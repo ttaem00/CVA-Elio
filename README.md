@@ -1,13 +1,14 @@
 <p align="center"><img src="docs/assets/readme-hero.svg" width="1200" alt="Elio — 관계를 고르고, 페이지로 만드는 CVA 디자인 시스템"></p>
 
 <h1 align="center">Elio</h1>
-<p align="center"><strong>내용의 관계에 맞춰, 읽고 편집할 수 있는 페이지를 만듭니다.</strong></p>
+<p align="center"><strong>관계를 고르고, 페이지로 만듭니다.</strong></p>
 <p align="center"><a href="https://ttaem.com"><img src="assets/logo.svg" width="180" alt="TTaem CVA 원본 로고"></a><br><a href="https://ttaem.com">ttaem.com</a> · <a href="https://github.com/ttaem00/cva-elio">cva-elio 원본 저장소</a></p>
 <p align="center"><strong>요소·모듈 라이브러리</strong> · <strong>페이지 제작실</strong> · <strong>이야기 저작</strong> · <strong>HTML·JSON 출력</strong></p>
 <p align="center"><a href="#quickstart"><strong>빠른 시작</strong></a> · <a href="#features">주요 기능</a> · <a href="#library">라이브러리</a> · <a href="#authoring">Codex·스킬</a> · <a href="#examples">실제 사용 화면</a> · <a href="#policy">이용 정책</a></p>
 
-Elio는 **CVA의 공용 디자인 시스템**입니다. 요소를 고르고 모듈을 조합해 페이지를 편집하며,
-이야기는 **Elio Story**, 이야기·도감의 보드는 **Elio Board**로 이어집니다.
+Elio는 **CVA의 공용 디자인 시스템**입니다. 필요한 요소와 표현을 골라 페이지를 편집하고,
+완성한 페이지는 HTML로, 다시 편집할 구성은 JSON으로 보관합니다.
+이야기를 읽을 때는 **Elio Story**, 이야기·도감의 항목과 관계를 살펴볼 때는 **Elio Board**에서 시작합니다.
 스토리게임·드라마·영화·소설·만화처럼 매체가 달라도 내용의 순서·관계·관점과 원문 근거를 구분합니다.
 
 이름·역할·화면 입구·로고 용도·수치 집계의 현재 기준은 [Elio 브랜드와 범위](docs/BRANDING.md)를 따릅니다.
@@ -62,7 +63,8 @@ GitHub에서는 HTML 소스가 표시되므로 실제 조작은 로컬 서버에
 | --- | --- |
 | 종류별 요소·모듈 찾기 | [`/cva/library.html?profile=forma&palette=forest`](http://127.0.0.1:8798/cva/library.html?profile=forma&palette=forest) |
 | 페이지 구성·내용 편집 | [`/cva/index.html`](http://127.0.0.1:8798/cva/index.html) |
-| 이야기 읽기·원본 템플릿 고르기 | [`/examples/templates/index.html`](http://127.0.0.1:8798/examples/templates/index.html) |
+| Elio Story에서 창작 이야기 읽기 | [`/examples/story.html`](http://127.0.0.1:8798/examples/story.html) |
+| Story 원본 템플릿·예제 살펴보기 | [`/examples/templates/index.html`](http://127.0.0.1:8798/examples/templates/index.html) |
 | 이야기·도감 보드 열기 | [`/board/index.html`](http://127.0.0.1:8798/board/index.html) |
 
 <a id="features"></a>
