@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">Elio — 관계를 고르고, 페이지로 만듭니다.</title>
+  <desc id="desc">Elio 디자인 시스템의 브랜드 배너. 요소와 모듈을 골라 페이지를 만들고 HTML과 JSON으로 보관하는 흐름을 벡터 도식으로 표현합니다. 실제 제품 스크린샷은 본문에서 제공합니다.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#141d2b"/><stop offset="1" stop-color="#173c34"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#b2dc9c"/><stop offset="1" stop-color="#f4be70"/></linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#faf5eb" stroke-opacity=".035"/></pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0L6 3L0 6" fill="none" stroke="#b2dc9c" stroke-width="1.4"/></marker>
+  </defs>
+  <rect width="1200" height="340" rx="22" fill="url(#bg)"/>
+  <rect width="1200" height="340" rx="22" fill="url(#grid)"/>
+  <path d="M0 337H1200" stroke="url(#accent)" stroke-width="6"/>
+  <g font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+    <text x="48" y="62" fill="#f4be70" font-size="24" font-weight="700">Elio</text>
+    <text x="114" y="61" fill="#b7c8bd" font-size="13" letter-spacing="2">CVA DESIGN SYSTEM</text>
+    <text x="48" y="133" fill="#faf5eb" font-size="45" font-weight="750" letter-spacing="-1.6">관계를 고르고,</text>
+    <text x="48" y="190" fill="#faf5eb" font-size="45" font-weight="750" letter-spacing="-1.6">페이지로 만듭니다.</text>
+    <text x="50" y="231" fill="#bbcec7" font-size="18">내용을 읽고, 조합하고, 편집하고, 다시 여는 디자인 시스템.</text>
+    <g font-size="13" font-weight="600" fill="#e2eee2">
+      <rect x="48" y="270" width="104" height="32" rx="16" fill="#2b493d"/><text x="100" y="291" text-anchor="middle">Library</text>
+      <rect x="164" y="270" width="104" height="32" rx="16" fill="#2b493d"/><text x="216" y="291" text-anchor="middle">Studio</text>
+      <rect x="280" y="270" width="104" height="32" rx="16" fill="#2b493d"/><text x="332" y="291" text-anchor="middle">Story</text>
+      <rect x="396" y="270" width="104" height="32" rx="16" fill="#2b493d"/><text x="448" y="291" text-anchor="middle">Board</text>
+    </g>
+    <g transform="translate(688 58)">
+      <g fill="#1c332f" stroke="#627b6b"><rect width="164" height="84" rx="14"/><rect x="248" width="164" height="84" rx="14"/><rect x="124" y="156" width="164" height="84" rx="14"/></g>
+      <g text-anchor="middle"><text x="82" y="34" fill="#b2dc9c" font-size="12">FIND</text><text x="82" y="61" fill="#faf5eb" font-size="20" font-weight="700">요소 · 모듈</text><text x="330" y="34" fill="#b2dc9c" font-size="12">MAKE</text><text x="330" y="61" fill="#faf5eb" font-size="20" font-weight="700">페이지 · 이야기</text><text x="206" y="190" fill="#f4be70" font-size="12">SAVE &amp; REOPEN</text><text x="206" y="217" fill="#faf5eb" font-size="20" font-weight="700">HTML · JSON</text></g>
+      <path d="M176 42H235M330 96V130Q330 140 320 140H216Q206 140 206 150" fill="none" stroke="#b2dc9c" stroke-width="2" marker-end="url(#arrow)"/>
+      <path d="M82 96V188Q82 198 92 198H112" fill="none" stroke="#b2dc9c" stroke-width="2" marker-end="url(#arrow)"/>
+    </g>
+  </g>
+</svg>
