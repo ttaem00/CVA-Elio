@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Elio 디자인 기준 · 같은 뜻, 다양한 모습</title>
+  <meta name="description" content="같은 내용을 여덟 가지 스타일로 읽어 보고, Elio의 행동·선택·근거·시간을 표현하는 공통 기준을 살펴봅니다.">
+  <link rel="icon" href="../cva/assets/cva-symbol-micro.svg">
+  <link rel="stylesheet" href="../design/foundations.css">
+  <link rel="stylesheet" href="foundations.css">
+  <script src="../cva/tokens.js" defer></script>
+  <script src="../cva/library-icons.js" defer></script>
+  <script src="foundations.js" defer></script>
+</head>
+<body class="foundations-page" data-elio-shell="guide">
+  <a class="foundation-skip elio-link" href="#foundation-main">본문으로 이동</a>
+  <header class="foundation-header foundation-wrap">
+    <a class="foundation-brand" href="../index.html"><img src="../cva/assets/cva-symbol.svg" width="32" height="32" alt=""><span>Elio<small>디자인 기준</small></span></a>
+    <nav aria-label="디자인 가이드 탐색"><a href="ui-states.html">행동과 상태</a><a href="brand-icons.html">브랜드 아이콘</a><a href="../cva/library.html">요소 라이브러리 <span data-ui-icon="arrow-right" aria-hidden="true"></span></a></nav>
+  </header>
+
+  <main id="foundation-main" class="foundation-wrap" tabindex="-1">
+    <section class="foundation-hero" aria-labelledby="foundation-title">
+      <div><p class="foundation-eyebrow">ELIO / FOUNDATIONS</p><h1 id="foundation-title">같은 뜻,<br><em>다양한 모습.</em></h1><p class="foundation-lead">표현은 내용에 어울리게.<br>행동과 관계는 한결같이 읽히게.</p></div>
+      <div class="foundation-intro"><p>Elio는 관계를 고르고, 페이지로 만드는 디자인 시스템입니다. 무엇을 보여 주는지에 따라 분위기는 달라져도, 선택과 실행·내용과 근거는 같은 뜻을 이어갑니다.</p><dl><div><dt>함께 쓰는 기준</dt><dd>행동 · 선택 · 초점 · 피드백</dd></div><div><dt>내용에 맞는 표현</dt><dd>색 · 글자 · 읽기 밀도 · 배치</dd></div><div><dt>언제나 남는 것</dt><dd>내용 · 순서 · 관계 · 시간 · 출처</dd></div></dl></div>
+    </section>
+
+    <section id="profile-lab" class="foundation-section profile-section" aria-labelledby="profile-title">
+      <div class="section-heading"><div><p class="foundation-eyebrow">01 / 만드는 페이지</p><h2 id="profile-title">하나의 기록, 여덟 가지 읽기.</h2></div><p>스타일을 골라 같은 내용을 비교해 보세요.</p></div>
+      <div class="profile-workbench">
+        <div class="profile-toolbar">
+          <div class="profile-control"><label for="profile-select">페이지 스타일</label><select id="profile-select" class="elio-select" aria-describedby="profile-intent" disabled><option value="forma">Forma · 정보 표현</option></select></div>
+          <div class="profile-control palette-control"><label for="palette-select">강조색</label><select id="palette-select" class="elio-select" disabled><option value="">스타일의 기본색</option></select></div>
+          <p class="profile-boundary">바뀌는 곳은 아래 페이지입니다.<br>바깥의 조작 도구는 그대로입니다.</p>
+        </div>
+        <div class="profile-context"><div><span class="profile-context-label">어울리는 내용</span><p id="profile-intent">항목의 차이와 관계를 차분하게 비교할 때.</p></div><div><span class="profile-context-label">표현의 특징</span><p id="profile-character">밝은 바탕, 초록색 강조, 넉넉한 여백.</p></div></div>
+        <div class="preview-shell" id="preview-shell" aria-busy="true">
+          <div class="preview-caption"><span><span class="preview-dot" aria-hidden="true"></span>같은 내용의 실제 페이지</span><span id="applied-profile">미리보기 준비 중</span></div>
+          <div class="preview-area">
+            <iframe id="profile-preview" title="선택한 스타일의 페이지 미리보기" data-src="../cva/canvas.html#preview" hidden></iframe>
+            <article id="preview-fallback" class="preview-fallback" aria-labelledby="fallback-title"><div><p>비교할 내용 · 창작 관측 노트</p><h3 id="fallback-title">장면을 보고,<br>근거를 남깁니다.</h3><p>해안의 풍경을 살펴보고, 수첩에 질문을 남깁니다. 관찰과 해석을 나누어 읽는 같은 내용이 모든 스타일에 사용됩니다.</p><small>아래 문구에서 미리보기의 준비 상태를 확인할 수 있습니다.</small></div><img src="../cva/adaptive-assets/coastal-observation-dawn.png" width="1536" height="1024" alt="CVA 창작 삽화. 새벽빛이 비치는 해안과 등대." decoding="async"></article>
+          </div>
+        </div>
+        <div class="preview-feedback"><p id="profile-feedback" class="elio-feedback" role="status" aria-live="polite" aria-atomic="true">같은 내용을 불러오고 있습니다.</p><button id="preview-retry" class="elio-button" type="button" hidden>미리보기 다시 불러오기</button></div>
+      </div>
+      <p class="profile-footnote">미리보기 안에서 내용을 스크롤하고 링크·펼침을 사용할 수 있습니다. 스타일을 고르는 동작은 입력한 문장과 이미지·읽는 순서·출처를 바꾸지 않습니다.</p>
+      <noscript><p class="guide-note">스타일 비교에는 JavaScript가 필요합니다. 아래의 기준과 링크는 그대로 읽을 수 있습니다. <a href="../cva/library.html">요소 라이브러리로 이동</a></p></noscript>
+      <details class="foundation-details"><summary>여덟 스타일은 무엇을 바꾸나요?</summary><p>스타일은 색과 글자뿐 아니라 읽기 밀도와 표현 목적을 함께 담습니다. 강조색은 그중 색의 역할만 조정합니다. 기존 스타일 이름과 저장된 문서의 구분은 그대로 유지합니다.</p><div class="table-scroll" role="region" tabindex="0" aria-label="여덟 스타일 비교표 · 가로로 스크롤"><table><caption>스타일의 의도와 어울리는 내용</caption><thead><tr><th scope="col">스타일</th><th scope="col">어울리는 내용</th><th scope="col">표현의 특징</th></tr></thead><tbody id="profile-intent-table"><tr><th scope="row">Forma</th><td>항목의 차이와 관계를 비교</td><td>밝은 바탕과 넓은 여백</td></tr></tbody></table></div><p>최종 글자 크기와 배치는 사용하는 구성에 따라 달라집니다. 아래의 제작 기준에서 실제 스타일 소스와 적용 범위를 확인할 수 있습니다.</p></details>
+    </section>
+
+    <section class="foundation-section" aria-labelledby="control-title">
+      <div class="section-heading"><div><p class="foundation-eyebrow">02 / 페이지를 다루는 도구</p><h2 id="control-title">어느 화면에서도,<br>행동의 뜻은 같습니다.</h2></div><p>색이 달라도 입력·선택·실행을 구분합니다.<br>직접 눌러 볼 수 있는 조작 예시입니다.</p></div>
+      <div class="control-grid">
+        <article class="control-specimen" data-elio-shell="library" aria-labelledby="library-specimen-title">
+          <header><span class="specimen-label">요소 라이브러리</span><h3 id="library-specimen-title">고르는 순간.</h3><p>숲의 초록빛 위에서 필요한 내용을 찾습니다.</p></header>
+          <label class="specimen-field-label" for="library-specimen-name">기록 이름 · 입력 예시</label><input id="library-specimen-name" class="elio-input" value="새벽의 관측 노트" aria-describedby="library-specimen-help">
+          <div class="specimen-choices" data-choice-group role="group" aria-label="라이브러리 선택 표현 예시"><button class="elio-choice" type="button" data-example-choice="장면" aria-pressed="true"><span>장면</span><small aria-hidden="true">선택됨</small></button><button class="elio-choice" type="button" data-example-choice="근거" aria-pressed="false"><span>근거</span><small aria-hidden="true">선택됨</small></button></div>
+          <p class="specimen-selection" data-choice-feedback>장면을 선택한 표현입니다.</p>
+          <div class="specimen-actions"><a class="elio-button" data-tone="primary" href="#profile-lab">스타일 비교로 이동 <span data-ui-icon="arrow-right" aria-hidden="true"></span></a><a class="elio-link" href="ui-states.html">동작 뒤의 상태 보기</a></div>
+          <p id="library-specimen-help" class="specimen-help">이 입력과 선택은 화면 표현을 살펴보는 예시입니다. 내용을 저장하거나 다른 페이지에 보내지 않습니다.</p>
+        </article>
+        <article class="control-specimen" data-elio-shell="studio" aria-labelledby="studio-specimen-title">
+          <header><span class="specimen-label">페이지 제작실</span><h3 id="studio-specimen-title">이어 만드는 순간.</h3><p>네이비와 황동색 안에서 다음 행동을 찾습니다.</p></header>
+          <label class="specimen-field-label" for="studio-specimen-name">기록 이름 · 입력 예시</label><input id="studio-specimen-name" class="elio-input" value="새벽의 관측 노트" aria-describedby="studio-specimen-help">
+          <div class="specimen-choices" data-choice-group role="group" aria-label="제작실 선택 표현 예시"><button class="elio-choice" type="button" data-example-choice="장면" aria-pressed="true"><span>장면</span><small aria-hidden="true">선택됨</small></button><button class="elio-choice" type="button" data-example-choice="근거" aria-pressed="false"><span>근거</span><small aria-hidden="true">선택됨</small></button></div>
+          <p class="specimen-selection" data-choice-feedback>장면을 선택한 표현입니다.</p>
+          <div class="specimen-actions"><a class="elio-button" data-tone="primary" href="#profile-lab">스타일 비교로 이동 <span data-ui-icon="arrow-right" aria-hidden="true"></span></a><a class="elio-link" href="ui-states.html">동작 뒤의 상태 보기</a></div>
+          <p id="studio-specimen-help" class="specimen-help">이 입력과 선택은 화면 표현을 살펴보는 예시입니다. 내용을 저장하거나 다른 페이지에 보내지 않습니다.</p>
+        </article>
+      </div>
+      <div class="control-principles"><p><strong>선택</strong><span>대상을 표시합니다.<br>글과 테두리가 함께 바뀝니다.</span></p><p><strong>초점</strong><span>키보드로 조작할 위치입니다.<br>선택과 별도의 외곽선으로 보입니다.</span></p><p><strong>실행</strong><span>다음 행동을 시작합니다.<br>목적지를 버튼의 문장에 적습니다.</span></p></div>
+    </section>
+
+    <section class="foundation-section" aria-labelledby="meaning-title">
+      <div class="section-heading"><div><p class="foundation-eyebrow">03 / 내용의 의미</p><h2 id="meaning-title">순서와 시간은,<br>서로 다른 이야기입니다.</h2></div><p>화면의 간격으로 시간이나 인과를 추측하지 않습니다.<br>입력하지 않은 값은 모르는 상태로 남깁니다.</p></div>
+      <div class="clock-grid">
+        <article class="clock-card"><p class="clock-domain">읽는 순서</p><p class="clock-value">01 <span data-ui-icon="arrow-right" aria-hidden="true"></span> 02</p><h3>어떤 장면부터 읽는가</h3><p>위 예시는 해안을 살펴본 뒤 수첩의 질문으로 이어집니다. 번호와 배치 사이의 간격은 경과 시간을 뜻하지 않습니다.</p></article>
+        <article class="clock-card"><p class="clock-domain">작품 속 시간</p><p class="clock-value clock-words">새벽 <small>정확한 시각 없음</small></p><h3>이야기 안에서는 언제인가</h3><p>첫 장면에 ‘새벽’이라고 적었습니다. 두 번째 장면의 시각은 미정이며, 읽는 순서만으로 같은 시각이라 판단하지 않습니다.</p></article>
+        <article class="clock-card"><p class="clock-domain">원본 영상의 시각</p><p class="clock-value clock-words">미입력 <small>원본 영상 없음</small></p><h3>어느 영상의 어디인가</h3><p>영상과 시작 시점이 제공된 경우 그 영상의 기준을 따릅니다. 이 창작 예시에는 재생 시각을 만들어 넣지 않습니다.</p></article>
+        <article class="clock-card"><p class="clock-domain">편집 결과의 시각</p><p class="clock-value clock-words">미생성 <small>편집 결과 없음</small></p><h3>완성한 편집본의 어디인가</h3><p>편집한 순서와 길이에 따라 달라지는 별도의 기준입니다. 원본 시각을 그대로 복사해 결과의 시각으로 쓰지 않습니다.</p></article>
+      </div>
+      <aside class="relation-note"><span class="relation-line" aria-hidden="true"></span><div><h3>선을 그었다면, 관계의 이름도 함께.</h3><p>순서·인과·관련·분기·포함은 서로 다른 의미입니다. 가까이 둔 항목을 자동으로 연결하거나, 관련 있는 항목을 원인과 결과로 바꾸지 않습니다. 확인한 사실·작성자의 해석·미확인 정보도 각각 밝혀 둡니다.</p></div></aside>
+    </section>
+
+    <section class="foundation-section" aria-labelledby="reuse-title">
+      <div class="section-heading"><div><p class="foundation-eyebrow">04 / 이어 쓰는 기준</p><h2 id="reuse-title">값을 고르고,<br>뜻을 붙이고, 함께 씁니다.</h2></div><p>새 화면도 이미 정한 규칙에서 시작합니다.</p></div>
+      <ol class="token-layers"><li><span class="layer-number">1</span><div><h3>기본값</h3><p>색과 간격, 글자와 크기를 정합니다.</p><div class="layer-example"><span class="token-swatch" aria-hidden="true"></span><span>라이브러리의 밝은 초록</span></div></div></li><li><span class="layer-number">2</span><div><h3>의미</h3><p>무슨 역할로 쓰는 값인지 이름을 붙입니다.</p><div class="layer-example"><span class="role-token">주요 행동</span><span>다음에 할 일</span></div></div></li><li><span class="layer-number">3</span><div><h3>컴포넌트</h3><p>화면에서 같은 역할을 같은 규칙으로 씁니다.</p><a class="elio-button" data-tone="primary" href="../cva/library.html">요소 고르기 <span data-ui-icon="arrow-right" aria-hidden="true"></span></a></div></li></ol>
+      <div class="pattern-grid"><a class="pattern-link" href="../cva/library.html?item=module%3Afocus"><span>선택한 장면과 상세</span><small>현재 대상 · 근거 · 돌아갈 위치</small><span data-ui-icon="arrow-right" aria-hidden="true"></span></a><a class="pattern-link" href="../cva/library.html?item=module%3Aevidence"><span>원문과 근거</span><small>설명 · 자료 · 확인한 범위</small><span data-ui-icon="arrow-right" aria-hidden="true"></span></a><a class="pattern-link" href="../cva/library.html?item=module%3Atimeline"><span>장면과 시간</span><small>읽는 순서 · 명시한 시간 기준</small><span data-ui-icon="arrow-right" aria-hidden="true"></span></a><a class="pattern-link" href="../cva/library.html?item=module%3Aaccordion"><span>펼치고 이어 읽기</span><small>질문 · 상세 · 같은 자리의 복귀</small><span data-ui-icon="arrow-right" aria-hidden="true"></span></a></div>
+      <details class="foundation-details" id="implementation"><summary>사람과 저작 도구가 함께 참고할 제작 기준</summary><p>바깥의 조작 화면은 <code>design/foundations.css</code>의 <code>--elio-*</code> 값을, 만드는 페이지는 기존 <code>--cva-*</code>와 실제 페이지 스타일을 사용합니다. 위 비교는 제작실과 같은 페이지 렌더러에 같은 문서를 전달하고 스타일·강조색만 바꿉니다.</p><p><code>design/tokens.js</code>는 기존 제품의 호환 값과 스타일 정보를 담습니다. 최종 페이지의 글자·배치 규칙은 <code>cva/module-styles.css</code>와 렌더러에 있으므로, 호환 표의 숫자를 모든 화면의 최종 크기로 해석하지 않습니다.</p><p>키보드는 Tab으로 입력·선택·링크·펼침에 도달하고, 버튼은 Enter 또는 Space로 실행합니다. 선택·초점·진행 상태를 색 하나로만 알리지 않습니다. 장면·근거·관계 범례·복귀에 필요한 입력과 상태는 <a href="../docs/FOUNDATIONS.md">디자인 시스템 사용 기준</a>에서 확인하세요.</p><p><a href="ui-states.html">실제 동작 뒤의 상태 보기</a> · <a href="../docs/STORY_AUTHORING.md">Story 저작 기준</a> · <a href="../cva/LUCIDE_NOTICE.txt">행동 아이콘 출처·사용권</a></p></details>
+    </section>
+  </main>
+  <footer class="foundation-footer foundation-wrap"><p><strong>CVA · Elio</strong><br>관계를 고르고, 페이지로 만듭니다.</p><div><a href="../cva/library.html">요소 라이브러리</a><a href="../cva/index.html">페이지 제작실</a><a href="../docs/FOUNDATIONS.md">제작 기준</a></div></footer>
+</body>
+</html>
