@@ -1,0 +1,145 @@
+{
+  "schema_version": "elio.board-build.v1",
+  "mode": "authored",
+  "documents": [
+    {
+      "work_id": "public-observatory",
+      "schema_version": "elio.catalog.v1",
+      "path": "documents/public-observatory.json"
+    }
+  ],
+  "assets": {
+    "index.html": {
+      "source": "tools/elio_board/app/index.html",
+      "source_sha256": "4e396c20aabf3ec7b3906d19092de9bf5c9a537de99f42df33d5020f3b7b154b",
+      "delivered_sha256": "20f169505f258a1880a5294564d4dae73297a08d8974907b050c9b932259c077"
+    },
+    "styles.css": {
+      "source": "tools/elio_board/app/styles.css",
+      "source_sha256": "3d880c1dbd7eec5671d81a8b93e0b0349c7dff5480ac4279ddbdcb63d4e13e63",
+      "delivered_sha256": "3d880c1dbd7eec5671d81a8b93e0b0349c7dff5480ac4279ddbdcb63d4e13e63"
+    },
+    "hud-panels.css": {
+      "source": "tools/elio_board/app/hud-panels.css",
+      "source_sha256": "bb30a0fa7e4a723857d3e5f696934626411eb18a23ded515b76b2db5610bc2ff",
+      "delivered_sha256": "bb30a0fa7e4a723857d3e5f696934626411eb18a23ded515b76b2db5610bc2ff"
+    },
+    "board-refinement.css": {
+      "source": "tools/elio_board/app/board-refinement.css",
+      "source_sha256": "d8088bdf7262552b5c7e4410612b4740a55e655f900b104d8da2ed4eb4334484",
+      "delivered_sha256": "d8088bdf7262552b5c7e4410612b4740a55e655f900b104d8da2ed4eb4334484"
+    },
+    "depth-hover.css": {
+      "source": "tools/elio_board/app/depth-hover.css",
+      "source_sha256": "71f7f8f56043b98736563e803da0e3f5aa7ae25bd385ce5eee9e9b4d8c536da3",
+      "delivered_sha256": "71f7f8f56043b98736563e803da0e3f5aa7ae25bd385ce5eee9e9b4d8c536da3"
+    },
+    "content-picker.css": {
+      "source": "tools/elio_board/app/content-picker.css",
+      "source_sha256": "856f37f029504990ba25233a073347a1857e8f0ac7cae37b4453fa7823893a9f",
+      "delivered_sha256": "856f37f029504990ba25233a073347a1857e8f0ac7cae37b4453fa7823893a9f"
+    },
+    "authoring.css": {
+      "source": "tools/elio_board/app/authoring.css",
+      "source_sha256": "7ec898598e9b998ca4f997dc5aca7b539cc11d2fadb862d8159e9c9398e66f50",
+      "delivered_sha256": "7ec898598e9b998ca4f997dc5aca7b539cc11d2fadb862d8159e9c9398e66f50"
+    },
+    "app.js": {
+      "source": "tools/elio_board/app/app.js",
+      "source_sha256": "546fe5822c511219901e7fa15f2d5032bcae7a0d5064592b1f5680d861d02a57",
+      "delivered_sha256": "546fe5822c511219901e7fa15f2d5032bcae7a0d5064592b1f5680d861d02a57"
+    },
+    "projection.js": {
+      "source": "tools/elio_board/app/projection.js",
+      "source_sha256": "ba0e5fa8d012001f821916d0cd700573970bcb0a227b093edbd2946e5fbc486a",
+      "delivered_sha256": "ba0e5fa8d012001f821916d0cd700573970bcb0a227b093edbd2946e5fbc486a"
+    },
+    "depth-hover.js": {
+      "source": "tools/elio_board/app/depth-hover.js",
+      "source_sha256": "4abc981457185a30109fa8f893d6df56e966eea5238b1f5436ea250e73bf6220",
+      "delivered_sha256": "4abc981457185a30109fa8f893d6df56e966eea5238b1f5436ea250e73bf6220"
+    },
+    "content-picker.js": {
+      "source": "tools/elio_board/app/content-picker.js",
+      "source_sha256": "fbfe952ee104d4bf0ae47b019b7fe1adfeee9a1bea29a191612af8a7288f8c55",
+      "delivered_sha256": "fbfe952ee104d4bf0ae47b019b7fe1adfeee9a1bea29a191612af8a7288f8c55"
+    },
+    "document-adapter.js": {
+      "source": "tools/elio_board/app/document-adapter.js",
+      "source_sha256": "2ed381ddc7d1020aa8646dc6d04ceacb3a99e27abc933480ade53b95e08b73bb",
+      "delivered_sha256": "2ed381ddc7d1020aa8646dc6d04ceacb3a99e27abc933480ade53b95e08b73bb"
+    },
+    "authoring-ui.js": {
+      "source": "tools/elio_board/app/authoring-ui.js",
+      "source_sha256": "6c1b9701c288bc03627224b6af90781c95dc052ea5bf8845779a98eab63e3927",
+      "delivered_sha256": "6c1b9701c288bc03627224b6af90781c95dc052ea5bf8845779a98eab63e3927"
+    },
+    "vendor/board-model.js": {
+      "source": "tools/elio_board/app/vendor/board-model.js",
+      "source_sha256": "c7f57e267c905916a3058c53614900aa71d52687b9c2cba3c6557f467cf00816",
+      "delivered_sha256": "c7f57e267c905916a3058c53614900aa71d52687b9c2cba3c6557f467cf00816"
+    },
+    "vendor/components.js": {
+      "source": "tools/elio_board/app/vendor/components.js",
+      "source_sha256": "5399215b050477c6396059022ff75ee822d7d863a3b3106897f8e72083907894",
+      "delivered_sha256": "5399215b050477c6396059022ff75ee822d7d863a3b3106897f8e72083907894"
+    },
+    "vendor/diagram_geometry.js": {
+      "source": "tools/elio_board/app/vendor/diagram_geometry.js",
+      "source_sha256": "ec908c2666a7780b445cc4e2a7cc203bbcf8670e1ae2b07d2f0cf4b06a463e8c",
+      "delivered_sha256": "ec908c2666a7780b445cc4e2a7cc203bbcf8670e1ae2b07d2f0cf4b06a463e8c"
+    },
+    "vendor/story_layout.js": {
+      "source": "tools/elio_board/app/vendor/story_layout.js",
+      "source_sha256": "b0261329393cc7d55a5c08317f3712c20bd328c7f420b5ac8b490cd9d2cb4c12",
+      "delivered_sha256": "b0261329393cc7d55a5c08317f3712c20bd328c7f420b5ac8b490cd9d2cb4c12"
+    },
+    "depth-card.css": {
+      "source": "tools/elio_board/app/depth-card.css",
+      "source_sha256": "6bda2975ba12dd85e862d5f61827172764671057040866b587bb5fb87ec80cbc",
+      "delivered_sha256": "6bda2975ba12dd85e862d5f61827172764671057040866b587bb5fb87ec80cbc"
+    },
+    "depth-card.js": {
+      "source": "tools/elio_board/app/depth-card.js",
+      "source_sha256": "4c70b993468029dffc61043026d857a276330e8e03114a9566b06d18c99d2425",
+      "delivered_sha256": "4c70b993468029dffc61043026d857a276330e8e03114a9566b06d18c99d2425"
+    },
+    "assets/pretendard.woff2": {
+      "source": "tools/elio_board/app/assets/pretendard.woff2",
+      "source_sha256": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
+      "delivered_sha256": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4"
+    },
+    "assets/PRETENDARD-LICENSE.md": {
+      "source": "tools/elio_board/app/assets/PRETENDARD-LICENSE.md",
+      "source_sha256": "0dc62409683d658150320f7cbf0c98a70805f43f16ada7326072c807dffc6876",
+      "delivered_sha256": "0dc62409683d658150320f7cbf0c98a70805f43f16ada7326072c807dffc6876"
+    }
+  },
+  "files": {
+    "app.js": "546fe5822c511219901e7fa15f2d5032bcae7a0d5064592b1f5680d861d02a57",
+    "assets/PRETENDARD-LICENSE.md": "0dc62409683d658150320f7cbf0c98a70805f43f16ada7326072c807dffc6876",
+    "assets/pretendard.woff2": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
+    "authoring-ui.js": "6c1b9701c288bc03627224b6af90781c95dc052ea5bf8845779a98eab63e3927",
+    "authoring.css": "7ec898598e9b998ca4f997dc5aca7b539cc11d2fadb862d8159e9c9398e66f50",
+    "board-refinement.css": "d8088bdf7262552b5c7e4410612b4740a55e655f900b104d8da2ed4eb4334484",
+    "content-picker.css": "856f37f029504990ba25233a073347a1857e8f0ac7cae37b4453fa7823893a9f",
+    "content-picker.js": "fbfe952ee104d4bf0ae47b019b7fe1adfeee9a1bea29a191612af8a7288f8c55",
+    "depth-card.css": "6bda2975ba12dd85e862d5f61827172764671057040866b587bb5fb87ec80cbc",
+    "depth-card.js": "4c70b993468029dffc61043026d857a276330e8e03114a9566b06d18c99d2425",
+    "depth-hover.css": "71f7f8f56043b98736563e803da0e3f5aa7ae25bd385ce5eee9e9b4d8c536da3",
+    "depth-hover.js": "4abc981457185a30109fa8f893d6df56e966eea5238b1f5436ea250e73bf6220",
+    "document-adapter.js": "2ed381ddc7d1020aa8646dc6d04ceacb3a99e27abc933480ade53b95e08b73bb",
+    "documents.js": "aa09f006e193ec5b1c1137471496e979a1917775e418d6d7ba3a150e1027f888",
+    "documents/public-observatory.json": "bb21ea1fd49979ea6c05ea123fc0a03cf76e964c8a71265713085ea72ef0708b",
+    "hud-panels.css": "bb30a0fa7e4a723857d3e5f696934626411eb18a23ded515b76b2db5610bc2ff",
+    "index.html": "20f169505f258a1880a5294564d4dae73297a08d8974907b050c9b932259c077",
+    "notices/CVA-DEPTH-CARDS.txt": "824bb622d8f3cfa8f2d3eadd3c6998e189cc81a49fe7135d90cf8139fc0166a3",
+    "projection.js": "ba0e5fa8d012001f821916d0cd700573970bcb0a227b093edbd2946e5fbc486a",
+    "styles.css": "3d880c1dbd7eec5671d81a8b93e0b0349c7dff5480ac4279ddbdcb63d4e13e63",
+    "vendor/board-model.js": "c7f57e267c905916a3058c53614900aa71d52687b9c2cba3c6557f467cf00816",
+    "vendor/components.js": "5399215b050477c6396059022ff75ee822d7d863a3b3106897f8e72083907894",
+    "vendor/diagram_geometry.js": "ec908c2666a7780b445cc4e2a7cc203bbcf8670e1ae2b07d2f0cf4b06a463e8c",
+    "vendor/story_layout.js": "b0261329393cc7d55a5c08317f3712c20bd328c7f420b5ac8b490cd9d2cb4c12"
+  },
+  "fixtures": null
+}

@@ -1,0 +1,8 @@
+.reader-board-entry { position:relative; display:inline-flex; align-items:center; vertical-align:middle; }
+.reader-board-chip { display:inline-flex; align-items:center; justify-content:center; min-width:40px; min-height:36px; padding:0 10px; border:1px solid #c2d9df; border-radius:999px; color:#27768b; background:#eff9fc; text-decoration:none; }
+.reader-board-chip svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.reader-board-chip:hover { background:#e0f2f7; border-color:#7fb7c7; }
+.reader-board-chip:focus-visible { outline:3px solid #27768b; outline-offset:3px; }
+.reader-board-entry [role="tooltip"] { position:absolute; z-index:40; top:calc(100% + 8px); right:0; width:max-content; max-width:15rem; padding:7px 10px; border-radius:8px; background:#183341; color:white; font-size:12px; font-weight:600; line-height:1.5; pointer-events:none; visibility:hidden; opacity:0; }
+.reader-board-entry:hover [role="tooltip"], .reader-board-entry:focus-within [role="tooltip"] { visibility:visible; opacity:1; }
+.reader-board-entry[data-tooltip-dismissed] [role="tooltip"] { visibility:hidden; opacity:0; }

@@ -1,0 +1,36 @@
+{
+  "schema_version": "elio.connections.v3",
+  "work_id": "template-example",
+  "unit_id": "temporal-loop",
+  "publication_status": "manager_review",
+  "publish_approved": false,
+  "streams": [],
+  "links": [],
+  "replay_policy": {
+    "mode": "capture_only",
+    "reason": "창작 예제에는 실제 방송 다시보기를 연결하지 않는다."
+  },
+  "moments": [
+    {
+      "moment_id": "promise-highlight",
+      "after_event_id": "farewell",
+      "kind": "watch_highlight",
+      "title": "문턱을 건너 다시 만나요",
+      "summary": "작별의 말은 다시 만날 약속을 남긴다.",
+      "verification": "unresolved",
+      "evidence_ref": "이 저장소가 작성한 창작 예제의 편지"
+    }
+  ],
+  "pending_replays": [
+    {
+      "moment_id": "promise-highlight",
+      "streamer_name": "예제 시청자",
+      "clocks": [
+        "00:00:10",
+        "00:00:30"
+      ],
+      "evidence_ref": "입력 형식용 창작 시각이며 실제 방송 시각이 아님"
+    }
+  ],
+  "official_videos": []
+}

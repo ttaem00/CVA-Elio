@@ -1,0 +1,78 @@
+/* Optional inline tree: the existing scene renderer remains authoritative. */
+.timeline[data-story-layout="tree"]::before { display:none; }
+.story-tree { position:relative; }
+.story-tree__nodes { position:relative; }
+.story-tree__edges { position:absolute; inset:0; width:100%; height:100%; overflow:visible; pointer-events:none; z-index:0; }
+.story-tree__edges path { fill:none; stroke:#879099; stroke-width:5; stroke-linecap:round; stroke-linejoin:round; }
+.story-tree__node { position:relative; min-width:0; margin-bottom:72px; }
+.story-tree.is-laid-out .story-tree__node { position:absolute; margin:0; }
+.story-tree .story-tree__phase { position:relative; width:100%; margin:0; padding:24px 12px; box-sizing:border-box; z-index:3; }
+.story-tree .story-tree__phase > .story-phase__gate { max-width:640px; margin:0 auto; }
+.story-tree.is-laid-out .story-tree__phase { position:absolute; left:0; }
+.story-tree__meta { position:relative; z-index:2; display:flex; justify-content:center; align-items:baseline; flex-wrap:wrap; gap:7px 12px; padding:7px 18px 12px; font-size:11px; color:#72808a; }
+.story-tree__track { color:#385e71; font-weight:850; }
+.story-tree__condition { font-weight:750; }
+.story-tree__time { background:var(--bg); }
+.story-tree__time::before { content:"·"; margin-right:8px; color:#a0abb3; }
+.story-tree__alignment { flex-basis:100%; text-align:center; font-size:10px; color:#526d7a; }
+.story-tree__relations { position:relative; z-index:2; flex-basis:100%; text-align:center; line-height:1.7; font-size:10px; color:#72808a; }
+.story-tree__relations a { margin-inline:4px; padding-inline:3px; background:var(--bg); color:#526d7a; }
+.story-tree__relations .story-tree__return-link { color:#754e71; }
+.story-tree__return-link:focus-visible { outline:3px solid #1766a0; outline-offset:3px; }
+.page.spoilers-on .story-tree__node:has(.item:not(.spoiler-revealed)) .story-tree__relations { visibility:hidden; }
+.story-tree__track, .story-tree__alignment { background:var(--bg); }
+.page.spoilers-on .story-tree__node:has(.item:not(.spoiler-revealed)) .story-tree__meta { visibility:hidden; }
+.story-tree .item, .story-tree .watch-moment, .story-tree .story-phase { content-visibility:visible; contain-intrinsic-size:none; opacity:1; transform:none; }
+.story-tree .item { margin:0; padding-block:18px 28px; }
+.story-tree .node { border-color:#788a95; }
+.story-tree .item::before, .story-tree .item::after { display:none; }
+.story-tree .scene-photo { isolation:isolate; }
+.story-tree .event-source p { overflow-wrap:anywhere; }
+.story-tree__node:has(.streamer-picker[open]) { z-index:25; }
+.story-tree .watch-moment { padding:24px 16px 30px; }
+.story-tree .watch-moment__content { padding:22px 18px; }
+.story-tree .watch-moment .spoiler-cover { inset:18px 16px 22px; width:auto; }
+.story-tree .watch-moment__card { margin-inline:0; }
+.story-tree__node:not([data-lane-count="1"]) .item { grid-template-columns:44px minmax(0,1fr); align-items:start; }
+.story-tree__node:not([data-lane-count="1"]) { --scene-inset:56px; }
+.story-tree__node:not([data-lane-count="1"]) > .story-tree__meta { justify-content:flex-start; padding-left:var(--scene-inset); }
+.story-tree__node:not([data-lane-count="1"]) > .story-tree__relations { padding-left:var(--scene-inset); text-align:left; }
+.story-tree__node:not([data-lane-count="1"]) .story-tree__alignment { text-align:left; }
+.story-tree__relations a:first-child { margin-left:0; padding-left:0; }
+.story-tree__node:not([data-lane-count="1"]) .node { grid-column:1; grid-row:1 / span 2; align-self:start; margin-top:80px; width:32px; height:32px; border-width:6px; }
+.story-tree__node:not([data-lane-count="1"]) .node::after { left:25px; right:auto; width:28px; height:5px; }
+.story-tree__node:not([data-lane-count="1"]) .visual { grid-column:2; grid-row:1; justify-self:start; width:min(216px,85%); margin:0 0 34px 12px; }
+.story-tree__node:not([data-lane-count="1"]) .copy { grid-column:2; grid-row:2; justify-self:stretch; max-width:none; padding:14px 10px 0 12px; text-align:left; }
+.story-tree__node:not([data-lane-count="1"]) .event-actions { justify-content:flex-start; }
+.story-tree__node:not([data-lane-count="1"]) .streamer-picker__panel { left:0; right:auto; max-width:min(280px,75vw); }
+.story-tree__node[data-lane-count="3"] .scene-title, .story-tree__node[data-lane-count="4"] .scene-title { font-size:21px; }
+.story-tree__node[data-lane-count="3"] .scene-desc, .story-tree__node[data-lane-count="4"] .scene-desc { font-size:13px; }
+.story-tree__node[data-lane-count="4"] .item { grid-template-columns:34px minmax(0,1fr); }
+.story-tree__node[data-lane-count="4"] { --scene-inset:38px; }
+.story-tree__node[data-lane-count="4"] .visual { margin-left:4px; }
+.story-tree__node[data-lane-count="4"] .copy { padding-left:4px; }
+@media(max-width:900px) {
+  .story-tree__node:not([data-lane-count="1"]) { --scene-inset:72px; }
+  .story-tree__meta { justify-content:flex-start; padding-left:72px; padding-right:0; }
+  .story-tree__alignment, .story-tree__relations { text-align:left; }
+  .story-tree__relations { padding-left:72px; }
+  .story-tree .item, .story-tree__node:not([data-lane-count="1"]) .item { grid-template-columns:64px minmax(0,1fr); min-height:0; padding:10px 0 24px; }
+  .story-tree .item .visual, .story-tree__node:not([data-lane-count="1"]) .visual { grid-column:2; grid-row:1; justify-self:start; width:min(206px,64vw); margin:0 0 30px 8px; }
+  .story-tree .item .copy, .story-tree__node:not([data-lane-count="1"]) .copy { grid-column:2; grid-row:2; max-width:none; padding:14px 0 0 8px; text-align:left; }
+  .story-tree .item .node, .story-tree__node:not([data-lane-count="1"]) .node { grid-column:1; grid-row:1 / span 2; justify-self:start; align-self:start; margin-left:var(--mobile-rail,12px); margin-top:76px; width:26px; height:26px; border-width:5px; }
+  .story-tree .node::before { inset:4px; }
+  .story-tree .item .node::after { left:19px; right:auto; width:calc(48px - var(--mobile-rail,12px)); height:4px; }
+  .story-tree .event-actions { justify-content:flex-start; }
+  .story-tree .caption { max-width:206px; }
+  .story-tree .watch-moment { padding-left:72px; padding-right:0; }
+  .story-tree .watch-moment__marker { left:26px; }
+  .story-tree .watch-moment .spoiler-cover { left:64px; right:0; }
+  .story-tree .streamer-picker__panel { left:0; right:auto; max-width:min(260px,calc(100vw - 110px)); }
+  .story-tree .story-phase__gate { margin-left:64px; }
+}
+@media print {
+  .story-tree.is-laid-out .story-tree__phase { position:relative!important; left:auto!important; top:auto!important; width:100%!important; break-inside:avoid; }
+  .story-tree.is-laid-out .story-tree__node { position:relative!important; left:auto!important; top:auto!important; width:100%!important; margin-bottom:24px; break-inside:avoid; }
+  .story-tree__nodes { height:auto!important; }
+  .story-tree__edges { display:none; }
+}

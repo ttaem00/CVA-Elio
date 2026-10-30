@@ -1,0 +1,4 @@
+/* First paint only; the ordinary dialog takes ownership immediately. */
+html[data-moon-startup="intro"],html[data-moon-startup="intro"] body{background:#050a0f!important;color-scheme:dark}
+html[data-moon-startup="intro"]{overflow:hidden;scrollbar-gutter:auto}
+html[data-moon-startup="intro"] #elio-moon-reader{visibility:hidden!important;pointer-events:none}

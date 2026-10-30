@@ -1,0 +1,17 @@
+/* Depth's resting pose is front-facing. The button/ports stay on the map plane. */
+body[data-mode="depth"] #nodes button.scene-node > .node-surface{
+  transform:perspective(1000px) rotateX(var(--depth-hover-x,0deg)) rotateY(var(--depth-hover-y,0deg));
+  translate:none;rotate:none;scale:none;transform-origin:center;
+  transition:transform 120ms ease-out;will-change:auto;
+}
+body[data-mode="depth"] #nodes button.scene-node[data-depth-reset="true"] > .node-surface{
+  transform:none;transition:none;
+}
+body[data-mode="depth"].motion-reduced #nodes button.scene-node > .node-surface{
+  transform:none!important;transition:none!important;
+}
+@media(prefers-reduced-motion:reduce){
+  body[data-mode="depth"]:not(.motion-full) #nodes button.scene-node > .node-surface{
+    transform:none!important;transition:none!important;
+  }
+}
