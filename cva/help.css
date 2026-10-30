@@ -1,0 +1,41 @@
+/* Help supplements visible controls; all rules stay within a CVA page. */
+.cva-page .cva-help-tip,
+.cva-page .cva-help-tour {
+  position:fixed;box-sizing:border-box;z-index:80;max-inline-size:calc(100vw - 24px);
+  margin:0;border:2px solid var(--cva-focus);border-radius:12px;
+  background:var(--cva-surface);color:var(--cva-text);
+  box-shadow:0 8px 24px #0003;font:inherit;line-height:1.6;overflow-wrap:anywhere;
+}
+.cva-page .cva-help-tip[hidden],
+.cva-page .cva-help-tour[hidden] {display:none!important}
+.cva-page .cva-help-tip {padding:10px 14px;font-size:.8125rem;overflow:auto}
+.cva-page .cva-help-tour {z-index:90;padding:16px;overflow:auto}
+.cva-page .cva-help-tour::before {
+  content:"↑";display:block;inline-size:16px;block-size:18px;line-height:1;
+  margin-inline-start:calc(var(--cva-help-arrow, 24px) - 18px);
+  color:var(--cva-focus);font-size:20px;font-weight:850;
+}
+.cva-page .cva-help-tour[data-side="above"]::before {content:"↓"}
+.cva-page .cva-help-target {outline:3px solid var(--cva-focus);outline-offset:5px}
+.cva-page .cva-help-tour-count {margin:4px 56px 6px 0;color:var(--cva-muted);font-size:.75rem;font-variant-numeric:tabular-nums}
+.cva-page .cva-help-tour-title {margin:0 0 8px;font-size:1rem;line-height:1.5;font-weight:750}
+.cva-page .cva-help-tour-text {margin:0;color:var(--cva-copy);font-size:.875rem;white-space:pre-line}
+.cva-page .cva-help-tour-controls {display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px;margin-block-start:16px}
+.cva-page .cva-help-tour button {
+  box-sizing:border-box;min-block-size:40px;padding:7px 12px;border:1px solid var(--cva-border);
+  border-radius:7px;background:var(--cva-surface);color:var(--cva-text);
+  font:inherit;font-size:.8125rem;line-height:1.5;cursor:pointer;
+}
+.cva-page .cva-help-tour button:focus-visible {outline:3px solid var(--cva-focus);outline-offset:3px}
+.cva-page .cva-help-tour button:disabled {opacity:.5;cursor:default}
+.cva-page .cva-help-tour .cva-help-tour-close {position:absolute;inset-block-start:8px;inset-inline-end:8px;border-color:transparent;padding:4px 8px;min-block-size:36px}
+.cva-page .cva-help-tour .cva-help-tour-skip {margin-inline-end:auto;border-color:transparent;padding-inline:0;color:var(--cva-muted)}
+.cva-page .cva-help-tour .cva-help-tour-next {background:var(--cva-accent);border-color:var(--cva-accent);color:var(--cva-accent-ink);font-weight:700}
+@media (prefers-reduced-motion:reduce) {
+  .cva-page .cva-help-tip,.cva-page .cva-help-tour,.cva-page .cva-help-target {animation:none;transition:none;scroll-behavior:auto}
+}
+@media (forced-colors:active) {
+  .cva-page .cva-help-tip,.cva-page .cva-help-tour {border-color:CanvasText;box-shadow:none}
+  .cva-page .cva-help-target {outline-color:Highlight}
+  .cva-page .cva-help-tour::before {color:CanvasText}
+}

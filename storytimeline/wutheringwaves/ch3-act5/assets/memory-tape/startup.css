@@ -1,0 +1,6 @@
+/* Critical first paint only. Release once the ordinary dialog owns the screen. */
+html[data-memory-startup="intro"],html[data-memory-startup="intro"] body{background:#030507!important;color-scheme:dark}
+html[data-memory-startup="intro"]{overflow:hidden;scrollbar-gutter:auto}
+html[data-memory-startup="intro"] #elio-memory-reader{visibility:hidden!important;pointer-events:none}
+html[data-memory-startup="intro"] #elio-memory[hidden]{visibility:visible;z-index:10000}
+html[data-memory-startup="intro"] #elio-memory-help{visibility:hidden}
