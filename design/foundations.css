@@ -1,0 +1,157 @@
+/* Elio application foundations. Opt in with data-elio-shell="library|studio|guide".
+   These roles style the tool around a document. Authored pages keep --cva-* and
+   their existing profiles; this sheet is not an exporter or reader dependency. */
+@font-face{font-family:Pretendard;src:url('../cva/assets/PretendardVariable.woff2') format('woff2');font-weight:100 900;font-display:swap}
+
+[data-elio-shell] {
+  /* Values: only the colors and dimensions consumed by current shells. */
+  --elio-forest-950:#11140f;--elio-forest-900:#1a2016;--elio-forest-850:#1b2018;
+  --elio-forest-800:#29371d;--elio-forest-700:#343d2e;--elio-forest-500:#718364;
+  --elio-forest-300:#acb7a2;--elio-forest-100:#eff1e8;--elio-lime-300:#d3f58d;
+  --elio-navy-950:#141d2b;--elio-navy-900:#182332;--elio-navy-850:#202d3c;
+  --elio-navy-800:#344254;--elio-navy-700:#46576b;--elio-navy-500:#687b90;
+  --elio-navy-300:#bcc7d5;--elio-paper-100:#f5ecda;--elio-paper-50:#faf5eb;--elio-brass-300:#f4be70;
+  --elio-space-1:4px;--elio-space-2:8px;--elio-space-3:12px;--elio-space-4:16px;--elio-space-6:24px;
+  --elio-radius-small:8px;--elio-size-target:44px;--elio-size-icon:18px;--elio-size-feedback-icon:20px;
+  --elio-duration-feedback:120ms;--elio-duration-selection:180ms;
+
+  /* Meaning: library and guide retain the existing forest atmosphere. */
+  --elio-bg:var(--elio-forest-950);--elio-panel:var(--elio-forest-900);--elio-surface:var(--elio-forest-850);
+  --elio-text:var(--elio-forest-100);--elio-text-muted:var(--elio-forest-300);--elio-text-subtle:#7e9072;
+  --elio-border:var(--elio-forest-700);--elio-border-control:var(--elio-forest-500);
+  --elio-action:var(--elio-lime-300);--elio-on-action:#1b2710;--elio-action-hover:#e0faa9;
+  --elio-focus:var(--elio-lime-300);--elio-hover-bg:#232b1d;
+  --elio-selected-bg:var(--elio-forest-800);--elio-selected-text:var(--elio-lime-300);--elio-selected-border:var(--elio-lime-300);
+  --elio-disabled-bg:#293324;--elio-disabled-text:#a8b49e;--elio-disabled-border:#536148;
+  --elio-input-bg:var(--elio-bg);--elio-input-placeholder:#a6b59a;
+  --elio-pending-bg:#26271b;--elio-pending-text:#e8dfaa;--elio-pending-border:#827d4e;
+  --elio-success-bg:#1d2d24;--elio-success-text:#c1e7cd;--elio-success-border:#537b61;
+  --elio-error-bg:#34231f;--elio-error-text:#ffd4c8;--elio-error-border:#a66d5d;
+  --elio-font-ui:Pretendard,system-ui,sans-serif;--elio-font-body:16px;--elio-font-control:14px;--elio-font-label:12px;--elio-line-body:1.75;
+
+  /* Component roles: a small mark never reduces the target or focus area. */
+  --elio-control-height:var(--elio-size-target);--elio-control-radius:var(--elio-radius-small);--elio-control-gap:var(--elio-space-2);
+  --elio-control-padding-block:var(--elio-space-2);--elio-control-padding-inline:var(--elio-space-3);
+  --elio-focus-width:3px;--elio-focus-offset:3px;--elio-icon-size:var(--elio-size-icon);
+  --elio-feedback-icon-size:var(--elio-size-feedback-icon);--elio-feedback-padding:var(--elio-space-3);
+  --elio-motion-feedback:var(--elio-duration-feedback);--elio-motion-selection:var(--elio-duration-selection);
+  color-scheme:dark;background:var(--elio-bg);color:var(--elio-text);font-family:var(--elio-font-ui);
+}
+
+[data-elio-shell="studio"] {
+  --elio-bg:var(--elio-navy-950);--elio-panel:var(--elio-navy-900);--elio-surface:var(--elio-navy-850);
+  --elio-text:var(--elio-paper-100);--elio-text-muted:var(--elio-navy-300);--elio-text-subtle:#a5b3c4;
+  --elio-border:var(--elio-navy-700);--elio-border-control:var(--elio-navy-500);
+  --elio-action:var(--elio-brass-300);--elio-on-action:#182635;--elio-action-hover:#fbd39b;
+  --elio-focus:var(--elio-paper-50);--elio-hover-bg:#2c3c4e;
+  --elio-selected-bg:var(--elio-navy-800);--elio-selected-text:var(--elio-paper-50);--elio-selected-border:var(--elio-brass-300);
+  --elio-disabled-bg:#1a2635;--elio-disabled-text:#91a0b3;--elio-disabled-border:var(--elio-navy-800);
+  --elio-input-placeholder:#a9b8ca;
+}
+
+/* Opt-in controls for new screens. Existing shells consume the same variables
+   in their own selectors; no global button/input/layout reset is introduced. */
+[data-elio-shell] :where(.elio-button,.elio-choice) {
+  box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;gap:var(--elio-control-gap);
+  min-block-size:var(--elio-control-height);max-inline-size:100%;padding:var(--elio-control-padding-block) var(--elio-control-padding-inline);
+  border:1px solid var(--elio-border-control);border-radius:var(--elio-control-radius);background:var(--elio-surface);color:var(--elio-text);
+  font:600 var(--elio-font-control)/1.5 var(--elio-font-ui);text-decoration:none;cursor:pointer;
+  transition:background-color var(--elio-motion-feedback),border-color var(--elio-motion-feedback);
+}
+[data-elio-shell] :where(.elio-button,.elio-choice):hover:not(:disabled){background:var(--elio-hover-bg);border-color:var(--elio-action)}
+[data-elio-shell] .elio-button[data-tone="primary"]{background:var(--elio-action);border-color:var(--elio-action);color:var(--elio-on-action)}
+[data-elio-shell] .elio-button[data-tone="primary"]:hover:not(:disabled){background:var(--elio-action-hover);border-color:var(--elio-action-hover)}
+[data-elio-shell] .elio-choice[aria-pressed="true"]{background:var(--elio-selected-bg);color:var(--elio-selected-text);border-color:var(--elio-selected-border);box-shadow:inset 0 -2px 0 var(--elio-selected-border)}
+[data-elio-shell] :is(.elio-button,.elio-choice,.elio-input,.elio-select):disabled{background:var(--elio-disabled-bg);color:var(--elio-disabled-text);border-color:var(--elio-disabled-border);cursor:default}
+[data-elio-shell] :is(.elio-button,.elio-choice)[aria-busy="true"]{cursor:progress}
+[data-elio-shell] :where(.elio-input,.elio-select){box-sizing:border-box;min-block-size:var(--elio-control-height);max-inline-size:100%;padding:var(--elio-control-padding-block) var(--elio-control-padding-inline);border:1px solid var(--elio-border-control);border-radius:var(--elio-control-radius);background:var(--elio-input-bg);color:var(--elio-text);font:400 var(--elio-font-control)/1.6 var(--elio-font-ui)}
+[data-elio-shell] .elio-input::placeholder{color:var(--elio-input-placeholder);opacity:1}
+[data-elio-shell] .elio-input[aria-invalid="true"]{border-color:var(--elio-error-text)}
+[data-elio-shell] .elio-link{display:inline-flex;align-items:center;gap:var(--elio-control-gap);min-block-size:var(--elio-control-height);color:var(--elio-action);text-underline-offset:.25em}
+[data-elio-shell] :is(.elio-button,.elio-choice,.elio-input,.elio-select,.elio-link):focus-visible{outline:var(--elio-focus-width) solid var(--elio-focus);outline-offset:var(--elio-focus-offset)}
+
+/* Existing library-interactions data-state drives this shared feedback.
+   Check/x geometry is the pinned Lucide geometry in cva/library-icons.js.
+   Full upstream notices accompany this sheet below; the ring is native CSS. */
+[data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state]{position:relative;display:block;box-sizing:border-box;min-height:48px;padding:var(--elio-feedback-padding) 14px var(--elio-feedback-padding) 46px;border:1px solid var(--elio-border-control);border-radius:var(--elio-control-radius);background:var(--elio-surface);color:var(--elio-text);font-size:var(--elio-font-control);line-height:1.7;overflow-wrap:anywhere}
+[data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state]::before{content:'';position:absolute;inset:15px auto auto 14px;display:block;width:var(--elio-feedback-icon-size);height:var(--elio-feedback-icon-size);box-sizing:border-box;background:currentColor;mask-repeat:no-repeat;mask-position:center;mask-size:var(--elio-feedback-icon-size) var(--elio-feedback-icon-size)}
+[data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state="pending"]{background:var(--elio-pending-bg);border-color:var(--elio-pending-border);color:var(--elio-pending-text)}
+[data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state="pending"]::before{background:none;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:elio-status-turn 1s linear infinite}
+[data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state="success"]{background:var(--elio-success-bg);border-color:var(--elio-success-border);color:var(--elio-success-text)}
+[data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state="success"]::before{mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E")}
+[data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state="error"]{background:var(--elio-error-bg);border-color:var(--elio-error-border);color:var(--elio-error-text)}
+[data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state="error"]::before{mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E")}
+[data-elio-shell] :is(.action-feedback,.elio-feedback)[data-static][data-state="pending"]::before{animation:none}
+@keyframes elio-status-turn{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){
+  [data-elio-shell]{--elio-motion-feedback:0ms;--elio-motion-selection:0ms}
+  [data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state="pending"]::before{animation:none}
+}
+@media(forced-colors:active){
+  [data-elio-shell]{--elio-bg:Canvas;--elio-panel:Canvas;--elio-surface:Canvas;--elio-text:CanvasText;--elio-text-muted:CanvasText;--elio-border:CanvasText;--elio-border-control:CanvasText;--elio-action:Highlight;--elio-action-hover:Highlight;--elio-on-action:HighlightText;--elio-focus:Highlight;--elio-hover-bg:Canvas;--elio-selected-bg:Canvas;--elio-selected-text:CanvasText;--elio-selected-border:Highlight;--elio-disabled-bg:Canvas;--elio-disabled-text:GrayText;--elio-disabled-border:GrayText;--elio-input-bg:Canvas;--elio-input-placeholder:GrayText;--elio-error-text:CanvasText}
+  [data-elio-shell] :is(.elio-button,.elio-button[data-tone],.elio-choice,.elio-input,.elio-select){background:Canvas;color:CanvasText;border-color:CanvasText}
+  [data-elio-shell] .elio-choice[aria-pressed="true"]{outline:2px solid Highlight}
+  [data-elio-shell] :is(.elio-button,.elio-choice,.elio-input,.elio-select):disabled{color:GrayText;border-color:GrayText}
+  [data-elio-shell] :is(.elio-button,.elio-choice,.elio-input,.elio-select,.elio-link):focus-visible{outline-color:Highlight}
+  [data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state]{background:Canvas;color:CanvasText;border-color:CanvasText}
+  [data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state]::before{forced-color-adjust:none;background:CanvasText}
+  [data-elio-shell] :where(.demo-status,#copy-status,.action-feedback,.elio-feedback)[data-state="pending"]::before{background:none;border-color:CanvasText;border-right-color:transparent}
+}
+
+/* Fixed Lucide source and upstream notices, retained with the CSS masks.
+Lucide SVG notice for library-icons.js
+Source: https://github.com/lucide-icons/lucide/tree/7faf87628a1ad6175975bc595344337ce14a7db4/icons
+Pinned revision: 7faf87628a1ad6175975bc595344337ce14a7db4
+Verified: 2026-10-26
+Selected files: search.svg, arrow-right.svg, code.svg, sliders-horizontal.svg, layers.svg, external-link.svg, check.svg, copy.svg, x.svg, panel-left.svg
+Local changes: unchanged SVG geometry; fixed-name safe wrapper, decorative semantics, caller size/class.
+Runtime dependencies: none. No package, network request, font, or React runtime is required.
+Update: compare selected SVG files and LICENSE at a reviewed upstream pin; keep the notices with every distribution.
+Removal: remove the selected icon calls and library-icons.js; authored CVA content and documents remain.
+
+--- Upstream LICENSE, unchanged ---
+
+ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+The following Lucide icons are derived from the Feather project:
+
+airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, calendar, cast, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, circle, clipboard, clock, code, columns, command, compass, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, crosshair, database, divide-circle, divide-square, dollar-sign, download, external-link, feather, frown, hash, headphones, help-circle, info, italic, key, layout, life-buoy, link-2, link, loader, lock, log-in, log-out, maximize, meh, minimize, minimize-2, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, pause-circle, percent, plus-circle, plus-square, plus, power, radio, rss, search, server, share, shopping-bag, sidebar, smartphone, smile, square, table-2, tablet, target, terminal, trash-2, trash, triangle, tv, type, upload, x-circle, x-octagon, x-square, x, zoom-in, zoom-out
+
+The MIT License (MIT) (for the icons listed above)
+
+Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
