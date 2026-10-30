@@ -35,8 +35,10 @@ CSS와 함께 `FW_BUNDLE.css`를 넣어야 한다. public package의 원본 prev
 상태는 해당 DOM의 일시적인 선택이며 저장·서버·원자료를 바꾸지 않는다. 이미지와 폰트의
 실제 파일·출처·포함 범위는 package의 명시 recipe와 고지가 소유한다.
 
-현재 검증은 `node tests/test_elio_owned_runtime.cjs`다. 실제 Library/Studio와 전체
-HTML export·독립 재열기·브라우저 입력은 assembled public package의 별도 검증 대상이다.
+저장소 루트에서 `node scripts/smoke.cjs`로 컴포넌트 입력, URL·문자열 처리,
+페이지 모델의 HTML 조립·JSON 정규화 재열기와 등록 템플릿 렌더를 확인한다.
+이 명령은 브라우저를 실행하지 않는다. 실제 Library/Studio 클릭·키보드 입력,
+다운로드한 HTML의 독립 실행·JSON 파일 가져오기 흐름은 별도 브라우저 확인 대상이다.
 
 이 소유 코드는 공개 패키지에 동봉된 TTaem CVA Source-Available License 1.1을 따른다.
 외부 라이선스의 원래 권리를 재지정하지 않는다.
@@ -64,3 +66,4 @@ renderer와 Studio의 Elio adapter가 함께 사용한다. `build_elio_reader.py
 CSS 격리의 공식 비교 근거: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40scope
 DOM 순서를 CSS 배치로 바꾸지 않는 원칙은 GoogleChrome modern-web-guidance css-layout
 자료와 비교했다. 새 framework나 원본 제한 vendor를 추가하지 않는다.
+
