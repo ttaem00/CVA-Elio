@@ -14,6 +14,9 @@ Elio는 **CVA의 공용 디자인 시스템**입니다. 필요한 요소와 표�
 이름·역할·화면 입구·로고 용도·수치 집계의 현재 기준은 [Elio 브랜드와 범위](docs/BRANDING.md)를 따릅니다.
 추출 당시 후보 기록과 이 저장소의 소스, 실제 서비스에 반영된 버전은 구분합니다.
 
+화면을 새로 만들거나 다듬을 때는 [Elio 디자인 기준](docs/FOUNDATIONS.md)을 함께 사용합니다.
+공통 조작 규칙과 결과물의 스타일을 구분하며, [같은 내용을 8개 스타일로 비교하는 가이드](examples/foundations.html)에서 실제 표현을 확인할 수 있습니다.
+
 | 찾기 | 만들고 편집하기 | 보관하고 다시 열기 |
 | :--- | :--- | :--- |
 | 분류·검색으로 요소와 모듈 선택 | 페이지 제작실에서 구성·내용·스타일 조정 | 독립 HTML과 편집 JSON 저장 |
@@ -66,6 +69,7 @@ GitHub에서는 HTML 소스가 표시되므로 실제 조작은 로컬 서버에
 | Elio Story에서 창작 이야기 읽기 | [`/examples/story.html`](http://127.0.0.1:8798/examples/story.html) |
 | Story 원본 템플릿·예제 살펴보기 | [`/examples/templates/index.html`](http://127.0.0.1:8798/examples/templates/index.html) |
 | 이야기·도감 보드 열기 | [`/board/index.html`](http://127.0.0.1:8798/board/index.html) |
+| 공통 UI 기준과 8개 스타일 비교 | [`/examples/foundations.html`](http://127.0.0.1:8798/examples/foundations.html) |
 
 <a id="features"></a>
 ## 할 수 있는 일

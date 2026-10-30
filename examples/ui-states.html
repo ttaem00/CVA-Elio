@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" data-elio-shell="guide">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Elio UI states · 행동과 상태</title>
   <meta name="description" content="Elio의 이동·복사·진행·완료·실패를 같은 크기와 명확한 말로 살펴봅니다.">
   <link rel="icon" href="../cva/assets/cva-symbol-micro.svg">
-  <link rel="stylesheet" href="../cva/library.css">
+  <link rel="stylesheet" href="../design/foundations.css">
   <link rel="stylesheet" href="ui-states.css">
   <script src="../cva/library-icons.js" defer></script>
   <script src="../cva/library-interactions.js" defer></script>
@@ -16,7 +16,7 @@
   <a class="skip" href="#states-main">본문으로 이동</a>
   <header class="states-header states-wrap">
     <a class="states-brand" href="../index.html"><img src="../cva/assets/cva-symbol.svg" width="32" height="32" alt=""><span>Elio<small>UI states</small></span></a>
-    <nav aria-label="가이드 탐색"><span aria-current="page">행동과 상태</span><a href="brand-icons.html">브랜드 아이콘</a><a href="../cva/library.html">요소 라이브러리</a></nav>
+    <nav aria-label="가이드 탐색"><span aria-current="page">행동과 상태</span><a href="foundations.html">디자인 기준</a><a href="brand-icons.html">브랜드 아이콘</a><a href="../cva/library.html">요소 라이브러리</a></nav>
   </header>
   <main id="states-main" class="states-main states-wrap" tabindex="-1">
     <section class="states-hero" aria-labelledby="page-title">
@@ -30,8 +30,8 @@
         <div class="workbench-heading"><span class="workbench-dot" aria-hidden="true"></span><span>실제 클립보드 동작</span></div>
         <h2 id="copy-title">한 문장을 가져가 보세요.</h2>
         <label for="copy-text">복사할 문장</label>
-        <textarea id="copy-text" rows="2" readonly>관계를 고르고, 페이지로 만듭니다.</textarea>
-        <button id="copy-try" class="states-primary" type="button" disabled><span data-ui-icon="copy" aria-hidden="true"></span>문장 복사</button>
+        <textarea class="elio-input" id="copy-text" rows="2" readonly>관계를 고르고, 페이지로 만듭니다.</textarea>
+        <button id="copy-try" class="states-primary elio-button" data-tone="primary" type="button" disabled><span data-ui-icon="copy" aria-hidden="true"></span>문장 복사</button>
         <p id="copy-feedback" class="action-feedback resting-feedback" role="status" aria-live="polite" aria-atomic="true">복사가 끝나면 이 자리에서 알려드립니다.</p>
         <p class="workbench-note">복사가 허용되지 않으면 위 문장을 직접 선택해 복사할 수 있습니다.</p>
       </section>
@@ -40,13 +40,13 @@
     <section id="state-language" class="states-section" aria-labelledby="state-title">
       <div class="states-section-heading"><div><p class="states-eyebrow">01 / FEEDBACK</p><h2 id="state-title">상태는 모양과 말로 함께.</h2></div><p>아래 세 카드는 상태 표현 예시입니다.</p></div>
       <div class="state-cards">
-        <article class="state-card"><span class="state-number">01</span><h3>진행 중</h3><p>지금 하는 일을 알립니다.<br>완료될 때까지 중복 실행을 막습니다.</p><div class="action-feedback" data-state="pending">복사 중…</div><small>열린 원 · 따뜻한 황동색</small></article>
-        <article class="state-card"><span class="state-number">02</span><h3>완료</h3><p>실제로 끝난 결과를 알립니다.<br>작업이 끝난 뒤에만 표시합니다.</p><div class="action-feedback" data-state="success">문장을 복사했습니다.</div><small>확인 표시 · 부드러운 초록색</small></article>
-        <article class="state-card"><span class="state-number">03</span><h3>실패</h3><p>무엇을 못 했는지 말하고,<br>다음에 할 수 있는 일을 안내합니다.</p><div class="action-feedback" data-state="error">복사하지 못했습니다. 다시 시도하세요.</div><small>교차 표시 · 따뜻한 붉은색</small></article>
+        <article class="state-card"><span class="state-number">01</span><h3>진행 중</h3><p>지금 하는 일을 알립니다.<br>완료될 때까지 중복 실행을 막습니다.</p><div class="action-feedback" data-static data-state="pending">복사 중…</div><small>열린 원 · 따뜻한 황동색</small></article>
+        <article class="state-card"><span class="state-number">02</span><h3>완료</h3><p>실제로 끝난 결과를 알립니다.<br>작업이 끝난 뒤에만 표시합니다.</p><div class="action-feedback" data-static data-state="success">문장을 복사했습니다.</div><small>확인 표시 · 부드러운 초록색</small></article>
+        <article class="state-card"><span class="state-number">03</span><h3>실패</h3><p>무엇을 못 했는지 말하고,<br>다음에 할 수 있는 일을 안내합니다.</p><div class="action-feedback" data-static data-state="error">복사하지 못했습니다. 다시 시도하세요.</div><small>교차 표시 · 따뜻한 붉은색</small></article>
       </div>
       <div class="failure-demo">
         <div><h3>실패한 뒤도 확인해 보세요.</h3><p>이 동작은 실패 피드백을 보여 주는 <strong>시뮬레이션</strong>입니다. 잠시 진행 상태를 거친 뒤 같은 버튼으로 다시 시도할 수 있습니다.</p></div>
-        <div class="failure-controls"><button id="simulate-error" type="button" disabled>실패 상태 체험 <span class="simulation-label">시뮬레이션</span></button><p id="simulation-feedback" class="action-feedback resting-feedback" role="status" aria-live="polite" aria-atomic="true">버튼을 눌러 진행과 실패를 확인하세요.</p></div>
+        <div class="failure-controls"><button class="elio-button" id="simulate-error" type="button" disabled>실패 상태 체험 <span class="simulation-label">시뮬레이션</span></button><p id="simulation-feedback" class="action-feedback resting-feedback" role="status" aria-live="polite" aria-atomic="true">버튼을 눌러 진행과 실패를 확인하세요.</p></div>
       </div>
     </section>
 

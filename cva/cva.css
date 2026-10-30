@@ -10,7 +10,7 @@
 [data-cva] :where(a) {color:inherit}
 [data-cva] .cva-button {display:inline-flex;align-items:center;justify-content:center;gap:12px;min-block-size:44px;box-sizing:border-box;padding:10px 20px;border:1px solid var(--cva-accent);border-radius:7px;background:var(--cva-accent);color:var(--cva-accent-ink);font:inherit;font-weight:650;text-decoration:none;cursor:pointer;transition:filter 120ms ease}
 [data-cva] .cva-button:hover:not(:disabled) {filter:brightness(1.08)}
-[data-cva] .cva-button.secondary {background:var(--cva-surface);border-color:var(--cva-border);color:var(--cva-text)}
+[data-cva] :is(.cva-button.secondary,.cva-button-secondary) {background:var(--cva-surface);border-color:var(--cva-border);color:var(--cva-text)}
 [data-cva] .cva-button:disabled {opacity:.6;cursor:default}
 [data-cva] .cva-chip {display:inline-block;padding:3px 11px;border:1px solid var(--cva-border);border-radius:999px;font-size:.875em}
 [data-cva] .cva-chip.success::before {content:'✓ ';}
