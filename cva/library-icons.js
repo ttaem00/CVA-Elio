@@ -25,7 +25,7 @@
   function render(name, { size = 18, className = '' } = {}) {
     if (!Object.hasOwn(paths, name)) return '';
     const dimension = typeof size === 'number' && Number.isFinite(size) && size > 0 ? size : 18;
-    const classes = typeof className === 'string' && className ? ' class="' + escapeAttribute(className) + '"' : '';
+    const classes = ' class="ui-icon' + (typeof className === 'string' && className ? ' ' + escapeAttribute(className) : '') + '"';
     return '<svg xmlns="http://www.w3.org/2000/svg" width="' + dimension + '" height="' + dimension +
       '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"' + classes + '>' + paths[name] + '</svg>';
   }
