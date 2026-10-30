@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   const $ = id => document.getElementById(id), esc = CVA_COMPONENTS.escape;
-  const kinds = {section:'섹션 조합',template:'페이지 템플릿',module:'블록·모듈',element:'UI 요소·이펙트',component:'기본 요소',interaction:'상태·움직임',pattern:'원본 표현',scene:'확장 장면',elio:'Elio 원본'};
+  const kinds = {section:'섹션 조합',template:'페이지 템플릿',module:'블록·모듈',element:'UI 요소·이펙트',component:'기본 요소',interaction:'상태·움직임',pattern:'자체 관계 표현',scene:'확장 장면',elio:'Elio Story 원본'};
   const resources = CVA_LIBRARY.resources(), categories = CVA_LIBRARY.categories;
   const profiles = CVA_TOKENS.profiles, palettes = CVA_TOKENS.palettes;
   const icons = name => CVA_LIBRARY_ICONS.render(name);
@@ -250,3 +250,4 @@
   if(matchMedia('(max-width:740px)').matches)$('category-disclosure').open=false;
   render();document.body.dataset.ready='true';
 }());
+
