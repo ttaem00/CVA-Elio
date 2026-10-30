@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960" role="img">
+  <title>엘리오 1.1 멀티버스 이야기 콘셉트 이미지</title>
+  <defs>
+    <radialGradient id="night" cx="48%" cy="36%"><stop stop-color="#436f9d"/><stop offset=".58" stop-color="#192d4a"/><stop offset="1" stop-color="#0d1728"/></radialGradient>
+    <linearGradient id="violet" x2="1" y2="1"><stop stop-color="#34225f"/><stop offset=".5" stop-color="#836bd0"/><stop offset="1" stop-color="#e187aa"/></linearGradient>
+    <linearGradient id="teal" x2="1" y2="1"><stop stop-color="#123f4d"/><stop offset=".55" stop-color="#2aa78e"/><stop offset="1" stop-color="#b2d57b"/></linearGradient>
+    <linearGradient id="amber" x2="1" y2="1"><stop stop-color="#332839"/><stop offset=".55" stop-color="#a96d38"/><stop offset="1" stop-color="#e4c478"/></linearGradient>
+    <linearGradient id="rose" x2="1" y2="1"><stop stop-color="#3f2344"/><stop offset=".48" stop-color="#c05d82"/><stop offset="1" stop-color="#68aabc"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="16" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>.scene{display:none}.scene:target{display:inline}.label{font:700 30px system-ui,sans-serif;letter-spacing:7px;fill:#fff;opacity:.72}.line{fill:none;stroke:#fff;stroke-width:10;stroke-linecap:round;opacity:.78}</style>
+  </defs>
+  <g id="parallel" class="scene">
+    <rect width="960" height="960" fill="url(#night)"/><circle cx="480" cy="225" r="78" fill="#70d9e7" opacity=".9" filter="url(#glow)"/>
+    <path class="line" d="M480 305v165M480 470L214 700M480 470v310M480 470l266 230"/>
+    <circle cx="214" cy="700" r="86" fill="#4bbbd0" opacity=".55"/><circle cx="480" cy="780" r="86" fill="#a9cc38" opacity=".55"/><circle cx="746" cy="700" r="86" fill="#e9779d" opacity=".55"/>
+    <text x="480" y="885" text-anchor="middle" class="label">SAME NIGHT · THREE POV</text>
+  </g>
+  <g id="choice" class="scene"><rect width="960" height="960" fill="url(#violet)"/><circle cx="480" cy="300" r="112" fill="none" stroke="#fff" stroke-width="12" opacity=".7"/><path class="line" d="M480 412v115M480 527L260 735M480 527l220 208"/><circle cx="260" cy="735" r="100" fill="#65b8df" opacity=".55"/><circle cx="700" cy="735" r="100" fill="#ef6f95" opacity=".55"/><text x="480" y="885" text-anchor="middle" class="label">ONE CHOICE · TWO WORLDS</text></g>
+  <g id="choice-a" class="scene"><rect width="960" height="960" fill="#142c52"/><circle cx="480" cy="385" r="210" fill="#4b91c8" opacity=".45"/><path d="M350 355h260l-44 260H394z" fill="#f3df99" opacity=".88"/><path class="line" d="M360 350l55-105 65 105 65-105 55 105"/><text x="480" y="790" text-anchor="middle" class="label">BLUE WORLDLINE</text></g>
+  <g id="choice-b" class="scene"><rect width="960" height="960" fill="#421f35"/><circle cx="480" cy="385" r="210" fill="#df5e83" opacity=".38"/><path d="M350 355h260l-44 260H394z" fill="none" stroke="#f4cab5" stroke-width="18" opacity=".9"/><path class="line" d="M330 640l300-330M350 350l55-105 75 105 65-105 55 105"/><text x="480" y="790" text-anchor="middle" class="label">RED WORLDLINE</text></g>
+  <g id="convergence" class="scene"><rect width="960" height="960" fill="url(#teal)"/><path class="line" d="M205 250c0 220 50 305 275 410M755 250c0 220-50 305-275 410M480 660v130"/><circle cx="205" cy="250" r="70" fill="#8ad9d0" opacity=".52"/><circle cx="755" cy="250" r="70" fill="#d2e98b" opacity=".52"/><circle cx="480" cy="660" r="92" fill="#fff" opacity=".25"/><text x="480" y="885" text-anchor="middle" class="label">DIFFERENT PATHS · ONE DAWN</text></g>
+  <g id="uncertain" class="scene"><rect width="960" height="960" fill="url(#amber)"/><circle cx="330" cy="430" r="150" fill="none" stroke="#fff" stroke-width="10" stroke-dasharray="24 18" opacity=".72"/><circle cx="630" cy="530" r="150" fill="none" stroke="#fff" stroke-width="10" stroke-dasharray="24 18" opacity=".72"/><text x="480" y="510" text-anchor="middle" font-family="system-ui,sans-serif" font-size="150" font-weight="800" fill="#fff" opacity=".88">?</text><text x="480" y="830" text-anchor="middle" class="label">ORDER UNKNOWN</text></g>
+  <g id="alternate-a" class="scene"><rect width="960" height="960" fill="#224f56"/><circle cx="480" cy="440" r="270" fill="#61b3a5" opacity=".32"/><path class="line" d="M260 610c105-190 335-190 440 0M320 550V315h320v235"/><circle cx="390" cy="470" r="38" fill="#f5dfa0"/><circle cx="480" cy="440" r="38" fill="#f5dfa0"/><circle cx="570" cy="470" r="38" fill="#f5dfa0"/><text x="480" y="815" text-anchor="middle" class="label">THE CITY REMEMBERS</text></g>
+  <g id="alternate-b" class="scene"><rect width="960" height="960" fill="url(#rose)"/><circle cx="480" cy="440" r="270" fill="#fff" opacity=".14"/><path class="line" stroke-dasharray="20 18" d="M260 610c105-190 335-190 440 0M320 550V315h320v235"/><circle cx="390" cy="470" r="38" fill="#fff" opacity=".2"/><circle cx="480" cy="440" r="38" fill="#fff" opacity=".12"/><circle cx="570" cy="470" r="38" fill="#fff" opacity=".08"/><text x="480" y="815" text-anchor="middle" class="label">THE CITY FORGETS</text></g>
+</svg>

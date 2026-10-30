@@ -1,0 +1,17 @@
+.reader-share{position:relative;display:inline-flex;align-items:center}
+.reader-share__button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:34px;padding:7px 12px;border:1px solid rgba(46,57,68,.15);border-radius:999px;background:rgba(255,255,255,.82);color:#4e5964;font:inherit;font-size:11px;font-weight:850;cursor:pointer;box-shadow:0 5px 18px rgba(29,40,50,.06)}
+.reader-share__button svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.reader-share__button:hover{border-color:rgba(54,139,169,.34);background:#fff}
+.reader-share__button:focus-visible{outline:3px solid #167aab;outline-offset:4px}
+.reader-share__button:disabled{opacity:.55;cursor:default}
+.reader-share__status{position:absolute;top:calc(100% + 7px);left:50%;z-index:6;transform:translateX(-50%);width:max-content;max-width:240px;border-radius:9px;background:#263c4b;color:#fff;font-size:11px;line-height:1.5;box-shadow:0 4px 15px #10233126}
+.reader-share__status:not(:empty){padding:7px 10px}
+.reader-share-dialog{box-sizing:border-box;width:min(440px,calc(100% - 32px));padding:24px;border:1px solid #d8e2e7;border-radius:20px;background:#f9fbfc;color:#263c4b;box-shadow:0 24px 90px #10233142;font-family:inherit}
+.reader-share-dialog::backdrop{background:#0c172680;backdrop-filter:blur(4px)}
+.reader-share-dialog h2{margin:0 0 16px;font-size:20px}
+.reader-share-dialog input{box-sizing:border-box;width:100%;padding:12px;border:1px solid #a7beca;border-radius:9px;background:white;color:#263c4b;font:inherit;font-size:14px}
+.reader-share-dialog p{min-height:1.5em;font-size:13px;line-height:1.6}
+.reader-share-dialog__actions{display:flex;justify-content:flex-end;gap:9px}
+.reader-share-dialog button{padding:10px 15px;border:1px solid #b5c9d4;border-radius:999px;background:#fff;color:#263c4b;font:inherit;font-size:13px;cursor:pointer}
+.reader-share-dialog button:first-child{background:#263c4b;border-color:#263c4b;color:#fff}
+.reader-share[hidden]{display:none}

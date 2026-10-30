@@ -1,0 +1,580 @@
+{
+  "schema_version": "elio.preview.v1",
+  "work_id": "template-example",
+  "unit_id": "temporal-loop",
+  "work_title": "시간의 문턱 · 창작 예제",
+  "unit_label": "순환과 교차하는 시간",
+  "title": "만남이 시작되는 곳",
+  "intro": "시간선의 표현을 살펴보는 창작 예제입니다. 실제 작품이나 방송 기록이 아닙니다.",
+  "tags": [
+    "창작예제",
+    "시간선",
+    "순환"
+  ],
+  "source_hash": "2f65ead54cca8b508b19c1165961ecba134eac0c3bdb0920a1e2487b46e95834",
+  "events": [
+    {
+      "id": "arrival",
+      "title": "문턱에서 처음 만난 보호자",
+      "summary": "여행자는 낯선 문턱에서 보호자의 도움을 받는다.",
+      "location": "첫 만남",
+      "source_lines": [
+        1,
+        1
+      ],
+      "vod_links": [],
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#parallel",
+      "image_alt": "문턱에서 처음 만난 보호자 · 창작 예제의 상징 일러스트",
+      "image_caption": "장면의 관계를 표현한 창작 일러스트",
+      "phase_id": "meeting"
+    },
+    {
+      "id": "memory",
+      "title": "호수에서 구해진 어린아이",
+      "summary": "오래전 어린 보호자가 호수에서 구조되었다는 기억을 만난다.",
+      "location": "어린 시절의 기억",
+      "source_lines": [
+        2,
+        2
+      ],
+      "vod_links": [],
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#choice-a",
+      "image_alt": "호수에서 구해진 어린아이 · 창작 예제의 상징 일러스트",
+      "image_caption": "장면의 관계를 표현한 창작 일러스트",
+      "phase_id": "meeting"
+    },
+    {
+      "id": "threshold",
+      "title": "서로 다른 시간이 같은 공간에 모인다",
+      "summary": "문턱에서는 과거의 마을과 첫 만남, 마지막 작별의 장면이 함께 보인다.",
+      "location": "시간이 만나는 문턱",
+      "source_lines": [
+        3,
+        3
+      ],
+      "vod_links": [],
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#uncertain",
+      "image_alt": "서로 다른 시간이 같은 공간에 모인다 · 창작 예제의 상징 일러스트",
+      "image_caption": "장면의 관계를 표현한 창작 일러스트",
+      "phase_id": "meeting"
+    },
+    {
+      "id": "farewell",
+      "title": "과거의 마을을 지키러 떠난다",
+      "summary": "보호자는 과거의 마을을 지키려 문턱을 넘는다. 지켜낸 마을이 두 사람의 첫 만남을 가능하게 했다.",
+      "location": "마지막 작별",
+      "source_lines": [
+        4,
+        4
+      ],
+      "vod_links": [],
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#convergence",
+      "image_alt": "과거의 마을을 지키러 떠난다 · 창작 예제의 상징 일러스트",
+      "image_caption": "장면의 관계를 표현한 창작 일러스트",
+      "phase_id": "returning"
+    },
+    {
+      "id": "rescue",
+      "title": "여행자가 기억 속 구조자가 된다",
+      "summary": "여행자는 문턱을 따라가 호수에 빠진 어린 보호자를 구한다.",
+      "location": "어린 시절로 돌아감",
+      "source_lines": [
+        5,
+        5
+      ],
+      "vod_links": [],
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#choice-b",
+      "image_alt": "여행자가 기억 속 구조자가 된다 · 창작 예제의 상징 일러스트",
+      "image_caption": "장면의 관계를 표현한 창작 일러스트",
+      "phase_id": "returning"
+    },
+    {
+      "id": "promise",
+      "title": "남겨진 편지를 따라 다시 만날 길을 찾는다",
+      "summary": "지금의 마을로 돌아온 여행자는 편지를 단서로 다시 만날 길을 찾는다.",
+      "location": "지금",
+      "source_lines": [
+        6,
+        6
+      ],
+      "vod_links": [],
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#alternate-a",
+      "image_alt": "남겨진 편지를 따라 다시 만날 길을 찾는다 · 창작 예제의 상징 일러스트",
+      "image_caption": "장면의 관계를 표현한 창작 일러스트",
+      "phase_id": "returning"
+    }
+  ],
+  "story_topology": {
+    "schema_version": "elio.story-topology.v2",
+    "title": "만남을 완성하는 순환",
+    "summary": "처음 읽는 순서는 그대로 두고, 나중에 밝혀진 연결로 앞의 장면을 다시 읽는다.",
+    "nodes": [
+      {
+        "event_id": "arrival",
+        "track_id": "reading",
+        "track_label": "공개 순서",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 1,
+        "lead": 0,
+        "time": null
+      },
+      {
+        "event_id": "memory",
+        "track_id": "reading",
+        "track_label": "공개 순서",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 1,
+        "lead": 0,
+        "time": null
+      },
+      {
+        "event_id": "threshold",
+        "track_id": "reading",
+        "track_label": "공개 순서",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 1,
+        "lead": 0,
+        "time": null
+      },
+      {
+        "event_id": "farewell",
+        "track_id": "reading",
+        "track_label": "공개 순서",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 1,
+        "lead": 0,
+        "time": null
+      },
+      {
+        "event_id": "rescue",
+        "track_id": "reading",
+        "track_label": "공개 순서",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 1,
+        "lead": 0,
+        "time": null
+      },
+      {
+        "event_id": "promise",
+        "track_id": "reading",
+        "track_label": "공개 순서",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 1,
+        "lead": 0,
+        "time": null
+      }
+    ],
+    "edges": [
+      {
+        "from": "arrival",
+        "to": "memory"
+      },
+      {
+        "from": "memory",
+        "to": "threshold"
+      },
+      {
+        "from": "threshold",
+        "to": "farewell"
+      },
+      {
+        "from": "farewell",
+        "to": "rescue"
+      },
+      {
+        "from": "rescue",
+        "to": "promise"
+      },
+      {
+        "from": "rescue",
+        "to": "memory",
+        "relation": "return"
+      },
+      {
+        "from": "memory",
+        "to": "memory",
+        "relation": "return"
+      }
+    ],
+    "alignments": []
+  },
+  "reader_guides": [
+    {
+      "id": "times",
+      "kind": "perspective",
+      "title": "두 사람의 시간선으로 보기",
+      "summary": "같은 사건을 두 사람의 경험과 마을의 시간에 나누어 읽는다.",
+      "after_event_id": null,
+      "source_ids": [
+        "primary"
+      ],
+      "items": [
+        {
+          "id": "origin",
+          "label": "먼 과거",
+          "title": "마을을 지킨 보호자",
+          "summary": "보호자가 지킨 마을에서 두 사람의 만남이 가능해진다.",
+          "related_event_id": "farewell",
+          "image_event_id": "farewell",
+          "evidence_state": "confirmed"
+        },
+        {
+          "id": "lake",
+          "label": "어린 시절",
+          "title": "어린 보호자와 돌아온 여행자의 구조",
+          "summary": "나중에 문턱을 넘은 여행자가 어린 보호자를 구한다.",
+          "related_event_id": "rescue",
+          "image_event_id": "memory",
+          "evidence_state": "confirmed"
+        },
+        {
+          "id": "encounter",
+          "label": "첫 만남",
+          "title": "보호자가 여행자를 돕는다",
+          "summary": "두 사람의 첫 만남은 서로 다른 시간의 여행이 맞닿는 장면이다.",
+          "related_event_id": "arrival",
+          "image_event_id": "arrival",
+          "evidence_state": "confirmed"
+        },
+        {
+          "id": "leave",
+          "label": "마지막 작별",
+          "title": "보호자는 과거의 마을로 떠난다",
+          "summary": "문턱을 건너는 보호자의 여행은 마을의 시작으로 이어진다.",
+          "related_event_id": "farewell",
+          "image_event_id": "farewell",
+          "evidence_state": "confirmed"
+        },
+        {
+          "id": "seek",
+          "label": "지금",
+          "title": "여행자는 남겨진 편지를 따라간다",
+          "summary": "같은 문턱 너머에서 다시 만날 길을 찾는다.",
+          "related_event_id": "promise",
+          "image_event_id": "promise",
+          "evidence_state": "confirmed"
+        }
+      ],
+      "time_map": {
+        "title": "서로 다른 시간이 같은 만남에 닿는다",
+        "summary": "보호자의 귀환과 여행자의 구조를 각자의 시간에서 따라간다.",
+        "eras": [
+          "먼 과거",
+          "어린 시절",
+          "첫 만남",
+          "마지막 작별",
+          "지금"
+        ],
+        "lanes": [
+          "보호자",
+          "여행자"
+        ],
+        "nodes": [
+          {
+            "id": "origin",
+            "item_id": "origin",
+            "era": 0,
+            "lane": 0,
+            "label": "보호자\n마을을 지킴"
+          },
+          {
+            "id": "lake",
+            "item_id": "lake",
+            "era": 1,
+            "lane": 0,
+            "lane_span": 2,
+            "label": "어린 보호자 · 여행자\n호수에서 구조"
+          },
+          {
+            "id": "encounter",
+            "item_id": "encounter",
+            "era": 2,
+            "lane": 0,
+            "lane_span": 2,
+            "label": "보호자 · 여행자\n첫 만남"
+          },
+          {
+            "id": "leave",
+            "item_id": "leave",
+            "era": 3,
+            "lane": 0,
+            "label": "보호자\n마지막 작별"
+          },
+          {
+            "id": "seek",
+            "item_id": "seek",
+            "era": 4,
+            "lane": 1,
+            "label": "여행자\n다시 만날 길"
+          }
+        ],
+        "edges": [
+          {
+            "from": "origin",
+            "to": "lake",
+            "kind": "world",
+            "label": "지켜낸 마을에서 성장",
+            "via": []
+          },
+          {
+            "from": "lake",
+            "to": "encounter",
+            "kind": "life",
+            "label": "구조 이후의 만남",
+            "via": []
+          },
+          {
+            "from": "encounter",
+            "to": "leave",
+            "kind": "life",
+            "label": "함께한 여행",
+            "via": []
+          },
+          {
+            "from": "leave",
+            "to": "origin",
+            "kind": "actor-a",
+            "label": "과거로 돌아가 마을을 지킴",
+            "via": [
+              [
+                3,
+                -0.35
+              ],
+              [
+                0,
+                -0.35
+              ]
+            ]
+          },
+          {
+            "from": "seek",
+            "to": "lake",
+            "kind": "actor-b",
+            "label": "문턱을 따라 어린 시절로",
+            "via": [
+              [
+                4,
+                1.45
+              ],
+              [
+                1,
+                1.45
+              ]
+            ]
+          }
+        ],
+        "shared_space": {
+          "title": "여러 시간이 만나는 문턱",
+          "summary": "과거의 마을, 첫 만남, 마지막 작별이 하나의 공간에서 이어진다.",
+          "node_ids": [
+            "origin",
+            "encounter",
+            "leave"
+          ]
+        }
+      }
+    },
+    {
+      "id": "letter",
+      "kind": "clues",
+      "title": "이야기를 더 깊게 읽기 · 편지에 남은 봄",
+      "summary": "짧은 문장이 시간의 여행과 다시 만날 약속을 잇는다.",
+      "after_event_id": null,
+      "source_ids": [
+        "primary"
+      ],
+      "items": [
+        {
+          "label": "편지와 순환",
+          "title": "편지의 문턱은 만남의 시작이기도 하다",
+          "summary": "편지의 문턱은 작별의 장소이면서 앞선 만남을 성립시키는 길이다. 여행이 끝난 자리에서 처음의 장면을 다시 읽게 된다.",
+          "confidence": "supported_inference",
+          "reference": {
+            "source_id": "primary",
+            "label": "편지"
+          },
+          "related_event_id": "threshold"
+        },
+        {
+          "label": "편지와 계절",
+          "title": "편지의 봄은 지켜낸 마을의 일상이다",
+          "summary": "편지에 남은 봄을 마을의 일상과 겹쳐 읽으면, 보호자가 지키려던 삶이 보인다.",
+          "confidence": "supported_inference",
+          "reference": {
+            "source_id": "primary",
+            "label": "편지"
+          },
+          "related_event_id": "promise"
+        }
+      ]
+    },
+    {
+      "id": "overview",
+      "kind": "conclusion",
+      "title": "만남을 지키는 여행",
+      "summary": "보호자가 지킨 마을과 여행자의 구조는 서로 다른 시간에서 같은 만남을 가능하게 한다.",
+      "after_event_id": null,
+      "source_ids": [
+        "primary"
+      ],
+      "items": []
+    },
+    {
+      "id": "people",
+      "kind": "relationships",
+      "title": "서로를 돕는 두 사람",
+      "summary": "행동과 도움의 방향을 구분해 읽는다.",
+      "after_event_id": null,
+      "source_ids": [
+        "primary"
+      ],
+      "items": [
+        {
+          "subject": "보호자",
+          "relation": "여행을 도움",
+          "object": "여행자",
+          "summary": "첫 만남에서 낯선 문턱을 건너도록 돕는다.",
+          "related_event_id": "arrival"
+        },
+        {
+          "subject": "여행자",
+          "relation": "어린 시절에 구조",
+          "object": "어린 보호자",
+          "summary": "나중에 문턱을 넘어 호수의 구조자가 된다.",
+          "related_event_id": "rescue"
+        }
+      ]
+    },
+    {
+      "id": "comparison",
+      "kind": "contrast",
+      "title": "처음 읽은 만남과 다시 읽은 만남",
+      "summary": "독자에게 알려진 사실의 범위가 달라지는 두 관점을 나란히 둔다.",
+      "after_event_id": null,
+      "source_ids": [
+        "primary"
+      ],
+      "items": [
+        {
+          "label": "처음 읽을 때",
+          "title": "도움을 받는 여행자",
+          "summary": "보호자는 여행자가 문턱을 넘도록 돕는다.",
+          "related_event_id": "arrival"
+        },
+        {
+          "label": "끝까지 읽은 뒤",
+          "title": "서로의 만남을 지키는 두 사람",
+          "summary": "여행자의 구조도 앞선 만남을 성립시킨다.",
+          "related_event_id": "rescue"
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "kind": "questions",
+      "title": "시간의 여행에서 남는 질문",
+      "summary": "확인한 사건과 해석의 경계를 질문으로 남긴다.",
+      "after_event_id": null,
+      "source_ids": [
+        "primary"
+      ],
+      "items": [
+        {
+          "label": "장면의 순서",
+          "title": "나중에 읽는 사건이 먼저 일어났나요?",
+          "summary": "공개 순서와 작품 속 시각은 다르다. 이 예제의 구조는 어린 시절로 향하는 여행을 명시한다.",
+          "related_event_id": "rescue"
+        },
+        {
+          "label": "남는 해석",
+          "title": "편지가 곧 새로운 만남을 뜻하나요?",
+          "summary": "편지는 다시 만날 길을 찾게 하지만, 이 예제는 그 뒤의 만남을 확정하지 않는다.",
+          "related_event_id": "promise"
+        }
+      ]
+    }
+  ],
+  "term_links": [
+    {
+      "term": "문턱",
+      "url": "#term-93076d58acf9bf4e"
+    }
+  ],
+  "glossary_terms": [
+    {
+      "term": "문턱",
+      "context": "이 창작 이야기에서 서로 다른 시간이 만나는 공간이다.",
+      "reveal_after_event_id": "threshold"
+    }
+  ],
+  "reader_presentation": {
+    "main_view": {
+      "eyebrow": "본편 · 공개 순서",
+      "title": "먼저 보여 준 장면을 따라 읽기"
+    },
+    "perspective_views": {
+      "times": {
+        "eyebrow": "인물의 경험",
+        "item_label": "경험한 장면",
+        "legend": {
+          "title": "선을 읽는 기준",
+          "summary": "읽는 순서와 시간 이동, 세계의 인과를 구분한다.",
+          "entries": [
+            {
+              "relation": "sequence",
+              "label": "이야기에서 이어 읽는 순서"
+            },
+            {
+              "relation": "influence",
+              "label": "확인한 사건의 영향"
+            },
+            {
+              "relation": "transfer",
+              "label": "다른 시점으로 전한 것"
+            }
+          ],
+          "route": "각자의 경험을 따라가고, 같은 장면에서 본편으로 돌아온다."
+        }
+      }
+    },
+    "transitions": [
+      {
+        "event_id": "rescue",
+        "kind": "time-return",
+        "title": "어린 시절로 돌아가는 장면",
+        "summary": "공개 순서는 앞으로 이어지지만 작품 속 시간은 앞선 호수로 이동한다."
+      }
+    ],
+    "scene_links": [
+      {
+        "event_id": "rescue",
+        "guide_id": "times",
+        "item_id": "lake",
+        "label": "같은 구조 장면을 두 사람의 시간선에서 읽기",
+        "spoiler_label": "결말까지의 연결 포함"
+      }
+    ],
+    "quote_labels": {},
+    "preserve_line_breaks": [
+      "promise"
+    ]
+  },
+  "phases": [
+    {
+      "id": "meeting",
+      "label": "1부 · 만남과 문턱",
+      "summary": "처음 읽는 만남을 기록한다."
+    },
+    {
+      "id": "returning",
+      "label": "2부 · 귀환과 약속",
+      "summary": "앞선 장면을 다시 읽게 하는 연결이다."
+    }
+  ]
+}

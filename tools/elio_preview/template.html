@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="{{ROBOTS}}"><title>{{TITLE}} · 스토리 타임라인</title>{{HEAD_ASSETS}}</head>
+<body id="top"><a class="skip" href="#story">이야기로 건너뛰기</a>
+<main class="page">{{BREADCRUMB}}<header class="hero"><div class="eyebrow">{{WORK}}</div>
+<h1>{{UNIT}}</h1><p class="sub">{{INTRO}}</p>
+<div class="quest-chips" aria-label="이야기 핵심 태그">{{TAGS}}</div>
+<div class="hero-tools"><button id="spoiler-toggle" class="spoiler-toggle" type="button" aria-pressed="false">
+  <span class="spoiler-toggle__icon" aria-hidden="true"></span><span class="spoiler-toggle__label">스포일러 가리기</span></button>
+  </div>{{READER_SHARE}}
+{{STORY_VIEW_SWITCH}}{{SCENE_NAV}}</header>{{TOPOLOGY}}
+<nav id="scene-dock" class="scene-dock" aria-label="현재 장면 이동" aria-hidden="true" hidden>
+  <button id="scene-dock-previous" class="scene-dock__step" type="button" aria-label="이전 장면">‹</button>
+  <a id="scene-dock-current" class="scene-dock__current" href="#{{FIRST_SCENE_ID}}">
+    <span id="scene-dock-count" class="scene-dock__count">01 / {{COUNT_PADDED}}</span>
+    <strong id="scene-dock-label">{{FIRST_SCENE}}</strong>
+  </a>
+  <button id="scene-dock-next" class="scene-dock__step" type="button" aria-label="다음 장면">›</button>
+</nav>
+<section id="story" class="timeline"{{LAYOUT_ATTR}} aria-label="{{WORK}} {{UNIT}} 핵심 장면 타임라인">{{EVENTS}}</section>
+{{PERSPECTIVE_VIEWS}}
+{{GUIDES}}
+{{GLOSSARY}}
+{{WATCH_GALLERY}}
+{{STREAMER_REVIEWS}}
+<section class="ending"{{WATCH_HIDDEN}} aria-labelledby="watch-hub-title"><div class="ending__head"><div><span class="ending__eyebrow">WATCH PORTAL · 같이 즐기기</span>
+  <strong id="watch-hub-title">이야기에서 실제 방송으로</strong>
+  <p>장면의 같이보기 버튼은 해당 시점으로 이동합니다. 전체 방송과 방송 요약은 스트리머·플랫폼별로 선택하세요.</p></div></div>{{WATCH}}</section>
+{{OFFICIAL_VIDEOS}}
+<p id="watch-live-status" class="sr-only" aria-live="polite"></p><div id="watch-fx-layer" aria-hidden="true"></div>
+<p class="sources"><a href="{{SOURCE_URL}}" target="_blank" rel="noopener noreferrer">출처 보기 ↗</a></p>
+</main><footer class="ttaem-footer">
+  <a class="ttaem-footer__brand" href="https://ttaem.com/" aria-label="TTaem 홈"><img src="/assets/ttaem-cva-logo.svg" width="1621" height="793" alt="TTaem CVA"></a>
+  <div class="ttaem-footer__links"><a href="https://ttaem.com/">ttaem.com</a><a href="mailto:ttaem00@naver.com">Contact: ttaem00@naver.com</a><span>ELIO STORY {{ELIO_VERSION}} · STORY TIMELINE</span></div>
+  <a class="ttaem-footer__top" href="#top">맨 위로 ↑</a>
+</footer>{{BODY_ASSETS}}</body></html>

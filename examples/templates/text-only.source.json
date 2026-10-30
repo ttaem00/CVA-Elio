@@ -1,0 +1,11 @@
+{
+  "schema_version": "argus.read.v1",
+  "retrieval_status": "section_body_verified",
+  "content_text": "여행자는 낯선 문턱에서 보호자의 도움을 받는다.\n오래전 어린 보호자가 호수에서 구조되었다는 기억을 만난다.\n문턱에서는 과거의 마을과 첫 만남, 마지막 작별의 장면이 함께 보인다.\n보호자는 과거의 마을을 지키려 문턱을 넘는다. 지켜낸 마을이 두 사람의 첫 만남을 가능하게 했다.\n여행자는 문턱을 따라가 호수에 빠진 어린 보호자를 구한다.\n지금의 마을로 돌아온 여행자는 편지를 단서로 다시 만날 길을 찾는다.\n편지에는 ‘문턱을 건너 다시 만나요’와 ‘당신이 지킨 봄에’라는 문장이 남아 있다.\n",
+  "content_hash": "2f65ead54cca8b508b19c1165961ecba134eac0c3bdb0920a1e2487b46e95834",
+  "requested_url": "https://ttaem.com/storytimeline/templates/source.json",
+  "site_name": "Elio 창작 예제",
+  "retrieved_at": "2026-10-13T00:00:00Z",
+  "evidence_role": "primary",
+  "material_type": "authored_design_fiction"
+}

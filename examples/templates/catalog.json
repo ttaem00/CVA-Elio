@@ -1,0 +1,346 @@
+[
+  {
+    "id": "linear",
+    "title": "선형 장면·원형 사진·교차 본문",
+    "href": "linear.html?view=cards",
+    "source": "__main__.py + template.html + style.css",
+    "inputs": [
+      "events"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "cards",
+    "title": "장면 카드로 읽기",
+    "href": "complete.html?view=cards",
+    "source": "components/story_tree_reader.js",
+    "inputs": [
+      "events",
+      "story_topology"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "photos",
+    "title": "사진 흐름·장면 상세·초점 복귀",
+    "href": "complete.html?view=photos",
+    "source": "components/story_tree_reader.js",
+    "inputs": [
+      "events",
+      "story_topology"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "branches",
+    "title": "중첩 분기·합류·독립 결말",
+    "href": "branches.html?view=photos",
+    "source": "components/story_layout.py/js",
+    "inputs": [
+      "story_topology.nodes",
+      "edges",
+      "alignments"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "return",
+    "title": "앞 장면·같은 노드로 돌아오는 관계",
+    "href": "complete.html?view=photos#rescue",
+    "source": "components/story_layout.py/js",
+    "inputs": [
+      "story_topology.edges[].relation"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "time-map",
+    "title": "행·열 시간선·사진 노드·관계별 연결선",
+    "href": "complete.html?story=perspective-times#perspective-times-map",
+    "source": "components/time_map.py/css/js + diagram_geometry.js",
+    "inputs": [
+      "reader_guides[].time_map"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "shared-space",
+    "title": "여러 시간이 만나는 공유 공간",
+    "href": "complete.html?story=perspective-times#perspective-times-map",
+    "source": "components/time_map.py/css/js",
+    "inputs": [
+      "time_map.shared_space",
+      "time_map.nodes[].lane_span"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "perspective",
+    "title": "인물의 삶·확인된 사실과 해석",
+    "href": "life.html?story=perspective-times",
+    "source": "components/perspective_timeline.py",
+    "inputs": [
+      "reader_guides[].kind=perspective",
+      "items[].evidence_state"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "phases",
+    "title": "부·장 단위 구분과 장면 지도",
+    "href": "complete.html#story",
+    "source": "components/scene_navigation.py + scene_minimap.py/js",
+    "inputs": [
+      "phases",
+      "events[].phase_id"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "glossary",
+    "title": "용어·본문 연결·다시 읽기",
+    "href": "complete.html#story-glossary-title",
+    "source": "__main__.py + components/glossary_navigation.js",
+    "inputs": [
+      "term_links",
+      "glossary_terms"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "presentation",
+    "title": "읽기 표제·전환·관련 관점으로 이동",
+    "href": "complete.html#rescue",
+    "source": "components/reader_presentation.py",
+    "inputs": [
+      "reader_presentation"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "text-only",
+    "title": "이미지 없는 장면의 원래 읽기",
+    "href": "text-only.html#memory",
+    "source": "__main__.py + components/story_tree_reader.js",
+    "inputs": [
+      "reader_presentation.text_only_scenes"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "highlight-draft",
+    "title": "하이라이트 편집 초안",
+    "href": "complete.html#moment-promise-highlight",
+    "source": "__main__.py + connections.py",
+    "inputs": [
+      "connections.moments"
+    ],
+    "note": "실제 방송이나 재생 시각을 만들지 않는 미확인 창작 입력이다.",
+    "status": "rendered_original"
+  },
+  {
+    "id": "replay",
+    "title": "원본 영상·같이보기·시점·후기",
+    "href": "",
+    "source": "connections.py + __main__.py + app.js",
+    "inputs": [
+      "connections.streams",
+      "links",
+      "moments"
+    ],
+    "note": "소스는 동봉한다. 실제 동일 장면의 영상·검증 시각 없이 재생 가능한 예제를 만들지 않는다.",
+    "status": "source_only"
+  },
+  {
+    "id": "watch-gallery",
+    "title": "장면 썸네일·방송 하이라이트 갤러리",
+    "href": "",
+    "source": "__main__.py + connections.py",
+    "inputs": [
+      "moments[].placement=watch_gallery"
+    ],
+    "note": "소스는 동봉한다. 검증된 방송·썸네일 입력이 필요한 원래 계약이다.",
+    "status": "source_only"
+  },
+  {
+    "id": "streamer-review",
+    "title": "방송 감상 후기",
+    "href": "",
+    "source": "__main__.py + connections.py",
+    "inputs": [
+      "moments[].placement=streamer_review"
+    ],
+    "note": "소스는 동봉한다. 실제 방송 후기를 작성한 것처럼 표시하지 않는다.",
+    "status": "source_only"
+  },
+  {
+    "id": "share",
+    "title": "공유·현재 장면 주소",
+    "href": "complete.html",
+    "source": "components/reader_share.py/js/css",
+    "inputs": [
+      "work_id",
+      "unit_id",
+      "publication_status"
+    ],
+    "note": "로컬 미리보기에서는 원래 계약대로 공개 공유 버튼이 비활성이다. 원격 short-link 개설은 포함하지 않는다.",
+    "status": "rendered_original"
+  },
+  {
+    "id": "board",
+    "title": "Elio Board 진입·관점·장면 도감",
+    "href": "../../board/index.html",
+    "source": "components/reader_board.py/js/css + tools/elio_board/",
+    "inputs": [
+      "elio.board.v1",
+      "elio.catalog.v1",
+      "story/source"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "guide-overview",
+    "title": "핵심 흐름",
+    "href": "complete.html#guide-overview",
+    "source": "components/reader_guides.py/html/css/js",
+    "inputs": [
+      "reader_guides"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "guide-people",
+    "title": "인물·세력 관계",
+    "href": "complete.html#guide-people",
+    "source": "components/reader_guides.py/html/css/js",
+    "inputs": [
+      "reader_guides"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "guide-comparison",
+    "title": "두 관점",
+    "href": "complete.html#guide-comparison",
+    "source": "components/reader_guides.py/html/css/js",
+    "inputs": [
+      "reader_guides"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "guide-questions",
+    "title": "질문과 답",
+    "href": "complete.html#guide-questions",
+    "source": "components/reader_guides.py/html/css/js",
+    "inputs": [
+      "reader_guides"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "guide-letter",
+    "title": "이야기를 더 깊게 읽기 · 단서와 근거",
+    "href": "complete.html#guide-letter",
+    "source": "components/reader_guides.py/html/css/js",
+    "inputs": [
+      "reader_guides"
+    ],
+    "note": "",
+    "status": "rendered_original"
+  },
+  {
+    "id": "loading-none",
+    "title": "준비 문구만",
+    "href": "loading.html#loading-none",
+    "source": "components/reader_experience.py",
+    "inputs": [
+      "experience.loading=none"
+    ],
+    "note": "원래 loading_markup의 벡터·문구를 보여 주는 템플릿입니다. 다운로드 진행률을 가정하지 않습니다.",
+    "status": "rendered_original"
+  },
+  {
+    "id": "loading-cassette",
+    "title": "카세트 릴 로딩",
+    "href": "loading.html#loading-cassette",
+    "source": "components/reader_experience.py + memory_tape.py",
+    "inputs": [
+      "experience.loading=cassette_reels"
+    ],
+    "note": "원래 loading_markup의 벡터·문구를 보여 주는 템플릿입니다. 다운로드 진행률을 가정하지 않습니다.",
+    "status": "rendered_original"
+  },
+  {
+    "id": "loading-orbit",
+    "title": "신호 공전 로딩",
+    "href": "loading.html#loading-orbit",
+    "source": "components/reader_experience.py + memory_tape.py",
+    "inputs": [
+      "experience.loading=signal_orbit"
+    ],
+    "note": "원래 loading_markup의 벡터·문구를 보여 주는 템플릿입니다. 다운로드 진행률을 가정하지 않습니다.",
+    "status": "rendered_original"
+  },
+  {
+    "id": "memory-tape",
+    "title": "기억 테이프 · 3D 첫 진입·링크 연출",
+    "href": "../../storytimeline/wutheringwaves/ch3-act5/index.html",
+    "source": "components/memory_tape.py + experiments/memory_tape/",
+    "inputs": [
+      "experience.entry/link=memory_tape"
+    ],
+    "note": "명조 3장 5막 「어젯밤의 뭇별들」의 기존 완성본입니다. 본문·영상·3D·카메라·다시보기·본문 복귀를 그대로 사용합니다.",
+    "status": "retained_original_example"
+  },
+  {
+    "id": "moon-memory",
+    "title": "달의 기억 · 영상·3D 첫 진입",
+    "href": "../../storytimeline/wutheringwaves/ch3-side-story-edge-dream/index.html",
+    "source": "components/moon_memory.py + experiments/moon_memory/",
+    "inputs": [
+      "experience.entry=moon_memory"
+    ],
+    "note": "명조 3장 「엣지 드림」의 기존 완성본입니다. 본문·영상·3D·카메라·다시보기·본문 복귀를 그대로 사용합니다.",
+    "status": "retained_original_example"
+  },
+  {
+    "id": "link-none",
+    "title": "바로 새 탭에서 열기",
+    "href": "complete.html",
+    "source": "components/reader_experience.py",
+    "inputs": [
+      "experience.link=none"
+    ],
+    "note": "원래 링크 정책 소스와 선택 입력을 동봉합니다. 실제 영상 연결에는 확인한 원본 URL·시각이 필요합니다.",
+    "status": "source_only"
+  },
+  {
+    "id": "link-standard",
+    "title": "기본 영상 이동",
+    "href": "complete.html",
+    "source": "components/reader_experience.py + components/link_effects.js",
+    "inputs": [
+      "experience.link=standard"
+    ],
+    "note": "원래 링크 정책 소스와 선택 입력을 동봉합니다. 실제 영상 연결에는 확인한 원본 URL·시각이 필요합니다.",
+    "status": "source_only"
+  }
+]

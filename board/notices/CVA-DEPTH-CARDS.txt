@@ -1,0 +1,8 @@
+Elio Board CVA depth cards
+
+The delivered depth-card.js and depth-card.css use CVA-authored native DOM,
+CSS perspective and Pointer Events. They do not contain Aceternity source,
+its compiled bundle, React or another component-library runtime.
+Saved document schemas, board layout and connection ports remain unchanged.
+Pointer effects are optional; every card remains an ordinary keyboard button.
+The source project's license and the separate Pretendard font notice apply.

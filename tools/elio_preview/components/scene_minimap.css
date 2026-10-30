@@ -1,0 +1,29 @@
+/* The overview shares actual story edges, never a number-to-number rail. */
+.scene-nav--tree { position:relative; left:50%; text-align:left; width:min(1120px,calc(100vw - 48px)); margin-left:0; translate:-50% 0; }
+.scene-nav--tree .scene-nav__heading { margin-bottom:10px; }
+.scene-nav__legend { display:flex; flex-wrap:wrap; gap:5px 15px; margin-bottom:12px; }
+.scene-nav__legend-item { display:inline-flex; align-items:center; gap:5px; color:#60717e; font-size:10px; font-weight:650; }
+.scene-nav__legend-item::before { content:""; width:15px; height:3px; border-radius:2px; background:var(--nav-accent); }
+.scene-nav__legend-hidden { display:none; }
+.spoilers-on .scene-nav__legend-label { display:none; }
+.spoilers-on .scene-nav__legend-hidden { display:inline; }
+.scene-nav--tree .scene-nav__rail { overscroll-behavior-x:contain; scroll-padding-inline:12px; }
+.scene-nav__map { position:relative; margin-inline:auto; isolation:isolate; }
+.scene-nav__edges { position:absolute; inset:0; overflow:visible; pointer-events:none; }
+.scene-nav__edges path { fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; opacity:.65; }
+.scene-nav__phase-region { position:absolute; top:44px; bottom:0; pointer-events:none; background:linear-gradient(180deg,rgba(81,150,174,.065),rgba(81,150,174,.015)); border-top:1px solid #d9e5eb; }
+.scene-nav__phase-region + .scene-nav__phase-region { border-left:1px dashed #a8bdc8; background:linear-gradient(180deg,rgba(96,125,162,.035),rgba(96,125,162,.005)); }
+.scene-nav__phase { position:absolute; top:0; min-height:44px; padding:0 10px; display:flex; align-items:center; color:#516879; font-size:11px; font-weight:600; text-decoration:none; white-space:nowrap; overflow:hidden; border-radius:8px; }
+.scene-nav__phase-badge { flex-shrink:0; padding:3px 8px; border:1px solid #d5e4ec; border-radius:6px; background:#edf4f8; color:#35566b; font-size:12px; font-weight:800; }
+.scene-nav__phase-name { overflow:hidden; text-overflow:ellipsis; }
+.scene-nav__phase:hover { color:#1f789a; background:#edf4f8; }
+.scene-nav--tree .scene-nav__link { position:absolute; top:var(--map-y); left:var(--map-x); width:44px; height:44px; margin:-22px 0 0 -22px; background:transparent; border:0; box-shadow:none; transform:none; z-index:1; }
+.scene-nav--tree .scene-nav__link span { display:flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:50%; border:1.5px solid var(--nav-accent); background:#fbfdff; color:var(--nav-accent); font-size:10px; font-weight:800; transition:background .16s,color .16s,box-shadow .16s; }
+.scene-nav--tree .scene-nav__link:hover span { background:color-mix(in srgb,var(--nav-accent) 10%,#fff); box-shadow:0 0 0 3px color-mix(in srgb,var(--nav-accent) 15%,transparent); }
+.scene-nav--tree .scene-nav__link[aria-current="step"] span { background:var(--nav-accent); color:white; box-shadow:0 0 0 4px color-mix(in srgb,var(--nav-accent) 22%,transparent); }
+.scene-nav--tree .scene-nav__link:focus-visible,.scene-nav__phase:focus-visible { outline:2px solid #176e96; outline-offset:1px; border-radius:7px; }
+@media(max-width:820px) {
+  .scene-nav--tree { padding:13px 12px 11px; width:calc(100vw - 32px); }
+  .scene-nav--tree .scene-nav__heading strong { max-width:65%; }
+  .scene-nav__legend { gap:5px 12px; }
+}

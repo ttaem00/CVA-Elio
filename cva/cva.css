@@ -1,0 +1,30 @@
+/* Opt-in CVA primitives. Every rule is confined to an explicit data-cva root.
+   These compatibility values never get imported into existing product pages. */
+[data-cva] {--cva-bg:#141d2b;--cva-surface:#202d3c;--cva-text:#f5ecda;--cva-muted:#c0c8d1;--cva-accent:#f4be70;--cva-accent-ink:#182635;--cva-border:#435363;--cva-focus:#f4be70;--cva-radius:10px;color:var(--cva-text);background:var(--cva-bg);font-family:Pretendard,'Segoe UI',sans-serif;line-height:1.7;color-scheme:dark}
+[data-cva][data-cva-profile="elio"] {--cva-bg:#f4f6f7;--cva-surface:#fff;--cva-text:#23272d;--cva-muted:#6e747c;--cva-accent:#52bdd8;--cva-accent-ink:#182635;--cva-border:#d5dfe5;--cva-focus:#167aab;--cva-radius:20px;font-family:Pretendard,'Noto Sans KR','Malgun Gothic',system-ui,sans-serif;color-scheme:light}
+[data-cva][data-cva-profile="editor"] {--cva-bg:#171924;--cva-surface:#24283b;--cva-text:#c0caf5;--cva-muted:#8b93b7;--cva-accent:#7aa2f7;--cva-accent-ink:#17223e;--cva-border:#363b54;--cva-focus:#95adff;--cva-radius:7px;font-family:Pretendard,'Malgun Gothic',sans-serif;font-size:14px;line-height:1.6;color-scheme:dark}
+[data-cva][data-cva-profile="forma"] {--cva-bg:#f4f6f5;--cva-surface:#fff;--cva-text:#202c32;--cva-muted:#5e6c73;--cva-accent:#146f67;--cva-accent-ink:#fff;--cva-border:#dbe3df;--cva-focus:#167c8a;--cva-radius:22px;font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-ui,sans-serif;color-scheme:light}
+[data-cva] :where(button,input,select,textarea) {font:inherit;max-inline-size:100%}
+[data-cva] :where(input,select,textarea) {box-sizing:border-box;min-block-size:44px;padding:9px 12px;border:1px solid var(--cva-border);border-radius:7px;background:var(--cva-surface);color:var(--cva-text)}
+[data-cva] :where(button,a,input,select,textarea,summary):focus-visible {outline:3px solid var(--cva-focus);outline-offset:4px}
+[data-cva] :where(a) {color:inherit}
+[data-cva] .cva-button {display:inline-flex;align-items:center;justify-content:center;gap:12px;min-block-size:44px;box-sizing:border-box;padding:10px 20px;border:1px solid var(--cva-accent);border-radius:7px;background:var(--cva-accent);color:var(--cva-accent-ink);font:inherit;font-weight:650;text-decoration:none;cursor:pointer;transition:filter 120ms ease}
+[data-cva] .cva-button:hover:not(:disabled) {filter:brightness(1.08)}
+[data-cva] .cva-button.secondary {background:var(--cva-surface);border-color:var(--cva-border);color:var(--cva-text)}
+[data-cva] .cva-button:disabled {opacity:.6;cursor:default}
+[data-cva] .cva-chip {display:inline-block;padding:3px 11px;border:1px solid var(--cva-border);border-radius:999px;font-size:.875em}
+[data-cva] .cva-chip.success::before {content:'✓ ';}
+[data-cva] .cva-panel {padding:20px;border:1px solid var(--cva-border);border-radius:var(--cva-radius);background:var(--cva-surface)}
+[data-cva] .cva-time {font-variant-numeric:tabular-nums;letter-spacing:0}
+[data-cva] :where(progress) {display:block;inline-size:100%;block-size:12px;margin-block:12px;accent-color:var(--cva-accent)}
+[data-cva] :where(summary) {min-block-size:44px;align-content:center;cursor:pointer}
+[data-cva] .cva-link {display:inline-block;min-block-size:44px;align-content:center;text-underline-offset:5px}
+[data-cva] .cva-skip {position:fixed;inset-block-start:-100px;inset-inline-start:16px;z-index:20;padding:12px 20px;background:var(--cva-accent);color:var(--cva-accent-ink)}
+[data-cva] .cva-skip:focus {inset-block-start:12px}
+@media (prefers-reduced-motion:reduce) {[data-cva] .cva-button {transition:none}}
+@media (forced-colors:active) {[data-cva] .cva-button,[data-cva] .cva-chip,[data-cva] .cva-panel {border-color:CanvasText}}
+/* Shared cham primitive values are supplied by tokens.js, including the guide. */
+[data-cva][data-cva-profile="cham"] {font-family:var(--cham-font);line-height:var(--cham-line-height);color-scheme:light}
+[data-cva][data-cva-profile="cham"] :is(.cva-panel,.cva-chip) {border-width:var(--cham-border-width);border-radius:var(--cham-radius);box-shadow:var(--cham-shadow)}
+[data-cva][data-cva-profile="cham"] .cva-button {border-width:var(--cham-border-width);border-radius:calc(var(--cham-radius)/2);border-color:var(--cham-accent-text);transition-duration:var(--cham-motion)}
+@media (prefers-reduced-motion:reduce) {[data-cva][data-cva-profile="cham"] .cva-button {transition-duration:var(--cham-motion-reduced)}}

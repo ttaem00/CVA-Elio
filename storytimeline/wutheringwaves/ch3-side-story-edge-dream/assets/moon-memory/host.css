@@ -1,0 +1,20 @@
+#elio-moon[hidden]{display:none!important}
+#elio-moon{position:fixed;inset:0;margin:0;padding:0;width:100vw;height:100dvh;max-width:none;max-height:none;border:0;overflow:hidden;background:#050a0f;color:#eaf0ee;overscroll-behavior:contain}
+#elio-moon::backdrop{background:#050a0ff2}
+#elio-moon-scene{display:block;width:100%;height:100%;border:0;background:#050a0f}
+#elio-moon-close{position:absolute;z-index:20;top:max(16px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right));min-width:44px;min-height:44px;padding:10px 17px;border:1px solid #c8e2da5c;border-radius:999px;background:#09131de8;color:#edf4f0;font:600 12px/1.3 Pretendard,"Noto Sans KR",system-ui,sans-serif;cursor:pointer;backdrop-filter:blur(12px)}
+#elio-moon-close:hover{background:#23342c}
+#elio-moon-close:focus-visible,[data-moon-open]:focus-visible{outline:2px solid #dcf3ac;outline-offset:5px}
+#elio-moon[data-handoff=true]{display:block;z-index:2147483000;pointer-events:none;animation:elio-moon-tail 1s ease both}
+#elio-moon[data-handoff=true] #elio-moon-close{visibility:hidden}
+#elio-moon[data-handoff=true] #elio-moon-scene{pointer-events:none}
+@keyframes elio-moon-tail{from{opacity:1}to{opacity:0}}
+[data-moon-open]{min-height:44px;cursor:pointer}
+#elio-moon-status{position:absolute;z-index:10;left:24px;bottom:20px;padding:10px 16px;border-radius:8px;background:#09131de8;color:#eaf0ee;font:13px/1.5 system-ui,sans-serif;pointer-events:none}
+#elio-moon[data-state=ready] #elio-moon-status{display:none}
+.elio-moon-return{position:fixed;z-index:800;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));max-width:calc(100vw - 32px);display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.elio-moon-entry{min-height:44px;border:1px solid #b9d3e344;border-radius:999px;background:#112230ed;color:#edf3fc;font:600 11px/1.3 Pretendard,system-ui,sans-serif;padding:11px 16px;box-shadow:0 8px 28px #0002;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.elio-moon-entry span{font-size:16px;margin-right:6px}
+.elio-moon-entry:focus-visible{outline:2px solid #c4edff;outline-offset:5px}
+@media(max-width:600px){.elio-moon-return{right:12px;bottom:max(12px,env(safe-area-inset-bottom))}}
+@media(max-height:520px){#elio-moon-close{top:max(8px,env(safe-area-inset-top));right:max(10px,env(safe-area-inset-right));font-size:11px;padding:8px 13px}}
