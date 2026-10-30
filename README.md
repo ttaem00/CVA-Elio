@@ -10,6 +10,9 @@ Elio는 **CVA의 공용 디자인 시스템**입니다. 요소를 고르고 모�
 이야기는 **Elio Story**, 이야기·도감의 보드는 **Elio Board**로 이어집니다.
 스토리게임·드라마·영화·소설·만화처럼 매체가 달라도 내용의 순서·관계·관점과 원문 근거를 구분합니다.
 
+이름·역할·화면 입구·로고 용도·수치 집계의 현재 기준은 [Elio 브랜드와 범위](docs/BRANDING.md)를 따릅니다.
+추출 당시 후보 기록과 이 저장소의 소스, 실제 서비스에 반영된 버전은 구분합니다.
+
 | 찾기 | 만들고 편집하기 | 보관하고 다시 열기 |
 | :--- | :--- | :--- |
 | 분류·검색으로 요소와 모듈 선택 | 페이지 제작실에서 구성·내용·스타일 조정 | 독립 HTML과 편집 JSON 저장 |
@@ -177,3 +180,4 @@ node scripts/smoke.cjs
 [이용허락](LICENSE) · [정책](POLICY.md) · [기여 안내](CONTRIBUTING.md) · [브랜드](docs/BRANDING.md)
 
 <p align="center"><a href="https://ttaem.com">ttaem.com</a> · <a href="https://github.com/ttaem00/cva-elio">cva-elio</a> · <a href="mailto:ttaem00@naver.com">ttaem00@naver.com</a></p>
+
