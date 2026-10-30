@@ -23,6 +23,10 @@
   if(Object.hasOwn(CVA_TOKENS.palettes,requestedPalette||'')) doc=CVA_MODULES.normalizeDocument({...doc,presentation:{...doc.presentation,palette:requestedPalette}});
   else if(requestedPalette==='original'&&doc.presentation)delete doc.presentation.palette;
   const custom=[],urls=new Set(),styleNames={ttaem:'CVA',elio:'Elio Story',editor:'작업실',forma:'Forma',cham:'cham',folio:'Folio',signal:'Signal',mist:'Mist'};
+  const expressionCounts={original:originalPatterns.length,enhanced:enhancedPatterns.length,total:patterns.length,families:CVA_PATTERNS.families.length};
+  const editionLabels={all:'전체 '+expressionCounts.total+'개',enhanced:'확장 '+expressionCounts.enhanced+'개 · 장면 중심',original:'자체 관계 표현 '+expressionCounts.original+'개 · 관계 중심'};
+  for(const option of $('expression-edition').options)option.textContent=editionLabels[option.value];
+  $('family').options[0].textContent=expressionCounts.families+'개 계열 모두';
   $('profiles').innerHTML=Object.keys(CVA_TOKENS.profiles).map(id=>'<button data-profile="'+esc(id)+'" aria-pressed="'+String(id===doc.profile)+'">'+esc(styleNames[id])+'</button>').join('');
   const purposes=[{id:'all',label:'전체',families:[]},{id:'story',label:'이야기·사건',families:['1','2','3','4','6','7','9','14','15','16','17']},{id:'relations',label:'인물·관계',families:['2','3','4','5','6','7','8']},{id:'items',label:'아이템·도감',families:['5','8','9','10','11','12','13','14','15','17']},{id:'broadcast',label:'방송·편집',families:['1','2','6','7','9','10','14','15','16','17']},{id:'intro',label:'소개·설명',families:['3','8','9','10','13','14','15','16','17']}];
   const templatePurposes=Object.fromEntries(CVA_TEMPLATES.entries.map(entry=>[entry.id,entry.purpose]));
@@ -76,12 +80,12 @@
       html='<p class="library-count">'+list.length+'개 섹션 · 선택한 블록 다음에 넣습니다. 기존 내용은 유지합니다.</p>';
     }
     if(tab==='patterns'){
-      $('family').innerHTML='<option value="all">'+(axis==='all'?'17개 계열 모두':'이 축의 계열 모두')+'</option>'+options(CVA_PATTERNS.families.filter(f=>axis==='all'||f.axis===axis).map(f=>({id:f.id,label:f.name})),family);$('family').value=family;
+      $('family').innerHTML='<option value="all">'+(axis==='all'?expressionCounts.families+'개 계열 모두':'이 축의 계열 모두')+'</option>'+options(CVA_PATTERNS.families.filter(f=>axis==='all'||f.axis===axis).map(f=>({id:f.id,label:f.name})),family);$('family').value=family;
       const chosenAxis=CVA_PATTERNS.axes.find(entry=>entry.id===axis),chosenFamily=familyById.get(family);
       $('expression-guidance').innerHTML=(chosenAxis?'<p><strong>'+esc(chosenAxis.question)+'</strong><br>'+esc(chosenAxis.prompt)+'</p>':'<details><summary>네 축으로 표현 고르기</summary>'+CVA_PATTERNS.axes.map(entry=>'<p><strong>'+esc(entry.question)+'</strong><br>'+esc(entry.prompt)+'</p>').join('')+'</details>')+(chosenFamily?'<details><summary>'+esc(chosenFamily.question)+'</summary><p>'+esc(chosenFamily.preserve)+'</p><p><strong>적용할 때</strong> '+esc(chosenFamily.recipe.when)+'</p><dl>'+CVA_PATTERNS.axes.map(entry=>'<dt>'+esc(entry.name)+'</dt><dd>'+esc(chosenFamily.recipe[entry.id])+'</dd>').join('')+'</dl></details>':'');
       list=patterns.filter(e=>($('expression-edition').value==='all'||Boolean(e.enhanced)===($('expression-edition').value==='enhanced'))&&(axis==='all'||familyById.get(e.familyId)?.axis===axis)&&(family==='all'||e.familyId===family)&&(purpose==='all'||(e.enhanced?e.purpose===purpose:facet.families.includes(e.familyId)))&&match(e.title+' '+e.familyName+' '+e.id+' '+(familyById.get(e.familyId)?.question||'')));
-      render=e=>card(e.id,e.title,e.description||e.question||'관계의 구조를 원래 엔진으로 표현합니다.',e.familyName,'표현 추가','pattern',thumbnail(e.enhanced?'scene':'pattern',e.id,doc.profile),(e.enhanced?'확장 · ':'원본 · ')+e.axisName);
-      html='<p class="library-count">'+list.length+' / 146개 표현 · 기존 126 + 확장 20 · 17계열</p>';
+      render=e=>card(e.id,e.title,e.description||e.question||'관계의 구조를 원래 엔진으로 표현합니다.',e.familyName,'표현 추가','pattern',thumbnail(e.enhanced?'scene':'pattern',e.id,doc.profile),(e.enhanced?'확장 · ':'자체 · ')+e.axisName);
+      html='<p class="library-count">'+list.length+' / '+expressionCounts.total+'개 표현 · 자체 '+expressionCounts.original+' + 확장 '+expressionCounts.enhanced+' · '+expressionCounts.families+'계열</p>';
     }
     if(render){const per=workspaceView==='library'?12:4,max=Math.max(0,Math.ceil(list.length/per)-1);galleryPage=Math.min(galleryPage,max);html+='<div class="library-cards">'+list.slice(galleryPage*per,(galleryPage+1)*per).map(render).join('')+'</div>';if(!list.length)html+='<p class="library-empty">맞는 결과가 없습니다. 사용 목적·검색·표현 축·계열을 바꿔 보세요.</p>';if(list.length>per)html+='<nav class="gallery-pagination" aria-label="갤러리 페이지"><button data-gallery-page="-1"'+(galleryPage===0?' disabled':'')+'>이전</button><span>'+(galleryPage+1)+' / '+(max+1)+'</span><button data-gallery-page="1"'+(galleryPage===max?' disabled':'')+'>다음</button></nav>';}
     if(tab==='elements'){list=CVA_ELEMENTS.entries.filter(e=>match(e.id+' '+e.name+' '+e.description+' '+e.keywords.join(' ')+' '+(CVA_LIBRARY.categories.find(c=>c.id===e.category)?.name||'')+' '+e.variants.map(v=>v.label).join(' ')));render=e=>card(e.id,e.name,e.description,e.lab?'Labs · 실험적 요소':'UI 요소','페이지에 추가','element',thumbnail('element',e.id,doc.profile),e.variants.length+'개 변형 · 내용과 동작 편집');html='<p class="library-count">'+list.length+'개 공용 요소 · 변형·입력·효과를 실제 페이지에 넣습니다</p><div class="library-cards">'+list.map(render).join('')+'</div>'+(list.length?'':'<p class="library-empty">맞는 요소가 없습니다. 검색어를 바꾸거나 요소 라이브러리에서 목적별로 살펴보세요.</p>');render=null;}
@@ -219,3 +223,4 @@
   $('check-import').addEventListener('click',checkImport);$('apply-import').addEventListener('click',()=>{if(!pending||importRendered!==importRequest)return;replace(pending,'편집 파일을 열었습니다. 되돌리기로 이전 페이지를 복원할 수 있습니다.');$('import-dialog').close();panel('canvas');});
   window.addEventListener('pagehide',()=>{urls.forEach(url=>URL.revokeObjectURL(url));},{once:true});overview();properties();library();sync();if(openedExample){showInspector();announce('요소 라이브러리에서 선택한 예제입니다. 속성을 바꾸고 HTML 또는 편집 JSON으로 보관하세요.');}if(requestError)announce(requestError);document.body.dataset.ready='true';
 }());
+
