@@ -1,0 +1,20 @@
+/* Authored CVA card surface; no third-party component or framework runtime. */
+[data-elio-card-host]{overflow:visible!important;border:0!important;background:none!important;box-shadow:none!important;padding:0!important}
+.elio-card-root{position:relative;width:100%;height:100%;perspective:900px}
+.elio-card-button{position:relative;display:flex;flex-direction:column;width:100%;height:100%;min-height:inherit;padding:0;overflow:hidden;text-align:left;border:1px solid var(--panel-line,var(--line));border-radius:10px;background:var(--panel-bg,var(--paper));color:var(--ink);box-shadow:0 5px 14px #03142524;transform-origin:center;transition:transform 140ms ease-out;isolation:isolate}
+.elio-card-button:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+.elio-card-root[data-effect="3d"][data-motion="true"][data-active="true"]>.elio-card-button{transform:rotateX(var(--card-turn-x,0deg)) rotateY(var(--card-turn-y,0deg));transition:none}
+.elio-card-button::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:0;border-radius:inherit;background:radial-gradient(circle at var(--card-light-x,50%) var(--card-light-y,50%),#c5f6ff42,transparent 65%)}
+.elio-card-root[data-motion="true"][data-active="true"]>.elio-card-button::after{opacity:1}
+.elio-card-art{display:block;flex:none;width:100%;height:58%;min-height:0;overflow:hidden;background:#102b3b}
+.elio-card-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.elio-card-copy{display:flex;flex:1;min-height:0;flex-direction:column;gap:7px;padding:13px 15px 8px}
+.elio-card-meta{font-size:11px;line-height:1.4;color:var(--muted);white-space:pre-line}
+.elio-card-title{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;font-size:17px;line-height:1.45;word-break:keep-all}
+.elio-card-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;font-size:12px;line-height:1.65;color:var(--muted)}
+.elio-card-hint{display:flex;justify-content:space-between;padding:0 15px 11px;font-size:10px;color:var(--muted)}
+[data-elio-card-host]:is(.is-selected,.selected) .elio-card-button{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent),0 8px 22px #03142536}
+.catalog-item .elio-card-root{min-height:220px}.catalog-item .elio-card-art{height:180px}.catalog-item .elio-card-button{min-height:220px}
+body.motion-reduced .elio-card-button{transform:none!important;transition:none!important}
+body.motion-reduced .elio-card-button::after{display:none}
+@media(prefers-reduced-motion:reduce){body:not(.motion-full) .elio-card-button{transform:none!important;transition:none!important}}

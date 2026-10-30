@@ -1,0 +1,581 @@
+{
+  "schema_version": "elio.preview.v1",
+  "work_id": "glass-city-fiction",
+  "unit_id": "continuing-branches",
+  "work_title": "유리성 연대기 · 창작 예시",
+  "title": "갈라진 길 너머의 이야기 · 창작 예시",
+  "unit_label": "갈라진 길 너머의 이야기",
+  "intro": "이 페이지는 구조 검토용 창작 예시이며 실제 작품·방송 기록이 아닙니다. 두 구조대의 여정 안에서 다시 갈라지는 길과, 선택 뒤에도 계속되는 두 세계를 따라갑니다.",
+  "tags": [
+    "창작예시",
+    "중첩분기",
+    "동시시점",
+    "재합류",
+    "배타적세계"
+  ],
+  "source_hash": "69e75271ee5e5df0513c7e16e40f350311159184dd259a80834684651cd583dd",
+  "events": [
+    {
+      "id": "first-signal",
+      "title": "유리성에 구조 신호가 울린다",
+      "summary": "유리성에 첫 구조 신호가 울리고 주민들이 광장으로 모인다.",
+      "location": "유리성 · 공통 이야기",
+      "source_lines": [
+        2,
+        2
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#parallel",
+      "image_alt": "유리성에 구조 신호가 울린다을 상징하는 창작 예시 일러스트",
+      "image_caption": "유리성 · 공통 이야기",
+      "vod_links": []
+    },
+    {
+      "id": "departing-square",
+      "title": "구조대가 두 길로 나뉜다",
+      "summary": "광장에서 강변 구조대와 지붕 정찰대가 서로 다른 임무를 맡아 출발한다.",
+      "location": "중앙 광장 · 두 시점의 출발",
+      "source_lines": [
+        3,
+        3
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#convergence",
+      "image_alt": "구조대가 두 길로 나뉜다을 상징하는 창작 예시 일러스트",
+      "image_caption": "중앙 광장 · 두 시점의 출발",
+      "vod_links": []
+    },
+    {
+      "id": "river-entry",
+      "title": "강변에서 수문을 찾는다",
+      "summary": "가상의 유리력 축제일, 강변 구조대는 물에 잠긴 수문을 찾아 내려간다.",
+      "location": "강변 · 구조대 시점",
+      "source_lines": [
+        4,
+        4
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#convergence",
+      "image_alt": "강변에서 수문을 찾는다을 상징하는 창작 예시 일러스트",
+      "image_caption": "강변 · 구조대 시점",
+      "vod_links": []
+    },
+    {
+      "id": "roof-entry",
+      "title": "지붕 위에서 불빛을 찾는다",
+      "summary": "지붕 정찰대는 끊어진 다리를 우회한다. 강변 진입과의 정확한 시각 관계는 기록되지 않았다.",
+      "location": "지붕길 · 정찰대 시점",
+      "source_lines": [
+        5,
+        5
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#convergence",
+      "image_alt": "지붕 위에서 불빛을 찾는다을 상징하는 창작 예시 일러스트",
+      "image_caption": "지붕길 · 정찰대 시점",
+      "vod_links": []
+    },
+    {
+      "id": "river-lock",
+      "title": "수문에서 잠금장치를 푼다",
+      "summary": "첫 신호 2분 후, 강변 구조대가 잠금장치를 푸는 순간 지붕의 봉화도 켜진다.",
+      "location": "수문 · 명시된 동시 사건",
+      "source_lines": [
+        6,
+        6
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#parallel",
+      "image_alt": "수문에서 잠금장치를 푼다을 상징하는 창작 예시 일러스트",
+      "image_caption": "수문 · 명시된 동시 사건",
+      "vod_links": []
+    },
+    {
+      "id": "roof-beacon",
+      "title": "지붕의 봉화를 밝힌다",
+      "summary": "첫 신호 2분 후, 정찰대는 수문이 열리는 바로 그 순간 봉화를 밝히고 거울의 회랑으로 향한다.",
+      "location": "지붕길 · 명시된 동시 사건",
+      "source_lines": [
+        7,
+        7
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#parallel",
+      "image_alt": "지붕의 봉화를 밝힌다을 상징하는 창작 예시 일러스트",
+      "image_caption": "지붕길 · 명시된 동시 사건",
+      "vod_links": []
+    },
+    {
+      "id": "three-gates",
+      "title": "수문 안에서 다시 세 길로 갈라진다",
+      "summary": "수문을 통과한 구조대는 서문길, 내문길, 봉인실로 나뉜다. 지붕 정찰대의 경로는 계속 이어진다.",
+      "location": "수문 안쪽 · 중첩 갈림점",
+      "source_lines": [
+        8,
+        8
+      ],
+      "source_quote": "수문을 통과한 구조대는 서문길, 내문길, 봉인실로 나뉜다. 지붕 정찰대의 경로는 계속 이어진다.",
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#choice",
+      "image_alt": "수문 안에서 다시 세 길로 갈라진다을 상징하는 창작 예시 일러스트",
+      "image_caption": "수문 안쪽 · 중첩 갈림점",
+      "vod_links": []
+    },
+    {
+      "id": "west-gate",
+      "title": "서문길에서 주민을 구한다",
+      "summary": "서문길의 첫 번째 기록에는 주민을 구해 안뜰로 향했다고 적혀 있다. 다른 두 길과의 시각 관계는 알 수 없다.",
+      "location": "서문길 · 첫 번째 기록",
+      "source_lines": [
+        9,
+        9
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#convergence",
+      "image_alt": "서문길에서 주민을 구한다을 상징하는 창작 예시 일러스트",
+      "image_caption": "서문길 · 첫 번째 기록",
+      "vod_links": []
+    },
+    {
+      "id": "inner-gate",
+      "title": "내문길에서 통로를 연다",
+      "summary": "내문길의 첫 번째 기록에는 막힌 통로를 열어 안뜰로 향했다고 적혀 있다. 서문길과 같은 시각이라는 뜻은 아니다.",
+      "location": "내문길 · 첫 번째 기록",
+      "source_lines": [
+        10,
+        10
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#convergence",
+      "image_alt": "내문길에서 통로를 연다을 상징하는 창작 예시 일러스트",
+      "image_caption": "내문길 · 첫 번째 기록",
+      "vod_links": []
+    },
+    {
+      "id": "sealed-room",
+      "title": "봉인실의 문을 닫고 남는다",
+      "summary": "봉인실로 향한 대원은 균열을 막기 위해 안에 남는다. 이 경로의 이야기는 여기서 끝나며 안뜰에 합류하지 않는다.",
+      "location": "봉인실 · 이 경로의 끝",
+      "source_lines": [
+        11,
+        11
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#uncertain",
+      "image_alt": "봉인실의 문을 닫고 남는다을 상징하는 창작 예시 일러스트",
+      "image_caption": "봉인실 · 이 경로의 끝",
+      "vod_links": []
+    },
+    {
+      "id": "courtyard-reunion",
+      "title": "두 구조대가 안뜰에서 만난다",
+      "summary": "서문길과 내문길을 지난 두 구조대가 안뜰에서 다시 만나 거울의 회랑으로 이동한다.",
+      "location": "안뜰 · 두 경로의 재합류",
+      "source_lines": [
+        12,
+        12
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#convergence",
+      "image_alt": "두 구조대가 안뜰에서 만난다을 상징하는 창작 예시 일러스트",
+      "image_caption": "안뜰 · 두 경로의 재합류",
+      "vod_links": []
+    },
+    {
+      "id": "mirror-decision",
+      "title": "모두 만난 회랑에서 왕관을 마주한다",
+      "summary": "안뜰의 구조대와 지붕 정찰대가 회랑에서 만난다. 왕관을 받는 선택과 부수는 선택은 서로 배타적인 세계로 이어진다.",
+      "location": "거울의 회랑 · 두 세계의 갈림점",
+      "source_lines": [
+        13,
+        13
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#choice",
+      "image_alt": "모두 만난 회랑에서 왕관을 마주한다을 상징하는 창작 예시 일러스트",
+      "image_caption": "거울의 회랑 · 두 세계의 갈림점",
+      "vod_links": []
+    },
+    {
+      "id": "crown-first-year",
+      "title": "왕관을 받아 도시를 재건한다",
+      "summary": "왕관을 받은 세계는 독자적인 즉위력 원년을 시작한다. 주인공은 도시 재건을 맡으며 이 세계의 이야기는 계속된다.",
+      "location": "왕관 세계 · 즉위력 원년",
+      "source_lines": [
+        14,
+        14
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#choice-a",
+      "image_alt": "왕관을 받아 도시를 재건한다을 상징하는 창작 예시 일러스트",
+      "image_caption": "왕관 세계 · 즉위력 원년",
+      "vod_links": []
+    },
+    {
+      "id": "exile-first-year",
+      "title": "왕관을 부수고 성문을 나선다",
+      "summary": "왕관을 부순 세계는 별개의 유랑력 원년을 시작한다. 주인공은 성문을 나서며 왕관 세계로 합쳐지지 않는다.",
+      "location": "유랑 세계 · 유랑력 원년",
+      "source_lines": [
+        15,
+        15
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#choice-b",
+      "image_alt": "왕관을 부수고 성문을 나선다을 상징하는 창작 예시 일러스트",
+      "image_caption": "유랑 세계 · 유랑력 원년",
+      "vod_links": []
+    },
+    {
+      "id": "crown-second-year",
+      "title": "새 의회에 도시를 맡긴다",
+      "summary": "왕관 세계의 즉위력 2년, 주인공은 복구된 도시를 의회에 맡긴다. 이 세계의 이번 이야기는 여기서 마무리된다.",
+      "location": "왕관 세계 · 즉위력 2년",
+      "source_lines": [
+        16,
+        16
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#alternate-a",
+      "image_alt": "새 의회에 도시를 맡긴다을 상징하는 창작 예시 일러스트",
+      "image_caption": "왕관 세계 · 즉위력 2년",
+      "vod_links": []
+    },
+    {
+      "id": "exile-second-year",
+      "title": "길 위에서 새로운 마을을 세운다",
+      "summary": "유랑 세계의 유랑력 2년, 주인공은 떠돌던 사람들과 마을을 세운다. 이 결말은 왕관 세계의 다음 사건이 아니다.",
+      "location": "유랑 세계 · 유랑력 2년",
+      "source_lines": [
+        17,
+        17
+      ],
+      "source_quote": null,
+      "image_site_asset": "/storytimeline/templates/assets/scenes.svg#alternate-b",
+      "image_alt": "길 위에서 새로운 마을을 세운다을 상징하는 창작 예시 일러스트",
+      "image_caption": "유랑 세계 · 유랑력 2년",
+      "vod_links": []
+    }
+  ],
+  "story_topology": {
+    "schema_version": "elio.story-topology.v2",
+    "title": "어디서 갈라지고, 어디로 이어지는가",
+    "summary": "공통 이야기에서 갈라지는 구조대의 경로와 선택 후의 두 세계를 따라갑니다.",
+    "nodes": [
+      {
+        "event_id": "first-signal",
+        "track_id": "common",
+        "track_label": "공통 이야기",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 1,
+        "lead": 0,
+        "time": {
+          "kind": "order",
+          "domain": "opening-record",
+          "label": "첫 번째 기록",
+          "value": 1
+        }
+      },
+      {
+        "event_id": "departing-square",
+        "track_id": "common",
+        "track_label": "공통 이야기",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 1,
+        "lead": 0,
+        "time": {
+          "kind": "order",
+          "domain": "opening-record",
+          "label": "두 번째 기록",
+          "value": 2
+        }
+      },
+      {
+        "event_id": "river-entry",
+        "track_id": "river",
+        "track_label": "강변 구조대",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 2,
+        "lead": 0,
+        "time": {
+          "kind": "date",
+          "domain": "glass-calendar",
+          "label": "유리력 축제일",
+          "value": null
+        }
+      },
+      {
+        "event_id": "roof-entry",
+        "track_id": "roof",
+        "track_label": "지붕 정찰대",
+        "condition": "",
+        "lane_index": 1,
+        "lane_count": 2,
+        "lead": 3,
+        "time": null
+      },
+      {
+        "event_id": "river-lock",
+        "track_id": "river",
+        "track_label": "강변 구조대",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 2,
+        "lead": 0,
+        "time": {
+          "kind": "time",
+          "domain": "first-signal-elapsed",
+          "label": "첫 신호 2분 후",
+          "value": 120
+        }
+      },
+      {
+        "event_id": "roof-beacon",
+        "track_id": "roof",
+        "track_label": "지붕 정찰대",
+        "condition": "",
+        "lane_index": 1,
+        "lane_count": 2,
+        "lead": 0,
+        "time": {
+          "kind": "time",
+          "domain": "first-signal-elapsed",
+          "label": "첫 신호 2분 후",
+          "value": 120
+        }
+      },
+      {
+        "event_id": "three-gates",
+        "track_id": "river",
+        "track_label": "강변 구조대",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 2,
+        "lead": 0,
+        "time": null
+      },
+      {
+        "event_id": "west-gate",
+        "track_id": "west",
+        "track_label": "서문길",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 3,
+        "lead": 0,
+        "time": {
+          "kind": "order",
+          "domain": "west-route-record",
+          "label": "첫 번째 기록",
+          "value": 1
+        }
+      },
+      {
+        "event_id": "inner-gate",
+        "track_id": "inner",
+        "track_label": "내문길",
+        "condition": "",
+        "lane_index": 1,
+        "lane_count": 3,
+        "lead": 0,
+        "time": {
+          "kind": "order",
+          "domain": "inner-route-record",
+          "label": "첫 번째 기록",
+          "value": 1
+        }
+      },
+      {
+        "event_id": "sealed-room",
+        "track_id": "sealed",
+        "track_label": "봉인실",
+        "condition": "",
+        "lane_index": 2,
+        "lane_count": 3,
+        "lead": 0,
+        "time": null
+      },
+      {
+        "event_id": "courtyard-reunion",
+        "track_id": "rejoined",
+        "track_label": "안뜰의 구조대",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 1,
+        "lead": 0,
+        "time": null
+      },
+      {
+        "event_id": "mirror-decision",
+        "track_id": "mirror",
+        "track_label": "회랑의 일행",
+        "condition": "",
+        "lane_index": 0,
+        "lane_count": 1,
+        "lead": 0,
+        "time": null
+      },
+      {
+        "event_id": "crown-first-year",
+        "track_id": "crown",
+        "track_label": "왕관 세계",
+        "condition": "왕관을 받았을 때",
+        "lane_index": 0,
+        "lane_count": 2,
+        "lead": 0,
+        "time": {
+          "kind": "date",
+          "domain": "crown-calendar",
+          "label": "즉위력 원년",
+          "value": 1
+        }
+      },
+      {
+        "event_id": "exile-first-year",
+        "track_id": "exile",
+        "track_label": "유랑 세계",
+        "condition": "왕관을 부쉈을 때",
+        "lane_index": 1,
+        "lane_count": 2,
+        "lead": 0,
+        "time": {
+          "kind": "date",
+          "domain": "exile-calendar",
+          "label": "유랑력 원년",
+          "value": 1
+        }
+      },
+      {
+        "event_id": "crown-second-year",
+        "track_id": "crown",
+        "track_label": "왕관 세계",
+        "condition": "왕관을 받았을 때",
+        "lane_index": 0,
+        "lane_count": 2,
+        "lead": 0,
+        "time": {
+          "kind": "date",
+          "domain": "crown-calendar",
+          "label": "즉위력 2년",
+          "value": 2
+        }
+      },
+      {
+        "event_id": "exile-second-year",
+        "track_id": "exile",
+        "track_label": "유랑 세계",
+        "condition": "왕관을 부쉈을 때",
+        "lane_index": 1,
+        "lane_count": 2,
+        "lead": 0,
+        "time": {
+          "kind": "date",
+          "domain": "exile-calendar",
+          "label": "유랑력 2년",
+          "value": 2
+        }
+      }
+    ],
+    "edges": [
+      {
+        "from": "first-signal",
+        "to": "departing-square"
+      },
+      {
+        "from": "departing-square",
+        "to": "river-entry"
+      },
+      {
+        "from": "departing-square",
+        "to": "roof-entry"
+      },
+      {
+        "from": "river-entry",
+        "to": "river-lock"
+      },
+      {
+        "from": "roof-entry",
+        "to": "roof-beacon"
+      },
+      {
+        "from": "river-lock",
+        "to": "three-gates"
+      },
+      {
+        "from": "three-gates",
+        "to": "west-gate"
+      },
+      {
+        "from": "three-gates",
+        "to": "inner-gate"
+      },
+      {
+        "from": "three-gates",
+        "to": "sealed-room"
+      },
+      {
+        "from": "west-gate",
+        "to": "courtyard-reunion"
+      },
+      {
+        "from": "inner-gate",
+        "to": "courtyard-reunion"
+      },
+      {
+        "from": "courtyard-reunion",
+        "to": "mirror-decision"
+      },
+      {
+        "from": "roof-beacon",
+        "to": "mirror-decision"
+      },
+      {
+        "from": "mirror-decision",
+        "to": "crown-first-year"
+      },
+      {
+        "from": "mirror-decision",
+        "to": "exile-first-year"
+      },
+      {
+        "from": "crown-first-year",
+        "to": "crown-second-year"
+      },
+      {
+        "from": "exile-first-year",
+        "to": "exile-second-year"
+      }
+    ],
+    "alignments": [
+      {
+        "id": "signal-simultaneous",
+        "kind": "simultaneous",
+        "label": "수문 개방과 봉화 점등",
+        "event_ids": [
+          "river-lock",
+          "roof-beacon"
+        ]
+      },
+      {
+        "id": "three-path-layout",
+        "kind": "layout",
+        "label": "세 갈래를 나란히 배치 · 서로의 시각 관계는 미확정",
+        "event_ids": [
+          "west-gate",
+          "inner-gate",
+          "sealed-room"
+        ]
+      },
+      {
+        "id": "exclusive-world-layout",
+        "kind": "layout",
+        "label": "배타적인 두 세계의 시작 · 같은 높이가 같은 날짜를 뜻하지 않음",
+        "event_ids": [
+          "crown-first-year",
+          "exile-first-year"
+        ]
+      }
+    ]
+  }
+}

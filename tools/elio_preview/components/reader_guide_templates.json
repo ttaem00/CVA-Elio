@@ -1,0 +1,14 @@
+{
+  "schema_version": "elio.reader-guide-templates.v1",
+  "templates": {
+    "guide": "<section id=\"guide-{{GUIDE_ID}}\" class=\"reader-guide reader-guide--{{KIND}}\" aria-labelledby=\"{{TITLE_ID}}\"><div class=\"reader-guide__content\">{{HEADER}}{{ITEMS}}{{SOURCES}}</div>{{COVER}}</section>",
+    "header": "<header class=\"reader-guide__header\"><span>{{LABEL}}</span><h{{LEVEL}} id=\"{{TITLE_ID}}\">{{TITLE}}</h{{LEVEL}}><p>{{SUMMARY}}</p></header>",
+    "disclosure": "<details class=\"reader-guide__disclosure\"{{OPEN}}><summary><span class=\"reader-guide__meta\"><span>{{LABEL}}</span></span><strong>{{TITLE}}</strong><i aria-hidden=\"true\"></i></summary><div class=\"reader-guide__answer\">{{ANSWER}}</div></details>",
+    "disclosures": "<div class=\"reader-guide__disclosures\">{{ITEMS}}</div>",
+    "paragraph": "<p>{{TEXT}}</p>",
+    "source_note": "<p class=\"reader-guide__source-note\"><strong>근거</strong> {{TEXT}}</p>",
+    "reference": "<a class=\"reader-guide__reference\" href=\"{{HREF}}\" target=\"_blank\" rel=\"noopener noreferrer\">원문 근거<span aria-hidden=\"true\">↗</span></a>",
+    "related_scene": "<a class=\"reader-guide__scene\" href=\"{{HREF}}\" data-main-scene=\"true\">관련 장면 돌아보기 ↑</a>",
+    "cover": "<button class=\"spoiler-cover\" type=\"button\" aria-label=\"이야기 이해 내용 보기\" hidden><span><small>이야기 이해</small><strong>클릭해서 내용 보기</strong></span></button>"
+  }
+}

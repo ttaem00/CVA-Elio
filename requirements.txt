@@ -1,0 +1,3 @@
+# Raster evidence validation and the original optional cinematic compositors.
+Pillow
+beautifulsoup4>=4.12.0

@@ -1,0 +1,9 @@
+{
+  "schema": "cva.page.v2",
+  "title": "관측 기록의 분기와 합류",
+  "description": "직접 작성한 관계 표현으로 편집과 보관을 확인하는 창작 예제입니다.",
+  "profile": "elio",
+  "modules": [
+    {"id": "observations", "type": "forma-pattern", "variant": "original", "props": {"patternId": "fork-and-join", "title": "관측 기록의 분기와 합류", "body": "독립적으로 진행한 두 기록을 같은 검토 지점에 모읍니다."}}
+  ]
+}

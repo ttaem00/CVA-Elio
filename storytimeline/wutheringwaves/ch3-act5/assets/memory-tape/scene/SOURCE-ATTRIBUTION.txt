@@ -1,0 +1,71 @@
+Memory Tape — supplied readable viewer, private CVA study
+
+Current private derivative (2026-10-22): the original import and subsequent
+historical asset notes below are retained for attribution. Current assets,
+hashes and adaptations are described in assets.json and ADAPTATIONS.md.
+The cassette now derives from the user's aemeath_cassette.glb, with generated
+inferred rear/side maps and a thin rear shell, packed as an 863360-byte GLB.
+The current derivative removes16085 original cassette Gaussian centers while
+preserving foreground fingers and all retained attribute row bytes. Original
+scene.spz stays untouched. The straight compact GLB appears from frame0 in both
+the live scene and fully recaptured1440p software films. No bent-case prototype
+is adopted. Exact current hashes and capture provenance live in assets.json.
+Unseen surfaces are an approximate fan completion, not official game geometry.
+This supersedes the historical original-model/film descriptions below without
+removing the original notices or asserting additional redistribution rights.
+
+Supplied project: memory-tape-full-with-making-of/memory-tape-full
+Project: https://github.com/mizan0515/memory-tape
+Source frame: https://www.youtube.com/watch?v=AnTBwaQK9CU&t=6223s
+Game visuals: Wuthering Waves © KURO GAMES. Unofficial fan visual experiment.
+
+scene.spz is the supplied single-frame Gaussian reconstruction. cassette.glb is
+the supplied generated cassette approximation, not a verified original game
+model. No reconstruction or image generation is performed by this importer.
+The readable viewer starts ambient rotation enabled, permits its pause control
+independently of system reduced motion, and supplies the camera/cassette relative
+position to navigation. The readable navigation keeps the original broad idle
+orbit at every viewing distance, including near the reel. Its first direction
+is chosen from the current camera position once after direct input. The intro
+approach follows the same progress/track/damping as wheel input, without
+an additional idle orbit until the approach has finished. Explicit
+source adaptations are recorded in the importer; no opaque compiled bundle is
+patched. Manual orbit, zoom damping, track, model transform and playback bridge
+remain original. Reduced motion still shortens reel playback and CVA decoration.
+motion-track.js and the original THIRD_PARTY_NOTICES.txt are copied unchanged.
+Only viewer.js, navigation.js, motion-track.js, the original notices and this
+attribution are imported locally. No supplied source is modified.
+
+Internet access is required for Memory Tape. The browser reads the large media
+from the original public GitHub repository at fixed commit 47d73f5543e99834951b802d723cf0af93103c0e;
+the media and vendor library modules are not copied into the private ZIP.
+scene.spz: https://raw.githubusercontent.com/mizan0515/memory-tape/47d73f5543e99834951b802d723cf0af93103c0e/scene.spz
+Expected bytes: 16548216
+SHA-256: e1b10fa1d520864d8d0789dab84f09a2ef8dbedad64e559b1936b6da16d31ecb
+cassette.glb: https://raw.githubusercontent.com/mizan0515/memory-tape/47d73f5543e99834951b802d723cf0af93103c0e/cassette.glb
+Expected bytes: 1866176
+SHA-256: 9ea0f8820abc99509c3473e3e76ab936e8bd52a153c5c8c3503db55fed740c45
+
+The import map uses fixed official library releases:
+Three.js 0.180.0: https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js
+Three.js addons: https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/
+Spark 2.4.0: https://sparkjs.dev/releases/spark/2.4.0/spark.module.js
+
+Included for this owner's private local study. No blanket commercial license,
+game-art license, public redistribution permission, or license for the entire
+supplied custom viewer is asserted. Library MIT licenses apply to their software,
+not to the game artwork. Keep this attribution and all original notices.
+
+R2 migration follow-up: #5005 adds scene/assets.json as a content-addressed
+manifest and tools/elio-assets as the proposed private-bucket gateway. The
+original SPZ/GLB bytes and hashes above remain unchanged; the derived WebP is
+captured from the original scene at its authored first pose. Original source
+URLs and notices remain in the manifest and here. Local preview stages verified
+copies outside Git; large assets are not copied into the source tree or ZIP.
+R2 upload/deployment is pending connector write authorization, not completed.
+No redistribution license beyond the original notices is newly asserted.
+
+The rejected poster is superseded by approach-film.mp4: a derived offline render
+of the same original SPZ/GLB with this preview's two-pose camera. Its150frames,
+encoding, exacthash and2,549,070bytes are recorded in assets.json. No newgame-art
+license is asserted. Software displays the finished film alone; GPU stays live.

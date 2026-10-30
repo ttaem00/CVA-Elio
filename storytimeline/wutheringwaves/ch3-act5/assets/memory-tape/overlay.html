@@ -1,0 +1,48 @@
+<dialog id="elio-memory" class="elio-memory" aria-labelledby="elio-memory-title" data-mode="intro" data-state="loading" data-transition="standard" tabindex="-1" hidden>
+  <div class="elio-memory__inverse-backdrop" aria-hidden="true"></div>
+  <div class="elio-memory__watch-light" aria-hidden="true"></div>
+  <iframe id="elio-memory-scene" class="elio-memory__scene" title="에이메스가 건넨 테이프. 아래로 스크롤해 다가가고, 드래그로 회전합니다." tabindex="-1" loading="eager" inert></iframe>
+  <div class="elio-memory__grain" aria-hidden="true"></div>
+  <div class="elio-memory__loading-scrim" aria-hidden="true"></div>
+  <div class="elio-memory__loader" aria-hidden="true">
+    <svg viewBox="0 0 100 64"><rect x="2" y="2" width="96" height="60" rx="7"/><path d="M22 62l6-15h44l6 15M32 54h36M38 41h24"/>
+      <g class="elio-memory__reel"><circle cx="28" cy="25" r="12"/><circle cx="28" cy="25" r="3"/><path d="M28 13v6m0 12v6M16 25h6m12 0h6"/></g>
+      <g class="elio-memory__reel"><circle cx="72" cy="25" r="12"/><circle cx="72" cy="25" r="3"/><path d="M72 13v6m0 12v6M60 25h6m12 0h6"/></g>
+    </svg>
+  </div>
+  <span class="elio-memory__wordmark" aria-hidden="true">ELIO <span>· MEMORY TAPE</span></span>
+  <div class="elio-memory__type" aria-hidden="true">
+    <p class="elio-memory__eyebrow">명조: 워더링 웨이브 <span>제3장 제5막</span></p>
+    <h1 id="elio-memory-title"><span>어젯밤의</span><span>뭇별들</span></h1>
+  </div>
+  <p id="elio-memory-near" class="elio-memory__near" aria-hidden="true"><span>알 수 없는 경계에 닿기 위해서</span><span>이 별바다 아래로 온 거 아닌가요?</span></p>
+  <div class="elio-memory__watch" aria-hidden="true">
+    <p class="elio-memory__eyebrow">같은 장면, 다른 시선</p>
+    <strong id="elio-memory-streamer"></strong>
+    <p id="elio-memory-time"></p>
+  </div>
+  <div id="elio-memory-moment" class="elio-memory__moment" aria-hidden="true" hidden>
+    <p id="elio-memory-moment-kind" class="elio-memory__eyebrow"></p>
+    <p id="elio-memory-quote" class="elio-memory__quote"></p>
+  </div>
+  <p id="elio-memory-status" class="elio-memory__status" role="status" aria-live="polite">테이프에 남은 장면을 불러오고 있어요.</p>
+  <div id="elio-memory-help" class="elio-memory__help">
+    <div class="elio-memory__gestures">
+      <span><svg class="elio-memory__arrow elio-memory__desktop-hint" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17m-6-6 6 6 6-6"/></svg><svg class="elio-memory__touch-hint" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-5-5m0 5V3h5m8 13 5 5m0-5v5h-5M9 14l5-5"/><circle cx="9" cy="14" r="2"/><circle cx="14" cy="9" r="2"/></svg><span class="elio-memory__desktop-hint">아래로 스크롤</span><span class="elio-memory__touch-hint">두 손가락으로 확대</span></span>
+      <span class="elio-memory__rotation-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 13V5a1.5 1.5 0 0 1 3 0v6-8a1.5 1.5 0 0 1 3 0v8-6a1.5 1.5 0 0 1 3 0v7-4a1.5 1.5 0 0 1 3 0v7c0 4-2 7-6 7h-2c-2 0-3-1-4-3l-4-6a1.5 1.5 0 0 1 2-2l2 2"/></svg>드래그로 회전</span>
+      <span class="elio-memory__film-touch-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-5-5 5 5 5-5M7 9l5-5 5 5"/></svg>위아래로 쓸어 다가가기</span>
+    </div>
+    <button type="button" id="elio-memory-read" aria-busy="true" disabled>이야기 읽기 <span aria-hidden="true">↗</span></button>
+  </div>
+  <button type="button" id="elio-memory-info" class="elio-memory__info" aria-label="조작 안내 보기" aria-controls="elio-memory-help" aria-expanded="true" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg></button>
+  <a id="elio-memory-video" class="elio-memory__video" target="_blank" rel="noopener noreferrer" hidden>새 탭에서 영상 열기 ↗</a>
+  <button type="button" id="elio-memory-continue" class="elio-memory__continue" hidden>이 페이지 계속 읽기</button>
+</dialog>
+<div id="elio-memory-return" class="elio-memory-return" hidden>
+  <div id="elio-memory-actions" class="elio-memory__actions">
+    <button type="button" id="elio-memory-link-effects" class="elio-memory__link-effects" aria-pressed="true">링크 연출 켜짐</button>
+    <button type="button" id="elio-memory-reopen"><span aria-hidden="true">↶</span> 기억 장면 다시 보기</button>
+  </div>
+  <button type="button" id="elio-memory-tools" class="elio-memory__tools" aria-label="기억 장면과 링크 연출 설정" aria-expanded="false" aria-controls="elio-memory-actions"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><circle cx="16" cy="10" r="2"/><path d="m6 19 2-4h8l2 4M10 10h4"/></svg></button>
+</div>
+<!-- Original scene and library credits remain in scene/SOURCE-ATTRIBUTION.txt and THIRD_PARTY_NOTICES.txt. -->

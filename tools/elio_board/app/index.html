@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Elio Board · 장면을 따라, 갈래를 보다</title>
+  <style>
+    .board-loading{position:fixed;inset:0;z-index:1000;display:grid;place-content:center;gap:14px;padding:28px;background:#081723;color:#d6edf4;text-align:center;font:500 15px/1.7 system-ui,sans-serif}
+    .board-loading[hidden]{display:none}.board-loading .board-loading-title{font-size:22px;margin:0}.board-loading p{max-width:32rem;margin:0}.board-loading .loading-mark{width:44px;height:6px;margin:0 auto;background:#6bc9d8;border-radius:9px}
+    .board-loading button{justify-self:center;min-height:44px;padding:8px 20px;border:1px solid #6ba5b6;border-radius:9px;background:#16394b;color:#edfaff;font:inherit;cursor:pointer}.board-loading button[hidden]{display:none}
+  </style>
+  <script>
+  (()=>{
+    let ready=false,timer;
+    const trace=new URLSearchParams(location.search).get('profile')==='1',started=Date.now(),stages=[];
+    const mark=(name,details={})=>{if(trace)stages.push({name,ms:Date.now()-started,...details});};
+    mark('html');
+    const message=(title,detail,retry=false)=>{const panel=document.getElementById('board-loading');if(!panel||ready)return;panel.hidden=false;panel.querySelector('.board-loading-title').textContent=title;panel.querySelector('p').textContent=detail;panel.querySelector('button').hidden=!retry;};
+    window.ElioBoardStartup={
+      mark,
+      message:detail=>{mark('document-loaded');message('이야기 흐름을 준비하고 있습니다',detail);},
+      ready:()=>{ready=true;clearTimeout(timer);mark('render-ready');document.getElementById('board-loading')?.setAttribute('hidden','');if(trace)requestAnimationFrame(()=>requestAnimationFrame(()=>{mark('paint-ready');document.documentElement.dataset.boardStartup=JSON.stringify({stages,resources:performance.getEntriesByType('resource').map(row=>({path:new URL(row.name,location.href).pathname,type:row.initiatorType,ms:Math.round(row.duration),bytes:row.transferSize}))});}));},
+      error:()=>{clearTimeout(timer);message('보드를 불러오지 못했습니다','자료를 다시 불러와 주세요. 계속 열리지 않으면 잠시 후 다시 시도해 주세요.',true);document.getElementById('board-loading')?.setAttribute('role','alert');}
+    };
+    window.addEventListener('error',event=>{if(event.target?.tagName==='IMG'||event.target?.tagName==='LINK')return;window.ElioBoardStartup.error();},true);
+    window.addEventListener('unhandledrejection',()=>window.ElioBoardStartup.error());
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.getElementById('board-load-retry')?.addEventListener('click',()=>location.reload());
+      timer=setTimeout(()=>message('이야기 흐름을 준비하고 있습니다','평소보다 시간이 걸리고 있습니다. 잠시 기다리거나 자료를 다시 불러와 주세요.',true),15000);
+    });
+  })();
+  </script>
+  <script>const audience=new URLSearchParams(location.search).get('audience');document.documentElement.dataset.audience=document.documentElement.dataset.readerOnly==='true'||/^\/storytimeline\/board(?:\/(?:index\.html)?)?$/.test(location.pathname)||audience==='reader'?'reader':'author';</script>
+  <link rel="stylesheet" href="styles.css?v=s57">
+  <link rel="stylesheet" href="hud-panels.css?v=s57">
+  <link rel="stylesheet" href="depth-card.css?v=s57">
+  <link rel="stylesheet" href="board-refinement.css?v=s57">
+  <link rel="stylesheet" href="product-flow.css?v=s57">
+  <link rel="stylesheet" href="product-screen.css?v=s57">
+  <link rel="stylesheet" href="depth-hover.css?v=s57">
+  <link rel="stylesheet" href="content-picker.css?v=s57">
+  <link rel="stylesheet" href="authoring.css?v=s57">
+  <script defer src="vendor/components.js?v=s57"></script><script defer src="vendor/diagram_geometry.js?v=s57"></script><script defer src="vendor/story_layout.js?v=s57"></script>
+  <script>
+/* Opt-in local diagnostics. No network, persistent state or event replay. */
+(() => {
+  'use strict';
+  if (new URLSearchParams(location.search).get('profile') !== '1') return;
+  let frame = 0, started = 0, previous = 0, intervals = [], tasks = [];
+  const observer = typeof PerformanceObserver === 'function' ? new PerformanceObserver(list => {
+    for (const entry of list.getEntries()) if (started && entry.startTime >= started) tasks.push(entry.duration);
+  }) : null;
+  try { observer?.observe({type:'longtask', buffered:false}); } catch {}
+  function sample(now) {
+    if (previous) intervals.push(now - previous);
+    previous = now;
+    if (now - started < 5000) { frame = requestAnimationFrame(sample); return; }
+    const sorted = intervals.slice().sort((a,b) => a-b);
+    const report = {frames:intervals.length, p95_frame_ms:sorted[Math.floor(sorted.length*.95)] || 0,
+      max_frame_ms:Math.max(0,...intervals), long_tasks:tasks.length,
+      long_task_ms:tasks.reduce((sum,value) => sum+value,0), nodes:document.querySelectorAll('.scene-node').length,
+      painted_nodes:[...document.querySelectorAll('.scene-node')].filter(node => getComputedStyle(node).visibility !== 'hidden').length,
+      mode:document.body.dataset.mode, reduced:document.body.classList.contains('motion-reduced')};
+    document.documentElement.dataset.canvasProfile = JSON.stringify(report);
+    frame = 0; started = 0;
+  }
+  function begin(event) {
+    if (frame || !event.target.closest('#viewport,#reader-view-select,#camera-controls')) return;
+    intervals = []; tasks = []; previous = 0; started = performance.now();
+    document.documentElement.dataset.canvasProfile = 'recording';
+    frame = requestAnimationFrame(sample);
+  }
+  for (const type of ['pointerdown','wheel','keydown','change']) document.addEventListener(type,begin,{capture:true,passive:true});
+})();
+
+</script>
+  <script defer src="vendor/board-model.js?v=s57"></script><script defer src="document-adapter.js?v=s57"></script><script defer src="data.js?v=s57"></script><script defer src="projection.js?v=s57"></script><script defer src="depth-card.js?v=s57"></script><script defer src="product-data.js?v=s57"></script><script defer src="product-flow.js?v=s57"></script><script defer src="product-screen.js?v=s57"></script><script defer src="depth-hover.js?v=s57"></script><script defer src="content-picker.js?v=s57"></script><script defer src="authoring-ui.js?v=s57"></script><script defer src="app.js?v=s57"></script>
+</head>
+<body data-mode="hud" data-work="glass-city-fiction">
+<section class="board-loading" id="board-loading" role="status" aria-live="polite"><span class="loading-mark" aria-hidden="true"></span><div class="board-loading-title">이야기 흐름을 불러오는 중입니다</div><p>장면과 관계 지도를 준비하고 있습니다.</p><button id="board-load-retry" type="button" hidden>다시 불러오기</button></section>
+<div id="app">
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Elio Board 처음 보기"><strong>CVA</strong><span>Elio Board</span></a>
+    <button id="work-picker-trigger" data-authoring-control type="button" aria-haspopup="dialog">콘텐츠 선택</button>
+    <span class="material-note" id="material-note">창작 이야기 · 인터랙션 시안</span>
+    <button id="document-tools-open" data-authoring-control type="button" aria-haspopup="dialog" aria-controls="document-tools" aria-label="입력·편집·내보내기" title="입력·편집·내보내기"><svg class="ui-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 3h8l4 4v10H4V3Zm8 0v4h4M7 10h6M7 13h6"/></svg><span class="document-tools-label">입력·편집·내보내기</span></button>
+    <button id="hud-effects-open" data-authoring-control type="button" aria-haspopup="dialog" aria-controls="hud-effects-dialog" aria-label="HUD 카드 효과 선택" title="HUD 카드 효과 선택"><svg class="ui-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 2 7 4v8l-7 4-7-4V6l7-4Zm-7 4 7 4 7-4M10 10v8"/></svg></button>
+    <a id="reader-return" class="reader-return" hidden>이야기로 돌아가기 <span aria-hidden="true">↗</span></a>
+    <button id="motion-button" aria-pressed="false" title="움직임 줄이기" aria-label="움직임 줄이기"><svg class="ui-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12a6 6 0 0 1-8-8 6 6 0 1 0 8 8Z"/></svg><span>모션 줄이기</span></button>
+  </header>
+  <nav class="mode-nav" data-authoring-control aria-label="이 콘텐츠의 보기 방식">
+    <button data-mode="atlas" aria-pressed="false"><span>01</span> 분기 지도</button>
+    <button data-mode="tapestry" aria-pressed="false"><span>02</span> 장면 보기</button>
+    <button data-mode="depth" aria-pressed="false"><span>03</span> 레이어 보드</button>
+    <button data-mode="hud" class="active" aria-pressed="true"><span>04</span> 입체 패널</button>
+    <p class="mode-caption" id="mode-caption">장면과 선택을 한눈에, 깊이는 가볍게.</p>
+  </nav>
+  <main class="stage-shell">
+    <div id="viewport" class="viewport" tabindex="0" aria-label="이야기 지도. 빈 공간을 끌어 이동하고, 확대 버튼 또는 휠로 확대합니다.">
+      <div class="scene-backdrop" aria-hidden="true"></div>
+      <div id="camera" class="camera"><div id="world" class="world"><div id="groups"></div><svg id="connections" class="edges" aria-hidden="true"></svg><div id="nodes" class="nodes"></div></div></div>
+      <section id="catalog-stage" class="catalog-stage" hidden>
+        <div id="catalog-controls" data-hud-panel><label class="catalog-search">항목 찾기<input id="catalog-search" type="search" placeholder="이름이나 쓰임으로 찾기" autocomplete="off"></label><div id="category-tabs" class="category-tabs" aria-label="항목 분류"></div></div>
+        <p id="catalog-count" class="catalog-count" role="status" aria-live="polite"></p>
+        <div id="catalog-grid" class="catalog-grid"></div>
+      </section>
+    </div>
+    <div class="map-toolbar" id="map-toolbar"><nav id="stage-tabs" class="stage-tabs" data-hud-panel aria-label="읽기 구간"></nav><label id="reader-navigation" class="reader-navigation" hidden><span>관점으로 이동</span><select id="reader-view-select" aria-label="막·읽기 관점"></select></label><div class="scope-controls" data-hud-panel><button id="chapter-button" aria-pressed="false">장 전체</button><button id="stage-button" aria-pressed="false">현재 구간</button><button id="focus-button" data-authoring-control aria-pressed="true">현재 갈래</button><span id="scope-label"></span></div><div class="board-meta"><p id="board-context" class="board-context"></p><p id="reader-map-summary" class="reader-map-summary" hidden></p><div class="board-legend" aria-label="장면 종류"><span data-kind="scene">장면</span><span data-kind="decision">선택</span><span data-kind="outcome">갈래의 끝</span></div></div></div>
+    <aside id="preview" class="preview" data-hud-panel aria-label="선택한 장면 미리보기"></aside>
+    <aside id="product-screen" hidden aria-label="선택한 제품 단계와 실제 화면"></aside>
+    <div class="minimap" id="minimap" data-hud-panel aria-label="현재 지도 범위"></div>
+    <div class="camera-controls" id="camera-controls" data-hud-panel><button id="back-selection-button" title="이전 선택" aria-label="이전 선택" disabled><svg class="ui-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5-5 5 5 5M3 10h9a4 4 0 0 1 4 4"/></svg></button><button id="home-button" title="현재 장면으로 이동" aria-label="현재 장면으로 이동"><svg class="ui-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2v3m0 10v3M2 10h3m10 0h3M15 10a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z"/></svg></button><button id="fit-button" title="전체 지도 맞추기" aria-label="전체 지도 맞추기"><svg class="ui-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 7V3h4m6 0h4v4M3 13v4h4m6 0h4v-4"/></svg></button><button id="zoom-out" aria-label="지도 축소">−</button><output id="zoom-value">100%</output><button id="zoom-in" aria-label="지도 확대">+</button><button id="orbit-button" title="보드 각도 조작" aria-label="보드 각도 조작" aria-pressed="false" hidden><svg class="ui-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3 7 7-7 7-7-7 7-7Zm-7 7h14M10 3v14"/></svg></button><button id="reset-angle" title="보드를 정면으로 보기" aria-label="보드를 정면으로 보기" hidden><svg class="ui-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4h12v12H4V4Z"/></svg></button></div>
+    <div class="status-line" id="status-line">장면을 선택해 갈래를 살펴보세요.</div>
+  </main>
+</div>
+<dialog id="content-picker" data-authoring-control aria-labelledby="content-picker-title"></dialog>
+<dialog id="document-tools" data-authoring-control class="document-tools" aria-labelledby="document-tools-title"></dialog>
+<dialog id="hud-effects-dialog" data-authoring-control class="hud-effects-dialog" aria-labelledby="hud-effects-title"><header><h2 id="hud-effects-title">HUD 카드 효과</h2><button id="hud-effects-close" aria-label="카드 효과 설정 닫기" title="닫기"><svg class="ui-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></button></header><div role="group" aria-label="카드 표현 선택"><button data-hud-effect="3d" aria-pressed="true"><strong>Elio 입체 카드</strong><span>이미지·번호·제목·행동 표시가 한 면에서 함께 기울어집니다. 카드의 빛도 같은 면을 따릅니다.</span></button><button data-hud-effect="glow" aria-pressed="false"><strong>고정 카드 · glow</strong><span>카드 형태는 그대로, 포인터를 따라 빛만 움직입니다.</span></button></div><p>움직임 줄이기를 켜면 두 효과 모두 정지합니다.</p></dialog>
+<section id="reading" class="reading" role="dialog" aria-modal="true" aria-labelledby="reading-title" hidden></section>
+<p id="selection-status" class="sr-only" role="status" aria-live="polite"></p>
+<p id="toast" class="toast" role="status" aria-live="polite"></p>
+</body></html>
