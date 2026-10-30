@@ -78,7 +78,7 @@
     document.querySelectorAll('.card-preview').forEach(node=>observer.observe(node));
   }
   function starterChoices(s) {
-    const show=s.category==='all'&&s.kind==='all'&&!s.q.trim();
+    const show=!s.item&&s.category==='all'&&s.kind==='all'&&!s.q.trim();
     $('start-points').hidden=!show;
     if(!show){$('starter-grid').innerHTML='';return;}
     const choices=[
@@ -89,7 +89,7 @@
     $('all-templates').href=href({kind:'template',item:'',page:0});
     $('starter-grid').innerHTML=choices.map(([id,title,use])=>{
       const resource=resources.find(entry=>entry.kind==='template'&&entry.id===id);
-      return '<a class="starter-card" aria-label="'+esc(title+' · '+use)+'" href="'+esc(resourceUrl(resource))+'" data-resource="'+esc(resourceKey(resource))+'"><article><header><span class="overline">'+esc(use)+'</span><h3>'+esc(title)+'</h3></header><div class="card-preview" aria-hidden="true"><iframe src="'+esc(styledUrl(resource.previewUrl,resource))+'" title="'+esc(title)+' 미리보기" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe></div><footer>내용을 바꿔 시작하기 '+icons('arrow-right')+'</footer></article></a>';
+      return '<article class="starter-card" aria-labelledby="starter-'+esc(id)+'"><header><span class="overline">'+esc(use)+'</span><h3 id="starter-'+esc(id)+'">'+esc(title)+'</h3></header><a class="starter-preview-link" aria-label="'+esc(title+' · 예제 살펴보기')+'" href="'+esc(resourceUrl(resource))+'" data-resource="'+esc(resourceKey(resource))+'"><div class="card-preview" aria-hidden="true"><iframe src="'+esc(styledUrl(resource.previewUrl,resource))+'" title="'+esc(title)+' 미리보기" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe></div><span>예제 살펴보기 '+icons('arrow-right')+'</span></a><footer class="starter-actions"><a class="action primary" href="'+esc(styledUrl(resource.studioUrl,resource))+'" target="_blank" rel="noopener" aria-label="'+esc(title+' · 이 구성으로 만들기 (새 탭)')+'">이 구성으로 만들기 '+icons('external-link')+'<span class="sr-only"> (새 탭)</span></a></footer></article>';
     }).join('');
     document.querySelectorAll('#starter-grid .card-preview').forEach(node=>observer.observe(node));
   }
@@ -225,7 +225,7 @@
     disposeReveal?.();disposeReveal=null;observer.disconnect();categoryNav();
     page=state().page;
     current=resources.find(r=>resourceKey(r)===key);
-    $('search-form').hidden=$('browse').hidden=$('browse-heading').hidden=Boolean(key);$('detail').hidden=!key;
+    $('start-points').hidden=$('search-form').hidden=$('browse').hidden=$('browse-heading').hidden=Boolean(key);$('detail').hidden=!key;
     if(current)detail(current);
     else if(key)$('detail').innerHTML='<a class="back-link" href="'+esc(href({category:'all',q:'',kind:'all',item:'',page:0}))+'" data-reset>← 모든 요소</a><div class="empty"><h1>등록된 요소를 찾지 못했습니다.</h1><p>원래 목록에서 다시 선택하세요. 기존 편집 내용에는 영향을 주지 않습니다.</p></div>';
     else {previewComponent=previewDocument=null;browse();}

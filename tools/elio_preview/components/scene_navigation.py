@@ -42,7 +42,7 @@ def render_scene_navigation(events, topology=None, phases=()):
             f'<span>{number:02}</span></a>'
         )
     links = ''.join(rows)
-    heading = ('<div class="scene-nav__heading"><span>이야기 흐름</span>'
+    heading = ('<div class="scene-nav__heading"><span>현재 장면</span>'
                f'<strong id="scene-current-label">{escape(events[0]["title"])}</strong></div>')
     if not tree:
         return ('<nav class="scene-nav" aria-label="장면 바로가기">' + heading
