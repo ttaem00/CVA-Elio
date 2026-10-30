@@ -1,9 +1,9 @@
 {
   "schema_version": "cva.elio-public-candidate.v1",
   "publication_status": "not_published",
-  "source_commit": "44bb1af881f885d04c2869b9e60020c460781932",
+  "source_commit": "933e38c9bfccf393a0d6cdc58b815df761601d58",
   "source_has_uncommitted_inputs": false,
-  "recipe_sha256": "e34234d0bf8117fef444b88312a71b3cfa248d86f138a9b2420418470a954732",
+  "recipe_sha256": "31812ce72592dfe57d4eadca6eeba55b57b1dc92110671e02109971cd861d768",
   "sources": [
     {
       "source": "tools/elio_release/scaffold/assets/font.css",
@@ -58,8 +58,8 @@
       "source": "tools/elio_release/scaffold/README.md",
       "destination": "README.md",
       "encoding": "utf8-lf-v1",
-      "sha256": "a45574a384cbc345873a1251d4e8634dcd191f927e05a082b2c83b70244a6355",
-      "export_sha256": "a45574a384cbc345873a1251d4e8634dcd191f927e05a082b2c83b70244a6355"
+      "sha256": "bee28ced11d5a88219051a80c101100c5616e17a9bc93a4c67fd1d06121c33f3",
+      "export_sha256": "bee28ced11d5a88219051a80c101100c5616e17a9bc93a4c67fd1d06121c33f3"
     },
     {
       "source": "tools/elio_release/scaffold/scripts/demo.py",
@@ -8825,8 +8825,8 @@
       "source": "tools/elio_release/scaffold/docs/screenshots/README.md",
       "destination": "docs/screenshots/README.md",
       "encoding": "utf8-lf-v1",
-      "sha256": "e37592fda62ae4ed6d8f589ad8a4e304a988efefd3bd6d5ce077500c940d8c17",
-      "export_sha256": "e37592fda62ae4ed6d8f589ad8a4e304a988efefd3bd6d5ce077500c940d8c17"
+      "sha256": "b090a73ba24a3613ce113e4b79c9177c0c2dcf53bcc35522e88c51f3fad3b1b1",
+      "export_sha256": "b090a73ba24a3613ce113e4b79c9177c0c2dcf53bcc35522e88c51f3fad3b1b1"
     },
     {
       "source": "tools/elio_release/scaffold/docs/screenshots/time-map.webp",
@@ -8834,6 +8834,13 @@
       "encoding": "binary",
       "sha256": "c2c104652bcb875a29a7fced5f75d3dbcbeb77b6a52743b23b4680976a4ad103",
       "export_sha256": "c2c104652bcb875a29a7fced5f75d3dbcbeb77b6a52743b23b4680976a4ad103"
+    },
+    {
+      "source": "tools/elio_release/scaffold/docs/assets/readme-hero.svg",
+      "destination": "docs/assets/readme-hero.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "a21074295eafbe6bc97bddd65ea3ba1cb35f7ec84d130f2172073ecdc6f91066",
+      "export_sha256": "a21074295eafbe6bc97bddd65ea3ba1cb35f7ec84d130f2172073ecdc6f91066"
     }
   ],
   "files": {
@@ -8842,7 +8849,7 @@
     "LICENSE": "b83ca162ea41c85a51d84becb04f3300fa7851d81d28386ec4d9152a70561a31",
     "POLICY.md": "1392fcb70ab8f97a82f4042bbe233936a2cd7f542225353637a0a80bad6c49ca",
     "PRIVACY.md": "d52c9ca31cf9d8ed28c09f3b866be95754750c9144c2b30b9a619291b701bf29",
-    "README.md": "a45574a384cbc345873a1251d4e8634dcd191f927e05a082b2c83b70244a6355",
+    "README.md": "bee28ced11d5a88219051a80c101100c5616e17a9bc93a4c67fd1d06121c33f3",
     "SECURITY.md": "c3f301881bc67c22ebaecf678cb79e96a194e909bfe4bd564c6208bbbd06c21f",
     "THIRD_PARTY_NOTICES.md": "5ab50b8fc3cf300d62ebe4c857d774003bcfe09a00f31f2f4a647901be51f72d",
     "assets-data.js": "bcafee44871a58737465e8591f143096a927ffe6aedc6ad29cd7b2214a23f970",
@@ -9101,7 +9108,8 @@
     "docs/ORIGINAL_EXAMPLES.md": "9d5f04401445de6eb0b108350fd982a537927e8d2ddac96137f31d393ff4ccb6",
     "docs/OWNED_RUNTIME.md": "15d8f8c1dba389e7b5ea2bf797c02a9e2c8e2d3669e4259c99fee7594d4e07d3",
     "docs/STORY_AUTHORING.md": "815828d8d62ec676ba7f99f26efa6f45b9ea828e88a80581d6afd38d5710de4e",
-    "docs/screenshots/README.md": "e37592fda62ae4ed6d8f589ad8a4e304a988efefd3bd6d5ce077500c940d8c17",
+    "docs/assets/readme-hero.svg": "a21074295eafbe6bc97bddd65ea3ba1cb35f7ec84d130f2172073ecdc6f91066",
+    "docs/screenshots/README.md": "b090a73ba24a3613ce113e4b79c9177c0c2dcf53bcc35522e88c51f3fad3b1b1",
     "docs/screenshots/library.webp": "2969c5a85d92db2e4d9dbe7351a2989f3ff1176cbe0498e84264ec1366bc4d58",
     "docs/screenshots/memory-tape.png": "6438d07d0968ca21826c8c2c9c3172ff0c359fbec7668125496955825e840fe0",
     "docs/screenshots/moon-memory.png": "d6f0eb858ca12cb8f4dfea5b4f08dd7d737414fd59053c11a050ea32cde37b8f",
