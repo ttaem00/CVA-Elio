@@ -38,13 +38,14 @@ Story를 읽는 입구와 전체 템플릿 목록은 다른 목적지로 표시�
 
 | 자산 | 용도 | 기준 |
 | --- | --- | --- |
-| [`cva/assets/cva-symbol.svg`](../cva/assets/cva-symbol.svg) | 32·34px 헤더의 CVA 표식 | 승인된 CVA v4 compact 자산. 64 그리드·3.2 획·16 모서리. Elio 독립 로고를 새로 만든 것이 아님 |
-| [`cva/assets/cva-symbol-micro.svg`](../cva/assets/cva-symbol-micro.svg) | 16px 파비콘의 CVA 표식 | 같은 정본의 micro 자산. 작은 크기에서 3.8 획 사용 |
+| [`cva/assets/cva-symbol.svg`](../cva/assets/cva-symbol.svg) | 32·34px 헤더의 CVA 표식 | CVA v4 compact의 S1 중심 보정본. 64 그리드·3.2 획·16 모서리. Elio 독립 로고를 새로 만든 것이 아님 |
+| [`cva/assets/cva-symbol-micro.svg`](../cva/assets/cva-symbol-micro.svg) | 16px 파비콘의 CVA 표식 | 같은 중심 보정을 적용한 micro 자산. 작은 크기에서 3.8 획 사용 |
 | [`assets/logo.svg`](../assets/logo.svg) | 소개·README의 다람쥐와 워드마크 | 원본 비율을 유지하고 충분한 크기(가이드 최소 160px)로 표시 |
 | `cva/assets/cva-color.svg` | 기존 원본 로고 자산 경로 | 호환을 위해 유지. 작은 헤더에서 새로 축소해 쓰지 않음 |
 
 작은 표식은 CVA 정본 `docs/design/cva-brand-v1/media/icons/v4/`의 `cva-color.svg`와 `cva-micro.svg`에서 가져왔습니다.
-S1 자산 출처는 `ttaem00/chzz-vod-analyzer`의 `475d9c776f6bceea5981846cb3e7395d1865c103`입니다.
+S1 자산 출처는 `ttaem00/chzz-vod-analyzer`의 `91602249d9046d97eb22e7fd5f329e3174a242f5`입니다.
+S1에서 마름모만 왼쪽으로 2 이동해 중심을 (32, 32)에 맞췄습니다. 고리·시작 노드·색·크기는 유지합니다.
 원본 로고를 표시하는 기존 소개·재배포 고지는 유지합니다.
 
 기본 CVA 표현은 네이비 `#141D2B`, 종이 `#FAF5EB`, 황동 `#F4BE70`을 공유합니다.
