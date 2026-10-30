@@ -405,3 +405,16 @@ dialog :is(input,textarea,select){font-size:14px}
   button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline-color:Highlight}
   :is(.library-tabs [aria-selected=true],.purpose-tabs [aria-pressed=true],#profiles [aria-pressed=true],.workspace-views [aria-pressed=true]){border-color:Highlight;outline:1px solid Highlight}
 }
+
+/* S4: the existing pinned Lucide external-link/x paths replace font glyphs.
+   Their accessible action names and button targets remain on the controls. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.ui-icon{display:inline-block;flex:0 0 auto;vertical-align:middle}
+.header-actions>a,#full-preview,.style-bar>a,.library-footer>a{display:inline-flex;align-items:center;justify-content:center;gap:7px}
+.library-footer>a{justify-content:flex-start}.library-footer .ui-icon{width:16px;height:16px}
+.dialog-head button,.inspector-head button{display:inline-flex;align-items:center;justify-content:center}
+@media(max-width:520px){
+  #full-preview{flex-wrap:wrap;column-gap:5px}
+  .header-tools>summary::after{content:'';width:8px;height:8px;flex:none;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);margin-inline-start:3px}
+  .header-tools[open]>summary::after{transform:translateY(2px) rotate(225deg)}
+}
