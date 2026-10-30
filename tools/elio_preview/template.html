@@ -10,12 +10,12 @@
   </div>{{READER_SHARE}}
 {{STORY_VIEW_SWITCH}}{{SCENE_NAV}}</header>{{TOPOLOGY}}
 <nav id="scene-dock" class="scene-dock" aria-label="현재 장면 이동" aria-hidden="true" hidden>
-  <button id="scene-dock-previous" class="scene-dock__step" type="button" aria-label="이전 장면">‹</button>
+  <button id="scene-dock-previous" class="scene-dock__step" type="button" aria-label="이전 장면"><span class="scene-dock__arrow scene-dock__arrow--previous" aria-hidden="true"></span><span>이전</span></button>
   <a id="scene-dock-current" class="scene-dock__current" href="#{{FIRST_SCENE_ID}}">
-    <span id="scene-dock-count" class="scene-dock__count">01 / {{COUNT_PADDED}}</span>
+    <span class="scene-dock__context"><span class="scene-dock__caption">현재 장면</span><span id="scene-dock-count" class="scene-dock__count">01 / {{COUNT_PADDED}}</span></span>
     <strong id="scene-dock-label">{{FIRST_SCENE}}</strong>
   </a>
-  <button id="scene-dock-next" class="scene-dock__step" type="button" aria-label="다음 장면">›</button>
+  <button id="scene-dock-next" class="scene-dock__step" type="button" aria-label="다음 장면"><span>다음</span><span class="scene-dock__arrow" aria-hidden="true"></span></button>
 </nav>
 <section id="story" class="timeline"{{LAYOUT_ATTR}} aria-label="{{WORK}} {{UNIT}} 핵심 장면 타임라인">{{EVENTS}}</section>
 {{PERSPECTIVE_VIEWS}}
