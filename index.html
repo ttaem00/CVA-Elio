@@ -1,4 +1,103 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Elio · CVA 디자인 시스템</title><link rel="stylesheet" href="assets/font.css"><link rel="stylesheet" href="design/cva.css"></head>
-<body data-cva><main class="cva-page" data-cva-profile="ttaem"><header class="cva-module-head"><img src="assets/logo.svg" width="160" alt="TTaem CVA"><p class="cva-eyebrow">CVA DESIGN SYSTEM</p><h1 class="cva-title">Elio</h1><p class="cva-lead">관계를 고르고, 이야기의 흐름과 근거를 읽습니다.</p></header><section><h2>만들고 편집하기</h2><p>관계와 표현을 고르고 같은 자료로 페이지를 만듭니다.</p><a class="cva-button" href="cva/library.html">라이브러리 열기</a><p><a href="cva/index.html">페이지 제작실</a> · <a href="board/index.html">Elio Board 도감</a></p></section><section><h2>Elio Story</h2><p>원본 전체 템플릿과 기존 명조 3장 5막·엣지 드림 예제에서 장면·연출·근거를 살펴보세요.</p><p><a class="cva-button cva-button-primary" href="examples/templates/index.html">Elio 원본 전체 템플릿</a></p><a class="cva-button cva-button-primary" href="examples/story.html">창작 이야기 읽기</a></section><section><h2>구성·이용 범위</h2><p>CVA가 직접 작성한 관계 표현과 제작실, Story 리더와 Board를 담았습니다. 공개 범위와 제3자 고지는 사용 안내에서 확인할 수 있습니다.</p><p><a href="README.md">사용법과 범위</a> · <a href="docs/BRANDING.md">현재 브랜드 기준</a> · <a href="examples/brand-icons.html">브랜드 아이콘</a> · <a href="POLICY.md">이용 정책</a></p></section><footer><a href="https://ttaem.com">ttaem.com</a> · <a href="https://github.com/ttaem00/cva-elio">cva-elio 원본 저장소</a></footer></main></body></html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Elio는 CVA의 공용 디자인 시스템입니다. 요소와 표현을 고르고 페이지를 편집하며, Elio Story와 Elio Board에서 이야기와 관계를 살펴봅니다.">
+  <title>Elio · 관계를 고르고, 페이지로 만듭니다.</title>
+  <link rel="icon" href="cva/assets/cva-symbol-micro.svg">
+  <link rel="stylesheet" href="assets/font.css">
+  <link rel="stylesheet" href="design/cva.css">
+  <link rel="stylesheet" href="assets/elio-intro.css">
+</head>
+<body class="elio-intro" data-cva>
+  <a class="cva-skip" href="#main">본문으로 이동</a>
+  <header class="el-header el-wrap">
+    <a class="el-brand" href="index.html" aria-label="Elio 처음으로"><img src="cva/assets/cva-symbol.svg" width="32" height="32" alt=""><span>Elio<small>CVA DESIGN SYSTEM</small></span></a>
+    <nav aria-label="Elio 안내"><a href="#entrances">시작하기</a><a href="examples/brand-icons.html">브랜드 아이콘</a><a href="#resources">사용 안내</a></nav>
+  </header>
 
+  <main id="main">
+    <section class="el-hero el-wrap" aria-labelledby="hero-title">
+      <div class="el-hero-copy">
+        <p class="el-eyebrow">CVA의 공용 디자인 시스템</p>
+        <h1 id="hero-title">관계를 고르고,<br>페이지로 만듭니다.</h1>
+        <p class="el-lead">내용을 어떤 순서로, 어떤 관계로 보여줄까요?<br>필요한 요소와 표현을 골라 읽고 편집할 수 있는 페이지를 만듭니다.</p>
+        <div class="el-actions"><a class="cva-button" href="cva/library.html">라이브러리 시작하기 <span aria-hidden="true">↗</span></a><a class="cva-button secondary" href="cva/index.html">페이지 제작실 열기</a></div>
+        <p class="el-output">완성한 페이지는 <strong>HTML</strong>로.<br>다시 편집할 구성은 <strong>JSON</strong>으로.</p>
+      </div>
+
+      <figure class="el-composition" aria-labelledby="composition-caption">
+        <div class="el-composition-top"><span>CONTENT &amp; CONNECTIONS</span><span class="el-example-label">구성 예시</span></div>
+        <p class="el-composition-title">내용에 맞는<br><em>관계를 펼치다.</em></p>
+        <div class="el-specimen-grid">
+          <section class="el-specimen el-sequence" aria-label="순서를 표현한 예시">
+            <h2><span aria-hidden="true">01</span> 순서</h2>
+            <ol><li><span>만남</span><small>이야기의 시작</small></li><li><span>선택</span><small>달라지는 방향</small></li><li><span>귀환</span><small>다시 만나는 장면</small></li></ol>
+          </section>
+          <section class="el-specimen el-relation" aria-label="인물과 장면의 관계를 표현한 예시">
+            <h2><span aria-hidden="true">02</span> 관계</h2>
+            <svg class="el-relation-drawing" viewBox="0 0 200 210" role="img" aria-labelledby="relation-title relation-description">
+              <title id="relation-title">두 인물이 하나의 장면에서 만나는 관계</title>
+              <desc id="relation-description">왼쪽의 여행자와 오른쪽의 안내자가 아래의 만남 장면에 연결됩니다.</desc>
+              <path class="el-connection" d="M49 71v27q0 11 11 11h29q11 0 11 11v17M151 71v27q0 11-11 11h-29q-11 0-11 11"/>
+              <rect class="el-node" x="10" y="29" width="78" height="42" rx="6"/><rect class="el-node" x="112" y="29" width="78" height="42" rx="6"/>
+              <text x="49" y="54" text-anchor="middle">여행자</text><text x="151" y="54" text-anchor="middle">안내자</text>
+              <rect class="el-node el-node-scene" x="51" y="137" width="98" height="44" rx="6"/>
+              <text class="el-scene-text" x="100" y="164" text-anchor="middle">만남의 장면</text>
+              <circle class="el-junction" cx="100" cy="120" r="4"/>
+            </svg>
+          </section>
+        </div>
+        <figcaption id="composition-caption">순서와 관계를 표현한 구성 예시입니다.<br>페이지의 모양은 전하려는 내용에서 시작합니다.</figcaption>
+      </figure>
+    </section>
+
+    <section id="entrances" class="el-entrances el-wrap" aria-labelledby="entrances-title">
+      <div class="el-section-head"><div><p class="el-eyebrow">FIND YOUR WAY</p><h2 id="entrances-title">하려는 일에서 시작하세요.</h2></div><p>페이지를 만들거나, 이야기를 읽거나.<br>필요한 곳으로 바로 들어가세요.</p></div>
+      <div class="el-entrance-grid">
+        <a class="el-entrance" href="cva/library.html">
+          <div class="el-card-top"><span class="el-verb">고르기</span><span class="el-card-arrow" aria-hidden="true">↗</span></div>
+          <h3>Elio 라이브러리</h3><p>요소·모듈·표현을<br>실제 예제로 살펴봅니다.</p>
+          <span class="el-card-result">필요한 구성 찾기</span>
+        </a>
+        <a class="el-entrance" href="cva/index.html">
+          <div class="el-card-top"><span class="el-verb">만들기</span><span class="el-card-arrow" aria-hidden="true">↗</span></div>
+          <h3>페이지 제작실</h3><p>구성과 내용을 편집하고<br>HTML·JSON으로 보관합니다.</p>
+          <span class="el-card-result">읽고 다시 편집할 페이지</span>
+        </a>
+        <a class="el-entrance el-entrance-story" href="examples/story.html">
+          <div class="el-card-top"><span class="el-verb">읽기</span><img src="cva/assets/brand-icons/v4/elio-color.svg" width="32" height="32" alt=""></div>
+          <h3>Elio Story</h3><p>장면·인물·시간·근거를<br>따라 이야기를 읽습니다.</p>
+          <span class="el-card-result">장면으로 돌아가는 읽기 <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="el-entrance" href="board/index.html">
+          <div class="el-card-top"><span class="el-verb">살펴보기</span><span class="el-card-arrow" aria-hidden="true">↗</span></div>
+          <h3>Elio Board</h3><p>이야기와 도감의 항목을<br>지도와 보드에서 탐색·편집합니다.</p>
+          <span class="el-card-result">항목과 관계를 한눈에</span>
+        </a>
+      </div>
+      <p class="el-relationship-note">라이브러리와 제작실은 Elio 안의 작업 화면입니다. Story는 이야기 리더, Board는 항목과 관계를 살펴보는 보드입니다.</p>
+    </section>
+
+    <section class="el-principle el-wrap" aria-labelledby="principle-title">
+      <p class="el-serif" aria-hidden="true">One system.<br>Many ways to read.</p>
+      <div><p class="el-eyebrow">같은 기준, 내용에 맞는 표현</p><h2 id="principle-title">표현은 달라도,<br>읽는 기준은 분명하게.</h2><p>중요한 내용은 먼저 보이게, 관련된 내용은 함께 놓습니다. 이름과 행동은 화면에서 읽히고, 키보드로도 같은 길을 찾을 수 있게 설계합니다.</p><a class="el-text-link" href="examples/brand-icons.html">작은 아이콘에도 이어지는 기준 <span aria-hidden="true">→</span></a></div>
+    </section>
+
+    <section id="resources" class="el-resources el-wrap" aria-labelledby="resources-title">
+      <div class="el-section-head"><div><p class="el-eyebrow">KEEP EXPLORING</p><h2 id="resources-title">예제와 사용 안내</h2></div><p>먼저 살펴보고, 내 내용으로 이어가세요.</p></div>
+      <div class="el-resource-grid">
+        <article><h3>예제와 템플릿</h3><p>창작 이야기와 기존 작품 예제에서 장면의 순서·관점·근거를 살펴봅니다.</p><a class="el-text-link" href="examples/templates/index.html">Story 원본 전체 템플릿 <span aria-hidden="true">↗</span></a></article>
+        <article><h3>직접 만들기</h3><p>로컬에서 여는 방법부터 구성 선택, HTML·JSON 보관까지 확인합니다.</p><a class="el-text-link" href="README.md">사용법과 제공 범위 <span aria-hidden="true">↗</span></a></article>
+        <article><h3>공유하는 기준</h3><p>이름과 로고의 쓰임, 자산 출처와 이용 조건을 확인합니다.</p><div class="el-resource-links"><a class="el-text-link" href="docs/BRANDING.md">브랜드 기준 <span aria-hidden="true">↗</span></a><a class="el-text-link" href="POLICY.md">이용 정책 <span aria-hidden="true">↗</span></a></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="el-footer el-wrap">
+    <div class="el-footer-brand"><img src="assets/logo.svg" width="160" alt="TTaem CVA"><p>Elio는 CVA의 공용 디자인 시스템입니다.</p></div>
+    <div class="el-footer-links"><a href="https://ttaem.com">ttaem.com</a><a href="https://github.com/ttaem00/cva-elio">cva-elio 원본 저장소</a></div>
+  </footer>
+</body>
+</html>
