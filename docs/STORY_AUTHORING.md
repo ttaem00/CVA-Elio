@@ -95,6 +95,10 @@ python scripts/render_story.py --input STORY.json --source SOURCE.json --output 
 같은 입력으로 다시 렌더할 수 있게 JSON을 보관합니다.
 고정 예제 재생성용 `scripts/demo.py`로 편집 입력을 덮어쓰지 않습니다.
 
+상단 길 안내의 `Elio 홈`은 출력 위치를 기준으로 저장소의 `index.html`을 가리킵니다.
+작품명은 링크 없는 현재 맥락으로 표시하고, 현재 구간은 `aria-current="page"`로 구분합니다.
+출력 파일을 다른 폴더로 옮길 때는 새 위치를 `--output`으로 지정해 다시 렌더합니다.
+
 `board/index.html`은 자체 Board 앱입니다. 명시한 이야기·도감 JSON으로 별도 Board를 만들 수 있습니다.
 
 ```text
