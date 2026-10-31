@@ -616,12 +616,12 @@
         group.id, group.title, nodes.filter(node => group.event_ids.includes(node.item.id)),
       )).filter(Boolean);
     } else {
-      const preceding = new Set(edges.filter(edge => edge.to === selected).map(edge => edge.from));
-      const following = new Set(edges.filter(edge => edge.from === selected).map(edge => edge.to));
+      const preceding = new Set(edges.filter(edge => edge.to === selected && edge.from !== selected).map(edge => edge.from));
+      const following = new Set(edges.filter(edge => edge.from === selected && edge.to !== selected).map(edge => edge.to));
       groups = [
-        groupBounds('context-before', '앞선 장면', nodes.filter(node => preceding.has(node.item.id))),
+        groupBounds('context-before', '들어오는 연결', nodes.filter(node => preceding.has(node.item.id))),
         groupBounds('context-current', '지금 고른 장면', nodes.filter(node => node.item.id === selected)),
-        groupBounds('context-after', '이어지는 갈래', nodes.filter(node => following.has(node.item.id))),
+        groupBounds('context-after', '나가는 연결', nodes.filter(node => following.has(node.item.id))),
       ].filter(Boolean);
     }
     groups = exactGroups(groups, nodes, effectiveScope === 'focus' ? 'context' : 'stage');
