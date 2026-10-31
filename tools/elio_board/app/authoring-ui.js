@@ -85,7 +85,13 @@
       message('파일을 확인하고 있습니다…');
       try {
         if (file.size > A.MAX_BYTES) throw new Error('JSON 파일은 2MB 이하로 선택해 주세요.');
-        const data = A.normalizeDocument(JSON.parse(await file.text()));
+        let contents;
+        try { contents = await file.text(); }
+        catch {
+          if (ticket === request) $('document-file').value = '';
+          throw new Error('선택한 파일을 읽지 못했습니다. 파일 위치와 접근 권한을 확인한 뒤 다시 선택해 주세요. 현재 문서는 그대로입니다.');
+        }
+        const data = A.normalizeDocument(JSON.parse(contents));
         if (ticket !== request) return;
         pending = data;
         $('document-review-copy').textContent = `${data.title} · ${data.schema_version === 'elio.board.v1' ? '이야기' : '도감'} · ${(data.events || data.items).length}개 ${data.events ? '장면' : '항목'}`;
