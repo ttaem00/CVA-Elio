@@ -194,6 +194,24 @@
       if(field.variants)form.elements.namedItem(field.key).closest('.control').hidden=!field.variants.includes(form.elements.namedItem('variant').value);
     }
   }
+  function previewStatus(message){const status=$('preview-status');if(status&&status.textContent!==message)status.textContent=message;}
+  function fieldRequirement(input){
+    const label=input.labels?.[0]?.textContent.trim()||'입력값';
+    if(input.type!=='number')return label+': 입력 형식을 확인하세요.';
+    const min=input.getAttribute('min'),max=input.getAttribute('max'),step=input.getAttribute('step');
+    const range=min!==null&&max!==null?min+'~'+max+' 범위에서 ':min!==null?min+' 이상의 ':max!==null?max+' 이하의 ':'';
+    return label+': '+range+(step&&step!=='any'?step+' 단위의 ':'')+'숫자를 입력하세요.';
+  }
+  function fieldError(input,message){
+    const id='field-error-'+input.id;let error=$(id);
+    if(!error&&message){error=document.createElement('p');error.id=id;error.className='field-error';input.closest('.control').append(error);}
+    if(!error)return;
+    if(error.textContent!==message)error.textContent=message;if(error.hidden!==!message)error.hidden=!message;
+    if(message){if(input.getAttribute('aria-invalid')!=='true')input.setAttribute('aria-invalid','true');}else if(input.hasAttribute('aria-invalid'))input.removeAttribute('aria-invalid');
+    const previous=input.getAttribute('aria-describedby')||'',descriptions=previous.split(/\s+/).filter(value=>value&&value!==id);
+    if(message)descriptions.push(id);
+    const description=descriptions.join(' ');if(description!==previous){if(description)input.setAttribute('aria-describedby',description);else input.removeAttribute('aria-describedby');}
+  }
   function sendPreview() {
     const iframe=$('live-preview');if(!iframe)return;previewRequest++;
     if(previewComponent)iframe.contentWindow.postMessage({type:'cva.library.component',requestId:previewRequest,kind:current.kind,id:previewComponent.id,props:currentProps,profile:selectedProfile(),palette:state().palette},location.origin);
@@ -211,7 +229,28 @@
     if(['template','section'].includes(resource.kind)&&previewDocument.profile==='elio')body+='<p class="composition-note">이 구성은 CVA 페이지의 Elio 스타일입니다. Elio 원본 전체 템플릿과 사건·관계·단서 입력은 <a href="library.html?kind=elio">Elio 원본 저작 입력</a>과 <a href="../examples/templates/index.html">같은 리더의 실행 예제</a>를 사용하세요.</p>';
     $('detail').innerHTML='<a class="back-link" href="'+esc(href({item:''}))+'" data-back>← 목록으로</a><header class="detail-head"><span class="overline">'+esc(kinds[resource.kind])+' / '+esc(categories.find(c=>c.id===resource.category)?.name||'ELIO')+'</span><h1 id="detail-title">'+esc(resource.name)+'</h1><p>'+esc(resource.description)+'</p></header>'+body+(resource.studioUrl||resource.kind==='elio'?'<div class="detail-actions">'+(resource.studioUrl?'<a class="action primary" data-studio-route="'+esc(resource.studioUrl)+'" href="'+esc(styledUrl(resource.studioUrl,resource))+'" target="_blank" rel="noopener">'+(resource.kind==='elio'?'원본 예제에서 열기':'페이지 제작실에서 조절')+' '+icons('external-link')+'<span class="sr-only"> (새 탭)</span></a>':'')+(resource.kind==='elio'?'<a class="action" href="../examples/templates/index.html" target="_blank" rel="noopener">원본 리더 읽기 '+icons('external-link')+'<span class="sr-only"> (새 탭)</span></a><a class="action" href="../docs/ELIO_TEMPLATE_COVERAGE.md" download>원본 템플릿 보관 ↓</a>':'')+'</div>':'')+'<section class="code-section"><div class="code-header"><h2>'+(resource.kind==='elio'?'연결 정보':'사용 코드')+'</h2><button id="copy-code">'+icons('copy')+'코드 복사</button></div><pre><code id="use-code"></code></pre><p id="copy-status" class="detail-note" role="status" aria-live="polite"></p></section>'+sourceLinks(resource,descriptor);
     updateCode();
-    if(descriptor){syncElementControls(resource);$('component-form').addEventListener('submit',event=>event.preventDefault());$('component-form').addEventListener('input',event=>{const input=event.target;if(!input.name)return;const next={...currentProps};if(resource.kind==='element')syncElementControls(resource);for(const field of event.currentTarget.elements){if(field.name&&!field.closest('.control')?.hidden)next[field.name]=field.type==='checkbox'?field.checked:field.type==='number'?field.valueAsNumber:field.value;}try{if(resource.kind==='element')CVA_ELEMENTS.normalize(resource.id,next);if(!input.checkValidity())throw new Error('입력 범위를 확인하세요.');invalidProps=false;currentProps=next;syncElementControls(resource);updateCode();sendPreview();}catch(error){invalidProps=true;$('preview-status').textContent='마지막 유효한 미리보기를 유지합니다: '+error.message;}});$('reset-props').addEventListener('click',()=>{detail(resource);$('reset-props').focus();});}
+    if(descriptor){
+      syncElementControls(resource);$('component-form').addEventListener('submit',event=>event.preventDefault());
+      $('component-form').addEventListener('input',event=>{
+        const input=event.target;if(!input.name)return;
+        const next={...currentProps};if(resource.kind==='element')syncElementControls(resource);
+        const fields=[...event.currentTarget.elements].filter(field=>field.name),visible=fields.filter(field=>!field.closest('.control')?.hidden);
+        for(const field of visible)next[field.name]=field.type==='checkbox'?field.checked:field.type==='number'?field.valueAsNumber:field.value;
+        let invalid=null;
+        try{
+          invalid=visible.find(field=>!field.checkValidity());if(invalid)throw new Error(fieldRequirement(invalid));
+          if(resource.kind==='element')CVA_ELEMENTS.normalize(resource.id,next);
+          const recovering=invalidProps;invalidProps=false;fields.forEach(field=>fieldError(field,''));currentProps=next;
+          if(recovering)previewStatus('입력값을 확인했습니다. 미리보기를 갱신합니다.');
+          syncElementControls(resource);updateCode();sendPreview();
+        }catch(error){
+          invalidProps=true;const target=invalid||visible.find(field=>field.getAttribute('aria-invalid')==='true'&&$('field-error-'+field.id)?.textContent===error.message)||input;
+          fields.forEach(field=>fieldError(field,field===target?error.message:''));
+          previewStatus('마지막 유효한 미리보기를 유지합니다: '+error.message);
+        }
+      });
+      $('reset-props').addEventListener('click',()=>{detail(resource);$('reset-props').focus();});
+    }
     if(resource.kind==='interaction'&&resource.id==='text-reveal'){
       $('reveal-text').addEventListener('input',()=>{disposeReveal?.();$('reveal-title').textContent=$('reveal-text').value;});
       $('reveal-play').addEventListener('click',()=>{disposeReveal?.();disposeReveal=CVA_LIBRARY_INTERACTIONS.reveal($('reveal-title'));$('demo-status').textContent='짧은 제목 효과를 요청했습니다. 움직임 줄이기 설정에서는 정지 상태입니다.';});
@@ -244,7 +283,7 @@
   $('library-profile').addEventListener('change',()=>changeTone({profile:$('library-profile').value}));
   $('library-palette').addEventListener('change',()=>changeTone({palette:$('library-palette').value}));
   window.addEventListener('popstate',render);
-  window.addEventListener('message',event=>{if(event.origin!==location.origin||event.source!==$('live-preview')?.contentWindow)return;if(CVA_COMPONENTS.receivePreviewDownload(event,[$('live-preview')]))return;if(['cva.library.ready','cva.canvas.ready'].includes(event.data?.type))sendPreview();if(event.data?.type==='cva.library.rendered'&&event.data.requestId===previewRequest&&!invalidProps&&$('preview-status'))$('preview-status').textContent='현재 옵션으로 표시했습니다.';if(event.data?.type==='cva.library.error'&&event.data.requestId===previewRequest&&!invalidProps&&$('preview-status'))$('preview-status').textContent='미리보기를 만들지 못했습니다: '+event.data.message;});
+  window.addEventListener('message',event=>{if(event.origin!==location.origin||event.source!==$('live-preview')?.contentWindow)return;if(CVA_COMPONENTS.receivePreviewDownload(event,[$('live-preview')]))return;if(['cva.library.ready','cva.canvas.ready'].includes(event.data?.type))sendPreview();if(event.data?.type==='cva.library.rendered'&&event.data.requestId===previewRequest&&!invalidProps&&$('preview-status'))previewStatus('현재 옵션으로 표시했습니다.');if(event.data?.type==='cva.library.error'&&event.data.requestId===previewRequest&&!invalidProps&&$('preview-status'))previewStatus('미리보기를 만들지 못했습니다: '+event.data.message);});
   window.addEventListener('pagehide',()=>{observer.disconnect();disposeReveal?.();},{once:true});
   $('search-icon').innerHTML=icons('search');
   if(matchMedia('(max-width:740px)').matches)$('category-disclosure').open=false;

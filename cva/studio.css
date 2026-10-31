@@ -418,6 +418,10 @@ dialog :is(input,textarea,select){font-size:14px}
   .header-tools[open]>summary::after{transform:translateY(2px) rotate(225deg)}
 }
 
+/* Field errors reuse the shared feedback roles. */
+.property-row .field-error{margin:8px 0 0;color:var(--elio-error-text);font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+.property-row :is(input,textarea,select)[aria-invalid="true"]{border-color:var(--elio-error-text)}
+
 /* S6: page identity, editing target and file preparation stay visible. */
 .document-name .document-state{display:block;margin-top:6px;color:var(--muted);font-size:12px;font-weight:400;line-height:1.5;overflow-wrap:anywhere}
 .profile-label small{display:block;margin-top:3px;font-size:12px;font-weight:400;line-height:1.5;color:var(--muted);letter-spacing:0}

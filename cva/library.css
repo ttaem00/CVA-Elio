@@ -51,6 +51,8 @@ main{padding:30px 40px}
 .consumer-list a>.ui-icon{margin-left:5px}.footer-links{display:flex;flex-wrap:wrap;gap:8px 20px}
 
 /* Shared feedback and control roles: ../design/foundations.css. */
+.control .field-error{margin:8px 0 0;color:var(--elio-error-text);font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+.control :is(input,textarea,select)[aria-invalid="true"]{border-color:var(--elio-error-text)}
 
 /* S6: choose an outcome first; detail and creation remain distinct actions. */
 .starter-preview-link{display:block;min-width:0}

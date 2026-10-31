@@ -44,10 +44,10 @@
     refresh(); return changed;
   }
 
-  function download(value, type, extension) {
+  function download(value, type, extension, workId) {
     const url = URL.createObjectURL(new Blob([value], { type }));
     const link = document.createElement('a');
-    link.href = url; link.download = `${options.getWork().id}.${extension}`;
+    link.href = url; link.download = `${workId}.${extension}`;
     document.body.append(link); link.click(); link.remove();
     setTimeout(() => URL.revokeObjectURL(url), 30000);
   }
@@ -92,23 +92,23 @@
         $('document-review').hidden = false; message('내용을 확인한 뒤 이 문서 열기를 눌러 주세요.');
       } catch (error) { if (ticket === request) message(error.message, true); }
     });
-    $('document-import-cancel').addEventListener('click', () => { request++; pending = undefined; $('document-review').hidden = true; $('document-file').value = ''; message('가져오기를 취소했습니다. 현재 문서는 그대로입니다.'); });
+    $('document-import-cancel').addEventListener('click', () => { request++; pending = undefined; $('document-review').hidden = true; $('document-file').value = ''; $('document-file').focus(); message('가져오기를 취소했습니다. 현재 문서는 그대로입니다.'); });
     $('document-import-apply').addEventListener('click', () => {
       if (!pending) return;
       const data = pending; request++; pending = undefined;
-      options.installDocument(data, true); $('document-review').hidden = true; $('document-file').value = ''; refresh(); message('가져온 문서를 열었습니다.');
+      options.installDocument(data, true); $('document-review').hidden = true; $('document-file').value = ''; refresh(); $('document-work-title').focus(); message('가져온 문서를 열었습니다.');
     });
     $('document-edit').addEventListener('submit', event => { event.preventDefault(); try { applyEdits(); message('변경을 보드에 적용했습니다. 파일로 저장하면 다시 열 수 있습니다.'); } catch (error) { message(error.message, true); } });
     $('document-save-json').addEventListener('click', () => {
-      try { const data = A.exportDocument(applyEdits(), options.getState()); download(JSON.stringify(data, null, 2), 'application/json;charset=utf-8', 'json'); message('편집 파일(.json) 다운로드를 시작했습니다. 현재 문서와 읽기 위치를 포함합니다.'); } catch (error) { message(error.message, true); }
+      try { const data = A.exportDocument(applyEdits(), options.getState()); download(JSON.stringify(data, null, 2), 'application/json;charset=utf-8', 'json', data.work_id); message('편집 파일(.json) 다운로드를 시작했습니다. 현재 문서와 읽기 위치를 포함합니다.'); } catch (error) { message(error.message, true); }
     });
     $('document-save-html').addEventListener('click', async () => {
-      const button = $('document-save-html'); button.disabled = true;
+      const button = $('document-save-html'), ticket = request; button.disabled = true;
       try {
         const data = applyEdits(); message('현재 문서와 화면 파일을 하나로 묶고 있습니다…');
         const html = await A.standaloneHTML(data, options.getState(), { template: exportShell(), readerBase: window.ELIO_BOARD_READER_BASE || location.href, readText: name => readAsset(name), readDataURL: name => readAsset(name, true) });
-        download(html, 'text/html;charset=utf-8', 'html'); message('페이지 파일(.html) 다운로드를 시작했습니다. 파일을 열어 이어서 읽고 편집할 수 있습니다.');
-      } catch (error) { message(error.message, true); } finally { button.disabled = false; }
+        download(html, 'text/html;charset=utf-8', 'html', data.work_id); if (ticket === request) message('페이지 파일(.html) 다운로드를 시작했습니다. 파일을 열어 이어서 읽고 편집할 수 있습니다.');
+      } catch (error) { if (ticket === request) message(error.message, true); } finally { button.disabled = false; }
     });
     refresh();
   }

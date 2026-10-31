@@ -74,7 +74,7 @@
     check(data.edge_conditions && typeof data.edge_conditions === 'object' && !Array.isArray(data.edge_conditions), '갈래의 조건이 필요합니다.');
     graph.edges.forEach(edge => {
       const id = edgeId(edge), relation = edge.relation || 'sequence';
-      check(events.has(edge.from) && events.has(edge.to) && edge.from !== edge.to && !pairs.has(id), '연결이 중복되거나 알 수 없는 장면을 가리킵니다.'); pairs.add(id);
+      check(events.has(edge.from) && events.has(edge.to) && !pairs.has(id), '연결이 중복되거나 알 수 없는 장면을 가리킵니다.'); pairs.add(id);
       check(['sequence', 'influence', 'transfer', 'return'].includes(relation), '알 수 없는 연결 종류입니다.');
       check(relation === 'return' || order.get(edge.from) < order.get(edge.to), '읽는 순서를 거스르는 연결은 돌아가는 관계로 구분해야 합니다.');
       text(data.edge_conditions[id], '연결의 조건', MAX_BYTES);
