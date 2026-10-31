@@ -97,11 +97,10 @@
   function toneFamilies() {
     if(!$('tone-comparison').open||current){$('tone-families').innerHTML='';return;}
     const s=state();
-    if(!$('tone-families').querySelector('[data-tone-profile]'))$('tone-families').innerHTML=Object.entries(profiles).map(([id,entry])=>'<button type="button" class="tone-family" data-tone-profile="'+esc(id)+'" aria-pressed="'+String(s.profile===id)+'"><span class="card-preview" aria-hidden="true"><iframe src="'+esc(styledUrl('thumb.html?module=cards',null,id))+'" title="'+esc(entry.label)+' 스타일 예제" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe></span><span class="tone-label">'+(s.profile===id?'<span aria-hidden="true">✓ </span>':'')+esc(entry.label)+'</span></button>').join('');
+    if(!$('tone-families').querySelector('[data-tone-profile]'))$('tone-families').innerHTML=Object.entries(profiles).map(([id,entry])=>'<button type="button" class="tone-family" data-tone-profile="'+esc(id)+'" aria-pressed="'+String(s.profile===id)+'"><span class="card-preview" aria-hidden="true"><iframe src="'+esc(styledUrl('thumb.html?module=cards',null,id))+'" title="'+esc(entry.label)+' 스타일 예제" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe></span><span class="tone-label">'+icons('check')+'<span>'+esc(entry.label)+'</span></span></button>').join('');
     $('tone-families').querySelectorAll('[data-tone-profile]').forEach(button=>{
       const id=button.dataset.toneProfile,selected=s.profile===id;
       button.setAttribute('aria-pressed',String(selected));
-      button.querySelector('.tone-label').textContent=(selected?'✓ ':'')+profiles[id].label;
       const frame=button.querySelector('iframe'),next=styledUrl('thumb.html?module=cards',null,id);
       if(frame.getAttribute('src')!==next)frame.setAttribute('src',next);
     });
@@ -135,14 +134,15 @@
   function control(c) {
     const id='control-'+c.key,value=currentProps[c.key],options=c.options||[];
     const label='<label for="'+esc(id)+'">'+esc(c.label)+'</label>';
-    if(c.kind==='checkbox')return '<div class="control check"><label for="'+esc(id)+'"><input type="checkbox" id="'+esc(id)+'" name="'+esc(c.key)+'"'+(value?' checked':'')+'>'+esc(c.label)+'</label></div>';
-    const common=' id="'+esc(id)+'" name="'+esc(c.key)+'"';
+    const hint=c.hint?'<small id="'+esc(id+'-hint')+'">'+esc(c.hint)+'</small>':'';
+    const common=' id="'+esc(id)+'" name="'+esc(c.key)+'"'+(c.hint?' aria-describedby="'+esc(id+'-hint')+'"':'');
+    if(c.kind==='checkbox')return '<div class="control check"><label for="'+esc(id)+'"><input type="checkbox"'+common+(value?' checked':'')+'>'+esc(c.label)+'</label>'+hint+'</div>';
     let input;
     if(c.kind==='select'||c.kind==='image'){const choices=c.kind==='image'?[{value:'',label:'이미지 없음'},...CVA_MODULES.media.map(m=>({value:m.id,label:m.label}))]:options;input='<select'+common+'>'+choices.map(o=>'<option value="'+esc(o.value)+'"'+(String(o.value)===String(value)?' selected':'')+'>'+esc(o.label)+'</option>').join('')+'</select>';}
     else if(c.kind==='number')input='<input'+common+' type="number" step="'+esc(c.step??'any')+'"'+(c.min===undefined?'':' min="'+esc(c.min)+'"')+(c.max===undefined?'':' max="'+esc(c.max)+'"')+' value="'+esc(value??'')+'">';
     else if(c.kind==='textarea')input='<textarea'+common+' rows="3" maxlength="2000">'+esc(value??'')+'</textarea>';
     else input='<input'+common+' value="'+esc(value??'')+'" maxlength="2000">';
-    return '<div class="control">'+label+input+(c.hint?'<small>'+esc(c.hint)+'</small>':'')+'</div>';
+    return '<div class="control">'+label+input+hint+'</div>';
   }
   function createDocument(resource) {
     if(resource.kind==='template')return styleDocument(CVA_TEMPLATES.create(resource.id),resource);
@@ -228,7 +228,7 @@
     else body='<div class="preview-panel"><div class="preview-toolbar"><span>원본 엔진으로 실행하는 예제</span><span>'+esc(kinds[resource.kind])+'</span></div><iframe id="live-preview" class="live-preview" style="height:620px" src="canvas.html#preview" title="'+esc(resource.name)+' 실행 예제" sandbox="allow-scripts allow-same-origin allow-forms"></iframe></div>';
     if(resource.kind==='section')body='<p class="composition-note"><strong>'+previewDocument.modules.length+'개 블록을 함께 쓰는 섹션</strong> · 아래에서 섹션으로 시작하거나, 기존 제작실의 ‘섹션 조합’에서 현재 페이지에 삽입하세요. 각 블록을 그대로 편집하고 한 번에 되돌릴 수 있습니다.</p>'+body;
     if(['template','section'].includes(resource.kind)&&previewDocument.profile==='elio')body+='<p class="composition-note">이 구성은 CVA 페이지의 Elio 스타일입니다. Elio 원본 전체 템플릿과 사건·관계·단서 입력은 <a href="library.html?kind=elio">Elio 원본 저작 입력</a>과 <a href="../examples/templates/index.html">같은 리더의 실행 예제</a>를 사용하세요.</p>';
-    $('detail').innerHTML='<a class="back-link" href="'+esc(href({item:''}))+'" data-back>← 목록으로</a><header class="detail-head"><div class="resource-meta"><span class="overline">'+esc(kinds[resource.kind])+' / '+esc(categories.find(c=>c.id===resource.category)?.name||'ELIO')+'</span>'+resourceStatus(resource)+'</div><h1 id="detail-title">'+esc(resource.name)+'</h1><p>'+esc(resource.description)+'</p></header>'+body+(resource.studioUrl||resource.kind==='elio'?'<div class="detail-actions">'+(resource.studioUrl?'<a class="action primary" data-studio-route="'+esc(resource.studioUrl)+'" href="'+esc(styledUrl(resource.studioUrl,resource))+'" target="_blank" rel="noopener">'+(resource.kind==='elio'?'원본 예제에서 열기':'페이지 제작실에서 조절')+' '+icons('external-link')+'<span class="sr-only"> (새 탭)</span></a>':'')+(resource.kind==='elio'?'<a class="action" href="../examples/templates/index.html" target="_blank" rel="noopener">원본 리더 읽기 '+icons('external-link')+'<span class="sr-only"> (새 탭)</span></a><a class="action" href="../docs/ELIO_TEMPLATE_COVERAGE.md" download>템플릿 안내 받기 ↓</a>':'')+'</div>':'')+'<section class="code-section"><div class="code-header"><h2>'+(resource.kind==='elio'?'연결 정보':'사용 코드')+'</h2><button id="copy-code">'+icons('copy')+'코드 복사</button></div><pre><code id="use-code"></code></pre><p id="copy-status" class="detail-note" role="status" aria-live="polite"></p></section>'+sourceLinks(resource,descriptor);
+    $('detail').innerHTML='<a class="back-link" href="'+esc(href({item:''}))+'" data-back>'+icons('arrow-left')+'<span>목록으로</span></a><header class="detail-head"><div class="resource-meta"><span class="overline">'+esc(kinds[resource.kind])+' / '+esc(categories.find(c=>c.id===resource.category)?.name||'ELIO')+'</span>'+resourceStatus(resource)+'</div><h1 id="detail-title">'+esc(resource.name)+'</h1><p>'+esc(resource.description)+'</p></header>'+body+(resource.studioUrl||resource.kind==='elio'?'<div class="detail-actions">'+(resource.studioUrl?'<a class="action primary" data-studio-route="'+esc(resource.studioUrl)+'" href="'+esc(styledUrl(resource.studioUrl,resource))+'" target="_blank" rel="noopener">'+(resource.kind==='elio'?'원본 예제에서 열기':'페이지 제작실에서 조절')+' '+icons('external-link')+'<span class="sr-only"> (새 탭)</span></a>':'')+(resource.kind==='elio'?'<a class="action" href="../examples/templates/index.html" target="_blank" rel="noopener">원본 리더 읽기 '+icons('external-link')+'<span class="sr-only"> (새 탭)</span></a><a class="action" href="../docs/ELIO_TEMPLATE_COVERAGE.md" download>템플릿 안내 받기 '+icons('download')+'</a>':'')+'</div>':'')+'<section class="code-section"><div class="code-header"><h2>'+(resource.kind==='elio'?'연결 정보':'사용 코드')+'</h2><button id="copy-code">'+icons('copy')+'코드 복사</button></div><pre><code id="use-code"></code></pre><p id="copy-status" class="detail-note" role="status" aria-live="polite"></p></section>'+sourceLinks(resource,descriptor);
     updateCode();
     if(descriptor){
       syncElementControls(resource);$('component-form').addEventListener('submit',event=>event.preventDefault());
@@ -267,7 +267,7 @@
     current=resources.find(r=>resourceKey(r)===key);
     $('start-points').hidden=$('search-form').hidden=$('browse').hidden=$('browse-heading').hidden=Boolean(key);$('detail').hidden=!key;
     if(current)detail(current);
-    else if(key)$('detail').innerHTML='<a class="back-link" href="'+esc(href({category:'all',q:'',kind:'all',item:'',page:0}))+'" data-reset>← 모든 요소</a><div class="empty"><h1>등록된 요소를 찾지 못했습니다.</h1><p>원래 목록에서 다시 선택하세요. 기존 편집 내용에는 영향을 주지 않습니다.</p></div>';
+    else if(key)$('detail').innerHTML='<a class="back-link" href="'+esc(href({category:'all',q:'',kind:'all',item:'',page:0}))+'" data-reset>'+icons('arrow-left')+'<span>모든 요소</span></a><div class="empty"><h1>등록된 요소를 찾지 못했습니다.</h1><p>원래 목록에서 다시 선택하세요. 기존 편집 내용에는 영향을 주지 않습니다.</p></div>';
     else {previewComponent=previewDocument=null;browse();}
     toneControls();
   }

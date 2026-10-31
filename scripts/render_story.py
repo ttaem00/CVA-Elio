@@ -1,5 +1,6 @@
 """Render authored Story JSON to a new local HTML, retaining packaged assets."""
 import argparse
+import html
 import json
 import os
 from pathlib import Path
@@ -16,8 +17,11 @@ def render_page(story, source, connections, output):
         return Path(os.path.relpath(ROOT / name, output.parent)).as_posix()
     page = page.replace('/storytimeline/templates/assets/', relative('examples/assets') + '/')
     page = page.replace('/assets/ttaem-cva-logo.svg', relative('assets/logo.svg'))
-    page = page.replace('href="/storytimeline/template-example/"', 'href="' + relative('index.html') + '"')
-    page = page.replace('href="/storytimeline/"', 'href="https://ttaem.com/storytimeline/"')
+    page = page.replace('<a href="/storytimeline/">전체 작품</a>',
+                        '<a href="' + html.escape(relative('index.html'), quote=True) + '">Elio 홈</a>', 1)
+    work_title = html.escape(story['work_title'], quote=True)
+    page = page.replace('<a href="/storytimeline/' + html.escape(story['work_id'], quote=True) + '/">' + work_title + '</a>',
+                        '<span>' + work_title + '</span>', 1)
     page = page.replace('href="/storytimeline/templates/"', 'href="https://ttaem.com/storytimeline/templates/"')
     page = page.replace('</head>', '<link rel="stylesheet" href="' + relative('assets/font.css') + '"></head>', 1)
     return page
