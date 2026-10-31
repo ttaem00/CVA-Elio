@@ -8,16 +8,21 @@
 
 ## 1. 작업 화면과 만드는 페이지
 
-| 범위 | 정본 | 바뀌는 것 | 유지할 것 |
+| 범위 | 실제 소비 소스 | 바뀌는 것 | 유지할 것 |
 | --- | --- | --- | --- |
 | Elio 작업 화면 | [`design/foundations.css`](../design/foundations.css) | 라이브러리·제작실의 표면과 조작 표현 | 행동의 이름, 선택과 포커스의 구분, 실제 결과 안내 |
-| 만드는 페이지의 profile | [`design/tokens.js`](../design/tokens.js), [`cva/module-styles.css`](../cva/module-styles.css) | 콘텐츠의 색·타이포·밀도·표현 방식 | 내용·순서·관계·시간·출처와 저장 형식 |
+| 만드는 페이지의 profile | [`cva/tokens.js`](../cva/tokens.js), [`cva/module-styles.css`](../cva/module-styles.css) | 콘텐츠의 색·타이포·밀도·표현 방식 | 내용·순서·관계·시간·출처와 저장 형식 |
 | 원래 Story·Board | [Story 저작 계약](STORY_AUTHORING.md), [원본 템플릿](ELIO_TEMPLATE_COVERAGE.md) | 해당 기능에서 지원하는 명시적 보기 | 원래 작품·이미지·입력과 복귀 경로 |
 
 `tokens.js`의 앞선 제품 profile 수치는 관찰한 호환 기준입니다. 실제 조합 페이지에는
 `module-styles.css`의 본문·간격·반경과 Story 원형 규칙이 함께 적용됩니다.
 예를 들어 ttaem의 관찰 반경 10px를 모든 조합 페이지의 반경으로 안내하지 않습니다.
 최종 결과는 실제 renderer로 확인하며, 공통 본문 크기가 각 profile의 의도를 덮어쓰지 않습니다.
+
+[`design/tokens.js`](../design/tokens.js)도 같은 호환 값을 제공합니다. 실제 Library·Studio와
+이 가이드의 스타일 비교는 `cva/tokens.js`를 소비합니다. 두 파일은 별도 사본이며
+`build_sources.py`의 자동 동기화 대상이 아닙니다. 공통 값을 바꿀 때는
+[소비 경로와 생성 범위](OWNED_RUNTIME.md#source-maintenance)를 함께 확인합니다.
 
 **페이지 스타일을 바꾸어도 편집 도구 자체의 색은 바뀌지 않습니다.** 라이브러리와 제작실은
 `--elio-*`, 만들어지는 페이지는 기존 `--cva-*`를 사용합니다. `foundations.css`는
@@ -136,3 +141,12 @@ cham은 큰 설명용 크기를 함께 선택합니다.
 수정 후 `node scripts/smoke.cjs`로 기존 컴포넌트와 모델·출력·재열기를 확인합니다.
 profile을 바꾸는 작업은 내용·관계·시간·출처를 보존하는지도 확인합니다. 브라우저에서
 보지 못한 포커스·키보드·넘침·클립보드 권한은 검증 완료로 표시하지 않습니다.
+
+라이브러리의 카드와 상세 제목 곁에는 등록 정보가 있는 항목만 **실험적 표현**으로 표시합니다.
+현재 이 표기는 요소의 기존 `lab` 값에서 읽으며 저장 입력이나 이름을 바꾸지 않습니다.
+해당 표현은 정지 상태로 시작해 사용자가 명시적으로 켭니다. 표기가 없는 항목도 적용 환경에
+맞는 확인이 필요하며, 등록 여부를 안정성·접근성 검증 완료로 해석하지 않습니다.
+
+첫 페이지의 구성 선택은 [기존 템플릿](../cva/library.html?kind=template), 공용 화면의 적용은
+위 사용 기준, 소스 유지보수는 [현재 소스와 생성 범위](OWNED_RUNTIME.md#source-maintenance)에서
+시작합니다. API와 파일 형식의 버전, 현재 커밋, 실제 서비스 반영도 해당 안내에서 구분합니다.

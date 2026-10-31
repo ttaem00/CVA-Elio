@@ -11,7 +11,7 @@ from .authoring import build_app
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description='Build a portable completed Elio Board app')
     commands = parser.add_subparsers(dest='command', required=True)
-    build = commands.add_parser('build', help='Build the sample app or supplied canonical documents')
+    build = commands.add_parser('build', help='Build a new Board app from explicit canonical document inputs')
     build.add_argument('--input', action='append', type=Path, default=[], help='Canonical JSON input; repeat for multiple works')
     build.add_argument('--output', required=True, type=Path, help='New output folder')
     build.add_argument('--asset-root', type=Path, help='Root folder for authored local images')
