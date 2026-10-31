@@ -10,6 +10,8 @@
   const paths = Object.freeze({
     search: '<path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" />',
     'arrow-right': '<path d="M5 12h14" /><path d="m12 5 7 7-7 7" />',
+    'arrow-left': '<path d="m12 19-7-7 7-7" /><path d="M19 12H5" />',
+    download: '<path d="M12 15V3" /><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><path d="m7 10 5 5 5-5" />',
     code: '<path d="m16 18 6-6-6-6" /><path d="m8 6-6 6 6 6" />',
     'sliders-horizontal': '<path d="M10 5H3" /><path d="M12 19H3" /><path d="M14 3v4" /><path d="M16 17v4" /><path d="M21 12h-9" /><path d="M21 19h-5" /><path d="M21 5h-7" /><path d="M8 10v4" /><path d="M8 12H3" />',
     layers: '<path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />',

@@ -12,7 +12,7 @@
     "index.html": {
       "source": "tools/elio_board/app/index.html",
       "source_sha256": "4e396c20aabf3ec7b3906d19092de9bf5c9a537de99f42df33d5020f3b7b154b",
-      "delivered_sha256": "33b3e41a4829108cd3fef278282be55b9c70b22e6da1603c15077dd4a1da6d5a"
+      "delivered_sha256": "aa267467f305e435b648f99bc62407227b09542043c4b4f7d8b8c807250c6989"
     },
     "styles.css": {
       "source": "tools/elio_board/app/styles.css",
@@ -76,8 +76,8 @@
     },
     "vendor/board-model.js": {
       "source": "tools/elio_board/app/vendor/board-model.js",
-      "source_sha256": "a44608bcdeaab4eef02617cfae61364cb836a3a0ad5451bdec82430fa1e580df",
-      "delivered_sha256": "a44608bcdeaab4eef02617cfae61364cb836a3a0ad5451bdec82430fa1e580df"
+      "source_sha256": "af961224609af56ac8aa4ee02d54f4e66e719db1897450bf071482166e14c1ad",
+      "delivered_sha256": "af961224609af56ac8aa4ee02d54f4e66e719db1897450bf071482166e14c1ad"
     },
     "vendor/components.js": {
       "source": "tools/elio_board/app/vendor/components.js",
@@ -132,11 +132,11 @@
     "documents.js": "aa09f006e193ec5b1c1137471496e979a1917775e418d6d7ba3a150e1027f888",
     "documents/public-observatory.json": "bb21ea1fd49979ea6c05ea123fc0a03cf76e964c8a71265713085ea72ef0708b",
     "hud-panels.css": "bb30a0fa7e4a723857d3e5f696934626411eb18a23ded515b76b2db5610bc2ff",
-    "index.html": "33b3e41a4829108cd3fef278282be55b9c70b22e6da1603c15077dd4a1da6d5a",
+    "index.html": "aa267467f305e435b648f99bc62407227b09542043c4b4f7d8b8c807250c6989",
     "notices/CVA-DEPTH-CARDS.txt": "824bb622d8f3cfa8f2d3eadd3c6998e189cc81a49fe7135d90cf8139fc0166a3",
     "projection.js": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af",
     "styles.css": "68c6f627b61760876e73a91c567fe2ee216e836ab3696b1dcfe1ff319643f829",
-    "vendor/board-model.js": "a44608bcdeaab4eef02617cfae61364cb836a3a0ad5451bdec82430fa1e580df",
+    "vendor/board-model.js": "af961224609af56ac8aa4ee02d54f4e66e719db1897450bf071482166e14c1ad",
     "vendor/components.js": "5399215b050477c6396059022ff75ee822d7d863a3b3106897f8e72083907894",
     "vendor/diagram_geometry.js": "ec908c2666a7780b445cc4e2a7cc203bbcf8670e1ae2b07d2f0cf4b06a463e8c",
     "vendor/story_layout.js": "b0261329393cc7d55a5c08317f3712c20bd328c7f420b5ac8b490cd9d2cb4c12"
