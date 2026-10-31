@@ -4,7 +4,7 @@
 페이지 제작실에서 내용을 편집할 때도 주행동·선택·포커스·상태의 역할은 같습니다.
 라이브러리의 숲색과 제작실의 네이비·황동은 각 화면의 분위기로 이어갑니다.
 
-[시각적 사용 가이드](../examples/foundations.html) · [제작과 읽기 흐름](S6_FLOWS.md) · [행동과 상태](../examples/ui-states.html) · [브랜드와 이름](BRANDING.md)
+[시각적 사용 가이드](../examples/foundations.html) · [제작과 읽기 흐름](S6_FLOWS.md) · [입력 오류·편집 초점·복귀 관계](S7_RESILIENCE.md) · [행동과 상태](../examples/ui-states.html) · [브랜드와 이름](BRANDING.md)
 
 ## 1. 작업 화면과 만드는 페이지
 
