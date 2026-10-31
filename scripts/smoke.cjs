@@ -31,3 +31,63 @@ for(const item of full.CVA_TEMPLATES.entries) {
 }
 assert.equal(full.ELIO_OWNED_RUNTIME.patterns.length,34);
 console.log('ELIO_FULL_MODEL_EXPORT_REOPEN_PASS',full.CVA_TEMPLATES.entries.length);
+
+async function checkBoardFileRecovery() {
+  const adapter = require('../tools/elio_board/app/document-adapter.js');
+  const original = JSON.parse(fs.readFileSync('examples/board.catalog.json', 'utf8'));
+  const before = JSON.stringify(original), nodes = new Map(), installed = [];
+  let current = original;
+  const get = id => {
+    if (!nodes.has(id)) nodes.set(id, {
+      value: '', hidden: false, events: {}, classList: { toggle() {} },
+      addEventListener(name, listener) { this.events[name] = listener; },
+      querySelector: selector => get(selector.slice(1)), focus() {}, showModal() {}
+    });
+    return nodes.get(id);
+  };
+  const scope = vm.createContext({ window: { ElioBoardDocuments: adapter }, document: { getElementById: get } });
+  vm.runInContext(fs.readFileSync('tools/elio_board/app/authoring-ui.js', 'utf8'), scope);
+  scope.window.ElioBoardAuthoring.init({
+    getDocument: () => current, getWork: () => ({ id: current.work_id, title: current.title }),
+    getItem: () => current.items[0], installDocument: data => { current = data; installed.push(data); }
+  });
+  const select = file => get('document-file').events.change({ target: { files: [file] } });
+  const apply = () => get('document-import-apply').events.click();
+
+  get('document-file').value = 'unreadable.json';
+  await select({ size: 100, text: async () => { throw new Error('The requested file could not be read.'); } });
+  assert.equal(get('document-status').textContent, '선택한 파일을 읽지 못했습니다. 파일 위치와 접근 권한을 확인한 뒤 다시 선택해 주세요. 현재 문서는 그대로입니다.');
+  assert.equal(get('document-file').value, '');
+  assert.equal(get('document-review').hidden, true);
+  apply();
+  assert.equal(installed.length, 0);
+  assert.equal(JSON.stringify(current), before, 'a failed read preserves the current document');
+
+  const valid = { ...original, title: '다시 선택한 문서' };
+  await select({ size: 100, text: async () => JSON.stringify(valid) });
+  assert.equal(installed.length, 0, 'a readable file still needs explicit review and application');
+  assert.equal(get('document-review').hidden, false);
+  apply();
+  assert.deepEqual(current, valid);
+
+  await select({ size: 100, text: async () => JSON.stringify({ ...valid, work_id: 'INVALID ID' }) });
+  assert.equal(get('document-status').textContent, '콘텐츠 ID를 확인해 주세요.', 'schema errors retain their specific message');
+  assert.deepEqual(current, valid);
+
+  let rejectOlder;
+  const older = select({ size: 100, text: () => new Promise((resolve, reject) => { rejectOlder = reject; }) });
+  const latest = { ...original, title: '마지막으로 고른 문서' };
+  get('document-file').value = 'latest.json';
+  await select({ size: 100, text: async () => JSON.stringify(latest) });
+  const reviewMessage = get('document-status').textContent;
+  rejectOlder(new Error('A late file read failed.'));
+  await older;
+  assert.equal(get('document-file').value, 'latest.json');
+  assert.equal(get('document-status').textContent, reviewMessage);
+  assert.equal(get('document-review').hidden, false);
+  apply();
+  assert.deepEqual(current, latest, 'a late failure cannot replace the newer reviewed document');
+  console.log('ELIO_BOARD_FILE_READ_RECOVERY_PASS');
+}
+
+checkBoardFileRecovery().catch(error => { console.error(error); process.exitCode = 1; });
