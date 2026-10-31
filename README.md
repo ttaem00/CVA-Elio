@@ -14,14 +14,15 @@ Elio는 **CVA의 공용 디자인 시스템**입니다. 필요한 요소와 표�
 이름·역할·화면 입구·로고 용도·수치 집계의 현재 기준은 [Elio 브랜드와 범위](docs/BRANDING.md)를 따릅니다.
 추출 당시 후보 기록과 이 저장소의 소스, 실제 서비스에 반영된 버전은 구분합니다.
 
-화면을 새로 만들거나 다듬을 때는 [Elio 디자인 기준](docs/FOUNDATIONS.md)을 함께 사용합니다.
-공통 조작 규칙과 결과물의 스타일을 구분하며, [같은 내용을 8개 스타일로 비교하는 가이드](examples/foundations.html)에서 실제 표현을 확인할 수 있습니다.
+| 지금 하려는 일 | 시작할 곳 | 이어서 확인할 것 |
+| --- | --- | --- |
+| 내 첫 페이지 만들기 | [빠른 시작](#quickstart) → [페이지 템플릿](cva/library.html?kind=template) | [편집·저장·다시 열기](docs/S6_FLOWS.md) |
+| 같은 기준으로 새 화면 만들기 | [디자인 기준과 실제 예제](examples/foundations.html) | [작업 화면·출력 스타일·컴포넌트 사용](docs/FOUNDATIONS.md) |
+| 소스를 수정하고 유지하기 | [현재 소스와 생성 범위](docs/OWNED_RUNTIME.md#source-maintenance) | [실제 확인 명령](#verification), [이름·자산·반영 상태](docs/BRANDING.md) |
 
-처음 사용할 때는 [제작과 읽기 흐름](docs/S6_FLOWS.md)을 참고하세요. 만들 결과를 고르고,
-현재 편집 대상을 확인한 뒤 열어 볼 페이지와 다시 편집할 파일을 구분해 저장합니다.
-
-[입력 오류·편집 초점·복귀 관계 기준](docs/S7_RESILIENCE.md)은 잘못된 값을 고치는 안내,
-키보드 선택 후 편집, 파일 이름과 내용의 일치, 같은 장면으로 돌아오는 관계를 설명합니다.
+[입력 오류·편집 초점·복귀 관계 기준](docs/S7_RESILIENCE.md)에서 잘못된 값을 고치는 안내,
+키보드 선택 후 편집, 파일 이름과 내용의 일치, 같은 장면으로 돌아오는 관계를 확인할 수 있습니다.
+라이브러리 안에서도 [제작·유지보수 안내](cva/library.html#agent-guide)로 이 경로를 찾습니다.
 
 | 찾기 | 만들고 편집하기 | 보관하고 다시 열기 |
 | :--- | :--- | :--- |
@@ -167,10 +168,15 @@ python scripts/demo.py --check
 node scripts/smoke.cjs
 ```
 
-원형 CSS·공용 HTML을 수정했다면 `python scripts/build_sources.py`로 브라우저 소스도 다시 생성합니다.
+`build_sources.py`는 Story의 공유 가이드·리더·시간 지도 원자료를 지정된 브라우저 소스 구간에
+반영합니다. 해당 원자료를 수정했다면 `python scripts/build_sources.py`로 재생성합니다.
+작업 화면 CSS나 토큰의 모든 사본을 동기화하는 명령은 아닙니다.
+[수정한 소스에 맞는 생성 범위](docs/OWNED_RUNTIME.md#source-maintenance)를 먼저 확인하세요.
 `scripts/demo.py`는 동봉 예제를 재생성하므로 수정한 개인 입력에는 직접 renderer를 사용합니다.
 `manifest.json`은 추출 시점의 소스·파일 hash와 후보 상태를 보존하며,
 실제 공개 소스의 최신 상태는 이 저장소의 기본 브랜치와 커밋을 따릅니다.
+기술 API·저장 형식의 버전과 제품의 검증·배포 상태는 별개입니다. 라이브러리의 **실험적 표현**은
+기존 등록 정보가 있는 항목에 표시하며, 다른 항목의 안정성 인증을 뜻하지 않습니다.
 
 <a id="policy"></a>
 ## 이용과 기여
