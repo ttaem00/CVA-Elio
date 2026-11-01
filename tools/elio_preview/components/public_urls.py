@@ -1,6 +1,25 @@
 """Pure URL boundary shared by Elio evidence validation and source acquisition."""
 import ipaddress
+import re
 from urllib.parse import urlparse, urlsplit
+
+
+_ACCOUNT_URL = re.compile(
+    r"(?P<prefix>https?://|//)(?:"
+    r"(?P<pages>mizan0515\.github\.io)(?=[:/?#\s\"'<>)]|$)|"
+    r"(?P<host>github\.com|raw\.githubusercontent\.com|cdn\.jsdelivr\.net/gh)"
+    r"/mizan0515(?=[/?#\s\"'<>)]|$))",
+    re.IGNORECASE,
+)
+
+
+def current_github_urls(text: str) -> str:
+    """Project old GitHub account URLs; keep repository, revision, path, query and fragment verbatim."""
+    def replace(match: re.Match) -> str:
+        destination = "veil05.github.io" if match["pages"] else match["host"] + "/VEIL05"
+        return match["prefix"] + destination
+
+    return _ACCOUNT_URL.sub(replace, text)
 
 
 def _is_public_ip(value: str) -> bool:
