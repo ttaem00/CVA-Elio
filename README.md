@@ -2,6 +2,7 @@
 
 <h1 align="center">Elio</h1>
 <p align="center"><strong>관계를 고르고, 페이지로 만듭니다.</strong></p>
+<p align="center">현재 버전 <a href="https://github.com/ttaem00/CVA-Elio/releases/tag/v1.1.0"><strong>Elio 1.1.0</strong></a></p>
 <p align="center"><a href="https://ttaem.com"><img src="assets/logo.svg" width="180" alt="TTaem CVA 원본 로고"></a><br><a href="https://ttaem00.github.io/CVA-Elio/"><strong>온라인으로 바로 열기</strong></a> · <a href="https://ttaem.com">ttaem.com</a> · <a href="https://github.com/ttaem00/cva-elio">cva-elio 원본 저장소</a></p>
 <p align="center"><strong>요소·모듈 라이브러리</strong> · <strong>페이지 제작실</strong> · <strong>이야기 저작</strong> · <strong>HTML·JSON 출력</strong></p>
 <p align="center"><a href="#quickstart"><strong>빠른 시작</strong></a> · <a href="#features">주요 기능</a> · <a href="#library">라이브러리</a> · <a href="#authoring">Codex·스킬</a> · <a href="#examples">실제 사용 화면</a> · <a href="#policy">이용 정책</a></p>
