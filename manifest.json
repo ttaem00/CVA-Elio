@@ -1,9 +1,9 @@
 {
   "schema_version": "cva.elio-public-candidate.v1",
   "publication_status": "not_published",
-  "source_commit": "933e38c9bfccf393a0d6cdc58b815df761601d58",
+  "source_commit": "12a1cc9b1c0a93cabddd475e659d2d778a49ff89",
   "source_has_uncommitted_inputs": false,
-  "recipe_sha256": "31812ce72592dfe57d4eadca6eeba55b57b1dc92110671e02109971cd861d768",
+  "recipe_sha256": "bf61c2b0b189d9f02e9cffd84526012e859f28d8f004eea5e7ac870c23e8c756",
   "sources": [
     {
       "source": "tools/elio_release/scaffold/assets/font.css",
@@ -23,15 +23,15 @@
       "source": "tools/elio_release/scaffold/docs/BRANDING.md",
       "destination": "docs/BRANDING.md",
       "encoding": "utf8-lf-v1",
-      "sha256": "cf3f7463d14354beb14d421c0757ec2f8613bcdf831b48d91a292e03dc2d1467",
-      "export_sha256": "cf3f7463d14354beb14d421c0757ec2f8613bcdf831b48d91a292e03dc2d1467"
+      "sha256": "f2c9afacb43936afe096f7accceaa37de6aa17b9371aaa0fe308df6695138657",
+      "export_sha256": "f2c9afacb43936afe096f7accceaa37de6aa17b9371aaa0fe308df6695138657"
     },
     {
       "source": "tools/elio_release/scaffold/index.html",
       "destination": "index.html",
       "encoding": "utf8-lf-v1",
-      "sha256": "d280e69e8b1adc2c5417dbf6bc803f039648fad23a4725875b02eacc3cca1680",
-      "export_sha256": "d280e69e8b1adc2c5417dbf6bc803f039648fad23a4725875b02eacc3cca1680"
+      "sha256": "9c42ef8aa354b874f19b59a013638adf0394ddd15e27c92318ed83489b564ea8",
+      "export_sha256": "9c42ef8aa354b874f19b59a013638adf0394ddd15e27c92318ed83489b564ea8"
     },
     {
       "source": "tools/elio_release/scaffold/LICENSE",
@@ -58,8 +58,8 @@
       "source": "tools/elio_release/scaffold/README.md",
       "destination": "README.md",
       "encoding": "utf8-lf-v1",
-      "sha256": "bee28ced11d5a88219051a80c101100c5616e17a9bc93a4c67fd1d06121c33f3",
-      "export_sha256": "bee28ced11d5a88219051a80c101100c5616e17a9bc93a4c67fd1d06121c33f3"
+      "sha256": "4c69f0788e821044f2bf173714b26e0afec2755313e408390ce58dcdb7c84b30",
+      "export_sha256": "4c69f0788e821044f2bf173714b26e0afec2755313e408390ce58dcdb7c84b30"
     },
     {
       "source": "tools/elio_release/scaffold/scripts/demo.py",
@@ -72,8 +72,8 @@
       "source": "tools/elio_release/scaffold/scripts/smoke.cjs",
       "destination": "scripts/smoke.cjs",
       "encoding": "utf8-lf-v1",
-      "sha256": "49505badca65644f714353351020be218707d3c2a3790031f6dee744413e1489",
-      "export_sha256": "49505badca65644f714353351020be218707d3c2a3790031f6dee744413e1489"
+      "sha256": "248272f2454a5f54e45078cd2a22068f9e3ed218f088a8c5a7e06881b515ff15",
+      "export_sha256": "248272f2454a5f54e45078cd2a22068f9e3ed218f088a8c5a7e06881b515ff15"
     },
     {
       "source": "tools/elio_release/scaffold/SECURITY.md",
@@ -121,8 +121,8 @@
       "source": "tools/cva_design_system/cva.css",
       "destination": "design/cva.css",
       "encoding": "utf8-lf-v1",
-      "sha256": "b39a1a76cfa2d3eb80f82b8eb9dd16f24f0f1528a995c8883ec00801e128165e",
-      "export_sha256": "b39a1a76cfa2d3eb80f82b8eb9dd16f24f0f1528a995c8883ec00801e128165e"
+      "sha256": "f064b75d6a137449db5f527fc7c32710bf245f7aabf60326c747f9ca8e6c90eb",
+      "export_sha256": "f064b75d6a137449db5f527fc7c32710bf245f7aabf60326c747f9ca8e6c90eb"
     },
     {
       "source": "tools/elio_preview/__init__.py",
@@ -135,9 +135,9 @@
       "source": "tools/elio_preview/__main__.py",
       "destination": "tools/elio_preview/__main__.py",
       "encoding": "utf8-lf-v1",
-      "sha256": "ba917e4e101444e99bb75f3a956f27add40856df2be6327f8728ba44b9d691eb",
+      "sha256": "2bb3f4086015ff7f0fdd665df33decb0fa35efe9d90c7d37ddb1e9bdee9adc51",
       "overlay": "text-provider-icons-v1",
-      "export_sha256": "50f6266648210d6dbe6e17faefa19a0bd22356b5e9e4c41309390c9e3491a94b"
+      "export_sha256": "1216d7dad7ef15225b033879bc6af870390ee6994859b816c46f93d00c0f8ae1"
     },
     {
       "source": "tools/elio_preview/connections.py",
@@ -171,15 +171,15 @@
       "source": "tools/elio_preview/template.html",
       "destination": "tools/elio_preview/template.html",
       "encoding": "utf8-lf-v1",
-      "sha256": "cbb3b245a6a17a9e1d93ee154b39117e6ca668f1646028838817159e6232f0a2",
-      "export_sha256": "cbb3b245a6a17a9e1d93ee154b39117e6ca668f1646028838817159e6232f0a2"
+      "sha256": "7b786fff4acbf533ad958a173add479aa1299b7365b472bc8b2ce147db536dbd",
+      "export_sha256": "7b786fff4acbf533ad958a173add479aa1299b7365b472bc8b2ce147db536dbd"
     },
     {
       "source": "tools/elio_preview/style.css",
       "destination": "tools/elio_preview/style.css",
       "encoding": "utf8-lf-v1",
-      "sha256": "07e5e611db8c1591bb188217f475ae15c6830eed09d585dc67fe30b4cea1ba26",
-      "export_sha256": "07e5e611db8c1591bb188217f475ae15c6830eed09d585dc67fe30b4cea1ba26"
+      "sha256": "958141a793fe31aa623bae3abfa889e4b0daffc68ac9064fff4c03067c4d9078",
+      "export_sha256": "958141a793fe31aa623bae3abfa889e4b0daffc68ac9064fff4c03067c4d9078"
     },
     {
       "source": "tools/elio_preview/app.js",
@@ -269,8 +269,8 @@
       "source": "tools/elio_preview/components/public_urls.py",
       "destination": "tools/elio_preview/components/public_urls.py",
       "encoding": "utf8-lf-v1",
-      "sha256": "397289d051ea670c4705809ea5326197e225d7b8020da058ce5bc81e75e33d36",
-      "export_sha256": "397289d051ea670c4705809ea5326197e225d7b8020da058ce5bc81e75e33d36"
+      "sha256": "b757b9bd3925aaf8a484d07c5c5cfe4680950008d3b8389745e889c2faa53415",
+      "export_sha256": "b757b9bd3925aaf8a484d07c5c5cfe4680950008d3b8389745e889c2faa53415"
     },
     {
       "source": "tools/elio_preview/components/raster_validation.py",
@@ -395,8 +395,8 @@
       "source": "tools/elio_preview/components/scene_navigation.py",
       "destination": "tools/elio_preview/components/scene_navigation.py",
       "encoding": "utf8-lf-v1",
-      "sha256": "94932b3695da20dd1c28717b62e858becd3522ae0ac908cf463c177bda84b889",
-      "export_sha256": "94932b3695da20dd1c28717b62e858becd3522ae0ac908cf463c177bda84b889"
+      "sha256": "019118bf6cc8910cde2a2e9bdd537dd65158db68c7d69c88784582311078b90c",
+      "export_sha256": "019118bf6cc8910cde2a2e9bdd537dd65158db68c7d69c88784582311078b90c"
     },
     {
       "source": "tools/elio_preview/components/story_layout.css",
@@ -409,8 +409,8 @@
       "source": "tools/elio_preview/components/story_layout.js",
       "destination": "tools/elio_preview/components/story_layout.js",
       "encoding": "utf8-lf-v1",
-      "sha256": "b0261329393cc7d55a5c08317f3712c20bd328c7f420b5ac8b490cd9d2cb4c12",
-      "export_sha256": "b0261329393cc7d55a5c08317f3712c20bd328c7f420b5ac8b490cd9d2cb4c12"
+      "sha256": "51fbf63ecac7d2998a8dac31503790035e4674ce040e9853f9ada8b4bcd4e480",
+      "export_sha256": "51fbf63ecac7d2998a8dac31503790035e4674ce040e9853f9ada8b4bcd4e480"
     },
     {
       "source": "tools/elio_preview/components/story_layout.py",
@@ -507,15 +507,15 @@
       "source": "tools/elio_release/scaffold/scripts/render_story.py",
       "destination": "scripts/render_story.py",
       "encoding": "utf8-lf-v1",
-      "sha256": "e55feb0cb69a0a310d4b89b306754f8ca3094f86422d697753a69fcd8850bc4e",
-      "export_sha256": "e55feb0cb69a0a310d4b89b306754f8ca3094f86422d697753a69fcd8850bc4e"
+      "sha256": "3a6dbddf287a8491da2d1cd3582a5ce3b004de7e801d61a0898a6b4f7ec20bcd",
+      "export_sha256": "3a6dbddf287a8491da2d1cd3582a5ce3b004de7e801d61a0898a6b4f7ec20bcd"
     },
     {
       "source": "tools/elio_release/scaffold/docs/STORY_AUTHORING.md",
       "destination": "docs/STORY_AUTHORING.md",
       "encoding": "utf8-lf-v1",
-      "sha256": "815828d8d62ec676ba7f99f26efa6f45b9ea828e88a80581d6afd38d5710de4e",
-      "export_sha256": "815828d8d62ec676ba7f99f26efa6f45b9ea828e88a80581d6afd38d5710de4e"
+      "sha256": "b0c2ab1141782b063d76ee42b1e07b235a45d4a389f02b6d622016dadf6911a5",
+      "export_sha256": "b0c2ab1141782b063d76ee42b1e07b235a45d4a389f02b6d622016dadf6911a5"
     },
     {
       "source": "tools/elio_preview/authoring_templates/reading-views.md",
@@ -668,54 +668,54 @@
       "source": "tools/cva_design_system/public_runtime/README.md",
       "destination": "docs/OWNED_RUNTIME.md",
       "encoding": "utf8-lf-v1",
-      "sha256": "15d8f8c1dba389e7b5ea2bf797c02a9e2c8e2d3669e4259c99fee7594d4e07d3",
-      "export_sha256": "15d8f8c1dba389e7b5ea2bf797c02a9e2c8e2d3669e4259c99fee7594d4e07d3"
+      "sha256": "6f4b2e5bff707a0efc611e2b62398fdccf3f950bd1f73f10e6e9b7289d25939c",
+      "export_sha256": "6f4b2e5bff707a0efc611e2b62398fdccf3f950bd1f73f10e6e9b7289d25939c"
     },
     {
       "source": "tools/cva_design_system/index.html",
       "destination": "cva/index.html",
       "encoding": "utf8-lf-v1",
-      "sha256": "5864af29a07a453b3767733e68b3d2f625de79e827e685b4413b10fc89645378",
+      "sha256": "540d1eef467a685692370340d076bc98005d168bce673315c27e4161ed0bcf3c",
       "overlay": "public-design-v1",
-      "export_sha256": "95f4189c950f1318797798585ec2bb7624e3ec9b770b4c649b0856f0fa5b19e2"
+      "export_sha256": "ade884f80053b9c99064824c187521ce66f3fb2bed641ca1fb0a1357a0b3daa8"
     },
     {
       "source": "tools/cva_design_system/studio.css",
       "destination": "cva/studio.css",
       "encoding": "utf8-lf-v1",
-      "sha256": "ad5e156b19c383743757de1bc215e5a1e896b47776c3a0ec471a1fb2f88d2d20",
-      "export_sha256": "ad5e156b19c383743757de1bc215e5a1e896b47776c3a0ec471a1fb2f88d2d20"
+      "sha256": "cfb93113b26a847a673cc9ab6187f5d633e4d6fc5375f63a015d9197b8164c3d",
+      "export_sha256": "cfb93113b26a847a673cc9ab6187f5d633e4d6fc5375f63a015d9197b8164c3d"
     },
     {
       "source": "tools/cva_design_system/studio.js",
       "destination": "cva/studio.js",
       "encoding": "utf8-lf-v1",
-      "sha256": "7e605d0ca1c8e5a423067bca10f43fd28da02b725a88cfa1297475aca0787e88",
+      "sha256": "8288d3f2231c6082abb9c4c458f4a376bada6fb5243cc019605bdf97efe00c88",
       "overlay": "public-design-v1",
-      "export_sha256": "7e605d0ca1c8e5a423067bca10f43fd28da02b725a88cfa1297475aca0787e88"
+      "export_sha256": "8288d3f2231c6082abb9c4c458f4a376bada6fb5243cc019605bdf97efe00c88"
     },
     {
       "source": "tools/cva_design_system/library.html",
       "destination": "cva/library.html",
       "encoding": "utf8-lf-v1",
-      "sha256": "76b5435740c984422968216b5d0b2c134931e6b7f8f0c0c67fded660bf978f65",
+      "sha256": "c262982d13048abd30e7a1b980c1359259dc80ca123e5f7be629548a13a2d43c",
       "overlay": "public-design-v1",
-      "export_sha256": "e6c4892715da789928982ebb17bd07d8095c079574e4d8720f4c980389131227"
+      "export_sha256": "0b5bd4e3ac09d9fc096120e1306e6d33ace1f1620d021011d491ecc8fa297ed2"
     },
     {
       "source": "tools/cva_design_system/library.css",
       "destination": "cva/library.css",
       "encoding": "utf8-lf-v1",
-      "sha256": "42ddde26698738fe72900d591e833f67756bfa6fb9f6e0af06a392482972d50d",
-      "export_sha256": "42ddde26698738fe72900d591e833f67756bfa6fb9f6e0af06a392482972d50d"
+      "sha256": "59a8c5b348beaa06f5a16056e1a73c67d10bbf9c5502122388fad6012bc84c03",
+      "export_sha256": "59a8c5b348beaa06f5a16056e1a73c67d10bbf9c5502122388fad6012bc84c03"
     },
     {
       "source": "tools/cva_design_system/library.js",
       "destination": "cva/library.js",
       "encoding": "utf8-lf-v1",
-      "sha256": "4712caf27e63580fe8f95f4bd7d89870398658bae04084978d70e58dde0f6312",
+      "sha256": "76025a63d7cb4a09b8ae413474162605615e83476a7c372679ecd1f6ad568c11",
       "overlay": "public-design-v1",
-      "export_sha256": "6088d422335bae09fcf724d0da7cd7cc41fa52fc859af0f338768c017c9fd43b"
+      "export_sha256": "d6754f8154312a0d4d09efa7f2c9284aa564ca1f946fdfbf510bfdb7adfaa483"
     },
     {
       "source": "tools/cva_design_system/library-map.js",
@@ -729,9 +729,9 @@
       "source": "tools/cva_design_system/library-icons.js",
       "destination": "cva/library-icons.js",
       "encoding": "utf8-lf-v1",
-      "sha256": "7d4cb52996f95a8ef945999ba23f24c2c8f4977398927e45a70ea87dfaba33f9",
+      "sha256": "6906e2bdaffeb85a615cc763cdd36d9c40b16c0322bb605956b8301ffa189f6a",
       "overlay": "public-design-v1",
-      "export_sha256": "7d4cb52996f95a8ef945999ba23f24c2c8f4977398927e45a70ea87dfaba33f9"
+      "export_sha256": "6906e2bdaffeb85a615cc763cdd36d9c40b16c0322bb605956b8301ffa189f6a"
     },
     {
       "source": "tools/cva_design_system/library-interactions.js",
@@ -832,8 +832,8 @@
       "source": "tools/cva_design_system/cva.css",
       "destination": "cva/cva.css",
       "encoding": "utf8-lf-v1",
-      "sha256": "b39a1a76cfa2d3eb80f82b8eb9dd16f24f0f1528a995c8883ec00801e128165e",
-      "export_sha256": "b39a1a76cfa2d3eb80f82b8eb9dd16f24f0f1528a995c8883ec00801e128165e"
+      "sha256": "f064b75d6a137449db5f527fc7c32710bf245f7aabf60326c747f9ca8e6c90eb",
+      "export_sha256": "f064b75d6a137449db5f527fc7c32710bf245f7aabf60326c747f9ca8e6c90eb"
     },
     {
       "source": "tools/cva_design_system/components.js",
@@ -915,9 +915,9 @@
       "source": "tools/cva_design_system/module-renderer.js",
       "destination": "cva/module-renderer.js",
       "encoding": "utf8-lf-v1",
-      "sha256": "c9b9ac9728da15f665e909f3613519bb2020335e42ccde09b1230f40b6f6e411",
+      "sha256": "2d94e54f3270bf20495a3897682386989a7d8f9d11d5bce3141851608c0fe20a",
       "overlay": "public-design-v1",
-      "export_sha256": "c9b9ac9728da15f665e909f3613519bb2020335e42ccde09b1230f40b6f6e411"
+      "export_sha256": "2d94e54f3270bf20495a3897682386989a7d8f9d11d5bce3141851608c0fe20a"
     },
     {
       "source": "tools/cva_design_system/module-styles.css",
@@ -1152,8 +1152,8 @@
       "source": "tools/elio_board/__main__.py",
       "destination": "tools/elio_board/__main__.py",
       "encoding": "utf8-lf-v1",
-      "sha256": "6636b166602d5ba492651763287481a336fa9676497c6797e323d00fa3e624dc",
-      "export_sha256": "6636b166602d5ba492651763287481a336fa9676497c6797e323d00fa3e624dc"
+      "sha256": "59e30223f9abd54fe6d0d1ff204a39437dc5a5f299977e4f8d9abe4b7fcc8847",
+      "export_sha256": "59e30223f9abd54fe6d0d1ff204a39437dc5a5f299977e4f8d9abe4b7fcc8847"
     },
     {
       "source": "tools/elio_board/authoring.py",
@@ -1181,8 +1181,8 @@
       "source": "tools/elio_board/app/styles.css",
       "destination": "tools/elio_board/app/styles.css",
       "encoding": "utf8-lf-v1",
-      "sha256": "3d880c1dbd7eec5671d81a8b93e0b0349c7dff5480ac4279ddbdcb63d4e13e63",
-      "export_sha256": "3d880c1dbd7eec5671d81a8b93e0b0349c7dff5480ac4279ddbdcb63d4e13e63"
+      "sha256": "68c6f627b61760876e73a91c567fe2ee216e836ab3696b1dcfe1ff319643f829",
+      "export_sha256": "68c6f627b61760876e73a91c567fe2ee216e836ab3696b1dcfe1ff319643f829"
     },
     {
       "source": "tools/elio_board/app/hud-panels.css",
@@ -1216,22 +1216,22 @@
       "source": "tools/elio_board/app/authoring.css",
       "destination": "tools/elio_board/app/authoring.css",
       "encoding": "utf8-lf-v1",
-      "sha256": "7ec898598e9b998ca4f997dc5aca7b539cc11d2fadb862d8159e9c9398e66f50",
-      "export_sha256": "7ec898598e9b998ca4f997dc5aca7b539cc11d2fadb862d8159e9c9398e66f50"
+      "sha256": "ec68e4ddc0a42343411d920b7d5399434a2c0fa15e9d5bb5083d3792ccf498f8",
+      "export_sha256": "ec68e4ddc0a42343411d920b7d5399434a2c0fa15e9d5bb5083d3792ccf498f8"
     },
     {
       "source": "tools/elio_board/app/app.js",
       "destination": "tools/elio_board/app/app.js",
       "encoding": "utf8-lf-v1",
-      "sha256": "546fe5822c511219901e7fa15f2d5032bcae7a0d5064592b1f5680d861d02a57",
-      "export_sha256": "546fe5822c511219901e7fa15f2d5032bcae7a0d5064592b1f5680d861d02a57"
+      "sha256": "57999000a9e0318ab1c2a2a53365c44ee3b7d27e0f68c95e76820a891be9c7d4",
+      "export_sha256": "57999000a9e0318ab1c2a2a53365c44ee3b7d27e0f68c95e76820a891be9c7d4"
     },
     {
       "source": "tools/elio_board/app/projection.js",
       "destination": "tools/elio_board/app/projection.js",
       "encoding": "utf8-lf-v1",
-      "sha256": "ba0e5fa8d012001f821916d0cd700573970bcb0a227b093edbd2946e5fbc486a",
-      "export_sha256": "ba0e5fa8d012001f821916d0cd700573970bcb0a227b093edbd2946e5fbc486a"
+      "sha256": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af",
+      "export_sha256": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af"
     },
     {
       "source": "tools/elio_board/app/depth-hover.js",
@@ -1258,15 +1258,15 @@
       "source": "tools/elio_board/app/authoring-ui.js",
       "destination": "tools/elio_board/app/authoring-ui.js",
       "encoding": "utf8-lf-v1",
-      "sha256": "6c1b9701c288bc03627224b6af90781c95dc052ea5bf8845779a98eab63e3927",
-      "export_sha256": "6c1b9701c288bc03627224b6af90781c95dc052ea5bf8845779a98eab63e3927"
+      "sha256": "6755f39abc54fc80b8b299d73b230a4cc0bf43ff5ca340a85239245e9c3bedea",
+      "export_sha256": "6755f39abc54fc80b8b299d73b230a4cc0bf43ff5ca340a85239245e9c3bedea"
     },
     {
       "source": "tools/elio_board/app/vendor/board-model.js",
       "destination": "tools/elio_board/app/vendor/board-model.js",
       "encoding": "utf8-lf-v1",
-      "sha256": "c7f57e267c905916a3058c53614900aa71d52687b9c2cba3c6557f467cf00816",
-      "export_sha256": "c7f57e267c905916a3058c53614900aa71d52687b9c2cba3c6557f467cf00816"
+      "sha256": "af961224609af56ac8aa4ee02d54f4e66e719db1897450bf071482166e14c1ad",
+      "export_sha256": "af961224609af56ac8aa4ee02d54f4e66e719db1897450bf071482166e14c1ad"
     },
     {
       "source": "tools/elio_board/app/vendor/components.js",
@@ -8841,15 +8841,373 @@
       "encoding": "utf8-lf-v1",
       "sha256": "a21074295eafbe6bc97bddd65ea3ba1cb35f7ec84d130f2172073ecdc6f91066",
       "export_sha256": "a21074295eafbe6bc97bddd65ea3ba1cb35f7ec84d130f2172073ecdc6f91066"
+    },
+    {
+      "source": "tools/elio_release/scaffold/.nojekyll",
+      "destination": ".nojekyll",
+      "encoding": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "tools/elio_release/scaffold/assets/elio-intro.css",
+      "destination": "assets/elio-intro.css",
+      "encoding": "utf8-lf-v1",
+      "sha256": "4f3a1adf6838d01890387fc89b2feda8244da078e748a25aa9f53eb8099517b4",
+      "export_sha256": "4f3a1adf6838d01890387fc89b2feda8244da078e748a25aa9f53eb8099517b4"
+    },
+    {
+      "source": "tools/elio_release/scaffold/cva/assets/brand-icons/manifest.json",
+      "destination": "cva/assets/brand-icons/manifest.json",
+      "encoding": "utf8-lf-v1",
+      "sha256": "638bcecef4506eaa6c2ce6c6e23713b91fdefef2b6b8f55d1ec8d0b23429bbb5",
+      "export_sha256": "638bcecef4506eaa6c2ce6c6e23713b91fdefef2b6b8f55d1ec8d0b23429bbb5"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/cva-color.svg",
+      "destination": "cva/assets/brand-icons/v4/cva-color.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "f2079b0e7a68c219111008472b50c573709f339b35e8de9ddb28c5aa010425d0",
+      "export_sha256": "f2079b0e7a68c219111008472b50c573709f339b35e8de9ddb28c5aa010425d0"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/cva-micro.svg",
+      "destination": "cva/assets/brand-icons/v4/cva-micro.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "6c237e71c90532f79922bb303d6d33c8a14fb22e5430da391d70900ea2d67843",
+      "export_sha256": "6c237e71c90532f79922bb303d6d33c8a14fb22e5430da391d70900ea2d67843"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/cva-mono.svg",
+      "destination": "cva/assets/brand-icons/v4/cva-mono.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "983b3cbdb11d052e353c572dd9c11bfba7d4459a8e3e00a6db41588290defb24",
+      "export_sha256": "983b3cbdb11d052e353c572dd9c11bfba7d4459a8e3e00a6db41588290defb24"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/cva-reverse.svg",
+      "destination": "cva/assets/brand-icons/v4/cva-reverse.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "1fb5cf3d69e9e4cc3a6dac3c5423bd97d04a691b95dbef691cb9ee410b2fae1a",
+      "export_sha256": "1fb5cf3d69e9e4cc3a6dac3c5423bd97d04a691b95dbef691cb9ee410b2fae1a"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/dayline-color.svg",
+      "destination": "cva/assets/brand-icons/v4/dayline-color.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "986a07b18446ace271a34d9c01e35d8041da22dc383c027e03ee92a8bfedc978",
+      "export_sha256": "986a07b18446ace271a34d9c01e35d8041da22dc383c027e03ee92a8bfedc978"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/dayline-micro.svg",
+      "destination": "cva/assets/brand-icons/v4/dayline-micro.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "af898041dcf9920d9afbb7fb4a3bdeba5457b75ecddf46f1e03771dc7fe23f05",
+      "export_sha256": "af898041dcf9920d9afbb7fb4a3bdeba5457b75ecddf46f1e03771dc7fe23f05"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/dayline-mono.svg",
+      "destination": "cva/assets/brand-icons/v4/dayline-mono.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "3ba03d1f2227a415026e6e6ec8fc4f6579e404f1e4d339f0411e93d8dd907d10",
+      "export_sha256": "3ba03d1f2227a415026e6e6ec8fc4f6579e404f1e4d339f0411e93d8dd907d10"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/dayline-reverse.svg",
+      "destination": "cva/assets/brand-icons/v4/dayline-reverse.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "8783a2adc8ad0b48505a72d0ce84a0cea70e13069bbab559ab3a27b9ba42ce13",
+      "export_sha256": "8783a2adc8ad0b48505a72d0ce84a0cea70e13069bbab559ab3a27b9ba42ce13"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/elio-color.svg",
+      "destination": "cva/assets/brand-icons/v4/elio-color.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "b23277a291544128f8ee054fb045de7de832ed5e49eb7834511dfcfe5b975383",
+      "export_sha256": "b23277a291544128f8ee054fb045de7de832ed5e49eb7834511dfcfe5b975383"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/elio-micro.svg",
+      "destination": "cva/assets/brand-icons/v4/elio-micro.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "3abb5b4bc5fd7623fa3ad012bba5a5aa906af0cfacfb06c4237a68f0f87e4aaa",
+      "export_sha256": "3abb5b4bc5fd7623fa3ad012bba5a5aa906af0cfacfb06c4237a68f0f87e4aaa"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/elio-mono.svg",
+      "destination": "cva/assets/brand-icons/v4/elio-mono.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "b8cb3eb063db736feb70c55a369657ce846ab79e3e37f11ea5421371cf4efda0",
+      "export_sha256": "b8cb3eb063db736feb70c55a369657ce846ab79e3e37f11ea5421371cf4efda0"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/elio-reverse.svg",
+      "destination": "cva/assets/brand-icons/v4/elio-reverse.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "f2e5cae8ea4ae8c6487e33b7baa5a3d1249877157fd313656f8bda5d115f6798",
+      "export_sha256": "f2e5cae8ea4ae8c6487e33b7baa5a3d1249877157fd313656f8bda5d115f6798"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/loki-color.svg",
+      "destination": "cva/assets/brand-icons/v4/loki-color.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "4ae4370cac79d584fa072c2b9c67cabb7229be57b3cbdfa2faed660c5ec126bd",
+      "export_sha256": "4ae4370cac79d584fa072c2b9c67cabb7229be57b3cbdfa2faed660c5ec126bd"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/loki-micro.svg",
+      "destination": "cva/assets/brand-icons/v4/loki-micro.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "945c95214a0f0d391ccaab6f9e2e4fec6f53ad6fb83bef20db4c2e9780c2eeb8",
+      "export_sha256": "945c95214a0f0d391ccaab6f9e2e4fec6f53ad6fb83bef20db4c2e9780c2eeb8"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/loki-mono.svg",
+      "destination": "cva/assets/brand-icons/v4/loki-mono.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "7f9cc86f74c9177da011b5a5381d5f864653a20ef272fb3ecabb4ac0eee0d672",
+      "export_sha256": "7f9cc86f74c9177da011b5a5381d5f864653a20ef272fb3ecabb4ac0eee0d672"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/loki-reverse.svg",
+      "destination": "cva/assets/brand-icons/v4/loki-reverse.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "52669009ba4696d407a02da92483757f2e2cb9e0f8d25c09dec8d8d8b396c7ed",
+      "export_sha256": "52669009ba4696d407a02da92483757f2e2cb9e0f8d25c09dec8d8d8b396c7ed"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/manager-cue-color.svg",
+      "destination": "cva/assets/brand-icons/v4/manager-cue-color.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "57f0d9a7876b1cd6b664d1f71e2d0206041f2917cd273c18af42359073ad6018",
+      "export_sha256": "57f0d9a7876b1cd6b664d1f71e2d0206041f2917cd273c18af42359073ad6018"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/manager-cue-micro.svg",
+      "destination": "cva/assets/brand-icons/v4/manager-cue-micro.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "d79392dd762f5891ff856c600cf51ee80261b8f6d969307ce185e076badb76dd",
+      "export_sha256": "d79392dd762f5891ff856c600cf51ee80261b8f6d969307ce185e076badb76dd"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/manager-cue-mono.svg",
+      "destination": "cva/assets/brand-icons/v4/manager-cue-mono.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "847386bff7b2dd8f05875e9e3c9b8e10d5bf0d167139dce486a824907a28e044",
+      "export_sha256": "847386bff7b2dd8f05875e9e3c9b8e10d5bf0d167139dce486a824907a28e044"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/manager-cue-reverse.svg",
+      "destination": "cva/assets/brand-icons/v4/manager-cue-reverse.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "781d5ee0df9dcaa956fa9532ad77268ec0b2540c33b16d9d5777905937be2e60",
+      "export_sha256": "781d5ee0df9dcaa956fa9532ad77268ec0b2540c33b16d9d5777905937be2e60"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/temporal-loom-color.svg",
+      "destination": "cva/assets/brand-icons/v4/temporal-loom-color.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "4f8756b5ec7e09e6ef94f51197c9b08ef1713c1b7e20858d1113c9fdb96f24dc",
+      "export_sha256": "4f8756b5ec7e09e6ef94f51197c9b08ef1713c1b7e20858d1113c9fdb96f24dc"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/temporal-loom-micro.svg",
+      "destination": "cva/assets/brand-icons/v4/temporal-loom-micro.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "f85a9ffb56b6f08fa0754c38976ebd8543e7838c665ef03de57442f847f2a6a2",
+      "export_sha256": "f85a9ffb56b6f08fa0754c38976ebd8543e7838c665ef03de57442f847f2a6a2"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/temporal-loom-mono.svg",
+      "destination": "cva/assets/brand-icons/v4/temporal-loom-mono.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "d05d291cc53b3b403314181c8113cfa7ac2abf6ed6c0bf826533209959075052",
+      "export_sha256": "d05d291cc53b3b403314181c8113cfa7ac2abf6ed6c0bf826533209959075052"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/temporal-loom-reverse.svg",
+      "destination": "cva/assets/brand-icons/v4/temporal-loom-reverse.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "f718492cc5f513e82804cee10d03a75986c4ed32cfb0b15aea4a93461850e54e",
+      "export_sha256": "f718492cc5f513e82804cee10d03a75986c4ed32cfb0b15aea4a93461850e54e"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/timelink-color.svg",
+      "destination": "cva/assets/brand-icons/v4/timelink-color.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "fb9b982b447befb61ef0db0b171c3a8a05895e372c171e3cbc4138dba2dd7996",
+      "export_sha256": "fb9b982b447befb61ef0db0b171c3a8a05895e372c171e3cbc4138dba2dd7996"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/timelink-micro.svg",
+      "destination": "cva/assets/brand-icons/v4/timelink-micro.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "8801b8309ebd5da6ab012aff22c7d223f6f6ad7c924532f0bf5f9338a08d6c37",
+      "export_sha256": "8801b8309ebd5da6ab012aff22c7d223f6f6ad7c924532f0bf5f9338a08d6c37"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/timelink-mono.svg",
+      "destination": "cva/assets/brand-icons/v4/timelink-mono.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "b7e426c92a664fd864a68012f71024a3534395c160fe26220b92e7376d2d5dd0",
+      "export_sha256": "b7e426c92a664fd864a68012f71024a3534395c160fe26220b92e7376d2d5dd0"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/timelink-reverse.svg",
+      "destination": "cva/assets/brand-icons/v4/timelink-reverse.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "7603aecb89dcbc317cc51fd1bf6e24e2d76734ccfeef0c6aeedce1a87e3db91e",
+      "export_sha256": "7603aecb89dcbc317cc51fd1bf6e24e2d76734ccfeef0c6aeedce1a87e3db91e"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/ttaempad-color.svg",
+      "destination": "cva/assets/brand-icons/v4/ttaempad-color.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "2b20940001f311eded8385c8d7601de71f1fd00702248814c7f86aa34e2ca341",
+      "export_sha256": "2b20940001f311eded8385c8d7601de71f1fd00702248814c7f86aa34e2ca341"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/ttaempad-micro.svg",
+      "destination": "cva/assets/brand-icons/v4/ttaempad-micro.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "8018815c4110e6f10b8365ef621cf2c1b8a2afc1a1f471383ad3847205eddbe3",
+      "export_sha256": "8018815c4110e6f10b8365ef621cf2c1b8a2afc1a1f471383ad3847205eddbe3"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/ttaempad-mono.svg",
+      "destination": "cva/assets/brand-icons/v4/ttaempad-mono.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "0d1cbfb4f360ea8bcef86b75d511855e9ce2d66e9057bee854e49b104dba0d41",
+      "export_sha256": "0d1cbfb4f360ea8bcef86b75d511855e9ce2d66e9057bee854e49b104dba0d41"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/ttaempad-reverse.svg",
+      "destination": "cva/assets/brand-icons/v4/ttaempad-reverse.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "339652a023ac08ca2d5ab1604887535b33dd9a5004f6a84e17462515063ab8b5",
+      "export_sha256": "339652a023ac08ca2d5ab1604887535b33dd9a5004f6a84e17462515063ab8b5"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/cva-micro.svg",
+      "destination": "cva/assets/cva-symbol-micro.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "6c237e71c90532f79922bb303d6d33c8a14fb22e5430da391d70900ea2d67843",
+      "export_sha256": "6c237e71c90532f79922bb303d6d33c8a14fb22e5430da391d70900ea2d67843"
+    },
+    {
+      "source": "docs/design/cva-brand-v1/media/icons/v4/cva-color.svg",
+      "destination": "cva/assets/cva-symbol.svg",
+      "encoding": "utf8-lf-v1",
+      "sha256": "f2079b0e7a68c219111008472b50c573709f339b35e8de9ddb28c5aa010425d0",
+      "export_sha256": "f2079b0e7a68c219111008472b50c573709f339b35e8de9ddb28c5aa010425d0"
+    },
+    {
+      "source": "tools/cva_design_system/foundations.css",
+      "destination": "design/foundations.css",
+      "encoding": "utf8-lf-v1",
+      "sha256": "eaa73fa8e86187fda5bb6691a52996b5282954d0eae1e9b0d4062260c32dc801",
+      "export_sha256": "eaa73fa8e86187fda5bb6691a52996b5282954d0eae1e9b0d4062260c32dc801"
+    },
+    {
+      "source": "tools/elio_release/scaffold/docs/FOUNDATIONS.md",
+      "destination": "docs/FOUNDATIONS.md",
+      "encoding": "utf8-lf-v1",
+      "sha256": "53f94b2285433667e73ba88f25852c6e8c3aa9dfc3377d9c3b95e6f95900105d",
+      "export_sha256": "53f94b2285433667e73ba88f25852c6e8c3aa9dfc3377d9c3b95e6f95900105d"
+    },
+    {
+      "source": "tools/elio_release/scaffold/docs/S6_FLOWS.md",
+      "destination": "docs/S6_FLOWS.md",
+      "encoding": "utf8-lf-v1",
+      "sha256": "2359ba04f6b87a734ddd5bbd22751c05dfab3f6293eee4fcc8123646df25c6f9",
+      "export_sha256": "2359ba04f6b87a734ddd5bbd22751c05dfab3f6293eee4fcc8123646df25c6f9"
+    },
+    {
+      "source": "tools/elio_release/scaffold/docs/S7_RESILIENCE.md",
+      "destination": "docs/S7_RESILIENCE.md",
+      "encoding": "utf8-lf-v1",
+      "sha256": "9c181cef76b9aca55307fe0aeb07adc44203774194f708fe6b6e335ce8c5cca3",
+      "export_sha256": "9c181cef76b9aca55307fe0aeb07adc44203774194f708fe6b6e335ce8c5cca3"
+    },
+    {
+      "source": "tools/elio_release/scaffold/examples/brand-icons.css",
+      "destination": "examples/brand-icons.css",
+      "encoding": "utf8-lf-v1",
+      "sha256": "cb4452c62b75e3501c2abf8af29f0ba5e30ff6351cd6c3e86eac14a776c45464",
+      "export_sha256": "cb4452c62b75e3501c2abf8af29f0ba5e30ff6351cd6c3e86eac14a776c45464"
+    },
+    {
+      "source": "tools/elio_release/scaffold/examples/brand-icons.html",
+      "destination": "examples/brand-icons.html",
+      "encoding": "utf8-lf-v1",
+      "sha256": "f407fbb97bb80633d2d638b52cf2e9c9cd22c7b394bcc388717e4993674d02a4",
+      "export_sha256": "f407fbb97bb80633d2d638b52cf2e9c9cd22c7b394bcc388717e4993674d02a4"
+    },
+    {
+      "source": "tools/elio_release/scaffold/examples/brand-icons.js",
+      "destination": "examples/brand-icons.js",
+      "encoding": "utf8-lf-v1",
+      "sha256": "a3f9dc961050d3c9b9ad7f374842e1529ebc0fcfa07ee45216797bb6ed5b2eb6",
+      "export_sha256": "a3f9dc961050d3c9b9ad7f374842e1529ebc0fcfa07ee45216797bb6ed5b2eb6"
+    },
+    {
+      "source": "tools/elio_release/scaffold/examples/foundations.css",
+      "destination": "examples/foundations.css",
+      "encoding": "utf8-lf-v1",
+      "sha256": "f24d6022e4bc28ddd7f9ac24391c53086346a312e3613e730e5288d71abcdfc5",
+      "export_sha256": "f24d6022e4bc28ddd7f9ac24391c53086346a312e3613e730e5288d71abcdfc5"
+    },
+    {
+      "source": "tools/elio_release/scaffold/examples/foundations.html",
+      "destination": "examples/foundations.html",
+      "encoding": "utf8-lf-v1",
+      "sha256": "21b1fdaf199cc8198fcca08f3687fe3bdacfd347ac1d5d3817a0d4cc51651120",
+      "export_sha256": "21b1fdaf199cc8198fcca08f3687fe3bdacfd347ac1d5d3817a0d4cc51651120"
+    },
+    {
+      "source": "tools/elio_release/scaffold/examples/foundations.js",
+      "destination": "examples/foundations.js",
+      "encoding": "utf8-lf-v1",
+      "sha256": "96dbc24b04dfbf39894a011aec4fd37e3cc0e3f1a5c7eff45e03caa192a1f0c4",
+      "export_sha256": "96dbc24b04dfbf39894a011aec4fd37e3cc0e3f1a5c7eff45e03caa192a1f0c4"
+    },
+    {
+      "source": "tools/elio_release/scaffold/examples/ui-states.css",
+      "destination": "examples/ui-states.css",
+      "encoding": "utf8-lf-v1",
+      "sha256": "734f45d9a9208224cebcc320c5439307089f02b072e2d27c80a1071c6f252369",
+      "export_sha256": "734f45d9a9208224cebcc320c5439307089f02b072e2d27c80a1071c6f252369"
+    },
+    {
+      "source": "tools/elio_release/scaffold/examples/ui-states.html",
+      "destination": "examples/ui-states.html",
+      "encoding": "utf8-lf-v1",
+      "sha256": "7486bbc2d2343d3a5c178fd21f29493f9226e3a2e3e19079b810da7fa3f17f17",
+      "export_sha256": "7486bbc2d2343d3a5c178fd21f29493f9226e3a2e3e19079b810da7fa3f17f17"
+    },
+    {
+      "source": "tools/elio_release/scaffold/examples/ui-states.js",
+      "destination": "examples/ui-states.js",
+      "encoding": "utf8-lf-v1",
+      "sha256": "85eb239f01388ff2433ba8d4c3a89f22fe163139fecb9c0696f7b4bd0a866e52",
+      "export_sha256": "85eb239f01388ff2433ba8d4c3a89f22fe163139fecb9c0696f7b4bd0a866e52"
+    },
+    {
+      "source": "tools/elio_release/scaffold/scripts/check-brand-icons.cjs",
+      "destination": "scripts/check-brand-icons.cjs",
+      "encoding": "utf8-lf-v1",
+      "sha256": "f180bc9e50b40a4117300c1f560d9bf06ad85a9fe9fc1c86bb1e93ad19920875",
+      "export_sha256": "f180bc9e50b40a4117300c1f560d9bf06ad85a9fe9fc1c86bb1e93ad19920875"
     }
   ],
   "files": {
     ".gitattributes": "05888ac26d8fb738916721e7b2a57217ab1bdfecdbf255f5daf55bf0547169eb",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "CONTRIBUTING.md": "83270f56987a77b1408925a66f8903f43be736f993345237b1e87493eb16c48e",
     "LICENSE": "b83ca162ea41c85a51d84becb04f3300fa7851d81d28386ec4d9152a70561a31",
     "POLICY.md": "1392fcb70ab8f97a82f4042bbe233936a2cd7f542225353637a0a80bad6c49ca",
     "PRIVACY.md": "d52c9ca31cf9d8ed28c09f3b866be95754750c9144c2b30b9a619291b701bf29",
-    "README.md": "bee28ced11d5a88219051a80c101100c5616e17a9bc93a4c67fd1d06121c33f3",
+    "README.md": "4c69f0788e821044f2bf173714b26e0afec2755313e408390ce58dcdb7c84b30",
     "SECURITY.md": "c3f301881bc67c22ebaecf678cb79e96a194e909bfe4bd564c6208bbbd06c21f",
     "THIRD_PARTY_NOTICES.md": "5ab50b8fc3cf300d62ebe4c857d774003bcfe09a00f31f2f4a647901be51f72d",
     "assets-data.js": "bcafee44871a58737465e8591f143096a927ffe6aedc6ad29cd7b2214a23f970",
@@ -8858,6 +9216,7 @@
     "assets/catalog-moonleaf.png": "afac91d4c79c288637c8f01d5dada41ca50a8c6f517154f7e7ce440c35521860",
     "assets/catalog-observation-notebook.png": "1c28f38a1bd0dc01dd3205aab9d05b0241082136579c53b16d725226e613a006",
     "assets/coastal-observation-dawn.png": "02fe4d00ee12fe8c5c1d59e98ab70778258ab896619d636a03dfba20d37ab4b3",
+    "assets/elio-intro.css": "4f3a1adf6838d01890387fc89b2feda8244da078e748a25aa9f53eb8099517b4",
     "assets/elio/library/09749cf6de4195e8612cb0124dd80fb02bc7bf44ab19cbb5bc3d9a8391a74850/asset-09749cf6de4195e8612c.webp": "09749cf6de4195e8612cb0124dd80fb02bc7bf44ab19cbb5bc3d9a8391a74850",
     "assets/elio/library/0b66a4f09582410b6a83e9ed82a0319d2685e9bdfd4722405da25c6e96c45956/asset-0b66a4f09582410b6a83.webp": "0b66a4f09582410b6a83e9ed82a0319d2685e9bdfd4722405da25c6e96c45956",
     "assets/elio/library/0d825a9978c19e065519b153262a5f49c474f9cd4bf62dd42ff5c849d85079b1/asset-0d825a9978c19e065519.webp": "0d825a9978c19e065519b153262a5f49c474f9cd4bf62dd42ff5c849d85079b1",
@@ -9013,13 +9372,13 @@
     "assets/public-space.svg": "7ca92de91a1f2ea2102830402c042d570eed5ff6af4cd360c0989789e900d234",
     "assets/public-workbench.svg": "95ba7fdd067b09a56961efd7882686f00df9c0765b64e562a5133ebb1cc8831c",
     "assets/winter-greenhouse-path.png": "a07a796a2ca69f7968f27a29f6e355d125b4ceefc297e3875931b6244d14862d",
-    "board/app.js": "546fe5822c511219901e7fa15f2d5032bcae7a0d5064592b1f5680d861d02a57",
+    "board/app.js": "57999000a9e0318ab1c2a2a53365c44ee3b7d27e0f68c95e76820a891be9c7d4",
     "board/assets/PRETENDARD-LICENSE.md": "0dc62409683d658150320f7cbf0c98a70805f43f16ada7326072c807dffc6876",
     "board/assets/pretendard.woff2": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
-    "board/authoring-ui.js": "6c1b9701c288bc03627224b6af90781c95dc052ea5bf8845779a98eab63e3927",
-    "board/authoring.css": "7ec898598e9b998ca4f997dc5aca7b539cc11d2fadb862d8159e9c9398e66f50",
+    "board/authoring-ui.js": "6755f39abc54fc80b8b299d73b230a4cc0bf43ff5ca340a85239245e9c3bedea",
+    "board/authoring.css": "ec68e4ddc0a42343411d920b7d5399434a2c0fa15e9d5bb5083d3792ccf498f8",
     "board/board-refinement.css": "d8088bdf7262552b5c7e4410612b4740a55e655f900b104d8da2ed4eb4334484",
-    "board/build-manifest.json": "38b9fb6913568476875a7bbebefd5ad90ee564e979c32c0faf843347a1cb71aa",
+    "board/build-manifest.json": "8eab915cc98301921f0bd1c44d6b184de081a04f478ad12456df23a054463c73",
     "board/content-picker.css": "856f37f029504990ba25233a073347a1857e8f0ac7cae37b4453fa7823893a9f",
     "board/content-picker.js": "fbfe952ee104d4bf0ae47b019b7fe1adfeee9a1bea29a191612af8a7288f8c55",
     "board/depth-card.css": "6bda2975ba12dd85e862d5f61827172764671057040866b587bb5fb87ec80cbc",
@@ -9030,11 +9389,11 @@
     "board/documents.js": "aa09f006e193ec5b1c1137471496e979a1917775e418d6d7ba3a150e1027f888",
     "board/documents/public-observatory.json": "bb21ea1fd49979ea6c05ea123fc0a03cf76e964c8a71265713085ea72ef0708b",
     "board/hud-panels.css": "bb30a0fa7e4a723857d3e5f696934626411eb18a23ded515b76b2db5610bc2ff",
-    "board/index.html": "20f169505f258a1880a5294564d4dae73297a08d8974907b050c9b932259c077",
+    "board/index.html": "66f7055c8df5c8aa2e59a9f24703521c6d16423eff6971bb770e132bb591f6fc",
     "board/notices/CVA-DEPTH-CARDS.txt": "824bb622d8f3cfa8f2d3eadd3c6998e189cc81a49fe7135d90cf8139fc0166a3",
-    "board/projection.js": "ba0e5fa8d012001f821916d0cd700573970bcb0a227b093edbd2946e5fbc486a",
-    "board/styles.css": "3d880c1dbd7eec5671d81a8b93e0b0349c7dff5480ac4279ddbdcb63d4e13e63",
-    "board/vendor/board-model.js": "c7f57e267c905916a3058c53614900aa71d52687b9c2cba3c6557f467cf00816",
+    "board/projection.js": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af",
+    "board/styles.css": "68c6f627b61760876e73a91c567fe2ee216e836ab3696b1dcfe1ff319643f829",
+    "board/vendor/board-model.js": "af961224609af56ac8aa4ee02d54f4e66e719db1897450bf071482166e14c1ad",
     "board/vendor/components.js": "5399215b050477c6396059022ff75ee822d7d863a3b3106897f8e72083907894",
     "board/vendor/diagram_geometry.js": "ec908c2666a7780b445cc4e2a7cc203bbcf8670e1ae2b07d2f0cf4b06a463e8c",
     "board/vendor/story_layout.js": "b0261329393cc7d55a5c08317f3712c20bd328c7f420b5ac8b490cd9d2cb4c12",
@@ -9050,11 +9409,46 @@
     "cva/adaptive-assets/winter-greenhouse-path.png": "a07a796a2ca69f7968f27a29f6e355d125b4ceefc297e3875931b6244d14862d",
     "cva/assets/PRETENDARD-LICENSE.md": "0dc62409683d658150320f7cbf0c98a70805f43f16ada7326072c807dffc6876",
     "cva/assets/PretendardVariable.woff2": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
+    "cva/assets/brand-icons/manifest.json": "638bcecef4506eaa6c2ce6c6e23713b91fdefef2b6b8f55d1ec8d0b23429bbb5",
+    "cva/assets/brand-icons/v4/cva-color.svg": "f2079b0e7a68c219111008472b50c573709f339b35e8de9ddb28c5aa010425d0",
+    "cva/assets/brand-icons/v4/cva-micro.svg": "6c237e71c90532f79922bb303d6d33c8a14fb22e5430da391d70900ea2d67843",
+    "cva/assets/brand-icons/v4/cva-mono.svg": "983b3cbdb11d052e353c572dd9c11bfba7d4459a8e3e00a6db41588290defb24",
+    "cva/assets/brand-icons/v4/cva-reverse.svg": "1fb5cf3d69e9e4cc3a6dac3c5423bd97d04a691b95dbef691cb9ee410b2fae1a",
+    "cva/assets/brand-icons/v4/dayline-color.svg": "986a07b18446ace271a34d9c01e35d8041da22dc383c027e03ee92a8bfedc978",
+    "cva/assets/brand-icons/v4/dayline-micro.svg": "af898041dcf9920d9afbb7fb4a3bdeba5457b75ecddf46f1e03771dc7fe23f05",
+    "cva/assets/brand-icons/v4/dayline-mono.svg": "3ba03d1f2227a415026e6e6ec8fc4f6579e404f1e4d339f0411e93d8dd907d10",
+    "cva/assets/brand-icons/v4/dayline-reverse.svg": "8783a2adc8ad0b48505a72d0ce84a0cea70e13069bbab559ab3a27b9ba42ce13",
+    "cva/assets/brand-icons/v4/elio-color.svg": "b23277a291544128f8ee054fb045de7de832ed5e49eb7834511dfcfe5b975383",
+    "cva/assets/brand-icons/v4/elio-micro.svg": "3abb5b4bc5fd7623fa3ad012bba5a5aa906af0cfacfb06c4237a68f0f87e4aaa",
+    "cva/assets/brand-icons/v4/elio-mono.svg": "b8cb3eb063db736feb70c55a369657ce846ab79e3e37f11ea5421371cf4efda0",
+    "cva/assets/brand-icons/v4/elio-reverse.svg": "f2e5cae8ea4ae8c6487e33b7baa5a3d1249877157fd313656f8bda5d115f6798",
+    "cva/assets/brand-icons/v4/loki-color.svg": "4ae4370cac79d584fa072c2b9c67cabb7229be57b3cbdfa2faed660c5ec126bd",
+    "cva/assets/brand-icons/v4/loki-micro.svg": "945c95214a0f0d391ccaab6f9e2e4fec6f53ad6fb83bef20db4c2e9780c2eeb8",
+    "cva/assets/brand-icons/v4/loki-mono.svg": "7f9cc86f74c9177da011b5a5381d5f864653a20ef272fb3ecabb4ac0eee0d672",
+    "cva/assets/brand-icons/v4/loki-reverse.svg": "52669009ba4696d407a02da92483757f2e2cb9e0f8d25c09dec8d8d8b396c7ed",
+    "cva/assets/brand-icons/v4/manager-cue-color.svg": "57f0d9a7876b1cd6b664d1f71e2d0206041f2917cd273c18af42359073ad6018",
+    "cva/assets/brand-icons/v4/manager-cue-micro.svg": "d79392dd762f5891ff856c600cf51ee80261b8f6d969307ce185e076badb76dd",
+    "cva/assets/brand-icons/v4/manager-cue-mono.svg": "847386bff7b2dd8f05875e9e3c9b8e10d5bf0d167139dce486a824907a28e044",
+    "cva/assets/brand-icons/v4/manager-cue-reverse.svg": "781d5ee0df9dcaa956fa9532ad77268ec0b2540c33b16d9d5777905937be2e60",
+    "cva/assets/brand-icons/v4/temporal-loom-color.svg": "4f8756b5ec7e09e6ef94f51197c9b08ef1713c1b7e20858d1113c9fdb96f24dc",
+    "cva/assets/brand-icons/v4/temporal-loom-micro.svg": "f85a9ffb56b6f08fa0754c38976ebd8543e7838c665ef03de57442f847f2a6a2",
+    "cva/assets/brand-icons/v4/temporal-loom-mono.svg": "d05d291cc53b3b403314181c8113cfa7ac2abf6ed6c0bf826533209959075052",
+    "cva/assets/brand-icons/v4/temporal-loom-reverse.svg": "f718492cc5f513e82804cee10d03a75986c4ed32cfb0b15aea4a93461850e54e",
+    "cva/assets/brand-icons/v4/timelink-color.svg": "fb9b982b447befb61ef0db0b171c3a8a05895e372c171e3cbc4138dba2dd7996",
+    "cva/assets/brand-icons/v4/timelink-micro.svg": "8801b8309ebd5da6ab012aff22c7d223f6f6ad7c924532f0bf5f9338a08d6c37",
+    "cva/assets/brand-icons/v4/timelink-mono.svg": "b7e426c92a664fd864a68012f71024a3534395c160fe26220b92e7376d2d5dd0",
+    "cva/assets/brand-icons/v4/timelink-reverse.svg": "7603aecb89dcbc317cc51fd1bf6e24e2d76734ccfeef0c6aeedce1a87e3db91e",
+    "cva/assets/brand-icons/v4/ttaempad-color.svg": "2b20940001f311eded8385c8d7601de71f1fd00702248814c7f86aa34e2ca341",
+    "cva/assets/brand-icons/v4/ttaempad-micro.svg": "8018815c4110e6f10b8365ef621cf2c1b8a2afc1a1f471383ad3847205eddbe3",
+    "cva/assets/brand-icons/v4/ttaempad-mono.svg": "0d1cbfb4f360ea8bcef86b75d511855e9ce2d66e9057bee854e49b104dba0d41",
+    "cva/assets/brand-icons/v4/ttaempad-reverse.svg": "339652a023ac08ca2d5ab1604887535b33dd9a5004f6a84e17462515063ab8b5",
     "cva/assets/cva-color.svg": "a0343c6cafb975d89e0caeb0d5a73a945b74c7f1e9697538c1a33404cca95658",
+    "cva/assets/cva-symbol-micro.svg": "6c237e71c90532f79922bb303d6d33c8a14fb22e5430da391d70900ea2d67843",
+    "cva/assets/cva-symbol.svg": "f2079b0e7a68c219111008472b50c573709f339b35e8de9ddb28c5aa010425d0",
     "cva/canvas.html": "068b5084480e741e4d21f0fdd5bdbb50006d311bc50d92f372ae42343c787e3c",
     "cva/canvas.js": "66a15f56e3711ad384a09f8f8a0a263408e529616b9fe466252ef67640f9fd78",
     "cva/components.js": "891af95a059db80c686a7bd4589271279494abe2ecd9030177df98baf247aaba",
-    "cva/cva.css": "b39a1a76cfa2d3eb80f82b8eb9dd16f24f0f1528a995c8883ec00801e128165e",
+    "cva/cva.css": "f064b75d6a137449db5f527fc7c32710bf245f7aabf60326c747f9ca8e6c90eb",
     "cva/element-preview.html": "22ab3ffd28cfb432003864124619a3552fbd602007827d0fa48aad231de10cef",
     "cva/element-preview.js": "bd445534c3da53f32fc26ac1de728f9e6c6986dcbcda7d9edba7f7bc31600369",
     "cva/elements-controls.css": "ee6c9f1430a96011347fef6a64fe3a465dc5001395e40125cf8fa3b09ae24af4",
@@ -9072,15 +9466,15 @@
     "cva/forma-context.js": "f06e824d2545d69532139cb79611fa742ea3157fcddb9e2c36c9a0aff9373228",
     "cva/help.css": "04cb23bccc7f3cd3d840f628c8888968afe91ebc604df8c15e78d88f9e538007",
     "cva/help.js": "d578193348deae3df64bd8e7f8e001ae048bb06b57e4a5cfe08f5575eb6d836f",
-    "cva/index.html": "95f4189c950f1318797798585ec2bb7624e3ec9b770b4c649b0856f0fa5b19e2",
+    "cva/index.html": "ade884f80053b9c99064824c187521ce66f3fb2bed641ca1fb0a1357a0b3daa8",
     "cva/interactive-examples.js": "d7dbf8543f8f8a0b25ccbd19e6b18256bdb175c4e1dd1f237e73e7089717364d",
-    "cva/library-icons.js": "7d4cb52996f95a8ef945999ba23f24c2c8f4977398927e45a70ea87dfaba33f9",
+    "cva/library-icons.js": "6906e2bdaffeb85a615cc763cdd36d9c40b16c0322bb605956b8301ffa189f6a",
     "cva/library-interactions.js": "eaeb456739fb5a47807586f7ac8cc22b9cdfec6456e367a4e650bc13c60adc55",
     "cva/library-map.js": "baf104d8a6643fa7b75ab2bdafeec2a41085364ec841554403bdb2c5d1813866",
-    "cva/library.css": "42ddde26698738fe72900d591e833f67756bfa6fb9f6e0af06a392482972d50d",
-    "cva/library.html": "e6c4892715da789928982ebb17bd07d8095c079574e4d8720f4c980389131227",
-    "cva/library.js": "6088d422335bae09fcf724d0da7cd7cc41fa52fc859af0f338768c017c9fd43b",
-    "cva/module-renderer.js": "c9b9ac9728da15f665e909f3613519bb2020335e42ccde09b1230f40b6f6e411",
+    "cva/library.css": "59a8c5b348beaa06f5a16056e1a73c67d10bbf9c5502122388fad6012bc84c03",
+    "cva/library.html": "0b5bd4e3ac09d9fc096120e1306e6d33ace1f1620d021011d491ecc8fa297ed2",
+    "cva/library.js": "d6754f8154312a0d4d09efa7f2c9284aa564ca1f946fdfbf510bfdb7adfaa483",
+    "cva/module-renderer.js": "2d94e54f3270bf20495a3897682386989a7d8f9d11d5bce3141851608c0fe20a",
     "cva/module-styles.css": "f9c6dd177a81a247163442b566498f620d04f26eda2faa1fde314cba7c66f757",
     "cva/modules.js": "b3481e2fed0b490b79bbb420ddfa5d32b312f7008755fb126908850bd3371b1b",
     "cva/patterns.js": "30afcfb96cc415f105b675bda045cf494c18e9f3747cfdfbec0f595ed8ae229b",
@@ -9090,8 +9484,8 @@
     "cva/scene-renderer.js": "859844e5dd7faa5b7d472a543702196e6c97ede0708a64515357c251f9c93b21",
     "cva/scene-styles.css": "f3610f13081682e525dfaa0f95201e2d38b4da87583f63c19e781d0614e5e3a4",
     "cva/sections.js": "d1d34f6a9e9fc226fbb34c55cc0c639c0a2d1fe08994d9d3ec84cfeb4c728ac4",
-    "cva/studio.css": "ad5e156b19c383743757de1bc215e5a1e896b47776c3a0ec471a1fb2f88d2d20",
-    "cva/studio.js": "7e605d0ca1c8e5a423067bca10f43fd28da02b725a88cfa1297475aca0787e88",
+    "cva/studio.css": "cfb93113b26a847a673cc9ab6187f5d633e4d6fc5375f63a015d9197b8164c3d",
+    "cva/studio.js": "8288d3f2231c6082abb9c4c458f4a376bada6fb5243cc019605bdf97efe00c88",
     "cva/templates.js": "d5462d7ea6617f3a66ade47ae2083f12ef0acb8236c4313fe65825e57da6930a",
     "cva/thumb.html": "01ef57072d3654f834c3278191e03c097a96d0b5e4fac4ffc313c26291d0b7c3",
     "cva/thumb.js": "3bc86feaa7e5ad2aba9259b154e9e312aee0cd02dcb38c04c8d841e0231438af",
@@ -9100,14 +9494,18 @@
     "cva/vendor/three-0.186.1.min.js": "d839913c15918023afe01fe758ebc90d3c911b8b181fecbb338de2011f11848d",
     "data-engines.js": "9e65c62efb6134258cd3f33544d9fc2bd66bf78ecaf6586466a416253054827a",
     "design/components.js": "891af95a059db80c686a7bd4589271279494abe2ecd9030177df98baf247aaba",
-    "design/cva.css": "b39a1a76cfa2d3eb80f82b8eb9dd16f24f0f1528a995c8883ec00801e128165e",
+    "design/cva.css": "f064b75d6a137449db5f527fc7c32710bf245f7aabf60326c747f9ca8e6c90eb",
+    "design/foundations.css": "eaa73fa8e86187fda5bb6691a52996b5282954d0eae1e9b0d4062260c32dc801",
     "design/tokens.js": "c1776ccc145d00230d1f8085740e2380d37b41e643e5dd5cbff12ca72823613f",
-    "docs/BRANDING.md": "cf3f7463d14354beb14d421c0757ec2f8613bcdf831b48d91a292e03dc2d1467",
+    "docs/BRANDING.md": "f2c9afacb43936afe096f7accceaa37de6aa17b9371aaa0fe308df6695138657",
     "docs/ELIO_TEMPLATE_COVERAGE.md": "719396d27c10d40ab94730944c9f3cff4c48eccb1db7e57a2a24e2f55bb2fe75",
+    "docs/FOUNDATIONS.md": "53f94b2285433667e73ba88f25852c6e8c3aa9dfc3377d9c3b95e6f95900105d",
     "docs/ORIGINAL_EXAMPLES.json": "c245bab6434754dee295ba5a145a16abefd6c960bd2323b2d3919b29bf6d92ec",
     "docs/ORIGINAL_EXAMPLES.md": "9d5f04401445de6eb0b108350fd982a537927e8d2ddac96137f31d393ff4ccb6",
-    "docs/OWNED_RUNTIME.md": "15d8f8c1dba389e7b5ea2bf797c02a9e2c8e2d3669e4259c99fee7594d4e07d3",
-    "docs/STORY_AUTHORING.md": "815828d8d62ec676ba7f99f26efa6f45b9ea828e88a80581d6afd38d5710de4e",
+    "docs/OWNED_RUNTIME.md": "6f4b2e5bff707a0efc611e2b62398fdccf3f950bd1f73f10e6e9b7289d25939c",
+    "docs/S6_FLOWS.md": "2359ba04f6b87a734ddd5bbd22751c05dfab3f6293eee4fcc8123646df25c6f9",
+    "docs/S7_RESILIENCE.md": "9c181cef76b9aca55307fe0aeb07adc44203774194f708fe6b6e335ce8c5cca3",
+    "docs/STORY_AUTHORING.md": "b0c2ab1141782b063d76ee42b1e07b235a45d4a389f02b6d622016dadf6911a5",
     "docs/assets/readme-hero.svg": "a21074295eafbe6bc97bddd65ea3ba1cb35f7ec84d130f2172073ecdc6f91066",
     "docs/screenshots/README.md": "b090a73ba24a3613ce113e4b79c9177c0c2dcf53bcc35522e88c51f3fad3b1b1",
     "docs/screenshots/library.webp": "2969c5a85d92db2e4d9dbe7351a2989f3ff1176cbe0498e84264ec1366bc4d58",
@@ -9119,34 +9517,43 @@
     "engines.js": "9db35284026c442499ad6391e1ede47a3f502a457ddd0b4ab61be1454c57a37c",
     "examples/assets/scenes.svg": "c9630249c50ec8127c53f79b6ec729d188f8908bd546e65e7dc5d8d400827dca",
     "examples/board.catalog.json": "93770086c12b24a4a5ff3b6e98ca6347102ab01b24da476c30494afbf80c7b7f",
+    "examples/brand-icons.css": "cb4452c62b75e3501c2abf8af29f0ba5e30ff6351cd6c3e86eac14a776c45464",
+    "examples/brand-icons.html": "f407fbb97bb80633d2d638b52cf2e9c9cd22c7b394bcc388717e4993674d02a4",
+    "examples/brand-icons.js": "a3f9dc961050d3c9b9ad7f374842e1529ebc0fcfa07ee45216797bb6ed5b2eb6",
     "examples/connections.json": "c9eeaae2773ce4cec9d08405a32ee85e00cde06b9bd1d6698c786d56e4195089",
+    "examples/foundations.css": "f24d6022e4bc28ddd7f9ac24391c53086346a312e3613e730e5288d71abcdfc5",
+    "examples/foundations.html": "21b1fdaf199cc8198fcca08f3687fe3bdacfd347ac1d5d3817a0d4cc51651120",
+    "examples/foundations.js": "96dbc24b04dfbf39894a011aec4fd37e3cc0e3f1a5c7eff45e03caa192a1f0c4",
     "examples/page.cva.json": "0f46ae5179dcd47983d4f808dedef8051aff29ddd323302944c5267869fed496",
     "examples/source.json": "a77039ebfc96fcc76884f1b70558af3964c2d46025185a9a161fef937556060e",
-    "examples/story.html": "f9216a110f4daed32d6c25ff24552ba09aa784c68f0be2567449b8ea08d994dc",
+    "examples/story.html": "01fdcf2785176cf31f49bacc06640c784e57b476d2fcaa67dbd99f1023e572f7",
     "examples/story.json": "4dfb3a39f6f3eaa93b810c63d38de49a66ce0f12a03228338d7b255f700f0891",
-    "examples/templates/branches.html": "8db477cc310ffcec680c51bce12fc186650c1b3bb0b552603b810dac6a59b4f9",
+    "examples/templates/branches.html": "a43a796fc72628139a27cc3d54a25197aa9792ac13e58fa19be36d20131e99c7",
     "examples/templates/branches.source.json": "b101bf1e95fdf222f7214ca5a6f7f38ebd31057dd4fd625e2caeee4bb6331549",
     "examples/templates/branches.story.json": "e4bbb36fe8364628d6fd6ccaa96cb65949dd19665dd0455742fda9c4a325172e",
     "examples/templates/catalog.json": "f629e19da0b177938462c270d8215c424c608653a367a55719b850ea6229ee93",
     "examples/templates/complete.connections.json": "95b911dabd0bb96dcaa096459d3e28ee03c2766d4593902bf41ee2539e60b916",
-    "examples/templates/complete.html": "7a1e5a10dd7465b54e3419ef54a7d6ca315ca76b02441601909ea9cfe82fa686",
+    "examples/templates/complete.html": "e8f45daaf9312dde7d372acc8a9862cec00d0e5eeaf9d180826d8d7aacedb203",
     "examples/templates/complete.source.json": "a77039ebfc96fcc76884f1b70558af3964c2d46025185a9a161fef937556060e",
     "examples/templates/complete.story.json": "c972307b8a103ca5cb688a5122edcc07459e62c122206792e4224be79b5be327",
     "examples/templates/index.html": "8e29b636b3333db529260bab4db838b2d353b065f8fd778324a023c752fe3443",
     "examples/templates/life.connections.json": "95b911dabd0bb96dcaa096459d3e28ee03c2766d4593902bf41ee2539e60b916",
-    "examples/templates/life.html": "b64d7bb0e8ffffc2e76ed3648012cffba40a47a3d76d0e76dea7048253dec0f9",
+    "examples/templates/life.html": "47d06138957787c05f5fe612ff75c9949caf7a02576e6270cafef7aaccc93f6c",
     "examples/templates/life.source.json": "a77039ebfc96fcc76884f1b70558af3964c2d46025185a9a161fef937556060e",
     "examples/templates/life.story.json": "8ba37e34909ea11d00adcb7d910a7a2663071d1ad582d9961b6e6de8cae964e7",
     "examples/templates/linear.connections.json": "95b911dabd0bb96dcaa096459d3e28ee03c2766d4593902bf41ee2539e60b916",
-    "examples/templates/linear.html": "a577ae5dd44674922bd238cedc2ba4f0b0c0db17e1e13b50ac28c7606b43089f",
+    "examples/templates/linear.html": "aea6595bb535de0d739f80aa4916de85c7cdb49877cee0f3bde3c7ca06c66e08",
     "examples/templates/linear.source.json": "a77039ebfc96fcc76884f1b70558af3964c2d46025185a9a161fef937556060e",
     "examples/templates/linear.story.json": "e60c9bae4424104efe50e5c19176b11d20bbca2a0abb02690413f7ae1b11ddbc",
     "examples/templates/loading.html": "2f3ee3eb801a41b84cd56371b416ebfa9d2507fbe6614ba188da6d419e8f5ae0",
     "examples/templates/text-only.connections.json": "95b911dabd0bb96dcaa096459d3e28ee03c2766d4593902bf41ee2539e60b916",
-    "examples/templates/text-only.html": "8fbb53d42995073cfa09e3f3186f4f84a3955132934296c92d6074a6944af117",
+    "examples/templates/text-only.html": "4ae859e9b1ff4ff328eda90a84614a5157d7ee89353b7b1b40151234f7edec04",
     "examples/templates/text-only.source.json": "a77039ebfc96fcc76884f1b70558af3964c2d46025185a9a161fef937556060e",
     "examples/templates/text-only.story.json": "0e66fa1410287ffb5cd4a66ea5692190d4b2304e80613d5289fec47dead95cef",
-    "index.html": "d280e69e8b1adc2c5417dbf6bc803f039648fad23a4725875b02eacc3cca1680",
+    "examples/ui-states.css": "734f45d9a9208224cebcc320c5439307089f02b072e2d27c80a1071c6f252369",
+    "examples/ui-states.html": "7486bbc2d2343d3a5c178fd21f29493f9226e3a2e3e19079b810da7fa3f17f17",
+    "examples/ui-states.js": "85eb239f01388ff2433ba8d4c3a89f22fe163139fecb9c0696f7b4bd0a866e52",
+    "index.html": "9c42ef8aa354b874f19b59a013638adf0394ddd15e27c92318ed83489b564ea8",
     "map-adapter.js": "b9c0dc7a05c2bfcb1c63dac08ce644065a4ea2223068e4f6cb887a3fc0db5018",
     "notices/animate-css-LICENSE": "aa4b4f6ba47ac6a4b3443615b5a18576d4d28ad8b3da8b4cb8cb2bd28fdd54b2",
     "notices/basecoat-LICENSE.md": "160a6cea26ff1931297957499ab739e94c4bc79ecea18b490c9f533fa76ace78",
@@ -9158,10 +9565,11 @@
     "scripts/build_elio_map.py": "e2fb0372f229ccd2e2ddb93ff72fc4d9528ae6df36771f54e951dabb5d09e9f1",
     "scripts/build_elio_reader.py": "a9dabfac3a8f308e82614759265ff8f8ab65440ce6af896b0e3127e70ce39fab",
     "scripts/build_sources.py": "b520d78a153c2aba4c223ef000b046d1d0121618061c18d668349c46bd3040a0",
+    "scripts/check-brand-icons.cjs": "f180bc9e50b40a4117300c1f560d9bf06ad85a9fe9fc1c86bb1e93ad19920875",
     "scripts/demo.py": "af23f6060c2d04378d9d455c95b6a04533f948bebd4099867f1721d744a3a5d5",
     "scripts/render_cva.cjs": "57a9916446c4bf6b4631bdf6ce0a2f8ae6de664491625e8dd486ebf1a8b3c029",
-    "scripts/render_story.py": "e55feb0cb69a0a310d4b89b306754f8ca3094f86422d697753a69fcd8850bc4e",
-    "scripts/smoke.cjs": "49505badca65644f714353351020be218707d3c2a3790031f6dee744413e1489",
+    "scripts/render_story.py": "3a6dbddf287a8491da2d1cd3582a5ce3b004de7e801d61a0898a6b4f7ec20bcd",
+    "scripts/smoke.cjs": "248272f2454a5f54e45078cd2a22068f9e3ed218f088a8c5a7e06881b515ff15",
     "scripts/template_gallery.py": "799de22acc9121fbf953ba150faa9f1bb77c13476a32fa5c5e5c204c25d8abce",
     "skills/elio-story/SKILL.md": "f39ae603ae8762e47032068c02fa4d70a4bab299c14e5807751f290ca56aac8d",
     "skills/elio/SKILL.md": "2200b7216fe96b04e43c8dcf13fb8fb366be123547f89ee94f912157b48dab1b",
@@ -10070,12 +10478,12 @@
     "tools/__init__.py": "e1525c0744fc62430c8dfca14293efc44d00d3fc7392bfc44ba76ec723190ffe",
     "tools/cva_design_system/elio_readers.py": "1b8c43df233c4e06755ae65ee51d215e63a990e9674b2757c9975acc1461ea8a",
     "tools/elio_board/__init__.py": "bc4e215cd4476bf41f1a986c8f4c2b9516c03e29b8f8389f4fecd3b007ce3149",
-    "tools/elio_board/__main__.py": "6636b166602d5ba492651763287481a336fa9676497c6797e323d00fa3e624dc",
-    "tools/elio_board/app/app.js": "546fe5822c511219901e7fa15f2d5032bcae7a0d5064592b1f5680d861d02a57",
+    "tools/elio_board/__main__.py": "59e30223f9abd54fe6d0d1ff204a39437dc5a5f299977e4f8d9abe4b7fcc8847",
+    "tools/elio_board/app/app.js": "57999000a9e0318ab1c2a2a53365c44ee3b7d27e0f68c95e76820a891be9c7d4",
     "tools/elio_board/app/assets/PRETENDARD-LICENSE.md": "0dc62409683d658150320f7cbf0c98a70805f43f16ada7326072c807dffc6876",
     "tools/elio_board/app/assets/pretendard.woff2": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
-    "tools/elio_board/app/authoring-ui.js": "6c1b9701c288bc03627224b6af90781c95dc052ea5bf8845779a98eab63e3927",
-    "tools/elio_board/app/authoring.css": "7ec898598e9b998ca4f997dc5aca7b539cc11d2fadb862d8159e9c9398e66f50",
+    "tools/elio_board/app/authoring-ui.js": "6755f39abc54fc80b8b299d73b230a4cc0bf43ff5ca340a85239245e9c3bedea",
+    "tools/elio_board/app/authoring.css": "ec68e4ddc0a42343411d920b7d5399434a2c0fa15e9d5bb5083d3792ccf498f8",
     "tools/elio_board/app/board-refinement.css": "d8088bdf7262552b5c7e4410612b4740a55e655f900b104d8da2ed4eb4334484",
     "tools/elio_board/app/content-picker.css": "856f37f029504990ba25233a073347a1857e8f0ac7cae37b4453fa7823893a9f",
     "tools/elio_board/app/content-picker.js": "fbfe952ee104d4bf0ae47b019b7fe1adfeee9a1bea29a191612af8a7288f8c55",
@@ -10086,15 +10494,15 @@
     "tools/elio_board/app/document-adapter.js": "2ed381ddc7d1020aa8646dc6d04ceacb3a99e27abc933480ade53b95e08b73bb",
     "tools/elio_board/app/hud-panels.css": "bb30a0fa7e4a723857d3e5f696934626411eb18a23ded515b76b2db5610bc2ff",
     "tools/elio_board/app/index.html": "4e396c20aabf3ec7b3906d19092de9bf5c9a537de99f42df33d5020f3b7b154b",
-    "tools/elio_board/app/projection.js": "ba0e5fa8d012001f821916d0cd700573970bcb0a227b093edbd2946e5fbc486a",
-    "tools/elio_board/app/styles.css": "3d880c1dbd7eec5671d81a8b93e0b0349c7dff5480ac4279ddbdcb63d4e13e63",
-    "tools/elio_board/app/vendor/board-model.js": "c7f57e267c905916a3058c53614900aa71d52687b9c2cba3c6557f467cf00816",
+    "tools/elio_board/app/projection.js": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af",
+    "tools/elio_board/app/styles.css": "68c6f627b61760876e73a91c567fe2ee216e836ab3696b1dcfe1ff319643f829",
+    "tools/elio_board/app/vendor/board-model.js": "af961224609af56ac8aa4ee02d54f4e66e719db1897450bf071482166e14c1ad",
     "tools/elio_board/app/vendor/components.js": "5399215b050477c6396059022ff75ee822d7d863a3b3106897f8e72083907894",
     "tools/elio_board/app/vendor/diagram_geometry.js": "ec908c2666a7780b445cc4e2a7cc203bbcf8670e1ae2b07d2f0cf4b06a463e8c",
     "tools/elio_board/app/vendor/story_layout.js": "b0261329393cc7d55a5c08317f3712c20bd328c7f420b5ac8b490cd9d2cb4c12",
     "tools/elio_board/authoring.py": "e7d8c44c7187c618a83828b1f5c7558e08c8d8c04c41250e35bbfed3ad5598c9",
     "tools/elio_preview/__init__.py": "65af090f7b80d8fbcd4c3edf4c1f3777c15e7edfa4e98d72d93ce9433d4d1509",
-    "tools/elio_preview/__main__.py": "50f6266648210d6dbe6e17faefa19a0bd22356b5e9e4c41309390c9e3491a94b",
+    "tools/elio_preview/__main__.py": "1216d7dad7ef15225b033879bc6af870390ee6994859b816c46f93d00c0f8ae1",
     "tools/elio_preview/app.js": "dd46c392b60c3bf4cc5f6e0909c57bc1a404bd1d0858fb450476498e64274510",
     "tools/elio_preview/authoring_templates/reading-views.md": "d019db24f7e587715837eae553142f29ab2ca1064205541bb24ebdf31e10be7b",
     "tools/elio_preview/authoring_templates/story-review-and-replay.md": "8b092d8e5778a8dd1f5f88337aa2b03ddab2b0ed2f2654d4bdf5c91313ed64a2",
@@ -10109,7 +10517,7 @@
     "tools/elio_preview/components/moon_memory.py": "a073f5f67672ef6c8431cce27641d61cbfa1b7b583da8be2710df641ae9fd030",
     "tools/elio_preview/components/perspective_timeline.css": "fe06ab0b4b09e043e1762e89ed5834ba0f482ec2d5c03319e0c3ad846ef3f872",
     "tools/elio_preview/components/perspective_timeline.py": "8baad28b8ddaa830df2a6f14ce7a3e581101a31ad1aa79f0a82cf2ad603843fd",
-    "tools/elio_preview/components/public_urls.py": "397289d051ea670c4705809ea5326197e225d7b8020da058ce5bc81e75e33d36",
+    "tools/elio_preview/components/public_urls.py": "b757b9bd3925aaf8a484d07c5c5cfe4680950008d3b8389745e889c2faa53415",
     "tools/elio_preview/components/raster_validation.py": "e98e0c86106bcdb18d8d3a1c0fa7b42b69c6d20ad4cf1592e4398b6009ea02cb",
     "tools/elio_preview/components/reader_board.css": "c73ebcd6a827eba639bcc258a7c756b32f09107f785e42648cde154f7907c667",
     "tools/elio_preview/components/reader_board.js": "0627fa2096d1ff47b37c024e59ad29669c418fbba2cbc7092fa12c18ddc02a1f",
@@ -10128,11 +10536,11 @@
     "tools/elio_preview/components/scene_minimap.css": "cf60ff2186e86a1aa404c8d81f06337e938dca7e25da0f20cc90303f94d4913c",
     "tools/elio_preview/components/scene_minimap.js": "a18e333fa6cd834635b449caa7fcd6c0451a3d694eefacb2334a1be23cb8798d",
     "tools/elio_preview/components/scene_minimap.py": "2a9078f0e4da2355f33cc6ae212d56dfa6113e3753652c012c82f59169bc1f4b",
-    "tools/elio_preview/components/scene_navigation.py": "94932b3695da20dd1c28717b62e858becd3522ae0ac908cf463c177bda84b889",
+    "tools/elio_preview/components/scene_navigation.py": "019118bf6cc8910cde2a2e9bdd537dd65158db68c7d69c88784582311078b90c",
     "tools/elio_preview/components/scene_shell.html": "79cefc8051c35299f114bd03b364ecb3450b9f7721c42f11c010c846c0a87e88",
     "tools/elio_preview/components/scene_shell.py": "1f867c4e9cdb7f87c4fba0df021b638c9fafa5897c5b58b01ee47e1e28c2e65c",
     "tools/elio_preview/components/story_layout.css": "590808571a8b9c814c21e4a59ad154581f8def7c5741e8cca198628f4fb2002e",
-    "tools/elio_preview/components/story_layout.js": "b0261329393cc7d55a5c08317f3712c20bd328c7f420b5ac8b490cd9d2cb4c12",
+    "tools/elio_preview/components/story_layout.js": "51fbf63ecac7d2998a8dac31503790035e4674ce040e9853f9ada8b4bcd4e480",
     "tools/elio_preview/components/story_layout.py": "efcb123f5ef5b5f25c95d5058f02efc16fcfb0902d5a78fbc6d6ca2e19ffb62e",
     "tools/elio_preview/components/story_topology.css": "6dfa4947c94d5c3b307418c9052092417effc6331c2a7b43195743294a4094f0",
     "tools/elio_preview/components/story_topology.html": "369cf186463c921f54e007d860c886d893c0e09b6f97f108997f66663d862848",
@@ -10150,7 +10558,7 @@
     "tools/elio_preview/reader_copy.py": "b4efdc3deacbfa5ecf03e95af778dc156dc010d856290fbf17156e02a79d69a4",
     "tools/elio_preview/story_contract.py": "782b1e7c28fa8bbfcda43a6bb1ca8c57e158d3e2dce89952fba3d92da7261e55",
     "tools/elio_preview/story_quality.py": "c76120958f6be447f54ab77ccdc78eca4eedaa33fddc20c0698db212087194b9",
-    "tools/elio_preview/style.css": "07e5e611db8c1591bb188217f475ae15c6830eed09d585dc67fe30b4cea1ba26",
-    "tools/elio_preview/template.html": "cbb3b245a6a17a9e1d93ee154b39117e6ca668f1646028838817159e6232f0a2"
+    "tools/elio_preview/style.css": "958141a793fe31aa623bae3abfa889e4b0daffc68ac9064fff4c03067c4d9078",
+    "tools/elio_preview/template.html": "7b786fff4acbf533ad958a173add479aa1299b7365b472bc8b2ce147db536dbd"
   }
 }

@@ -75,6 +75,8 @@ WORK_GLOSSARY_RELATION_LABELS = {
 
 
 def safe_url(value):
+    from tools.elio_preview.components.public_urls import current_github_urls
+    value = current_github_urls(value)
     parsed = urlsplit(value)
     if parsed.scheme != 'https' or not parsed.hostname or parsed.username or parsed.password:
         raise ValueError('Source links must be HTTPS without credentials')

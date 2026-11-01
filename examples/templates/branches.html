@@ -2296,7 +2296,8 @@ document.querySelectorAll('.reader-guide__scene').forEach((link) => {
 /* Layout distances are visual only. Never consume replay seconds or parse dates. */
 (() => {
   const RETURN_GUTTER = 42;
-  const geometry = globalThis.elioDiagramGeometry;
+  const geometry = globalThis.elioDiagramGeometry || (typeof module !== 'undefined' && module.exports
+    ? require('./diagram_geometry.js') : undefined);
   function packStoryTree(model, sizes, width, mobile = false, compact = false, phases = [], options = {}) {
     const horizontal = options.direction === 'horizontal';
     const nodes = model.nodes;
@@ -2434,7 +2435,30 @@ document.querySelectorAll('.reader-guide__scene').forEach((link) => {
     return [[x1,y1],[x1,lower],[rail,lower],[rail,upper],[x2,upper],[x2,y2]];
   }
 
-  const layoutAPI={packStoryTree,routeStoryEdge,routeStoryReturn};
+  function routeStorySelfReturn(photo, obstacles, width, height, occupied = [], reserved = {}) {
+    const {left,top,width:w,height:h,cx=left+w/2,cy=top+h/2}=photo;
+    const points={left:[left-8,cy],right:[left+w+8,cy],top:[cx,top-8],bottom:[cx,top+h+8]};
+    const candidates=[];
+    for(const [sourceSide,targetSide] of [['left','top'],['right','top'],['left','bottom'],['right','bottom'],['left','right'],['top','bottom']]){
+      const make=side=>{
+        const vertical=side==='top'||side==='bottom',tip=points[side];
+        const port=geometry.terminalPort({side,tip,gate:tip},side,24,{obstacles,width,height});
+        return geometry.availablePort(port,side,reserved[side]||[],vertical?left+4:top+4,vertical?left+w-4:top+h-4);
+      };
+      const start=make(sourceSide),end=make(targetSide);
+      if(!start||!end)continue;
+      const body=geometry.routeOrthogonal({start:start.gate,end:end.gate,startTip:start.tip,endTip:end.tip,obstacles,width,height,occupied});
+      if(!body)continue;
+      const path=geometry.compact([start.tip,...body,end.tip]),reach=Math.max(36,w,h);
+      // A self-return belongs to this marker, never to the page-wide return rail.
+      if(path.some(([x,y])=>x<left-reach||x>left+w+reach||y<top-reach||y>top+h+reach))continue;
+      candidates.push({points:path,start,end});
+    }
+    candidates.sort((a,b)=>geometry.pathCost(a.points,occupied,obstacles)-geometry.pathCost(b.points,occupied,obstacles));
+    return candidates[0]||null;
+  }
+
+  const layoutAPI={packStoryTree,routeStoryEdge,routeStoryReturn,routeStorySelfReturn};
   if (typeof module !== 'undefined' && module.exports) module.exports = layoutAPI;
   globalThis.elioStoryLayout=layoutAPI;
   if (typeof document === 'undefined') return;
@@ -2527,7 +2551,7 @@ document.querySelectorAll('.reader-guide__scene').forEach((link) => {
         const painted=compact?[]:[...(element.querySelectorAll?.('.copy, .visual, .story-tree__track, .story-tree__condition, .story-tree__time, .story-tree__alignment, .story-tree__relations a, .watch-moment__content')||[])].map(relative).filter(rect=>rect.width>0&&rect.height>0);
         const content=painted.length?{left:Math.min(...painted.map(rect=>rect.left)),top:Math.min(...painted.map(rect=>rect.top)),width:0,height:0}:box;
         if(painted.length){content.width=Math.max(...painted.map(rect=>rect.left+rect.width))-content.left;content.height=Math.max(...painted.map(rect=>rect.top+rect.height))-content.top;}
-        return [node.event_id,{id:node.event_id,box,photo,content}];
+        return [node.event_id,{id:node.event_id,box,photo,content,painted}];
       }));
       // Full cards deliberately leave a blank rail beside the copy. Treating
       // their full-width wrapper as solid closes that existing mobile corridor.
@@ -2560,12 +2584,13 @@ document.querySelectorAll('.reader-guide__scene').forEach((link) => {
         const manual=Boolean(override.via?.length||override.source_port||override.target_port);
         const alternate=!manual&&edge.relation!=='return'&&source.box.width<width*.95&&target.box.width<width*.95&&Math.abs(source.photo.cx-target.photo.cx)>20
           ?source.photo.cx<target.photo.cx?['right','left']:['left','right']:null;
-        return {edge,id:geometry.edgeId(edge.from,edge.to),start,end,via,manual,alternate};
+        return {edge,id:geometry.edgeId(edge.from,edge.to),start,end,via,manual,alternate,
+          localSelf:!manual&&edge.relation==='return'&&edge.from===edge.to};
       });
       if(svgHeight>svg.parentElement.offsetHeight)container.style.height=`${parseFloat(container.style.height)+svgHeight-svg.parentElement.offsetHeight}px`;
       svg.setAttribute('viewBox', `0 0 ${width} ${svgHeight}`);
       const fans=new Map();
-      plans.forEach(plan=>[plan.start,plan.end].forEach(endpoint=>{const key=`${endpoint.node}:${endpoint.side}`;if(!fans.has(key))fans.set(key,[]);fans.get(key).push(endpoint);}));
+      plans.filter(plan=>!plan.localSelf).forEach(plan=>[plan.start,plan.end].forEach(endpoint=>{const key=`${endpoint.node}:${endpoint.side}`;if(!fans.has(key))fans.set(key,[]);fans.get(key).push(endpoint);}));
       fans.forEach(endpoints=>endpoints.sort((a,b)=>['top','bottom'].includes(a.side)?a.other.cx-b.other.cx:a.other.cy-b.other.cy).forEach((endpoint,index)=>{const axis=['top','bottom'].includes(endpoint.side)?0:1,offset=(index-(endpoints.length-1)/2)*10;endpoint.tip[axis]+=offset;endpoint.gate[axis]+=offset;}));
       const reservations=new Map([...fans].map(([key,endpoints])=>[key,endpoints.map(endpoint=>endpoint.tip[['top','bottom'].includes(endpoint.side)?0:1])]));
       const alternatePort=(id,side)=>{
@@ -2577,6 +2602,17 @@ document.querySelectorAll('.reader-guide__scene').forEach((link) => {
       const distance=plan=>Math.abs(plan.start.gate[0]-plan.end.gate[0])+Math.abs(plan.start.gate[1]-plan.end.gate[1]);
       const route=(start,end,via=[],preferStraightStops=false)=>geometry.routeOrthogonal({start:start.gate,end:end.gate,startTip:start.tip,endTip:end.tip,via,obstacles,width,height:svgHeight,occupied,preferStraightStops});
       [...plans].sort((a,b)=>Number(b.manual)-Number(a.manual)||distance(a)-distance(b)).forEach(plan=>{
+        if(plan.localSelf){
+          const node=measured.get(plan.edge.from);
+          const localObstacles=[...measured.values()].flatMap(other=>other.id===node.id?[...other.painted,other.photo]:routingBoxes(other));
+          const reserved=Object.fromEntries(['left','right','top','bottom'].map(side=>[side,reservations.get(`${node.id}:${side}`)||[]]));
+          const local=routeStorySelfReturn(node.photo,localObstacles,width,svgHeight,occupied,reserved);
+          if(local){
+            routed.set(plan.id,local.points);terminals.set(plan.id,{start:local.start,end:local.end});
+            reserve(node.id,local.start.side,local.start);reserve(node.id,local.end.side,local.end);
+            occupied.push(...geometry.segments(local.points));return;
+          }
+        }
         let {start,end}=plan;
         ({start,end}=geometry.adaptTerminalPair(start,end,obstacles));
         const otherObstacles=[...measured.values()].filter(node=>node.id!==plan.edge.from&&node.id!==plan.edge.to).flatMap(routingBoxes);
