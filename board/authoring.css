@@ -17,5 +17,6 @@
   #app>.topbar{grid-template-columns:minmax(0,1fr) 40px 40px 40px;grid-template-rows:44px 44px;grid-template-areas:"brand documents effects motion" "work work work work";height:104px;min-height:104px}
   #app>.topbar #document-tools-open{grid-area:documents;width:40px;height:40px;padding:8px;margin:0}
   #document-tools-open .document-tools-label{display:none}
+  html[data-audience="author"] #motion-button span{display:none}
   #app>.topbar #work-picker-trigger{grid-area:work;min-width:0;max-width:none;min-height:40px}
 }

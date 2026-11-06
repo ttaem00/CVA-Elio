@@ -39,9 +39,11 @@
     if (block.type === 'accordion') return C.elioGuide({...p,id:block.id},{kind:block.variant==='clues'?'clues':'questions',titleLevel:level});
     if (block.type === 'forma-pattern' && global.ELIO_OWNED_RUNTIME) return content(block,context);
     if (block.type === 'hero' || (block.type === 'scene-composition' && block.variant === 'chapter-cover')) {
+      const selectedScenes = block.type === 'scene-composition' && p.items.length ? '<div class="timeline" aria-label="이 장에서 선택한 장면">' +
+        p.items.map((entry,index)=>elioScene(entry,index,block,context)).join('') + '</div>' : '';
       return '<header class="hero">' + elioHead(p,level) +
         (p.actionLabel ? '<div class="hero-tools">' + C.button(p.actionLabel,{target:context.nextId}) + '</div>' : '') +
-        C.media(p.image,{caption:p.caption}) + '</header>' + sceneNotes;
+        C.media(p.image,{caption:p.caption}) + '</header>' + selectedScenes + sceneNotes;
     }
     if (block.orientation !== 'horizontal' && (block.type === 'timeline' || (block.type === 'scene-composition' && block.variant === 'scene-rail'))) {
       return '<header class="hero">' + elioHead(p,level) + '</header><div class="timeline" aria-label="입력한 장면의 읽기 순서">' +
