@@ -12,7 +12,7 @@
     "index.html": {
       "source": "tools/elio_board/app/index.html",
       "source_sha256": "4e396c20aabf3ec7b3906d19092de9bf5c9a537de99f42df33d5020f3b7b154b",
-      "delivered_sha256": "66f7055c8df5c8aa2e59a9f24703521c6d16423eff6971bb770e132bb591f6fc"
+      "delivered_sha256": "4c290cad4ce923c05cdd7f795fb56340ebaeee125c2bb1dbd8cba1c52a6163ae"
     },
     "styles.css": {
       "source": "tools/elio_board/app/styles.css",
@@ -41,8 +41,8 @@
     },
     "authoring.css": {
       "source": "tools/elio_board/app/authoring.css",
-      "source_sha256": "ec68e4ddc0a42343411d920b7d5399434a2c0fa15e9d5bb5083d3792ccf498f8",
-      "delivered_sha256": "ec68e4ddc0a42343411d920b7d5399434a2c0fa15e9d5bb5083d3792ccf498f8"
+      "source_sha256": "5970da741474f07cf358a802c3ff02a0b09a80da166bc79c4a53ca444344fd4b",
+      "delivered_sha256": "5970da741474f07cf358a802c3ff02a0b09a80da166bc79c4a53ca444344fd4b"
     },
     "app.js": {
       "source": "tools/elio_board/app/app.js",
@@ -51,8 +51,8 @@
     },
     "projection.js": {
       "source": "tools/elio_board/app/projection.js",
-      "source_sha256": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af",
-      "delivered_sha256": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af"
+      "source_sha256": "c5aaab1101285a676d1055dec12fe76450bb396511a392b421337f4ca311b4a7",
+      "delivered_sha256": "c5aaab1101285a676d1055dec12fe76450bb396511a392b421337f4ca311b4a7"
     },
     "depth-hover.js": {
       "source": "tools/elio_board/app/depth-hover.js",
@@ -120,7 +120,7 @@
     "assets/PRETENDARD-LICENSE.md": "0dc62409683d658150320f7cbf0c98a70805f43f16ada7326072c807dffc6876",
     "assets/pretendard.woff2": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
     "authoring-ui.js": "6755f39abc54fc80b8b299d73b230a4cc0bf43ff5ca340a85239245e9c3bedea",
-    "authoring.css": "ec68e4ddc0a42343411d920b7d5399434a2c0fa15e9d5bb5083d3792ccf498f8",
+    "authoring.css": "5970da741474f07cf358a802c3ff02a0b09a80da166bc79c4a53ca444344fd4b",
     "board-refinement.css": "d8088bdf7262552b5c7e4410612b4740a55e655f900b104d8da2ed4eb4334484",
     "content-picker.css": "856f37f029504990ba25233a073347a1857e8f0ac7cae37b4453fa7823893a9f",
     "content-picker.js": "fbfe952ee104d4bf0ae47b019b7fe1adfeee9a1bea29a191612af8a7288f8c55",
@@ -132,9 +132,9 @@
     "documents.js": "aa09f006e193ec5b1c1137471496e979a1917775e418d6d7ba3a150e1027f888",
     "documents/public-observatory.json": "bb21ea1fd49979ea6c05ea123fc0a03cf76e964c8a71265713085ea72ef0708b",
     "hud-panels.css": "bb30a0fa7e4a723857d3e5f696934626411eb18a23ded515b76b2db5610bc2ff",
-    "index.html": "66f7055c8df5c8aa2e59a9f24703521c6d16423eff6971bb770e132bb591f6fc",
+    "index.html": "4c290cad4ce923c05cdd7f795fb56340ebaeee125c2bb1dbd8cba1c52a6163ae",
     "notices/CVA-DEPTH-CARDS.txt": "824bb622d8f3cfa8f2d3eadd3c6998e189cc81a49fe7135d90cf8139fc0166a3",
-    "projection.js": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af",
+    "projection.js": "c5aaab1101285a676d1055dec12fe76450bb396511a392b421337f4ca311b4a7",
     "styles.css": "68c6f627b61760876e73a91c567fe2ee216e836ab3696b1dcfe1ff319643f829",
     "vendor/board-model.js": "af961224609af56ac8aa4ee02d54f4e66e719db1897450bf071482166e14c1ad",
     "vendor/components.js": "5399215b050477c6396059022ff75ee822d7d863a3b3106897f8e72083907894",

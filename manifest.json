@@ -1,9 +1,9 @@
 {
   "schema_version": "cva.elio-public-candidate.v1",
   "publication_status": "not_published",
-  "source_commit": "12a1cc9b1c0a93cabddd475e659d2d778a49ff89",
+  "source_commit": "7477f114eb34008aad2e65c5ed5e2eb4b0de08e3",
   "source_has_uncommitted_inputs": false,
-  "recipe_sha256": "bf61c2b0b189d9f02e9cffd84526012e859f28d8f004eea5e7ac870c23e8c756",
+  "recipe_sha256": "032d3abe07945b792bb5e1b2cb3430bdb181a48fc9def8ea6a6850d010cbfab0",
   "sources": [
     {
       "source": "tools/elio_release/scaffold/assets/font.css",
@@ -23,8 +23,8 @@
       "source": "tools/elio_release/scaffold/docs/BRANDING.md",
       "destination": "docs/BRANDING.md",
       "encoding": "utf8-lf-v1",
-      "sha256": "f2c9afacb43936afe096f7accceaa37de6aa17b9371aaa0fe308df6695138657",
-      "export_sha256": "f2c9afacb43936afe096f7accceaa37de6aa17b9371aaa0fe308df6695138657"
+      "sha256": "adb741d86f0e687e9bead65ff6ecf837650b4af7f94ba0d1d9d49cc3fe707e27",
+      "export_sha256": "adb741d86f0e687e9bead65ff6ecf837650b4af7f94ba0d1d9d49cc3fe707e27"
     },
     {
       "source": "tools/elio_release/scaffold/index.html",
@@ -58,8 +58,8 @@
       "source": "tools/elio_release/scaffold/README.md",
       "destination": "README.md",
       "encoding": "utf8-lf-v1",
-      "sha256": "4c69f0788e821044f2bf173714b26e0afec2755313e408390ce58dcdb7c84b30",
-      "export_sha256": "4c69f0788e821044f2bf173714b26e0afec2755313e408390ce58dcdb7c84b30"
+      "sha256": "84784fba333d13b3cbbdca1be750d7a523c22142e305d66f740955cff673e366",
+      "export_sha256": "84784fba333d13b3cbbdca1be750d7a523c22142e305d66f740955cff673e366"
     },
     {
       "source": "tools/elio_release/scaffold/scripts/demo.py",
@@ -915,9 +915,9 @@
       "source": "tools/cva_design_system/module-renderer.js",
       "destination": "cva/module-renderer.js",
       "encoding": "utf8-lf-v1",
-      "sha256": "2d94e54f3270bf20495a3897682386989a7d8f9d11d5bce3141851608c0fe20a",
+      "sha256": "890cdc871c6071e58a9f2af3841aea15618318aff99927de5b65c4f4a1836c57",
       "overlay": "public-design-v1",
-      "export_sha256": "2d94e54f3270bf20495a3897682386989a7d8f9d11d5bce3141851608c0fe20a"
+      "export_sha256": "890cdc871c6071e58a9f2af3841aea15618318aff99927de5b65c4f4a1836c57"
     },
     {
       "source": "tools/cva_design_system/module-styles.css",
@@ -1216,8 +1216,8 @@
       "source": "tools/elio_board/app/authoring.css",
       "destination": "tools/elio_board/app/authoring.css",
       "encoding": "utf8-lf-v1",
-      "sha256": "ec68e4ddc0a42343411d920b7d5399434a2c0fa15e9d5bb5083d3792ccf498f8",
-      "export_sha256": "ec68e4ddc0a42343411d920b7d5399434a2c0fa15e9d5bb5083d3792ccf498f8"
+      "sha256": "5970da741474f07cf358a802c3ff02a0b09a80da166bc79c4a53ca444344fd4b",
+      "export_sha256": "5970da741474f07cf358a802c3ff02a0b09a80da166bc79c4a53ca444344fd4b"
     },
     {
       "source": "tools/elio_board/app/app.js",
@@ -1230,8 +1230,8 @@
       "source": "tools/elio_board/app/projection.js",
       "destination": "tools/elio_board/app/projection.js",
       "encoding": "utf8-lf-v1",
-      "sha256": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af",
-      "export_sha256": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af"
+      "sha256": "c5aaab1101285a676d1055dec12fe76450bb396511a392b421337f4ca311b4a7",
+      "export_sha256": "c5aaab1101285a676d1055dec12fe76450bb396511a392b421337f4ca311b4a7"
     },
     {
       "source": "tools/elio_board/app/depth-hover.js",
@@ -9207,7 +9207,7 @@
     "LICENSE": "b83ca162ea41c85a51d84becb04f3300fa7851d81d28386ec4d9152a70561a31",
     "POLICY.md": "1392fcb70ab8f97a82f4042bbe233936a2cd7f542225353637a0a80bad6c49ca",
     "PRIVACY.md": "d52c9ca31cf9d8ed28c09f3b866be95754750c9144c2b30b9a619291b701bf29",
-    "README.md": "4c69f0788e821044f2bf173714b26e0afec2755313e408390ce58dcdb7c84b30",
+    "README.md": "84784fba333d13b3cbbdca1be750d7a523c22142e305d66f740955cff673e366",
     "SECURITY.md": "c3f301881bc67c22ebaecf678cb79e96a194e909bfe4bd564c6208bbbd06c21f",
     "THIRD_PARTY_NOTICES.md": "5ab50b8fc3cf300d62ebe4c857d774003bcfe09a00f31f2f4a647901be51f72d",
     "assets-data.js": "bcafee44871a58737465e8591f143096a927ffe6aedc6ad29cd7b2214a23f970",
@@ -9376,9 +9376,9 @@
     "board/assets/PRETENDARD-LICENSE.md": "0dc62409683d658150320f7cbf0c98a70805f43f16ada7326072c807dffc6876",
     "board/assets/pretendard.woff2": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
     "board/authoring-ui.js": "6755f39abc54fc80b8b299d73b230a4cc0bf43ff5ca340a85239245e9c3bedea",
-    "board/authoring.css": "ec68e4ddc0a42343411d920b7d5399434a2c0fa15e9d5bb5083d3792ccf498f8",
+    "board/authoring.css": "5970da741474f07cf358a802c3ff02a0b09a80da166bc79c4a53ca444344fd4b",
     "board/board-refinement.css": "d8088bdf7262552b5c7e4410612b4740a55e655f900b104d8da2ed4eb4334484",
-    "board/build-manifest.json": "8eab915cc98301921f0bd1c44d6b184de081a04f478ad12456df23a054463c73",
+    "board/build-manifest.json": "1928e1bf3cdfd296eefb9996b053de1a9123fe91774c308dc1462ff0a3c425e4",
     "board/content-picker.css": "856f37f029504990ba25233a073347a1857e8f0ac7cae37b4453fa7823893a9f",
     "board/content-picker.js": "fbfe952ee104d4bf0ae47b019b7fe1adfeee9a1bea29a191612af8a7288f8c55",
     "board/depth-card.css": "6bda2975ba12dd85e862d5f61827172764671057040866b587bb5fb87ec80cbc",
@@ -9389,9 +9389,9 @@
     "board/documents.js": "aa09f006e193ec5b1c1137471496e979a1917775e418d6d7ba3a150e1027f888",
     "board/documents/public-observatory.json": "bb21ea1fd49979ea6c05ea123fc0a03cf76e964c8a71265713085ea72ef0708b",
     "board/hud-panels.css": "bb30a0fa7e4a723857d3e5f696934626411eb18a23ded515b76b2db5610bc2ff",
-    "board/index.html": "66f7055c8df5c8aa2e59a9f24703521c6d16423eff6971bb770e132bb591f6fc",
+    "board/index.html": "4c290cad4ce923c05cdd7f795fb56340ebaeee125c2bb1dbd8cba1c52a6163ae",
     "board/notices/CVA-DEPTH-CARDS.txt": "824bb622d8f3cfa8f2d3eadd3c6998e189cc81a49fe7135d90cf8139fc0166a3",
-    "board/projection.js": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af",
+    "board/projection.js": "c5aaab1101285a676d1055dec12fe76450bb396511a392b421337f4ca311b4a7",
     "board/styles.css": "68c6f627b61760876e73a91c567fe2ee216e836ab3696b1dcfe1ff319643f829",
     "board/vendor/board-model.js": "af961224609af56ac8aa4ee02d54f4e66e719db1897450bf071482166e14c1ad",
     "board/vendor/components.js": "5399215b050477c6396059022ff75ee822d7d863a3b3106897f8e72083907894",
@@ -9474,7 +9474,7 @@
     "cva/library.css": "59a8c5b348beaa06f5a16056e1a73c67d10bbf9c5502122388fad6012bc84c03",
     "cva/library.html": "0b5bd4e3ac09d9fc096120e1306e6d33ace1f1620d021011d491ecc8fa297ed2",
     "cva/library.js": "d6754f8154312a0d4d09efa7f2c9284aa564ca1f946fdfbf510bfdb7adfaa483",
-    "cva/module-renderer.js": "2d94e54f3270bf20495a3897682386989a7d8f9d11d5bce3141851608c0fe20a",
+    "cva/module-renderer.js": "890cdc871c6071e58a9f2af3841aea15618318aff99927de5b65c4f4a1836c57",
     "cva/module-styles.css": "f9c6dd177a81a247163442b566498f620d04f26eda2faa1fde314cba7c66f757",
     "cva/modules.js": "b3481e2fed0b490b79bbb420ddfa5d32b312f7008755fb126908850bd3371b1b",
     "cva/patterns.js": "30afcfb96cc415f105b675bda045cf494c18e9f3747cfdfbec0f595ed8ae229b",
@@ -9497,7 +9497,7 @@
     "design/cva.css": "f064b75d6a137449db5f527fc7c32710bf245f7aabf60326c747f9ca8e6c90eb",
     "design/foundations.css": "eaa73fa8e86187fda5bb6691a52996b5282954d0eae1e9b0d4062260c32dc801",
     "design/tokens.js": "c1776ccc145d00230d1f8085740e2380d37b41e643e5dd5cbff12ca72823613f",
-    "docs/BRANDING.md": "f2c9afacb43936afe096f7accceaa37de6aa17b9371aaa0fe308df6695138657",
+    "docs/BRANDING.md": "adb741d86f0e687e9bead65ff6ecf837650b4af7f94ba0d1d9d49cc3fe707e27",
     "docs/ELIO_TEMPLATE_COVERAGE.md": "719396d27c10d40ab94730944c9f3cff4c48eccb1db7e57a2a24e2f55bb2fe75",
     "docs/FOUNDATIONS.md": "53f94b2285433667e73ba88f25852c6e8c3aa9dfc3377d9c3b95e6f95900105d",
     "docs/ORIGINAL_EXAMPLES.json": "c245bab6434754dee295ba5a145a16abefd6c960bd2323b2d3919b29bf6d92ec",
@@ -10483,7 +10483,7 @@
     "tools/elio_board/app/assets/PRETENDARD-LICENSE.md": "0dc62409683d658150320f7cbf0c98a70805f43f16ada7326072c807dffc6876",
     "tools/elio_board/app/assets/pretendard.woff2": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
     "tools/elio_board/app/authoring-ui.js": "6755f39abc54fc80b8b299d73b230a4cc0bf43ff5ca340a85239245e9c3bedea",
-    "tools/elio_board/app/authoring.css": "ec68e4ddc0a42343411d920b7d5399434a2c0fa15e9d5bb5083d3792ccf498f8",
+    "tools/elio_board/app/authoring.css": "5970da741474f07cf358a802c3ff02a0b09a80da166bc79c4a53ca444344fd4b",
     "tools/elio_board/app/board-refinement.css": "d8088bdf7262552b5c7e4410612b4740a55e655f900b104d8da2ed4eb4334484",
     "tools/elio_board/app/content-picker.css": "856f37f029504990ba25233a073347a1857e8f0ac7cae37b4453fa7823893a9f",
     "tools/elio_board/app/content-picker.js": "fbfe952ee104d4bf0ae47b019b7fe1adfeee9a1bea29a191612af8a7288f8c55",
@@ -10494,7 +10494,7 @@
     "tools/elio_board/app/document-adapter.js": "2ed381ddc7d1020aa8646dc6d04ceacb3a99e27abc933480ade53b95e08b73bb",
     "tools/elio_board/app/hud-panels.css": "bb30a0fa7e4a723857d3e5f696934626411eb18a23ded515b76b2db5610bc2ff",
     "tools/elio_board/app/index.html": "4e396c20aabf3ec7b3906d19092de9bf5c9a537de99f42df33d5020f3b7b154b",
-    "tools/elio_board/app/projection.js": "dd92dbe9ccbb40c58d0a42261a72b9f493d2103c9ea74c3baab767d6fe2711af",
+    "tools/elio_board/app/projection.js": "c5aaab1101285a676d1055dec12fe76450bb396511a392b421337f4ca311b4a7",
     "tools/elio_board/app/styles.css": "68c6f627b61760876e73a91c567fe2ee216e836ab3696b1dcfe1ff319643f829",
     "tools/elio_board/app/vendor/board-model.js": "af961224609af56ac8aa4ee02d54f4e66e719db1897450bf071482166e14c1ad",
     "tools/elio_board/app/vendor/components.js": "5399215b050477c6396059022ff75ee822d7d863a3b3106897f8e72083907894",

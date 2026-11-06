@@ -42,6 +42,18 @@ Story의 책 심벌은 Story 입구에만 연결하고, Elio 전체는 CVA 표�
 Story를 읽는 입구와 전체 템플릿 목록은 다른 목적지로 표시합니다.
 내부 `studio`, `forma-pattern`, `FW_*`, 기존 profile 값과 저장 문서의 식별자는 이름 정리로 바꾸지 않습니다.
 
+## CVA 안의 VEIL
+
+**VEIL**은 CVA 아래에서 스트리머의 라이브 표현·배치·조작을 돕는 도구 브랜드입니다.
+Elio의 페이지 제작·이야기 읽기와 역할을 나누며, Elio를 사용하기 위해 VEIL을 설치할 필요는 없습니다.
+[VEIL 제품 안내](https://ttaem.com/brand/products.html#veil)에서 MWBP·OBS Filter·Camera Placement의
+기능·지원 상태와 개별 설치 입구를 확인합니다. 세 제품의 버전·라이선스·공개 상태는 각각 유지합니다.
+
+VEIL은 공통 **V와 VEIL 이름**을 함께 표시하고, V의 작은 우하단 표식으로 연결 고리(MWBP)·
+빛(필터)·배치 프레임(캠 배치)을 구분합니다. [CVA의 패밀리 아이콘 기준](https://ttaem.com/brand/identity-board.html#veil-icons)을
+따르며, 기존 MWBP 이미지를 잘라 공통 로고로 쓰지 않습니다. 이 Elio 패키지의 CVA·Story 표식은
+아래 자산 목록이 소유하고, VEIL 제품의 앱·설치 자산과 적용 상태는 해당 제품이 소유합니다.
+
 ## 같은 이름의 수치는 같은 목록에서
 
 | 화면의 수치 | 집계 기준 |

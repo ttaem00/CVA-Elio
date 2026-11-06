@@ -315,14 +315,20 @@
     });
   }
 
-  function placeLabels(work, projectedEdges, nodes, bounds, selected) {
+  function placeLabels(work, projectedEdges, nodes, bounds, selected, groups = []) {
     const occupiedLabels = [];
+    // Visible group headings use 22px text above the frame. Reserve a full
+    // glyph per character so a return choice cannot cover the heading; the
+    // larger overview headings are shown only while choices are hidden.
+    const headings = groups.map(group => ({x:group.x, y:group.y - 44,
+      w:Array.from(group.title || '').length * 22, h:44}));
+    const obstacles = [...nodes, ...headings];
     for (const edge of projectedEdges) {
       // A retained route may have belonged to the previous selection. Clear
       // its old plate before deciding whether the renderer will paint it.
       for (const key of ['x', 'y', 'labelWidth', 'labelHeight', 'labelAnchor', 'labelSide', 'labelPlacement']) delete edge[key];
       if (!isVisibleLabel(work, edge, selected)) continue;
-      const placement = labelPosition(edge.points, nodes, bounds, occupiedLabels, edge.label, true);
+      const placement = labelPosition(edge.points, obstacles, bounds, occupiedLabels, edge.label, true);
       if (!placement) throw new Error(`Elio condition label has no clear anchor: ${edge.from} → ${edge.to}`);
       Object.assign(edge, placement);
     }
@@ -336,7 +342,7 @@
       || !(layout.allFlows || layout.scope === 'chapter' || layout.scope === 'stage' && group?.id === layout.stage)) return null;
     const nodes = layout.nodes.map(node => ({ ...node, selected: node.item.id === selected }));
     const edges = layout.edges.map(edge => ({ ...edge }));
-    placeLabels(work, edges, nodes, layout, selected);
+    placeLabels(work, edges, nodes, layout, selected, layout.groups);
     return { ...layout, nodes, edges, stage: group?.id || null };
   }
 
@@ -368,7 +374,7 @@
       ...space.origins.map(origin => ({left: origin.x - 8, top: origin.y - 8, width: origin.w + 16, height: origin.h + 16}))];
   }
 
-  function routeEdges(work, nodes, edges, bounds, selected, decorations = []) {
+  function routeEdges(work, nodes, edges, bounds, decorations = []) {
     const byId = new Map(nodes.map(node => [node.item.id, node]));
     const ports = allocatePorts(nodes, edges);
     const occupied = [], routed = new Map();
@@ -392,7 +398,6 @@
       };
     });
     separateCrossings(projectedEdges);
-    placeLabels(work, projectedEdges, nodes, bounds, selected);
     return projectedEdges;
   }
 
@@ -476,9 +481,10 @@
     if (crossViewEdges.length) {
       const mapKinds = new Map(edges.map(edge => [edge.edge, edge.mapKind]));
       const decorations = timeMaps.flatMap(frame => frame.sharedSpace ? sharedSpaceObstacles(frame.sharedSpace) : []);
-      projectedEdges = routeEdges(work, nodes, [...edges.map(edge => edge.edge), ...crossViewEdges], bounds, selected, decorations);
+      projectedEdges = routeEdges(work, nodes, [...edges.map(edge => edge.edge), ...crossViewEdges], bounds, decorations);
       projectedEdges.forEach(edge => { edge.mapKind = mapKinds.get(edge.edge); });
-    } else placeLabels(work, projectedEdges, nodes, bounds, selected);
+    }
+    placeLabels(work, projectedEdges, nodes, bounds, selected, groups);
     return {nodes, edges: projectedEdges, groups, sections, timeMaps, allFlows: true,
       scope, stage: groupFor(work, selected)?.id || null,
       sceneCount: work.overview_event_ids ? work.overview_event_ids.filter(id => recordIds.has(id)).length : records.length, ...bounds};
@@ -604,7 +610,7 @@
       width: Math.max(1080, ...nodes.map(node => node.x + node.w + 96), ...(sharedSpace?.origins || []).map(origin => origin.x + origin.w + 96)),
       height: Math.max(620, ...nodes.map(node => node.y + node.h + 150), sharedSpace ? sharedSpace.y + sharedSpace.h + 32 : 0),
     };
-    const projectedEdges = routeEdges(work, nodes, edges, bounds, selected, sharedSpace ? sharedSpaceObstacles(sharedSpace) : []);
+    const projectedEdges = routeEdges(work, nodes, edges, bounds, sharedSpace ? sharedSpaceObstacles(sharedSpace) : []);
     if (timeMap) {
       const mapped = new Map(timeMap.nodes.map((node, index) => [node.id, selectedGroup.event_ids[index]]));
       const kinds = new Map(timeMap.edges.map(edge => [`${mapped.get(edge.from)}->${mapped.get(edge.to)}`, edge.kind]));
@@ -636,6 +642,7 @@
       if (sharedSpace) mapFrame.sharedSpace = sharedSpace;
       groups = [];
     }
+    placeLabels(work, projectedEdges, nodes, bounds, selected, groups);
     return { nodes, edges: projectedEdges, groups, timeMap: mapFrame, scope: effectiveScope, stage: selectedGroup?.id || null, ...bounds };
   }
 
