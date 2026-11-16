@@ -5,28 +5,28 @@
 
 [data-elio-shell] {
   /* Values: only the colors and dimensions consumed by current shells. */
-  --elio-forest-950:#11140f;--elio-forest-900:#1a2016;--elio-forest-850:#1b2018;
-  --elio-forest-800:#29371d;--elio-forest-700:#343d2e;--elio-forest-500:#718364;
-  --elio-forest-300:#acb7a2;--elio-forest-100:#eff1e8;--elio-lime-300:#d3f58d;
-  --elio-navy-950:#141d2b;--elio-navy-900:#182332;--elio-navy-850:#202d3c;
-  --elio-navy-800:#344254;--elio-navy-700:#46576b;--elio-navy-500:#687b90;
-  --elio-navy-300:#bcc7d5;--elio-paper-100:#f5ecda;--elio-paper-50:#faf5eb;--elio-brass-300:#f4be70;
+  --elio-forest-950:#1d2324;--elio-forest-900:#252d2e;--elio-forest-850:#2b3435;
+  --elio-forest-800:#36433e;--elio-forest-700:#46524f;--elio-forest-500:#839087;
+  --elio-forest-300:#b9c1b9;--elio-forest-100:#e8ebe4;--elio-lime-300:#b4c995;
+  --elio-navy-950:#20272f;--elio-navy-900:#27313b;--elio-navy-850:#2e3944;
+  --elio-navy-800:#3a4853;--elio-navy-700:#52616e;--elio-navy-500:#8796a4;
+  --elio-navy-300:#bbc5ce;--elio-paper-100:#e8e8e2;--elio-paper-50:#f1f0e9;--elio-brass-300:#d4b785;
   --elio-space-1:4px;--elio-space-2:8px;--elio-space-3:12px;--elio-space-4:16px;--elio-space-6:24px;
   --elio-radius-small:8px;--elio-size-target:44px;--elio-size-icon:18px;--elio-size-feedback-icon:20px;
   --elio-duration-feedback:120ms;--elio-duration-selection:180ms;
 
-  /* Meaning: library and guide retain the existing forest atmosphere. */
+  /* Meaning: neutral slate surfaces retain sage identity without lime glare. */
   --elio-bg:var(--elio-forest-950);--elio-panel:var(--elio-forest-900);--elio-surface:var(--elio-forest-850);
-  --elio-text:var(--elio-forest-100);--elio-text-muted:var(--elio-forest-300);--elio-text-subtle:#7e9072;
+  --elio-text:var(--elio-forest-100);--elio-text-muted:var(--elio-forest-300);--elio-text-subtle:#acb6ad;
   --elio-border:var(--elio-forest-700);--elio-border-control:var(--elio-forest-500);
-  --elio-action:var(--elio-lime-300);--elio-on-action:#1b2710;--elio-action-hover:#e0faa9;
-  --elio-focus:var(--elio-lime-300);--elio-hover-bg:#232b1d;
-  --elio-selected-bg:var(--elio-forest-800);--elio-selected-text:var(--elio-lime-300);--elio-selected-border:var(--elio-lime-300);
-  --elio-disabled-bg:#293324;--elio-disabled-text:#a8b49e;--elio-disabled-border:#536148;
-  --elio-input-bg:var(--elio-bg);--elio-input-placeholder:#a6b59a;
-  --elio-pending-bg:#26271b;--elio-pending-text:#e8dfaa;--elio-pending-border:#827d4e;
-  --elio-success-bg:#1d2d24;--elio-success-text:#c1e7cd;--elio-success-border:#537b61;
-  --elio-error-bg:#34231f;--elio-error-text:#ffd4c8;--elio-error-border:#a66d5d;
+  --elio-action:var(--elio-lime-300);--elio-on-action:#263024;--elio-action-hover:#c5d5ad;
+  --elio-focus:var(--elio-lime-300);--elio-hover-bg:#333d3b;
+  --elio-selected-bg:var(--elio-forest-800);--elio-selected-text:#e0e8d7;--elio-selected-border:#9aaf83;
+  --elio-disabled-bg:#303735;--elio-disabled-text:#a9b2aa;--elio-disabled-border:#6e7b70;
+  --elio-input-bg:var(--elio-bg);--elio-input-placeholder:#aab6ab;
+  --elio-pending-bg:#343328;--elio-pending-text:#e0d7b4;--elio-pending-border:#a39b72;
+  --elio-success-bg:#2b3930;--elio-success-text:#c5d7c7;--elio-success-border:#839d86;
+  --elio-error-bg:#3c302d;--elio-error-text:#e5c8bd;--elio-error-border:#b08b7c;
   --elio-font-ui:Pretendard,system-ui,sans-serif;--elio-font-body:16px;--elio-font-control:14px;--elio-font-label:12px;--elio-line-body:1.75;
 
   /* Component roles: a small mark never reduces the target or focus area. */
@@ -40,13 +40,13 @@
 
 [data-elio-shell="studio"] {
   --elio-bg:var(--elio-navy-950);--elio-panel:var(--elio-navy-900);--elio-surface:var(--elio-navy-850);
-  --elio-text:var(--elio-paper-100);--elio-text-muted:var(--elio-navy-300);--elio-text-subtle:#a5b3c4;
+  --elio-text:var(--elio-paper-100);--elio-text-muted:var(--elio-navy-300);--elio-text-subtle:#aebcc9;
   --elio-border:var(--elio-navy-700);--elio-border-control:var(--elio-navy-500);
-  --elio-action:var(--elio-brass-300);--elio-on-action:#182635;--elio-action-hover:#fbd39b;
-  --elio-focus:var(--elio-paper-50);--elio-hover-bg:#2c3c4e;
-  --elio-selected-bg:var(--elio-navy-800);--elio-selected-text:var(--elio-paper-50);--elio-selected-border:var(--elio-brass-300);
-  --elio-disabled-bg:#1a2635;--elio-disabled-text:#91a0b3;--elio-disabled-border:var(--elio-navy-800);
-  --elio-input-placeholder:#a9b8ca;
+  --elio-action:var(--elio-brass-300);--elio-on-action:#26303a;--elio-action-hover:#dfc69f;
+  --elio-focus:var(--elio-paper-50);--elio-hover-bg:#374450;
+  --elio-selected-bg:var(--elio-navy-800);--elio-selected-text:var(--elio-paper-50);--elio-selected-border:#baa278;
+  --elio-disabled-bg:#2c3540;--elio-disabled-text:#aab5c1;--elio-disabled-border:#6e7e8d;
+  --elio-input-placeholder:#adbac8;
 }
 
 /* Opt-in controls for new screens. Existing shells consume the same variables

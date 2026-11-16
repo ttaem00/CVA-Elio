@@ -1,0 +1,134 @@
+/* Story reader dark mode. Light output stays owned by the existing rules.
+   The block between the dark markers is also emitted, by components.bundled_styles,
+   as a no-script copy under prefers-color-scheme with the reader-only scope. */
+/* reader-theme:dark:start */
+@media screen{
+:root[data-reader-theme=dark]{color-scheme:dark;--rt-bg:#1b1e22;--rt-surface:#23272c;--rt-raised:#2c3138;--rt-ink:#dedbd5;--rt-body:#c0c5cc;--rt-muted:#9fa8b3;--rt-brass:#c5ab83;--rt-focus:#e8ddca;--rt-link:#a4c9d9;--rt-line:#3b434e;--rt-divider:#46505d;--rt-axis:#69727d;--rt-control:#78828f;--rt-return:#b08ba0;--bg:var(--rt-bg);--ink:var(--rt-ink);--muted:var(--rt-muted);--axis:var(--rt-axis);--ring:var(--rt-control)}
+:root[data-reader-theme=dark] body{background:var(--rt-bg);color:var(--rt-ink)}
+:root[data-reader-theme=dark] :focus-visible{outline-color:var(--rt-focus)}
+:root[data-reader-theme=dark] .skip:focus{background:var(--rt-raised);color:var(--rt-ink)}
+:root[data-reader-theme=dark] :is(.hero .sub,.scene-desc,.keywords,.caption,.event-source,.sources,.story-breadcrumb,.story-tree__meta,.story-tree__relations,.story-tree__alignment){color:var(--rt-muted)}
+:root[data-reader-theme=dark] :is(.story-breadcrumb [aria-current="page"],.story-tree__track,.sources summary){color:var(--rt-ink)}
+:root[data-reader-theme=dark] .story-tree__relations a{color:var(--rt-link)}
+:root[data-reader-theme=dark] .timeline:before{background:var(--axis);width:3px}
+:root[data-reader-theme=dark] .scene-desc{color:var(--rt-body);font-size:16px;line-height:1.8}
+:root[data-reader-theme=dark] .story-detail .scene-desc{font-size:16px!important}
+:root[data-reader-theme=dark] .reading-time-note{background:color-mix(in srgb,var(--accent) 5%,var(--rt-surface));color:var(--rt-muted)!important;border-left-color:color-mix(in srgb,var(--accent) 60%,var(--rt-ink));font-size:13px!important}
+:root[data-reader-theme=dark] .reading-time-note strong{color:color-mix(in srgb,var(--accent) 60%,var(--rt-ink))}
+:root[data-reader-theme=dark] .item.is-current .step{text-shadow:none}
+:root[data-reader-theme=dark] .node{background:var(--rt-surface)}
+:root[data-reader-theme=dark] .story-tree .node{border-color:var(--ring)}
+:root[data-reader-theme=dark] .scene-photo{border-color:var(--rt-line);border-width:1px}
+:root[data-reader-theme=dark] :is(.eyebrow,.quest-chips :where(span),.visual,.event-action,.event-actions>:where(span),.event-avatar--fallback,.quote,.ending,.story-glossary,.story-glossary__term,.story-glossary__scope,.spoiler-toggle,.scene-nav,.scene-nav__link,.spoiler-cover>:where(span),.watch-stream,.watch-stream__summary,.official-video,.streamer-picker__panel,.chapter-jump,.chronology-key,.streamer-reviews__portrait,.streamer-review :where(.watch-moment__play,.streamer-picker__trigger),.watch-moment__card,.time-map__portal,.reader-share__button,.reader-share-dialog,.story-detail__return,.story-tree__mode,.story-tree__choices,.story-tree__choices :where(button),.story-detail__routes :where(button),.story-view-switch,.story-view-switch__options :where(a),.reader-guides,.story-topology__legend :where(span),.story-topology__group,.story-topology__junction){background:var(--rt-surface);border-color:var(--rt-line);color:var(--rt-ink)}
+:root[data-reader-theme=dark] :is(.ending,.story-glossary,.story-glossary__term,.scene-nav,.watch-stream,.official-video,.chronology-key,.watch-moment__card,.reader-share-dialog,.story-view-switch,.story-topology__group) :is(div,header,section,p,li,dd,dt,small,figcaption,span,strong,b,em,h2,h3,h4,label,time,summary,a){color:inherit}
+:root[data-reader-theme=dark] :is(.ending,.story-glossary,.story-glossary__term,.watch-stream,.official-video,.chronology-key,.watch-moment__card,.reader-share-dialog,.story-view-switch,.story-topology__group) :is(p,small,dd,figcaption,time){color:var(--rt-muted)}
+:root[data-reader-theme=dark] :is(.spoiler-toggle,.reader-share__button,.event-action,.story-tree__mode,.story-detail__return,.story-tree__choices :where(button),.story-detail__routes :where(button),.reader-share-dialog :where(button,input),.time-map__portal,.story-view-switch__options :where(a),.scene-nav__link){border-color:var(--rt-control)}
+:root[data-reader-theme=dark] :is(.spoiler-toggle,.reader-share__button,.event-action,.story-tree__mode,.story-view-switch__options :where(a),.reader-guides__nav :where(a)):hover{background:var(--rt-raised)}
+:root[data-reader-theme=dark] .reader-guides{box-shadow:none}
+:root[data-reader-theme=dark] .reader-guide{--guide-ink:color-mix(in srgb,var(--guide-accent) 45%,var(--rt-ink))}
+:root[data-reader-theme=dark] .reader-guides :is(h2,h3,h4,.reader-guide__disclosure summary>strong,.reader-guide__relationship-line strong){color:var(--rt-ink)}
+:root[data-reader-theme=dark] :is(.reader-guides__intro>span,.reader-guides__nav a span){color:#85c4d4}
+:root[data-reader-theme=dark] :is(.reader-guides__intro>p,.reader-guide__header>p,.reader-guide__life-meta>span,.reader-guide__sources summary){color:var(--rt-muted)}
+:root[data-reader-theme=dark] .reader-guides__nav a{background:transparent;border-color:var(--rt-divider);color:var(--rt-body);font-weight:650}
+:root[data-reader-theme=dark] .reader-guides__nav a:hover{background:var(--rt-raised);border-color:var(--rt-control)}
+:root[data-reader-theme=dark] :is(.reader-guide__header>span,.reader-guide__meta>span,.reader-guide__comparison-item>span,.reader-guide__sources summary strong){color:var(--guide-ink)}
+:root[data-reader-theme=dark] :is(.reader-guide__answer>p,.reader-guide__comparison-item p,.reader-guide__relationship>p,.reader-guide__life-card p){color:var(--rt-body)}
+:root[data-reader-theme=dark] :is(.reader-guide__reference,.reader-guide__scene,.reader-guide__sources a){color:var(--rt-link);text-decoration-color:currentColor}
+:root[data-reader-theme=dark] :is(.reader-guide__reference:hover,.reader-guide__reference:focus-visible,.reader-guide__disclosure summary:hover>strong){color:var(--guide-ink)}
+:root[data-reader-theme=dark] .reader-guide--conclusion .reader-guide__content{border-left-color:var(--guide-ink);background:linear-gradient(100deg,color-mix(in srgb,var(--guide-accent) 10%,var(--rt-surface)),var(--rt-surface))}
+:root[data-reader-theme=dark] :is(.reader-guide__comparison,.reader-guide__comparison-item+.reader-guide__comparison-item,.reader-guide__relationship>p,.reader-guide__life-card){border-color:var(--rt-line)}
+:root[data-reader-theme=dark] .reader-guide__relationship{background:color-mix(in srgb,var(--guide-accent) 6%,var(--rt-surface));border-color:color-mix(in srgb,var(--guide-accent) 25%,var(--rt-surface))}
+:root[data-reader-theme=dark] .reader-guide__relationship-line span{background:color-mix(in srgb,var(--guide-accent) 18%,var(--rt-surface));color:var(--guide-ink)}
+:root[data-reader-theme=dark] :is(.reader-guide__disclosure summary>i,.reader-guide__sources summary>i){background:color-mix(in srgb,var(--guide-accent) 16%,var(--rt-surface))}
+:root[data-reader-theme=dark] :is(.reader-guide__disclosure summary>i,.reader-guide__sources summary>i)::before{background:var(--guide-ink)}
+:root[data-reader-theme=dark] :is(.reader-guide__disclosure summary>i,.reader-guide__sources summary>i)::after{background:var(--guide-ink)}
+:root[data-reader-theme=dark] .reader-guide__sources a{background:var(--rt-bg);border-color:var(--rt-divider)}
+:root[data-reader-theme=dark] .reader-guide__life-rail>span{background:var(--rt-surface);border-color:var(--guide-ink);color:var(--guide-ink);box-shadow:none}
+:root[data-reader-theme=dark] .reader-guide__life-rail:before{background:var(--rt-divider)}
+:root[data-reader-theme=dark] .reader-guide__evidence{--evidence-ink:#8cc9b6;background:color-mix(in srgb,var(--evidence-ink) 10%,var(--rt-surface));border-color:color-mix(in srgb,var(--evidence-ink) 40%,var(--rt-surface));color:var(--evidence-ink)}
+:root[data-reader-theme=dark] .reader-guide__evidence--in_world_legend{--evidence-ink:#d8c390}
+:root[data-reader-theme=dark] .reader-guide__evidence--corrected_record{--evidence-ink:#cbb7df}
+:root[data-reader-theme=dark] .reader-guide__evidence--interpretation{--evidence-ink:#a9cbd5}
+:root[data-reader-theme=dark] .reader-share-dialog :where(input,button){background:var(--rt-bg);color:var(--rt-ink)}
+:root[data-reader-theme=dark] .reader-share-dialog::backdrop{background:rgba(5,9,15,.62)}
+:root[data-reader-theme=dark] .spoiler-cover{background:linear-gradient(90deg,color-mix(in srgb,var(--rt-bg) 97%,transparent),color-mix(in srgb,var(--accent) 10%,var(--rt-bg)),color-mix(in srgb,var(--rt-bg) 97%,transparent));color:var(--rt-ink)}
+:root[data-reader-theme=dark] :is(.spoiler-toggle[aria-pressed="true"],.scene-nav__link[aria-current="step"],.story-view-switch__options a[aria-current="page"],.time-map__portal[aria-current="true"]){background:color-mix(in srgb,var(--rt-brass) 12%,var(--rt-raised));border-color:var(--rt-brass);color:var(--rt-ink)}
+:root[data-reader-theme=dark] .scene-nav--tree .scene-nav__link[aria-current="step"] span{outline:2px solid var(--rt-brass);outline-offset:2px}
+:root[data-reader-theme=dark] .scene-nav--tree .scene-nav__link span{background:var(--rt-surface);border-color:color-mix(in srgb,var(--nav-accent) 87%,var(--rt-ink));color:var(--rt-ink)}
+:root[data-reader-theme=dark] .item.is-current .node{border-color:var(--accent);box-shadow:0 0 0 3px var(--rt-bg),0 0 0 5px var(--accent)}
+:root[data-reader-theme=dark] .item.is-arriving .node{animation:none}
+:root[data-reader-theme=dark] .scene-dock{--dock-bg:var(--rt-raised);--dock-ink:var(--rt-ink);--dock-muted:var(--rt-muted);--dock-border:var(--rt-divider);--dock-step-bg:var(--rt-surface)}
+:root[data-reader-theme=dark] .scene-dock__count{background:color-mix(in srgb,var(--dock-accent) 18%,var(--rt-surface));border-color:color-mix(in srgb,var(--dock-accent) 45%,var(--rt-surface));color:color-mix(in srgb,var(--dock-accent) 60%,var(--rt-ink))}
+:root[data-reader-theme=dark] .scene-dock :focus-visible{outline-color:var(--rt-focus)}
+:root[data-reader-theme=dark] :is(.story-tree__time,.story-tree__track,.story-tree__alignment,.story-tree__relations a){background:var(--rt-bg)}
+:root[data-reader-theme=dark] :is(.term-link,.scene-desc a:not([class]),.story-glossary__back){color:var(--rt-link);text-decoration-line:underline;text-decoration-color:currentColor}
+:root[data-reader-theme=dark] .term-link:hover{color:var(--rt-focus)}
+:root[data-reader-theme=dark] :is(.watch-all,.watch-pending){background:var(--rt-brass);color:var(--rt-bg)}
+:root[data-reader-theme=dark] :is(.sources,footer){border-color:var(--rt-line)}
+:root[data-reader-theme=dark] .ttaem-footer{color:var(--rt-muted)}
+:root[data-reader-theme=dark] :is(.story-detail,.story-detail__header){background:var(--rt-bg);border-color:var(--rt-line);color:var(--rt-ink)}
+:root[data-reader-theme=dark] .story-detail::backdrop{background:rgba(5,9,15,.62)}
+:root[data-reader-theme=dark] .story-detail__close{background:var(--rt-raised);color:var(--rt-ink)}
+:root[data-reader-theme=dark] .story-detail__context{color:color-mix(in srgb,var(--route-color) 40%,var(--rt-ink))}
+:root[data-reader-theme=dark] :is(.story-detail__facts,.story-detail__routes small){color:var(--rt-muted)}
+:root[data-reader-theme=dark] .story-detail__nav{border-color:var(--rt-line)}
+:root[data-reader-theme=dark] :is(.story-tree__thumb,.story-tree__thumb-title){color:var(--rt-ink)}
+:root[data-reader-theme=dark] .story-tree__thumb-time{color:var(--rt-muted)}
+:root[data-reader-theme=dark] :is(.story-tree__image-state,.story-tree__thumb.is-covered .story-tree__hidden-mark){background:var(--rt-raised);color:var(--rt-muted)}
+:root[data-reader-theme=dark] .story-tree__thumb-label{color:color-mix(in srgb,var(--route-color) 40%,var(--rt-ink))}
+:root[data-reader-theme=dark] .story-tree__highlights{border-color:var(--rt-control);color:var(--rt-ink)}
+:root[data-reader-theme=dark] .time-map{background:var(--rt-surface);border-color:var(--rt-line);color:var(--rt-ink)}
+:root[data-reader-theme=dark] :is(.time-map__space,.time-map__detail){background:var(--rt-raised);border-color:var(--rt-line);color:var(--rt-ink)}
+:root[data-reader-theme=dark] :is(.time-map__space-heading>span,.time-map__space>p,.time-map__legend,.time-map__era,.time-map__lane,.time-map__role,.time-map__hint,.time-map__reading,.time-map__detail p,.perspective-state>span){color:var(--rt-muted)}
+:root[data-reader-theme=dark] :is(.time-map__action,.time-map__detail summary){color:var(--rt-ink)}
+:root[data-reader-theme=dark] .time-map__node[aria-current="true"] .time-map__action{color:var(--rt-brass)}
+:root[data-reader-theme=dark] .time-map__portal>span{color:inherit}
+:root[data-reader-theme=dark] .time-map__reading{border-color:var(--rt-divider)}
+:root[data-reader-theme=dark] .time-map__bridge{stroke:var(--rt-surface)}
+:root[data-reader-theme=dark] .time-map__edge{stroke:color-mix(in srgb,var(--map-color,var(--rt-muted)) 75%,var(--rt-ink))}
+:root[data-reader-theme=dark] .time-map__arrow{fill:color-mix(in srgb,var(--map-color,var(--rt-muted)) 75%,var(--rt-ink))}
+:root[data-reader-theme=dark] .time-map__legend span::before{border-top-color:color-mix(in srgb,var(--map-color,var(--rt-muted)) 75%,var(--rt-ink))}
+:root[data-reader-theme=dark] :is(.elio-language label,.elio-translation-note){color:var(--rt-muted)}
+:root[data-reader-theme=dark] .elio-language select{background:var(--rt-raised);border-color:var(--rt-control);color:var(--rt-ink)}
+:root[data-reader-theme=dark] .time-map__scene .scene-desc a:is([href^="https://www.youtube.com/"],[href^="https://youtu.be/"]){background:var(--rt-surface);border-color:var(--rt-control);color:var(--rt-ink);text-decoration-line:none}
+:root[data-reader-theme=dark] .time-map__scene .scene-desc a:focus-visible{outline-color:var(--rt-focus)}
+:root[data-reader-theme=dark] .perspective-scene-link{color:var(--rt-link)}
+:root[data-reader-theme=dark] .story-topology{background:var(--rt-surface);border-color:var(--rt-line);color:var(--rt-ink)}
+:root[data-reader-theme=dark] .story-topology__group{background:var(--rt-bg)}
+:root[data-reader-theme=dark] :is(.story-topology__intro>span,.story-topology__legend b){color:var(--rt-brass)}
+:root[data-reader-theme=dark] .story-topology__intro>p{color:var(--rt-muted)}
+:root[data-reader-theme=dark] :is(.story-topology__lane,.story-topology__lane header){background:var(--rt-surface);border-color:var(--rt-line)}
+:root[data-reader-theme=dark] .story-topology__lane+.story-topology__lane:before{color:var(--rt-muted)}
+:root[data-reader-theme=dark] .story-topology__event:is(:hover,:focus-visible){background:var(--rt-raised)}
+:root[data-reader-theme=dark] .story-topology__event>span{background:color-mix(in srgb,var(--topology-accent) 60%,var(--rt-ink));color:var(--rt-bg)}
+:root[data-reader-theme=dark] .visual--text-only strong{color:var(--rt-ink)}
+:root[data-reader-theme=dark] .visual--text-only span{color:var(--rt-muted)}
+:root[data-reader-theme=dark] .visual--text-only svg{color:color-mix(in srgb,var(--accent) 55%,var(--rt-ink))}
+:root[data-reader-theme=dark] .scene-nav .scene-nav__phase{color:var(--rt-ink)}
+:root[data-reader-theme=dark] .scene-nav .scene-nav__phase-badge{background:var(--rt-raised);border-color:var(--rt-control);color:var(--rt-ink)}
+:root[data-reader-theme=dark] .scene-nav .scene-nav__phase:hover{background:var(--rt-raised);color:var(--rt-focus)}
+:root[data-reader-theme=dark] .scene-nav--tree .scene-nav__phase-region{background:none;border-color:var(--rt-divider)}
+:root[data-reader-theme=dark] .story-view-switch__options a[aria-current="page"] :is(small,strong){color:inherit}
+:root[data-reader-theme=dark] .hero h1::after{background:linear-gradient(90deg,transparent,var(--rt-divider) 24%,var(--rt-divider) 76%,transparent)}
+:root[data-reader-theme=dark] :is(.story-view-switch,.scene-nav,.reader-guides__intro,.reader-guide,.reader-guide__disclosures,.reader-guide__disclosure,.story-detail__header,.story-detail__nav,.story-topology__lane header){border-color:var(--rt-divider)}
+:root[data-reader-theme=dark] .story-phase__gate{background:var(--rt-raised);border-color:var(--rt-divider);box-shadow:none}
+:root[data-reader-theme=dark] .story-phase__gate :is(h2,p,span){color:var(--rt-ink)}
+:root[data-reader-theme=dark] .streamer-reviews{background:var(--rt-surface);border-color:var(--rt-line);box-shadow:none}
+:root[data-reader-theme=dark] .streamer-reviews::before{background:var(--rt-return)}
+:root[data-reader-theme=dark] .streamer-reviews :is(h2,h3){color:var(--rt-ink)}
+:root[data-reader-theme=dark] :is(.streamer-reviews__eyebrow,.streamer-reviews__quote,.streamer-review .streamer-review__text p,.streamer-review__clock){color:var(--rt-muted)}
+:root[data-reader-theme=dark] .streamer-review .watch-moment__card{background:transparent;border-color:var(--rt-divider)}
+:root[data-reader-theme=dark] .streamer-review__clock{border-color:var(--rt-divider)}
+:root[data-reader-theme=dark] .streamer-review :is(.watch-moment__play,.streamer-picker__trigger):hover{background:var(--rt-raised);border-color:var(--rt-control)}
+:root[data-reader-theme=dark] .scene-nav__legend-item{color:var(--rt-muted)}
+:root[data-reader-theme=dark] .scene-nav__legend-item::before{background:color-mix(in srgb,var(--nav-accent) 87%,var(--rt-ink))}
+:root[data-reader-theme=dark] .scene-nav__map{background:var(--rt-bg)}
+:root[data-reader-theme=dark] .scene-nav__edges path{opacity:1}
+:root[data-reader-theme=dark] :is(.scene-nav__edges,.story-tree__edges) path[data-relation="return"]{stroke:var(--rt-return)}
+:root[data-reader-theme=dark] :is(.scene-nav__edges marker polygon,.story-tree__edges .story-tree__arrow){fill:var(--rt-return)}
+:root[data-reader-theme=dark] .reader-theme{color:var(--rt-ink)}
+:root[data-reader-theme=dark] .reader-theme select{border-color:var(--rt-control)}
+}
+/* reader-theme:dark:end */
+.reader-theme{display:inline-flex;align-items:center;gap:6px;min-height:34px;margin:0;color:#4e5964;font-size:11px;font-weight:850}
+.reader-theme select{min-height:34px;max-width:100%;padding:6px 10px;border:1px solid #6e747c;border-radius:999px;background:transparent;color:inherit;font:inherit}

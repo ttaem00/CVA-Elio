@@ -343,9 +343,24 @@
       // Rails continue through chapter boundaries. Only the opaque phase card
       // above the SVG occludes them; never cut a full-width band out of the tree.
       const arrows=[];
-      const paths = model.edges.map(edge => {
-        const points=routed.get(geometry.edgeId(edge.from,edge.to));if(!points)return null;
-        const d=geometry.roundedPath(points,14,9);
+      function photoLead(photo, [x,y], side) {
+        if (side !== 'top' && side !== 'bottom') return '';
+        const offset = (x - photo.cx) / (photo.width / 2);
+        if (Math.abs(offset) >= 1 || !photo.width) return '';
+        const sign = side === 'top' ? -1 : 1;
+        const rim = photo.cy + sign * photo.height / 2 * Math.sqrt(1 - offset * offset);
+        return (y - rim) * sign > 0 ? ` M${x} ${y} L${x} ${rim}` : '';
+      }
+      const paths = plans.map(({edge,id,manual}) => {
+        const points=routed.get(id);if(!points)return null;
+        let d=geometry.roundedPath(points,14,9);
+        if (compact && !manual && (!edge.relation || edge.relation === 'sequence')) {
+          // Extend the painted stem through empty row space. The routed path
+          // still clears the full row, and the labels sit above the SVG.
+          const { start, end } = terminals.get(id);
+          d += photoLead(measured.get(edge.from).photo, points[0], start.side)
+            + photoLead(measured.get(edge.to).photo, points.at(-1), end.side);
+        }
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         path.dataset.from = edge.from;
         path.dataset.to = edge.to;

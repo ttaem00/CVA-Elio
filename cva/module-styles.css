@@ -41,7 +41,7 @@ SOFTWARE.
 .cva-page[data-cva-profile="elio"] {
   --cva-bg:#f4f6f7;--cva-surface:#fff;--cva-inset:#eef2f4;--cva-text:#23272d;--cva-muted:#596573;
   --cva-accent:#52bdd8;--cva-accent-ink:#23272d;--cva-border:#d5dfe5;--cva-focus:#167aab;
-  --cva-accent-text:#53606d;--cva-tint:#e8f4f7;--cva-axis:#7f8389;--cva-radius:20px;--cva-content-width:1120px;
+  --cva-accent-text:#246879;--cva-tint:#e8f4f7;--cva-axis:#7f8389;--cva-radius:20px;--cva-content-width:1120px;
   --cva-module-space:54px;--cva-gap:32px;--cva-body-leading:1.85;--cva-item-padding:24px;
   --cva-copy:#424d59;--cva-section-weight:800;--cva-cover-weight:900;
   font-family:Pretendard,'Noto Sans KR','Malgun Gothic',system-ui,sans-serif;color-scheme:light;
@@ -49,7 +49,7 @@ SOFTWARE.
 .cva-page[data-cva-profile="editor"] {
   --cva-bg:#171924;--cva-surface:#24283b;--cva-inset:#191c2a;--cva-text:#c0caf5;--cva-muted:#aab4d0;
   --cva-accent:#7aa2f7;--cva-accent-ink:#17223e;--cva-border:#363b54;--cva-focus:#95adff;
-  --cva-accent-text:#7aa2f7;--cva-tint:#303b56;--cva-axis:#7287ba;--cva-highlight:#f3c27c;--cva-radius:7px;
+  --cva-accent-text:#8fb1f4;--cva-tint:#303b56;--cva-axis:#7287ba;--cva-highlight:#f3c27c;--cva-radius:7px;
   --cva-content-width:1840px;--cva-page-padding:24px;--cva-module-space:28px;--cva-gap:16px;
   --cva-body-size:.9375rem;--cva-body-leading:1.7;--cva-item-padding:14px;
   --cva-copy:#b9c3e5;--cva-section-size:clamp(1.5rem,1.3rem + .8vw,2rem);--cva-section-weight:720;
@@ -100,8 +100,8 @@ SOFTWARE.
 }
 .cva-page .cva-module+.cva-module {border-block-start:1px solid var(--cva-border)}
 .cva-page .cva-module[data-editable="true"] {outline-offset:-4px;cursor:default}
-.cva-page .cva-module[data-editable="true"]:hover {outline:1px dashed var(--cva-border)}
-.cva-page .cva-module[data-selected="true"] {outline:3px solid var(--cva-focus);outline-offset:-4px}
+.cva-page .cva-module[data-editable="true"]:not([data-selected="true"]):hover {outline:1px dashed var(--cva-border)}
+.cva-page .cva-module[data-selected="true"] {outline:1px solid var(--cva-muted);outline-offset:-1px}
 .cva-page .cva-module[data-editable="true"]:focus-visible {outline:3px solid var(--cva-focus);outline-offset:-4px}
 .cva-page .cva-module-head {max-inline-size:860px;margin-block-end:32px;min-inline-size:0}
 .cva-page .cva-eyebrow {display:block;margin-block-end:12px;color:var(--cva-accent-text);font-size:var(--cva-label-size);font-weight:650;letter-spacing:.025em;line-height:1.6}
@@ -731,3 +731,9 @@ SOFTWARE.
 .cva-page .cva-module-experience:first-child h1.cva-title {font-size:clamp(2.125rem,1.45rem + 2.5vw,4.25rem);line-height:1.15;letter-spacing:-.045em;max-inline-size:24ch;margin-block-end:22px}
 .cva-page .cva-module-experience .cva-module-head {margin-block-end:24px}
 .cva-page .cva-focus[data-focus-kind="catalog"] .cva-focus-detail:has(>.cva-media){display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;align-items:start}.cva-page .cva-focus[data-focus-kind="catalog"] .cva-focus-detail>.cva-media{border-radius:8px}.cva-page .cva-focus[data-focus-kind="catalog"] .cva-media img{aspect-ratio:4/3}.cva-page .cva-focus[data-focus-kind="catalog"] .cva-focus-copy{padding-block-start:0}@media(max-width:1000px){.cva-page .cva-focus[data-focus-kind="catalog"] .cva-focus-detail:has(>.cva-media){grid-template-columns:minmax(0,1fr)}}
+
+/* Private composed reader: keep the preserved scene colors and source CSS,
+   while auxiliary words use the readable role of the containing document. */
+.cva-page.elio-reader :is(.keywords,.caption,.sources,.event-source){color:var(--cva-muted);font-size:.8125rem;line-height:1.75}
+.cva-page.elio-reader .eyebrow{color:var(--cva-accent-text)}
+.cva-page.elio-reader .step{color:var(--cva-accent-text);color:color-mix(in srgb,var(--accent) 40%,var(--cva-text))}
