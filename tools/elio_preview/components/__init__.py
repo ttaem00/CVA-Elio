@@ -6,8 +6,9 @@ from pathlib import Path
 STYLE_COMPONENT_NAMES = (
     "reader_guides", "perspective_timeline", "story_topology",
     "story_layout", "story_tree_reader", "scene_minimap", "time_map", "reader_share", "reader_board",
+    "reader_theme",
 )
-SCRIPT_COMPONENT_NAMES = ("reader_guides", "story_tree_reader", "diagram_geometry", "story_layout", "glossary_navigation", "scene_minimap", "time_map", "reader_share", "reader_board")
+SCRIPT_COMPONENT_NAMES = ("reader_guides", "story_tree_reader", "diagram_geometry", "story_layout", "glossary_navigation", "scene_minimap", "time_map", "reader_share", "reader_board", "reader_theme")
 
 
 def _component_root() -> Path:
@@ -15,11 +16,16 @@ def _component_root() -> Path:
 
 
 def bundled_styles(base_style: str) -> str:
+    from .reader_theme import no_script_styles
+
     parts = [base_style.rstrip()]
-    parts.extend(
-        (_component_root() / f"{name}.css").read_text(encoding="utf-8").rstrip()
-        for name in STYLE_COMPONENT_NAMES
-    )
+    for name in STYLE_COMPONENT_NAMES:
+        css = (_component_root() / f"{name}.css").read_text(encoding="utf-8").rstrip()
+        if name == "reader_theme":
+            # The no-script copy precedes the source so the bundle still ends
+            # with the component's own tail (publication bundle recognition).
+            parts.append(no_script_styles(css))
+        parts.append(css)
     return "\n\n".join(parts) + "\n"
 
 

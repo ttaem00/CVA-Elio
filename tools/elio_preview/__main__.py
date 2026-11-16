@@ -15,6 +15,7 @@ from urllib.parse import urlsplit
 from .components.raster_validation import verify_raster, FORMATS
 from tools.elio_preview.components import bundled_scripts, bundled_styles
 from tools.elio_preview.components.reader_share import render_reader_share
+from tools.elio_preview.components.reader_theme import THEME_BOOT
 from tools.elio_preview.components.time_map import validate_time_map
 from tools.elio_preview.components.scene_navigation import render_scene_navigation
 from tools.elio_preview.components.reader_guides import (
@@ -1268,6 +1269,8 @@ def render(data, source, images=None, connections=None, *, asset_urls=None,
         js_url = safe_site_asset(asset_urls['js'])
         head_assets = f'<link rel="stylesheet" href="{css_url}">'
         body_assets = f'<script src="{js_url}"></script>'
+    # Apply a saved explicit display mode before the stylesheet (first paint).
+    head_assets = THEME_BOOT + head_assets
     breadcrumb = (
         '<nav class="story-breadcrumb" aria-label="스토리 위치">'
         '<a href="/storytimeline/">전체 작품</a><span aria-hidden="true">›</span>'

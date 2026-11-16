@@ -36,7 +36,7 @@
         label: 'Elio Story · 이야기 읽기',
         tokens: {
           background: '#F4F6F7', surface: '#FFFFFF', text: '#23272D',
-          muted: '#6E747C', accent: '#52BDD8', border: '#D5DFE5',
+          muted: '#596573', accent: '#52BDD8', border: '#D5DFE5',
           focus: '#167AAB', radius: '20px',
           font: 'Pretendard, "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif',
           bodySize: '16px', lineHeight: 'normal',
@@ -62,7 +62,7 @@
         label: '탬패드 · 편집 작업실',
         tokens: {
           background: '#171924', surface: '#24283B', text: '#C0CAF5',
-          muted: '#8B93B7', accent: '#7AA2F7', border: '#363B54',
+          muted: '#AAB4D0', accent: '#7AA2F7', border: '#363B54',
           focus: '#95ADFF', radius: '7px',
           font: '"CHZZK Workspace Pretendard", Pretendard, "Malgun Gothic", sans-serif',
           bodySize: '14px', lineHeight: '1.6', hostBodySize: '15px',

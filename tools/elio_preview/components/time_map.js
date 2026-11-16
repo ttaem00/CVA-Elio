@@ -264,8 +264,11 @@ function mountMap(map, {restoreHash = true} = {}) {
       // A narrow surface-colored bridge makes a necessary crossing visibly
       // distinct from a junction; adjacent return rails have separate bands.
       svg.append(el('path',{class:'time-map__bridge',d,stroke:'#f8fbfc','stroke-width':5.5,fill:'none','stroke-linejoin':'round'}));
-      svg.append(el('path',{class:'time-map__edge','data-from':relation.dataset.from,'data-to':relation.dataset.to,d,stroke:colors[relation.dataset.kind]}));
-      arrows.push(el('polygon',{class:'time-map__arrow','data-from':relation.dataset.from,'data-to':relation.dataset.to,points:geometry.arrowHead(points).map(point=>point.join(',')).join(' '),fill:colors[relation.dataset.kind],stroke:'none'}));
+      // The same validated palette color is also exposed as --map-color so the
+      // dark reader theme can lift it for contrast; light output keeps the attributes.
+      const color=colors[relation.dataset.kind],tint=element=>{if(color)element.style?.setProperty('--map-color',color);return element;};
+      svg.append(tint(el('path',{class:'time-map__edge','data-from':relation.dataset.from,'data-to':relation.dataset.to,d,stroke:color})));
+      arrows.push(tint(el('polygon',{class:'time-map__arrow','data-from':relation.dataset.from,'data-to':relation.dataset.to,points:geometry.arrowHead(points).map(point=>point.join(',')).join(' '),fill:color,stroke:'none'})));
     });
     // Later crossing bridges may cover an earlier body, never its arrowhead.
     svg.append(...arrows);

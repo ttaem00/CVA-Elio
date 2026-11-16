@@ -177,7 +177,9 @@ function setCurrentScene(sceneId) {
   sceneDockPrevious?.toggleAttribute('disabled', sceneIndex <= 0);
   sceneDockNext?.toggleAttribute('disabled', sceneIndex >= sceneLinks.length - 1);
   if (sceneDock) {
-    const accent = getComputedStyle(active).getPropertyValue('--nav-accent').trim();
+    // Frozen public navigation links can predate per-link accent metadata.
+    const accent = (nextScene && getComputedStyle(nextScene).getPropertyValue('--accent').trim())
+      || getComputedStyle(active).getPropertyValue('--nav-accent').trim();
     if (accent) sceneDock.style.setProperty('--dock-accent', accent);
   }
   timeline?.querySelector('.story-tree')?.storyReader?.syncDock(sceneId);
